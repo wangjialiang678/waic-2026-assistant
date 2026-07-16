@@ -124,6 +124,37 @@ def _time_key(a: dict) -> str:
     return a.get("start_time") or "99:99"
 
 
+def _date_in_span(span: str, date: str) -> bool:
+    """跨天区间日期是否覆盖某一天。span 如 '2026-07-17~20' 或 '2026-07-17~2026-07-20'。
+    横跨全会期的活动（如超脑四天展区/体验计划）date 是区间字符串，需要对区间内每一天都命中。"""
+    if not span or not date or "~" not in span:
+        return False
+    lo, _, hi = span.partition("~")
+    lo, hi = lo.strip(), hi.strip()
+    if not lo:
+        return False
+    if len(hi) < 10:                      # hi 是简写（'20' / '07-20'）→ 用 lo 的前缀补全成完整日期
+        hi = lo[:10 - len(hi)] + hi
+    return lo <= date <= hi
+
+
+def _act_covers_date(a: dict, date: Optional[str]) -> bool:
+    """活动是否落在某个具体日期（精确匹配或跨天区间覆盖）。"""
+    if not date:
+        return False
+    adate = a.get("date") or ""
+    return adate == date or _date_in_span(adate, date)
+
+
+def _act_on_day(a: dict, day: Optional[int], date: Optional[str]) -> bool:
+    """活动是否属于所查的某一天。兼容 day 序号、精确日期、以及跨天区间日期。"""
+    if day is None:
+        return True
+    if a.get("day") == day:
+        return True
+    return _act_covers_date(a, date)
+
+
 # ============ 工具实现 ============
 def _norm_kw(kw: str) -> str:
     """归一关键词提升召回：去掉 AI/人工智能/+/·/空格。AI教育→教育，AI+金融→金融。"""
@@ -161,7 +192,7 @@ def search_activities(store, day=None, district=None, category=None, track=None,
     for a in store.activities:
         if a.get("kind") == "exhibition_zone":
             continue
-        if day is not None and a.get("day") != day and a.get("date") != date:
+        if not _act_on_day(a, day, date):
             continue
         if district and district not in (a.get("district") or ""):
             continue
@@ -180,8 +211,8 @@ def search_activities(store, day=None, district=None, category=None, track=None,
             rel = 1
         out.append((rel, a))
 
-    # 相关性优先（标题/标签命中 > 描述命中），再按日期/时间；去重同 id
-    out.sort(key=lambda t: (-t[0], t[1].get("date") or "9999", _time_key(t[1])))
+    # 相关性优先（标题/标签命中 > 描述命中），同相关度再按权重（超脑=100 置顶），再按日期/时间；去重同 id
+    out.sort(key=lambda t: (-t[0], -(t[1].get("weight") or 0), t[1].get("date") or "9999", _time_key(t[1])))
     seen, picked = set(), []
     for _, a in out:
         aid = a.get("id")
@@ -239,7 +270,7 @@ def plan_day(store, interests=None, day=None, constraints=None) -> dict:
     for a in store.activities:
         if a.get("kind") == "exhibition_zone":
             continue
-        if day is not None and a.get("day") != day and a.get("date") != date:
+        if not _act_on_day(a, day, date):
             continue
         if not a.get("start_time"):
             continue
@@ -319,7 +350,7 @@ def whats_on_now(store, now=None, near=None, window_min=90) -> dict:
     horizon = _add_minutes(hm, window_min)
     ongoing, upcoming = [], []
     for a in store.activities:
-        if a.get("date") != date:
+        if not _act_covers_date(a, date):
             continue
         if near and near not in (a.get("district") or ""):
             continue
