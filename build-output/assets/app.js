@@ -25,6 +25,22 @@ const DAY_META = {
   3: { date: '2026-07-19', label: '7/19 周日' },
   4: { date: '2026-07-20', label: '7/20 周一' },
 };
+// 跨天区间日期(如 '2026-07-17~20')是否覆盖某一天。与后端 tools.py _date_in_span 保持一致。
+function dateInSpan(span, date) {
+  if (!span || !date || span.indexOf('~') < 0) return false;
+  let parts = span.split('~');
+  let lo = (parts[0] || '').trim(), hi = (parts[1] || '').trim();
+  if (!lo) return false;
+  if (hi.length < 10) hi = lo.slice(0, 10 - hi.length) + hi;  // '20'→'2026-07-20'
+  return lo <= date && date <= hi;
+}
+// 活动是否属于所选的某一天：精确 day 匹配，或区间日期覆盖该天（四天全程活动不会在单日标签下消失）。
+function actMatchesDay(a, dayStr) {
+  if (!dayStr) return true;
+  if (String(a.day) === dayStr) return true;
+  const meta = DAY_META[dayStr];
+  return !!(meta && a.date && a.date.indexOf('~') >= 0 && dateInSpan(a.date, meta.date));
+}
 const ZONE_DESC = {
   '世博中心': { role: '论坛策源', desc: '主题论坛与主论坛主场' },
   '世博展览馆': { role: '应用展览', desc: '核心展区 H1–H4，应用落地' },
@@ -234,7 +250,7 @@ function renderOfficial() {
     ? DATA.activities.filter(a => ['official_program', 'side_event', 'community'].includes(a.kind))
     : DATA.activities.filter(a => a.kind === 'official_program'
         || (filtering && a.kind === 'side_event' && a.waic_relation === 'official'));
-  if (f.day) progs = progs.filter(a => String(a.day) === f.day);
+  if (f.day) progs = progs.filter(a => actMatchesDay(a, f.day));
   if (f.district) progs = progs.filter(a => a.district === f.district);
   if (f.venue) progs = progs.filter(a => a.venue === f.venue);
   if (f.category) progs = progs.filter(a => a.category === f.category);
@@ -340,7 +356,7 @@ function renderSide() {
   const f = F.side;
   let list = DATA.activities.filter(a => a.kind === 'side_event' || a.kind === 'community');
   const total = list.length;
-  if (f.day) list = list.filter(a => String(a.day) === f.day);
+  if (f.day) list = list.filter(a => actMatchesDay(a, f.day));
   if (f.relation) list = list.filter(a => a.waic_relation === f.relation);
   if (f.track) list = list.filter(a => a.track === f.track);
   if (f.q) list = list.filter(a => (a.search_text || '').includes(f.q));
@@ -786,7 +802,7 @@ function renderMine() {
     return;
   }
   let show = all;
-  if (f.day) show = all.filter(a => String(a.day || 0) === f.day);
+  if (f.day) show = all.filter(a => actMatchesDay(a, f.day));
   const groups = {};
   show.forEach(a => { const d = a.day || 0; (groups[d] = groups[d] || []).push(a); });
   let html = '';

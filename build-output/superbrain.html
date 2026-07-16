@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="超脑 @ WAIC 2026 · 青少年 AI 特别展">
 <meta name="twitter:image" content="https://waic.sg.superbrain-ai.com/assets/og-share.png">
 <!-- 字体走系统栈（PingFang/Songti/SF Mono），不外链 Google Fonts -->
-<link rel="stylesheet" href="assets/style.css?v=0716d">
+<link rel="stylesheet" href="assets/style.css?v=0716e">
 <style>
 /* ========== 超脑专题页 · 页面级样式（沿用四色语义系统） ========== */
 /* 页面签名色 = 琥珀（side），与主站入口条一致 */
@@ -567,81 +567,83 @@
 const SB_AGENDA = [
   { key:"17", label:"07/17", wd:"周五",
     classroom:[
-      { t:"09:15–10:00", theme:"「AI 原住民体验计划」主旨演讲", sess:"主旨演讲", who:"王佳梁 Michael", hl:true },
-      { t:"12:00–12:45", theme:"线上展「生命力博物馆」发布 · 颁发证书（一）", sess:"特别展发布", who:"月亮" },
-      { t:"15:45–16:30", theme:"脑洞是第一生产力：青少年用 AI 创建的丰富世界", sess:"分享", who:"乐乐" }
+      { t:"09:15–10:00", theme:"“AI原住民体验计划”主旨演讲", sess:"主旨演讲", who:"王佳梁 Michael", hl:true },
+      { t:"12:00–12:30", theme:"线上展“生命力博物馆”发布", sess:"特别展发布", who:"月亮" },
+      { t:"12:30–12:45", theme:"颁发证书1", sess:"颁证", who:"王佳梁 Michael" },
+      { t:"15:45–16:30", theme:"脑洞是第一生产力：青少年用AI创建的丰富世界", sess:"分享", who:"乐乐" }
     ],
     salon:[
-      { t:"10:00–10:20", proj:"回音 Echo · 人工耳蜗术后辅助眼镜", booth:"4.1", org:"深圳科创学院" },
+      { t:"10:00–10:20", proj:"回音Echo——人工耳蜗术后辅助眼镜", booth:"4.1", org:"深圳科创学院" },
       { t:"10:20–10:40", proj:"铮铮眼镜", booth:"4.6", org:"点萌科创" },
-      { t:"10:40–11:00", proj:"HOLO DORO · 全息智能共养宠物", booth:"4.2", org:"深圳科创学院" },
-      { t:"11:00–11:20", proj:"星心", booth:"3.1", org:"北京栩多科技" },
+      { t:"10:40–11:00", proj:"HOLO DORO 全息智能共养宠物", booth:"4.2", org:"深圳科创学院" },
+      { t:"11:00–11:20", proj:"星心", booth:"3.1", org:"北京栩多科技咨询有限公司" },
       { t:"11:20–11:40", proj:"声桥 Echo Bridge", booth:"3.1", org:"WaytoAGI-EDU" },
       { t:"11:40–12:00", proj:"盲盒：出走的小包子", booth:"1", org:"艺下如何" },
-      { t:"13:30–13:50", proj:"天意将秋", booth:"2", org:"夏山" },
-      { t:"13:50–14:10", proj:"巡星 · 寻心", booth:"2", org:"夏山" },
+      { t:"13:30–13:50", proj:"天意将秋（团队）", booth:"2", org:"夏山" },
+      { t:"13:50–14:10", proj:"巡星 · 寻心（团队）", booth:"2", org:"夏山" },
       { t:"14:10–14:30", proj:"止战之战", booth:"2", org:"夏山" },
-      { t:"14:30–14:50", proj:"未来电梯 AI 小满", booth:"4.4", org:"WaytoAGI-EDU" },
-      { t:"14:50–15:10", proj:"动励打卡", booth:"4.3", org:"北京栩多科技" },
-      { t:"15:10–15:30", proj:"黑暗中的勇气 · 盲人足球", booth:"3.3", org:"Empact China" }
+      { t:"14:30–14:50", proj:"未来电梯AI小满", booth:"4.4", org:"WaytoAGI-EDU" },
+      { t:"14:50–15:10", proj:"动励打卡", booth:"4.3", org:"北京栩多科技咨询有限公司" },
+      { t:"15:10–15:30", proj:"黑暗中的勇气—盲人足球", booth:"3.3", org:"Empact China" }
     ] },
   { key:"18", label:"07/18", wd:"周六",
     classroom:[
-      { t:"09:15–10:00", theme:"思辨会：10 后创业，是新路径，还是又一轮卷王赛", sess:"思辨会", who:"刁劲翀" },
-      { t:"12:00–12:45", theme:"未来属于怎样的孩子？ · 颁发证书（二）", sess:"分享 · 颁证", who:"Mira" },
-      { t:"15:45–16:30", theme:"思辨会：AI 交给孩子，是失控还是成长？", sess:"思辨会", who:"刁劲翀" }
+      { t:"09:15–10:00", theme:"思辨会：10 后创业：是新路径，还是又一轮卷王赛", sess:"思辨会", who:"刁劲翀" },
+      { t:"12:00–12:30", theme:"未来属于怎样的孩子？", sess:"分享", who:"Mira" },
+      { t:"12:30–12:45", theme:"颁发证书2", sess:"颁证", who:"Maomao" },
+      { t:"15:45–16:30", theme:"思辨会：AI 交给孩子，是失控还是成长?", sess:"思辨会", who:"刁劲翀" }
     ],
     salon:[
-      { t:"10:00–10:20", proj:"SpiralMAIC", booth:"4.7", org:"清华 OpenMAIC" },
+      { t:"10:00–10:20", proj:"SpiralMAIC", booth:"4.7", org:"清华OpenMAIC " },
       { t:"10:20–10:40", proj:"涂鸦战争：纸上觉醒", booth:"4.4", org:"WaytoAGI-EDU" },
-      { t:"10:40–11:00", proj:"智学平台", booth:"4.7", org:"超脑 AI 孵化器" },
-      { t:"10:40–11:00", proj:"创新学习 Larry Academy", booth:"4.7", org:"超脑 AI 孵化器" },
+      { t:"10:40–11:00", proj:"智学平台", booth:"4.7", org:"超脑AI孵化器" },
+      { t:"10:40–11:00", proj:"创新学习Larry  Academy", booth:"4.7", org:"超脑AI孵化器" },
       { t:"11:00–11:20", proj:"1moji", booth:"1", org:"闽西职业技术学院" },
       { t:"11:20–12:00", proj:"艺术疗愈：梦境重现实验室", booth:"1", org:"艺下如何" },
-      { t:"11:20–12:00", proj:"鸟鸟世界 · 游戏 + IP", booth:"1", org:"艺下如何" },
+      { t:"11:20–12:00", proj:"鸟鸟世界 游戏+IP", booth:"1", org:"艺下如何" },
       { t:"11:20–12:00", proj:"把心情别在身上", booth:"1", org:"艺下如何" },
-      { t:"11:20–12:00", proj:"味觉回声 · 把味觉做成包装设计", booth:"1", org:"艺下如何" },
+      { t:"11:20–12:00", proj:"味觉回声-将味觉做成包装设计", booth:"1", org:"艺下如何" },
       { t:"13:30–13:50", proj:"指间跳动", booth:"3.5", org:"闽西职业技术学院" },
       { t:"13:50–14:10", proj:"袋鼠之战", booth:"2", org:"夏山" },
-      { t:"14:10–14:30", proj:"天空梦想家", booth:"2", org:"夏山" },
+      { t:"14:10–14:30", proj:"天空梦想家（个人）", booth:"2", org:"夏山" },
       { t:"14:10–14:30", proj:"战争", booth:"2", org:"夏山" },
       { t:"14:30–14:50", proj:"Polis", booth:"4.2", org:"深圳科创学院" },
       { t:"14:50–15:10", proj:"SceneBlocks 幕块启", booth:"4.2", org:"深圳科创学院" },
-      { t:"15:10–15:30", proj:"PaperLight · 纯视觉无接触空中钢琴", booth:"4.2", org:"深圳科创学院" }
+      { t:"15:10–15:30", proj:"PaperLight—— 基于纯计算机视觉的无接触式空中钢琴", booth:"4.2", org:"深圳科创学院" }
     ] },
   { key:"19", label:"07/19", wd:"周日",
     classroom:[
       { t:"09:15–10:00", theme:"思辨会：AI 原住民，有话说", sess:"思辨会", who:"刁劲翀" },
-      { t:"12:00–12:15", theme:"颁发证书（三）", sess:"颁证", who:"Maomao" },
+      { t:"12:00–12:15", theme:"颁发证书3", sess:"颁证", who:"Maomao" },
       { t:"15:45–16:30", theme:"思辨会：AI 时代，优秀家长的基本素养", sess:"思辨会", who:"刁劲翀" }
     ],
     salon:[
       { t:"10:00–10:20", proj:"共鸣原音", booth:"3.6", org:"中局" },
-      { t:"10:20–10:40", proj:"无界", booth:"3.3", org:"超脑 AI 孵化器" },
-      { t:"10:40–11:00", proj:"盲人助跑", booth:"3.4", org:"超脑 AI 孵化器" },
+      { t:"10:20–10:40", proj:"无界", booth:"3.3", org:"超脑AI孵化器" },
+      { t:"10:40–11:00", proj:"盲人助跑", booth:"3.4", org:"超脑AI孵化器" },
       { t:"13:30–13:50", proj:"SoilSense", booth:"3.2", org:"上海中学国际部" },
-      { t:"13:50–14:10", proj:"Operon", booth:"4.5", org:"超脑 AI 孵化器" },
-      { t:"14:10–14:30", proj:"《岁月书》· 人生回忆录 App", booth:"4.4", org:"WaytoAGI-EDU" },
-      { t:"14:30–14:50", proj:"宝珠奶酪", booth:"4.5", org:"超脑 AI 孵化器" }
+      { t:"13:50–14:10", proj:"Operon", booth:"4.5", org:"超脑AI孵化器" },
+      { t:"14:10–14:30", proj:"《岁月书》人生回忆录APP", booth:"4.4", org:"WaytoAGI-EDU" },
+      { t:"14:30–14:50", proj:"宝珠奶酪", booth:"4.5", org:"超脑AI孵化器" }
     ] },
   { key:"20", label:"07/20", wd:"周一",
     classroom:[
       { t:"09:15–10:00", theme:"思辨会：娃 + AI = ？", sess:"思辨会", who:"John Wu" },
-      { t:"12:00–12:45", theme:"AI for Good 圆桌论坛 + 签约仪式", sess:"论坛 · 签约", who:"Weiwei 等" },
-      { t:"13:00–13:15", theme:"颁发证书（四）", sess:"颁证", who:"Maomao" },
-      { t:"15:45–16:30", theme:"AI for Good 论坛", sess:"论坛", who:"詹娜 + 超脑学员" }
+      { t:"12:00–12:45", theme:"AI for Good 圆桌论坛 + 签约仪式", sess:"论坛", who:"Weiwei+" },
+      { t:"13:00–13:15", theme:"颁发证书4", sess:"颁证", who:"Maomao" },
+      { t:"15:45–16:30", theme:"AI for Good 论坛", sess:"论坛", who:"詹娜+超脑学员" }
     ],
     salon:[
-      { t:"10:00–10:20", proj:"OC 幻境", booth:"4.3", org:"北京栩多科技" },
-      { t:"10:20–10:40", proj:"梦核校园", booth:"4.4", org:"超脑 AI 孵化器" },
-      { t:"11:00–11:20", proj:"狄邦易物", booth:"4.7", org:"超脑 AI 孵化器" },
-      { t:"11:00–11:20", proj:"狄邦单词通", booth:"4.7", org:"超脑 AI 孵化器" },
+      { t:"10:00–10:20", proj:"OC 幻境", booth:"4.3", org:"北京栩多科技咨询有限公司" },
+      { t:"10:20–10:40", proj:"梦核校园", booth:"4.4", org:"超脑AI孵化器" },
+      { t:"11:00–11:20", proj:"狄邦易物", booth:"4.7", org:"超脑AI孵化器" },
+      { t:"11:00–11:20", proj:"狄邦单词通", booth:"4.7", org:"超脑AI孵化器" },
       { t:"11:20–11:40", proj:"基于 YOLO-Stutter 的防口吃演讲稿修订软件", booth:"3.2", org:"上海中学国际部" },
-      { t:"11:40–12:00", proj:"AMI BOT · 趋势筛选平台", booth:"4.3", org:"北京栩多科技" },
-      { t:"13:30–14:50", proj:"Profile Pilot · 基于 AI 的 GitHub 开发者分析系统", booth:"3.2", org:"上海中学国际部" },
-      { t:"13:50–14:10", proj:"无障碍赛车游戏", booth:"3.6", org:"超脑 AI 孵化器" },
-      { t:"14:10–14:30", proj:"步步有伴", booth:"3.4", org:"超脑 AI 孵化器" },
-      { t:"14:30–14:50", proj:"Realmefy / FrostLoop", booth:"4.5", org:"超脑 AI 孵化器" }
+      { t:"11:40–12:00", proj:"AMI BOT（趋势筛选平台 · Trend Testing Platform）", booth:"4.3", org:"北京栩多科技咨询有限公司" },
+      { t:"13:30–14:50", proj:"Profile Pilot基于 AI 的 GitHub 开发者分析系统", booth:"3.2", org:"上海中学国际部" },
+      { t:"13:50–14:10", proj:"无障碍赛车游戏", booth:"3.6", org:"超脑AI孵化器" },
+      { t:"14:10–14:30", proj:"步步有伴", booth:"3.4", org:"超脑AI孵化器" },
+      { t:"14:30–14:50", proj:"Realmefy / FrostLoop", booth:"4.5", org:"超脑AI孵化器" }
     ] }
 ];
 
