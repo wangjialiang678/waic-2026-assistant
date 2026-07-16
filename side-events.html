@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>边会 · 周边 · WAIC 2026 参展指南 · 超脑 AI 孵化器</title>
+<meta name="description" content="WAIC 2026 边会与周边活动聚合：报名链接、时间地点、官方入口。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  .side-hero { padding: clamp(3rem, 8vw, 5rem) 0 2rem; text-align: center; background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%); }
+  .side-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; margin-bottom: 0.6rem; }
+  .side-hero p { color: var(--text-soft); max-width: 55ch; margin: 0 auto; }
+  .side-content { max-width: min(960px, calc(100vw - 2rem)); margin: 0 auto; padding: 0 var(--gutter) clamp(3rem, 8vw, 5rem); }
+  .side-card { background: var(--surface-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; transition: transform 0.2s; }
+  .side-card:hover { transform: translateY(-2px); }
+  .side-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .side-card p { color: var(--text-soft); line-height: 1.7; margin-bottom: 0.75rem; }
+  .side-card a { color: var(--accent-blue); text-decoration: none; font-weight: 600; }
+  .side-empty { text-align: center; padding: 3rem; color: var(--text-mute); }
+  .side-tip { background: rgba(78,107,255,0.08); border-left: 3px solid var(--accent-blue); padding: 1rem 1.25rem; border-radius: 4px; margin-bottom: 1.5rem; color: var(--text-soft); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand"><img src="/assets/logo.jpg" alt="超脑 AI 孵化器" class="nav-logo">WAIC 2026 参展指南</a>
+    <div class="nav-links">
+      <a href="/index.html#list">论坛</a>
+      <a href="/ai-native.html">AI 原住民计划</a>
+      <a href="/project-wall.html">项目墙</a>
+      <a href="/intel.html">情报站</a>
+      <a href="/exhibitors.html">参展入口</a>
+      <a href="/side-events.html">边会</a>
+      <a href="/index.html#about">关于</a>
+      <a href="/install.html" class="nav-kb">接入 AI Agent</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="side-hero">
+  <div class="container">
+    <h1>边会 · 周边</h1>
+    <p>大会官方边会、周边活动、社区自发活动入口。想去参加，直接报名。</p>
+  </div>
+</section>
+
+<section class="side-content">
+  <div class="side-tip">
+    边会周边信息持续更新中。你也可以通过 <a href="https://www.worldaic.com.cn/" target="_blank" rel="noopener">WAIC 官方</a> 或 Hi WAIC APP 查看最新活动。
+  </div>
+  <div id="side-events-list">
+    <div class="side-empty">正在加载…</div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer" id="about">
+  <div class="container">
+    <div>
+      <div class="col-title">WAIC 2026 参展指南</div>
+      <p>本平台由 <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener">超脑 AI 孵化器</a> 搭建维护</p>
+    </div>
+    <div>
+      <div class="col-title">超脑 AI 孵化器</div>
+      <p><a href="https://www.superbrain-ai.com" target="_blank" rel="noopener"><strong>超脑链官网 · www.superbrain-ai.com</strong></a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(async function () {
+  const container = document.getElementById('side-events-list');
+  if (!container) return;
+  function esc(s) {
+    const d = document.createElement('div');
+    d.textContent = s || '';
+    return d.innerHTML;
+  }
+  try {
+    const res = await fetch('/data/side-events.json');
+    if (!res.ok) throw new Error('status ' + res.status);
+    const data = await res.json();
+    const items = data.items || [];
+    if (items.length === 0) {
+      container.innerHTML = '<div class="side-empty">暂无边会信息，请关注 WAIC 官方更新。</div>';
+      return;
+    }
+    container.innerHTML = items.map(item => `
+      <div class="side-card">
+        <h3>${esc(item.title)}</h3>
+        <p>${esc(item.summary)}</p>
+        <a href="${esc(item.url)}" target="_blank" rel="noopener">查看详情 →</a>
+      </div>
+    `).join('');
+  } catch (e) {
+    container.innerHTML = '<div class="side-empty">加载失败，请刷新重试。</div>';
+  }
+})();
+</script>
+
+
+<button type="button" class="ai-assistant-fab" id="ai-assistant-fab" aria-label="AI 助手">
+  <span class="sparkle" aria-hidden="true">✨</span>
+  <span>AI 助手</span>
+</button>
+
+<div class="ai-assistant-modal" id="ai-assistant-modal" aria-hidden="true">
+  <div class="ai-assistant-backdrop"></div>
+  <div class="ai-assistant-card">
+    <button type="button" class="ai-assistant-close" id="ai-assistant-close" aria-label="关闭">×</button>
+    <h4>AI 助手</h4>
+    <div class="ai-assistant-questions">
+      <button type="button" class="ai-assistant-question" data-question="Michael 什么时候演讲？">Michael 什么时候演讲？</button>
+      <button type="button" class="ai-assistant-question" data-question="AI 原住民计划在哪？">AI 原住民计划在哪？</button>
+      <button type="button" class="ai-assistant-question" data-question="如何查看我的日程？">如何查看我的日程？</button>
+    </div>
+    <form class="ai-assistant-form" id="ai-assistant-form">
+      <input type="text" id="ai-assistant-input" placeholder="输入你的问题…" autocomplete="off">
+      <button type="submit">发送</button>
+    </form>
+    <div class="ai-assistant-answer" id="ai-assistant-answer">
+      <p>有什么可以帮你的？</p>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/ai-assistant.js"></script>
+
+</body>
+</html>

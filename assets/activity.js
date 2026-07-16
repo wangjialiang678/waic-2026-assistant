@@ -117,6 +117,77 @@ function toggleFavorite() {
    ============================================================ */
 
 async function shareActivity() {
+  if (!currentActivity) return;
+
+  const modal = document.getElementById('share-modal');
+  const preview = document.getElementById('share-preview');
+  const target = document.getElementById('share-render-target');
+  if (!modal || !preview || !target) {
+    // fallback to native share
+    fallbackNativeShare();
+    return;
+  }
+
+  const start = currentActivity.start_time ? currentActivity.start_time.slice(11, 16) : '?';
+  const end = currentActivity.end_time ? currentActivity.end_time.slice(11, 16) : '?';
+  const date = currentActivity.date_label || `Day ${currentActivity.day || '?'}`;
+  const venue = [currentActivity.honeycomb?.name, currentActivity.venue].filter(Boolean).join(' · ');
+  const badge = currentActivity.superbrain?.badge_label ? `<div class="share-activity-badge">${escape(currentActivity.superbrain.badge_label)}</div>` : '';
+  const desc = (currentActivity.description || '').slice(0, 120) + ((currentActivity.description || '').length > 120 ? '…' : '');
+
+  target.innerHTML = `
+    <div class="share-activity-card">
+      ${badge}
+      <div class="share-activity-title">${escape(currentActivity.title || '')}</div>
+      <div class="share-activity-meta">
+        <div>${escape(date)} · ${escape(start)} - ${escape(end)}</div>
+        <div>${escape(venue || '场地待定')}</div>
+      </div>
+      <div class="share-activity-desc">${escape(desc)}</div>
+      <div class="share-card-footer">
+        <span class="share-card-brand">WAIC 2026 参展指南 · 超脑 AI 孵化器</span>
+        <span>waic.sg.superbrain-ai.com</span>
+      </div>
+    </div>
+  `;
+
+  if (typeof html2canvas !== 'function') {
+    target.style.visibility = 'hidden';
+    fallbackNativeShare();
+    return;
+  }
+
+  target.style.visibility = 'visible';
+  html2canvas(target.firstElementChild, { scale: 2, backgroundColor: '#ffffff' }).then(canvas => {
+    target.style.visibility = 'hidden';
+    const img = document.createElement('img');
+    img.src = canvas.toDataURL('image/png');
+    img.alt = currentActivity.title || '分享图';
+    preview.innerHTML = '';
+    preview.appendChild(img);
+
+    const downloadBtn = document.getElementById('share-download');
+    if (downloadBtn) {
+      downloadBtn.onclick = () => {
+        const a = document.createElement('a');
+        a.href = canvas.toDataURL('image/png');
+        a.download = `waic2026-${String(currentActivity.id).slice(0, 8)}.png`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      };
+    }
+
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  }).catch(err => {
+    target.style.visibility = 'hidden';
+    console.error('html2canvas failed', err);
+    fallbackNativeShare();
+  });
+}
+
+function fallbackNativeShare() {
   const url = window.location.href;
   const title = currentActivity ? currentActivity.title : document.title;
   const text = currentActivity
@@ -124,22 +195,17 @@ async function shareActivity() {
     : 'WAIC 2026 参展指南';
 
   if (navigator.share) {
-    try {
-      await navigator.share({ title, text, url });
-      return;
-    } catch (e) {
-      if (e.name !== 'AbortError') {
-        console.warn('Web Share 失败', e);
-      }
-    }
+    navigator.share({ title, text, url }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(url).then(() => showToast('链接已复制')).catch(() => showToast('复制失败'));
   }
+}
 
-  try {
-    await navigator.clipboard.writeText(url);
-    showToast('链接已复制到剪贴板');
-  } catch (e) {
-    console.warn('复制失败', e);
-    showToast('分享链接：' + url);
+function closeShareModal() {
+  const modal = document.getElementById('share-modal');
+  if (modal) {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
   }
 }
 
@@ -265,6 +331,11 @@ function renderDetail(act, transcriptsMap = {}) {
 
   document.getElementById('btn-favorite')?.addEventListener('click', toggleFavorite);
   document.getElementById('btn-share')?.addEventListener('click', shareActivity);
+  document.getElementById('share-modal-close')?.addEventListener('click', closeShareModal);
+  document.getElementById('share-modal-backdrop')?.addEventListener('click', closeShareModal);
+  document.getElementById('share-copy-link')?.addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href).then(() => showToast('链接已复制')).catch(() => showToast('复制失败'));
+  });
   document.getElementById('transcript-search')?.addEventListener('input', onTranscriptSearch);
 }
 
@@ -443,5 +514,80 @@ function renderSuperbrain(act) {
 /* ============================================================
    Boot
    ============================================================ */
+
+
+/* ============================================================
+   Comments (localStorage demo)
+   ============================================================ */
+
+function getCommentsKey() {
+  return 'waic_comments_' + (currentActivity ? currentActivity.id : 'global');
+}
+
+function getComments() {
+  try {
+    const raw = localStorage.getItem(getCommentsKey());
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveComments(comments) {
+  try {
+    localStorage.setItem(getCommentsKey(), JSON.stringify(comments));
+  } catch (e) {
+    console.warn('无法保存评论', e);
+  }
+}
+
+function renderComments() {
+  const listEl = document.getElementById('comment-list');
+  if (!listEl) return;
+  const comments = getComments();
+  if (comments.length === 0) {
+    listEl.innerHTML = '<div class="comment-empty">还没有评论，来说两句吧。</div>';
+    return;
+  }
+  listEl.innerHTML = comments.map(c => `
+    <div class="comment-item">
+      <div class="comment-header">
+        <span class="comment-author">${escape(c.name || '匿名')}</span>
+        <span class="comment-time">${escape(c.time || '')}</span>
+      </div>
+      <div class="comment-body">${escape(c.text || '')}</div>
+    </div>
+  `).join('');
+}
+
+function submitComment() {
+  const nameEl = document.getElementById('comment-name');
+  const textEl = document.getElementById('comment-text');
+  if (!nameEl || !textEl) return;
+  const name = nameEl.value.trim();
+  const text = textEl.value.trim();
+  if (!text) {
+    alert('请输入评论内容');
+    return;
+  }
+  const comments = getComments();
+  comments.unshift({
+    name: name || '匿名',
+    text,
+    time: new Date().toLocaleString('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+  });
+  saveComments(comments);
+  textEl.value = '';
+  renderComments();
+}
+
+function bindComments() {
+  const submitBtn = document.getElementById('comment-submit');
+  if (submitBtn) submitBtn.addEventListener('click', submitComment);
+  renderComments();
+}
+
+
+bindComments();
 
 loadActivity();

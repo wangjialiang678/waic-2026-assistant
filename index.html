@@ -20,6 +20,10 @@
     <div class="nav-links">
       <a href="#list">论坛</a>
       <a href="/ai-native.html">AI 原住民计划</a>
+      <a href="/project-wall.html">项目墙</a>
+      <a href="/intel.html">情报站</a>
+      <a href="/exhibitors.html">参展入口</a>
+      <a href="/side-events.html">边会</a>
       <a href="#about">关于</a>
       <a href="/install.html" class="nav-kb">接入 AI Agent</a>
     </div>
@@ -100,8 +104,12 @@
     <button class="drawer-close" id="schedule-drawer-close" type="button" aria-label="关闭">×</button>
   </div>
   <div class="drawer-body">
-    <div class="schedule-empty">你还没有收藏任何论坛。</div>
     <div class="schedule-list" id="schedule-list"></div>
+  </div>
+  <div class="drawer-actions">
+    <button type="button" class="btn btn-small" id="schedule-export-ics">导出日历 (.ics)</button>
+    <button type="button" class="btn btn-small" id="schedule-share">生成分享长图</button>
+    <button type="button" class="btn btn-small btn-ghost" id="schedule-clear">清空日程</button>
   </div>
 </aside>
 
@@ -141,6 +149,51 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script src="/assets/app.js"></script>
+
+<button type="button" class="ai-assistant-fab" id="ai-assistant-fab" aria-label="AI 助手">
+  <span class="sparkle" aria-hidden="true">✨</span>
+  <span>AI 助手</span>
+</button>
+
+<div class="ai-assistant-modal" id="ai-assistant-modal" aria-hidden="true">
+  <div class="ai-assistant-backdrop"></div>
+  <div class="ai-assistant-card">
+    <button type="button" class="ai-assistant-close" id="ai-assistant-close" aria-label="关闭">×</button>
+    <h4>AI 助手</h4>
+    <div class="ai-assistant-questions">
+      <button type="button" class="ai-assistant-question" data-question="Michael 什么时候演讲？">Michael 什么时候演讲？</button>
+      <button type="button" class="ai-assistant-question" data-question="AI 原住民计划在哪？">AI 原住民计划在哪？</button>
+      <button type="button" class="ai-assistant-question" data-question="如何查看我的日程？">如何查看我的日程？</button>
+    </div>
+    <form class="ai-assistant-form" id="ai-assistant-form">
+      <input type="text" id="ai-assistant-input" placeholder="输入你的问题…" autocomplete="off">
+      <button type="submit">发送</button>
+    </form>
+    <div class="ai-assistant-answer" id="ai-assistant-answer">
+      <p>有什么可以帮你的？</p>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/ai-assistant.js"></script>
+
+<aside class="share-modal" id="share-modal" aria-hidden="true">
+  <div class="share-modal-backdrop" id="share-modal-backdrop"></div>
+  <div class="share-modal-card">
+    <div class="share-modal-header">
+      <h3 class="share-modal-title">生成分享图</h3>
+      <button type="button" class="share-modal-close" id="share-modal-close" aria-label="关闭">×</button>
+    </div>
+    <div class="share-preview" id="share-preview"></div>
+    <div class="share-actions">
+      <button type="button" class="btn btn-primary" id="share-download">下载图片</button>
+      <button type="button" class="btn" id="share-copy-link">复制链接</button>
+    </div>
+  </div>
+</aside>
+<div class="share-render-target" id="share-render-target" aria-hidden="true"></div>
+
 </body>
 </html>

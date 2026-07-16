@@ -14,7 +14,7 @@
 <style>
   .ai-hero {
     padding: clamp(4rem, 10vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
-    background: linear-gradient(180deg, var(--paper) 0%, var(--ivory) 100%);
+    background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
   }
   .ai-hero-inner {
     max-width: var(--max-w);
@@ -30,22 +30,22 @@
   }
   .ai-hero .tagline {
     font-size: clamp(1.1rem, 2vw, 1.4rem);
-    color: var(--ink-soft);
+    color: var(--text-soft);
     max-width: 36ch;
     margin: 0 auto 1.5rem;
   }
   .ai-hero .hero-meta {
     font-family: var(--font-sans);
-    color: var(--ink-mute);
+    color: var(--text-mute);
     font-size: 0.95rem;
     letter-spacing: 0.02em;
   }
 
   .ai-stats {
     padding: clamp(2.5rem, 6vw, 4rem) 0;
-    background: var(--paper);
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
+    background: var(--bg-0);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
   .stats-grid {
     max-width: var(--max-w);
@@ -59,28 +59,28 @@
   @media (max-width: 480px) { .stats-grid { grid-template-columns: 1fr; } }
   .stat-card {
     padding: 1.6rem 1.4rem;
-    background: var(--ivory);
-    border: 1px solid var(--rule);
-    border-left: 3px solid var(--forest);
+    background: var(--bg-1);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-blue);
     border-radius: 2px;
     text-align: center;
   }
   .stat-value {
     font-size: clamp(2rem, 4vw, 2.6rem);
     font-weight: 700;
-    color: var(--forest-deep);
+    color: var(--accent-blue);
     line-height: 1;
   }
   .stat-label {
     font-family: var(--font-sans);
-    color: var(--ink-mute);
+    color: var(--text-mute);
     font-size: 0.9rem;
     margin-top: 0.6rem;
   }
 
   .ai-intro {
     padding: clamp(3rem, 8vw, 5rem) 0;
-    background: var(--ivory);
+    background: var(--bg-1);
   }
   .ai-intro-inner {
     max-width: var(--text-w);
@@ -91,13 +91,13 @@
   .ai-intro .question {
     font-size: clamp(1.8rem, 4vw, 2.6rem);
     font-weight: 600;
-    color: var(--forest-deep);
+    color: var(--accent-blue);
     margin-bottom: 1.2rem;
   }
   .ai-intro p {
     font-size: 1.1rem;
     line-height: 1.9;
-    color: var(--ink-soft);
+    color: var(--text-soft);
   }
 
   .ai-stories {
@@ -120,10 +120,10 @@
   .story-group-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--forest-deep);
+    color: var(--accent-blue);
     margin-bottom: 1.2rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--rule);
+    border-bottom: 1px solid var(--border);
   }
   .story-cards {
     display: grid;
@@ -131,8 +131,8 @@
     gap: 1.5rem;
   }
   .story-card {
-    background: var(--ivory);
-    border: 1px solid var(--rule);
+    background: var(--bg-1);
+    border: 1px solid var(--border);
     border-radius: 2px;
     padding: 1.5rem;
   }
@@ -140,24 +140,24 @@
     font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 0.4rem;
-    color: var(--ink);
+    color: var(--text);
   }
   .story-card-author {
     font-family: var(--font-sans);
-    color: var(--bronze-deep);
+    color: var(--accent-cyan);
     font-size: 0.9rem;
     margin-bottom: 0.8rem;
   }
   .story-card-summary {
     font-size: 0.98rem;
     line-height: 1.8;
-    color: var(--ink-soft);
+    color: var(--text-soft);
   }
 
   .ai-blocks {
     padding: clamp(3rem, 8vw, 5rem) 0;
-    background: var(--paper);
-    border-top: 1px solid var(--rule);
+    background: var(--bg-0);
+    border-top: 1px solid var(--border);
   }
   .ai-blocks-inner {
     max-width: var(--max-w);
@@ -176,9 +176,9 @@
     gap: 1.5rem;
   }
   .block-card {
-    background: var(--card);
-    border: 1px solid var(--rule);
-    border-top: 3px solid var(--clay);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent-blue);
     border-radius: 2px;
     padding: 1.8rem;
   }
@@ -189,20 +189,20 @@
   }
   .block-card .subtitle {
     font-family: var(--font-sans);
-    color: var(--bronze-deep);
+    color: var(--accent-cyan);
     font-size: 0.95rem;
     margin-bottom: 1rem;
   }
   .block-card p {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--ink-soft);
+    color: var(--text-soft);
   }
 
   .ai-michael {
     padding: clamp(3rem, 8vw, 5rem) 0;
-    background: var(--ivory);
-    border-top: 1px solid var(--rule);
+    background: var(--bg-1);
+    border-top: 1px solid var(--border);
   }
   .ai-michael-inner {
     max-width: var(--max-w);
@@ -219,9 +219,9 @@
     max-width: 720px;
     margin: 0 auto;
     padding: 2rem;
-    background: var(--card);
-    border: 1px solid var(--rule);
-    border-left: 3px solid var(--clay);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-blue);
     border-radius: 2px;
   }
   .michael-title {
@@ -231,12 +231,12 @@
   }
   .michael-speaker {
     font-family: var(--font-sans);
-    color: var(--ink-soft);
+    color: var(--text-soft);
     margin-bottom: 0.4rem;
   }
   .michael-time {
     font-family: var(--font-sans);
-    color: var(--ink-mute);
+    color: var(--text-mute);
     font-size: 0.9rem;
     margin-bottom: 1.2rem;
   }
@@ -256,7 +256,7 @@
     margin-bottom: 0.8rem;
   }
   .ai-cta p {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     margin-bottom: 1.5rem;
   }
   .cta-actions {
@@ -264,6 +264,16 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .ai-hero-badges {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+  }
+  .ai-hero-badges .badge {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.9rem;
   }
 </style>
 </head>
@@ -275,6 +285,10 @@
     <div class="nav-links">
       <a href="/index.html#list">论坛</a>
       <a href="/ai-native.html">AI 原住民计划</a>
+      <a href="/project-wall.html">项目墙</a>
+      <a href="/intel.html">情报站</a>
+      <a href="/exhibitors.html">参展入口</a>
+      <a href="/side-events.html">边会</a>
       <a href="/index.html#about">关于</a>
       <a href="/install.html" class="nav-kb">接入 AI Agent</a>
     </div>
@@ -286,9 +300,14 @@
 <section class="ai-hero">
   <div class="ai-hero-inner">
     <div class="eyebrow">超脑 AI 孵化器 · WAIC 2026</div>
+    <div class="ai-hero-badges"><span class="badge badge-super">超脑推荐</span></div>
     <h1>AI 原住民计划</h1>
     <p class="tagline">10 后用 AI，回应真实世界</p>
     <p class="hero-meta">2026.07.17 - 07.20 · 上海 · 徐汇西岸国际会展中心 4 楼</p>
+    <div class="cta-actions" style="justify-content:center;margin-top:1.5rem;">
+      <a href="/project-wall.html" class="btn btn-primary">打开 AI 原住民项目墙</a>
+      <a href="/index.html#list" class="btn">查看论坛日程</a>
+    </div>
   </div>
 </section>
 
@@ -331,7 +350,7 @@
       <div class="michael-title" id="michael-title">在 AI 中，看见具体的人</div>
       <div class="michael-speaker" id="michael-speaker">王佳梁（Michael）· 超脑 AI 孵化器发起人</div>
       <div class="michael-time" id="michael-time">2026-07-19 · WAIC AI 教育论坛</div>
-      <a href="/index.html#list" class="btn btn-primary" id="michael-cta">查看相关论坛</a>
+      <a href="/activity.html?id=be8b6b216f974effb4b386f26c0adee3" class="btn btn-primary" id="michael-cta">查看相关论坛</a>
     </div>
   </div>
 </section>
@@ -485,5 +504,31 @@
   load();
 })();
 </script>
+<button type="button" class="ai-assistant-fab" id="ai-assistant-fab" aria-label="AI 助手">
+  <span class="sparkle" aria-hidden="true">✨</span>
+  <span>AI 助手</span>
+</button>
+
+<div class="ai-assistant-modal" id="ai-assistant-modal" aria-hidden="true">
+  <div class="ai-assistant-backdrop"></div>
+  <div class="ai-assistant-card">
+    <button type="button" class="ai-assistant-close" id="ai-assistant-close" aria-label="关闭">×</button>
+    <h4>AI 助手</h4>
+    <div class="ai-assistant-questions">
+      <button type="button" class="ai-assistant-question" data-question="Michael 什么时候演讲？">Michael 什么时候演讲？</button>
+      <button type="button" class="ai-assistant-question" data-question="AI 原住民计划在哪？">AI 原住民计划在哪？</button>
+      <button type="button" class="ai-assistant-question" data-question="如何查看我的日程？">如何查看我的日程？</button>
+    </div>
+    <form class="ai-assistant-form" id="ai-assistant-form">
+      <input type="text" id="ai-assistant-input" placeholder="输入你的问题…" autocomplete="off">
+      <button type="submit">发送</button>
+    </form>
+    <div class="ai-assistant-answer" id="ai-assistant-answer">
+      <p>有什么可以帮你的？</p>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/ai-assistant.js"></script>
 </body>
 </html>

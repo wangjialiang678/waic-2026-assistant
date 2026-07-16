@@ -32428,10 +32428,10 @@
       "official_url": "https://www.worldaic.com.cn/events/forum/detail/be8b6b216f974effb4b386f26c0adee3",
       "search_text": "waic·amplified individual 在ai中看见具体的人（深耕与守望） amplified individual: seeing the individual in ai (depth and endurance) 人才生态 盛宴厅 banquet hall 世博桐森酒店 thompson shanghai expo 下午场，在最动人的故事里，听见最前沿的技术风向。\n下一代算力架构、具身智能、科学智能、脑机接口、ai教育、能源——没有参数轰炸，没有术语围墙。\n你会听到的，是这些硬核技术背后，一次次的试错和重来；是实验室里真实的欢呼，和更真实的沉默。也会听到，那些闪光时刻背后，具体的犹豫和具体的坚持。\n技术也许很远，但做技术的人很近。 张娅 李瑞 王佳梁 裘皓明 熊胤江‌ 扈鸿业 游洋威 曹鹏 黄超 吴泰霖 于晓轶 威客引力（waic）",
       "superbrain": {
-        "recommended": false,
-        "michael_speaking": false,
+        "recommended": true,
+        "michael_speaking": true,
         "ai_native_related": false,
-        "badge_label": ""
+        "badge_label": "Michael主讲"
       }
     },
     {

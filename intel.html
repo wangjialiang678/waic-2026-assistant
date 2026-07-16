@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>情报站 · WAIC 2026 参展指南 · 超脑 AI 孵化器</title>
+<meta name="description" content="WAIC 2026 情报站：官方入口、参会攻略、论坛日程、媒体报道、合作方资料一站式聚合。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  .intel-hero {
+    padding: clamp(3rem, 8vw, 5rem) 0 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
+  }
+  .intel-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+  .intel-hero p {
+    color: var(--text-soft);
+    max-width: 50ch;
+    margin: 0 auto;
+  }
+  .intel-toolbar {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 1.5rem var(--gutter);
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .intel-toolbar input {
+    flex: 1;
+    min-width: 220px;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill, 999px);
+    background: var(--surface-elevated);
+    color: var(--text);
+    font-family: var(--font-sans);
+  }
+  .intel-categories {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .intel-cat {
+    padding: 0.45rem 0.9rem;
+    border-radius: var(--radius-pill, 999px);
+    border: 1px solid var(--border);
+    background: var(--surface-elevated);
+    color: var(--text-soft);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+  }
+  .intel-cat.active,
+  .intel-cat:hover {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+  }
+  .intel-grid {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--gutter) clamp(3rem, 8vw, 5rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+  .intel-card {
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+  }
+  .intel-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  }
+  .intel-card-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(78, 107, 255, 0.12);
+    color: var(--accent-blue);
+    margin-bottom: 0.75rem;
+    align-self: flex-start;
+  }
+  .intel-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  .intel-card-summary {
+    font-size: 0.92rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    flex: 1;
+  }
+  .intel-card-source {
+    font-size: 0.8rem;
+    color: var(--text-mute);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .intel-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-mute);
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand"><img src="/assets/logo.jpg" alt="超脑 AI 孵化器" class="nav-logo">WAIC 2026 参展指南</a>
+    <div class="nav-links">
+      <a href="/index.html#list">论坛</a>
+      <a href="/ai-native.html">AI 原住民计划</a>
+      <a href="/project-wall.html">项目墙</a>
+      <a href="/intel.html">情报站</a>
+      <a href="/exhibitors.html">参展入口</a>
+      <a href="/side-events.html">边会</a>
+      <a href="/index.html#about">关于</a>
+      <a href="/install.html" class="nav-kb">接入 AI Agent</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="intel-hero">
+  <div class="container">
+    <h1>情报站</h1>
+    <p>官方入口、参会攻略、论坛日程、媒体报道、合作方资料，一站式聚合。</p>
+  </div>
+</section>
+
+<section class="intel-toolbar">
+  <input type="search" id="intel-search" placeholder="搜索情报标题、来源、关键词…">
+  <div class="intel-categories" id="intel-categories">
+    <button class="intel-cat active" data-cat="">全部</button>
+  </div>
+</section>
+
+<section class="intel-grid" id="intel-grid">
+  <div class="intel-empty">正在加载情报…</div>
+</section>
+</main>
+
+<footer class="site-footer" id="about">
+  <div class="container">
+    <div>
+      <div class="col-title">WAIC 2026 参展指南</div>
+      <p>数据版本 <span id="data-version" class="mono">...</span></p>
+      <p>本平台由 <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener">超脑 AI 孵化器</a> 搭建维护</p>
+      <p>活动来源 <a href="https://www.worldaic.com.cn/" target="_blank" rel="noopener">WAIC 官方</a></p>
+    </div>
+    <div>
+      <div class="col-title">超脑 AI 孵化器</div>
+      <p><a href="https://www.superbrain-ai.com" target="_blank" rel="noopener"><strong>超脑链官网 · www.superbrain-ai.com</strong></a></p>
+      <p>让热爱，在真实世界创造未来</p>
+    </div>
+    <div>
+      <div class="col-title">技术接入</div>
+      <p><a href="/install.html">AI Agent Skill</a></p>
+      <p><a href="/data/activities.json" target="_blank">论坛 API</a></p>
+      <p><a href="/data/intel.json" target="_blank">情报 API</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  let INTEL = { categories: [], items: [] };
+
+  function esc(s) {
+    const d = document.createElement('div');
+    d.textContent = s || '';
+    return d.innerHTML;
+  }
+
+  function renderCategories() {
+    const container = document.getElementById('intel-categories');
+    if (!container) return;
+    const cats = ['全部', ...(INTEL.categories || [])];
+    container.innerHTML = cats.map((c, i) =>
+      `<button class="intel-cat ${i === 0 ? 'active' : ''}" data-cat="${esc(c === '全部' ? '' : c)}">${esc(c)}</button>`
+    ).join('');
+    container.querySelectorAll('.intel-cat').forEach(btn => {
+      btn.addEventListener('click', () => {
+        container.querySelectorAll('.intel-cat').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderItems();
+      });
+    });
+  }
+
+  function renderItems() {
+    const grid = document.getElementById('intel-grid');
+    const search = document.getElementById('intel-search');
+    if (!grid) return;
+    const q = (search ? search.value : '').toLowerCase().trim();
+    const activeCat = document.querySelector('.intel-cat.active');
+    const cat = activeCat ? activeCat.dataset.cat : '';
+
+    const filtered = (INTEL.items || []).filter(item => {
+      const matchCat = !cat || item.category === cat;
+      const matchQ = !q ||
+        (item.title || '').toLowerCase().includes(q) ||
+        (item.source || '').toLowerCase().includes(q) ||
+        (item.summary || '').toLowerCase().includes(q);
+      return matchCat && matchQ;
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '<div class="intel-empty">没有找到匹配的情报。</div>';
+      return;
+    }
+
+    grid.innerHTML = filtered.map(item => `
+      <a class="intel-card" href="${esc(item.url)}" target="_blank" rel="noopener">
+        <span class="intel-card-category">${esc(item.category)}</span>
+        <div class="intel-card-title">${esc(item.title)}</div>
+        <div class="intel-card-summary">${esc(item.summary)}</div>
+        <div class="intel-card-source">
+          <span>来源：${esc(item.source)}</span>
+          <span>→</span>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  async function load() {
+    try {
+      const res = await fetch('/data/intel.json');
+      if (!res.ok) throw new Error('status ' + res.status);
+      INTEL = await res.json();
+      renderCategories();
+      renderItems();
+      const versionEl = document.getElementById('data-version');
+      if (versionEl && INTEL.version) versionEl.textContent = INTEL.version;
+    } catch (e) {
+      document.getElementById('intel-grid').innerHTML = '<div class="intel-empty">加载失败，请刷新重试。</div>';
+    }
+  }
+
+  const searchEl = document.getElementById('intel-search');
+  if (searchEl) searchEl.addEventListener('input', renderItems);
+
+  load();
+})();
+</script>
+
+</body>
+</html>

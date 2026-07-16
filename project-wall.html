@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 原住民项目墙 · WAIC 2026 · 超脑 AI 孵化器</title>
+<meta name="description" content="WAIC 2026 AI 原住民项目墙：51 个入选项目，支持搜索、筛选、分享与留言交流。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  .wall-hero { padding: clamp(3.5rem, 8vw, 6rem) 0 2rem; background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%); }
+  .wall-hero-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: end; }
+  .wall-hero h1 { font-size: clamp(2.1rem, 6vw, 4rem); line-height: 1.08; margin: 0.5rem 0 1rem; }
+  .wall-hero p { color: var(--text-soft); max-width: 58ch; }
+  .wall-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.4rem; }
+  .wall-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .wall-fact { background: var(--surface-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+  .wall-fact .n { display: block; font: 700 clamp(1.5rem, 3vw, 2.25rem)/1 var(--font-sans); color: var(--accent-blue); }
+  .wall-fact .l { color: var(--text-mute); font-size: 0.86rem; margin-top: 0.35rem; }
+  .wall-toolbar { max-width: var(--max-w); margin: 0 auto; padding: 1.25rem var(--gutter); display: grid; grid-template-columns: minmax(220px, 1fr) 180px 220px; gap: 0.75rem; align-items: center; }
+  .wall-toolbar input, .wall-toolbar select { width: 100%; border: 1px solid var(--border); background: var(--surface-elevated); color: var(--text); border-radius: 999px; padding: 0.72rem 1rem; font-family: var(--font-sans); }
+  .status-strip { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter) 1rem; display: flex; gap: 0.55rem; flex-wrap: wrap; align-items: center; }
+  .status-chip { border: 1px solid var(--border); background: var(--surface); color: var(--text-soft); border-radius: 999px; padding: 0.42rem 0.78rem; cursor: pointer; font-family: var(--font-sans); font-size: 0.84rem; }
+  .status-chip.active, .status-chip:hover { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
+  .wall-count { margin-left: auto; color: var(--text-mute); font-size: 0.86rem; }
+  .project-grid { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter) clamp(3rem, 7vw, 5rem); display: grid; grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); gap: 1rem; }
+  .project-card { background: var(--surface-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; min-height: 280px; display: flex; flex-direction: column; transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease; }
+  .project-card:hover { transform: translateY(-3px); border-color: var(--border-strong); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+  .project-top { display: flex; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.65rem; }
+  .project-card h2 { font-size: 1.08rem; line-height: 1.35; margin: 0; }
+  .project-no { color: var(--text-mute); font-family: var(--font-mono); font-size: 0.8rem; white-space: nowrap; }
+  .project-status { width: fit-content; border-radius: 999px; padding: 0.22rem 0.55rem; font-size: 0.74rem; font-weight: 700; margin-bottom: 0.65rem; }
+  .status-real { background: rgba(34,197,94,0.16); color: #16a34a; }
+  .status-demo { background: rgba(245,158,11,0.18); color: #d97706; }
+  .status-proto { background: rgba(34,211,238,0.16); color: var(--accent-cyan); }
+  .status-info { background: rgba(148,163,184,0.18); color: var(--text-mute); }
+  .project-meta { display: flex; gap: 0.45rem; flex-wrap: wrap; color: var(--text-mute); font-size: 0.82rem; margin-bottom: 0.75rem; }
+  .project-intro { color: var(--text-soft); font-size: 0.92rem; line-height: 1.65; flex: 1; }
+  .project-links { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.9rem; }
+  .project-links a, .project-links button { border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 999px; padding: 0.42rem 0.7rem; font: 600 0.78rem/1 var(--font-sans); text-decoration: none; cursor: pointer; }
+  .project-links a:hover, .project-links button:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+  .wall-community { max-width: var(--max-w); margin: 0 auto clamp(3rem, 7vw, 5rem); padding: 0 var(--gutter); display: grid; grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr); gap: 1rem; }
+  .community-panel { background: var(--surface-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+  .community-panel h2 { font-size: 1.2rem; margin-bottom: 0.75rem; }
+  .community-panel input, .community-panel textarea { width: 100%; border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px; padding: 0.75rem; margin-bottom: 0.65rem; font-family: var(--font-sans); }
+  .community-panel textarea { min-height: 98px; resize: vertical; }
+  .comment-item { border-bottom: 1px solid var(--border); padding: 0.8rem 0; }
+  .comment-item:last-child { border-bottom: 0; }
+  .comment-meta { color: var(--text-mute); font-size: 0.8rem; margin-bottom: 0.3rem; }
+  .empty { grid-column: 1 / -1; text-align: center; color: var(--text-mute); padding: 3rem 1rem; }
+  .share-render-target { position: fixed; left: -9999px; top: 0; width: 900px; visibility: hidden; }
+  .wall-share-card { width: 900px; padding: 44px; background: #fffdf7; color: #2c2419; font-family: "Noto Sans SC", sans-serif; }
+  .wall-share-card h2 { font-size: 42px; margin: 0 0 12px; }
+  .wall-share-card p { color: #5c4d3c; font-size: 18px; }
+  .wall-share-list { margin-top: 24px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .wall-share-item { border: 1px solid #e8e0d4; border-radius: 12px; padding: 14px; }
+  .wall-share-item strong { display: block; font-size: 17px; margin-bottom: 6px; }
+  @media (max-width: 880px) { .wall-hero-inner, .wall-community { grid-template-columns: 1fr; } .wall-toolbar { grid-template-columns: 1fr; } .wall-count { margin-left: 0; width: 100%; } }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand"><img src="/assets/logo.jpg" alt="超脑 AI 孵化器" class="nav-logo">WAIC 2026 参展指南</a>
+    <div class="nav-links">
+      <a href="/index.html#list">论坛</a>
+      <a href="/ai-native.html">AI 原住民计划</a>
+      <a href="/project-wall.html">项目墙</a>
+      <a href="/intel.html">情报站</a>
+      <a href="/exhibitors.html">参展入口</a>
+      <a href="/side-events.html">边会</a>
+      <a href="/install.html" class="nav-kb">接入 AI Agent</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="wall-hero">
+  <div class="wall-hero-inner">
+    <div>
+      <div class="eyebrow">AI 原住民项目墙</div>
+      <h1>51 个青少年 AI 项目，铺成一面真实世界的问题墙</h1>
+      <p>每张卡片都是一个具体的人、一种处境和一次用 AI 回应现实的尝试。现场可搜索、可筛选、可打开 Demo，也可以留下观展问题。</p>
+      <div class="wall-actions">
+        <button class="btn btn-primary" type="button" id="btn-wall-share">生成分享长图</button>
+        <a class="btn" href="/ai-native.html">返回 AI 原住民计划</a>
+      </div>
+    </div>
+    <div class="wall-facts" id="wall-facts"></div>
+  </div>
+</section>
+
+<section class="wall-toolbar" aria-label="项目筛选">
+  <input id="project-search" type="search" placeholder="搜索项目、学生、城市、机构…">
+  <select id="project-city"><option value="">全部城市</option></select>
+  <select id="project-inst"><option value="">全部机构</option></select>
+</section>
+<section class="status-strip" id="status-strip">
+  <button type="button" class="status-chip active" data-status="">全部</button>
+  <button type="button" class="status-chip" data-status="已有真实用户">已有真实用户</button>
+  <button type="button" class="status-chip" data-status="有可演示 Demo">有可演示 Demo</button>
+  <button type="button" class="status-chip" data-status="仅原型/概念">仅原型/概念</button>
+  <button type="button" class="status-chip" data-status="信息不足">信息不足</button>
+  <span class="wall-count" id="project-count"></span>
+</section>
+
+<section class="project-grid" id="project-grid"><p class="loading">正在加载项目墙…</p></section>
+
+<section class="wall-community">
+  <div class="community-panel">
+    <h2>现场留言</h2>
+    <input id="wall-comment-name" type="text" maxlength="20" placeholder="你的昵称">
+    <textarea id="wall-comment-text" placeholder="你想向这些项目提什么问题？"></textarea>
+    <button class="btn btn-primary" type="button" id="wall-comment-submit">发布留言</button>
+  </div>
+  <div class="community-panel">
+    <h2>观展讨论</h2>
+    <div id="wall-comments"></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="col-title">AI 原住民项目墙</div>
+      <p>数据来自 WAIC 2026 AI 原住民项目资料包。</p>
+    </div>
+    <div>
+      <div class="col-title">超脑 AI 孵化器</div>
+      <p>让热爱，在真实世界创造未来</p>
+    </div>
+    <div>
+      <div class="col-title">数据</div>
+      <p><a href="/data/project-wall.json" target="_blank">项目墙 API</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script>
+(function () {
+  let DATA = { facts: {}, projects: [] };
+  let activeStatus = '';
+  const state = { q: '', city: '', inst: '' };
+  const grid = document.getElementById('project-grid');
+  const count = document.getElementById('project-count');
+
+  function esc(s) {
+    const d = document.createElement('div');
+    d.textContent = s == null ? '' : String(s);
+    return d.innerHTML;
+  }
+  function firstLink(list) {
+    return Array.isArray(list) && list.length ? list[0] : '';
+  }
+  function renderFacts() {
+    const facts = DATA.facts || {};
+    document.getElementById('wall-facts').innerHTML = [
+      ['项目数', facts['项目数'] || DATA.projects.length],
+      ['城市数', facts['城市数'] || '-'],
+      ['平均年龄', facts['平均年龄'] || '-'],
+      ['真实用户', (DATA.status_counts || {})['已有真实用户'] || '-']
+    ].map(([label, value]) => `<div class="wall-fact"><span class="n">${esc(value)}</span><span class="l">${esc(label)}</span></div>`).join('');
+  }
+  function populateFilters() {
+    const cityEl = document.getElementById('project-city');
+    const instEl = document.getElementById('project-inst');
+    const cities = [...new Set(DATA.projects.map(p => p['城市']).filter(x => x && x !== '（空）'))].sort();
+    const insts = [...new Set(DATA.projects.map(p => p['推荐机构']).filter(Boolean))].sort();
+    cityEl.innerHTML = '<option value="">全部城市</option>' + cities.map(x => `<option value="${esc(x)}">${esc(x)}</option>`).join('');
+    instEl.innerHTML = '<option value="">全部机构</option>' + insts.map(x => `<option value="${esc(x)}">${esc(x)}</option>`).join('');
+  }
+  function filteredProjects() {
+    const q = state.q.toLowerCase();
+    return DATA.projects.filter(p => {
+      if (activeStatus && p.status_label !== activeStatus) return false;
+      if (state.city && p['城市'] !== state.city) return false;
+      if (state.inst && p['推荐机构'] !== state.inst) return false;
+      if (!q) return true;
+      return [p['项目名称'], p['学生姓名'], p['年级'], p['城市'], p['推荐机构'], p['一句话介绍']].join(' ').toLowerCase().includes(q);
+    });
+  }
+  function render() {
+    const items = filteredProjects();
+    count.textContent = `共 ${items.length} / ${DATA.projects.length} 个项目`;
+    if (!items.length) {
+      grid.innerHTML = '<div class="empty">没有匹配的项目。</div>';
+      return;
+    }
+    grid.innerHTML = items.map(p => {
+      const demo = firstLink(p.demo_links);
+      const pan = firstLink(p.pan_links);
+      return `<article class="project-card">
+        <div class="project-top"><h2>${esc(p['项目名称'])}</h2><span class="project-no">#${esc(p['#'])}</span></div>
+        <div class="project-status ${esc(p.status_class)}">${esc(p.status_label)}</div>
+        <div class="project-meta">
+          <span>${esc(p['学生姓名'] || '匿名团队')}</span>
+          <span>${esc(p['年级'] || '年级待补')}</span>
+          <span>${esc(p['城市'] || '城市待补')}</span>
+        </div>
+        <p class="project-intro">${esc(p['一句话介绍'] || '项目介绍待补充。')}</p>
+        <div class="project-meta"><span>${esc(p['推荐机构'] || '机构待补')}</span></div>
+        <div class="project-links">
+          ${demo ? `<a href="${esc(demo)}" target="_blank" rel="noopener">打开 Demo</a>` : ''}
+          ${pan ? `<a href="${esc(pan)}" target="_blank" rel="noopener">资料包</a>` : ''}
+          <button type="button" data-project="${esc(p['项目名称'])}" class="project-ask">提问</button>
+        </div>
+      </article>`;
+    }).join('');
+  }
+  function renderComments() {
+    const comments = JSON.parse(localStorage.getItem('waic_project_wall_comments') || '[]');
+    const el = document.getElementById('wall-comments');
+    el.innerHTML = comments.length ? comments.map(c => `<div class="comment-item"><div class="comment-meta">${esc(c.name || '匿名')} · ${esc(c.time)}</div><div>${esc(c.text)}</div></div>`).join('') : '<p class="comment-meta">还没有留言，现场第一个问题可以从这里开始。</p>';
+  }
+  function addComment(text, name) {
+    const comments = JSON.parse(localStorage.getItem('waic_project_wall_comments') || '[]');
+    comments.unshift({ name: name || '匿名', text, time: new Date().toLocaleString('zh-CN', { hour12: false }) });
+    localStorage.setItem('waic_project_wall_comments', JSON.stringify(comments.slice(0, 80)));
+    renderComments();
+  }
+  async function shareWall() {
+    const top = filteredProjects().slice(0, 8);
+    if (typeof html2canvas !== 'function') {
+      navigator.clipboard?.writeText(location.href);
+      alert('分享图组件暂不可用，已复制页面链接。');
+      return;
+    }
+    let target = document.getElementById('wall-share-target');
+    if (!target) {
+      target = document.createElement('div');
+      target.id = 'wall-share-target';
+      target.className = 'share-render-target';
+      document.body.appendChild(target);
+    }
+    target.innerHTML = `<div class="wall-share-card"><h2>WAIC 2026 AI 原住民项目墙</h2><p>10 后用 AI，回应真实世界 · 共 ${DATA.projects.length} 个入选项目</p><div class="wall-share-list">${top.map(p => `<div class="wall-share-item"><strong>${esc(p['项目名称'])}</strong><span>${esc(p.status_label)} · ${esc(p['城市'] || '城市待补')}</span></div>`).join('')}</div></div>`;
+    target.style.visibility = 'visible';
+    const canvas = await html2canvas(target.firstElementChild, { scale: 2, backgroundColor: '#fffdf7' });
+    target.style.visibility = 'hidden';
+    const a = document.createElement('a');
+    a.href = canvas.toDataURL('image/png');
+    a.download = 'waic2026-ai-native-project-wall.png';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+  async function load() {
+    const res = await fetch('/data/project-wall.json');
+    DATA = await res.json();
+    renderFacts();
+    populateFilters();
+    render();
+    renderComments();
+  }
+  document.getElementById('project-search').addEventListener('input', e => { state.q = e.target.value.trim(); render(); });
+  document.getElementById('project-city').addEventListener('change', e => { state.city = e.target.value; render(); });
+  document.getElementById('project-inst').addEventListener('change', e => { state.inst = e.target.value; render(); });
+  document.getElementById('status-strip').addEventListener('click', e => {
+    const btn = e.target.closest('.status-chip');
+    if (!btn) return;
+    activeStatus = btn.dataset.status || '';
+    document.querySelectorAll('.status-chip').forEach(x => x.classList.toggle('active', x === btn));
+    render();
+  });
+  grid.addEventListener('click', e => {
+    const btn = e.target.closest('.project-ask');
+    if (!btn) return;
+    document.getElementById('wall-comment-text').value = `我想了解「${btn.dataset.project}」：`;
+    document.getElementById('wall-comment-text').focus();
+  });
+  document.getElementById('wall-comment-submit').addEventListener('click', () => {
+    const textEl = document.getElementById('wall-comment-text');
+    const nameEl = document.getElementById('wall-comment-name');
+    const text = textEl.value.trim();
+    if (!text) return;
+    addComment(text, nameEl.value.trim());
+    textEl.value = '';
+  });
+  document.getElementById('btn-wall-share').addEventListener('click', shareWall);
+  load().catch(() => { grid.innerHTML = '<div class="empty">项目墙加载失败，请刷新重试。</div>'; });
+})();
+</script>
+
+<button type="button" class="ai-assistant-fab" id="ai-assistant-fab" aria-label="AI 助手">
+  <span class="sparkle" aria-hidden="true">✨</span>
+  <span>AI 助手</span>
+</button>
+<div class="ai-assistant-modal" id="ai-assistant-modal" aria-hidden="true">
+  <div class="ai-assistant-backdrop"></div>
+  <div class="ai-assistant-card">
+    <button type="button" class="ai-assistant-close" id="ai-assistant-close" aria-label="关闭">×</button>
+    <h4>AI 助手</h4>
+    <div class="ai-assistant-questions">
+      <button type="button" class="ai-assistant-question" data-question="AI 原住民项目墙有什么？">AI 原住民项目墙有什么？</button>
+      <button type="button" class="ai-assistant-question" data-question="如何查看我的日程？">如何查看我的日程？</button>
+      <button type="button" class="ai-assistant-question" data-question="参展商在哪里？">参展商在哪里？</button>
+    </div>
+    <form class="ai-assistant-form" id="ai-assistant-form">
+      <input type="text" id="ai-assistant-input" placeholder="输入你的问题…" autocomplete="off">
+      <button type="submit">发送</button>
+    </form>
+    <div class="ai-assistant-answer" id="ai-assistant-answer"><p>有什么可以帮你的？</p></div>
+  </div>
+</div>
+<script src="/assets/ai-assistant.js"></script>
+</body>
+</html>

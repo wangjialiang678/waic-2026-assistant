@@ -1,0 +1,68 @@
+{
+  "version": "2026-07-16",
+  "categories": [
+    "官方入口",
+    "参会攻略",
+    "论坛日程",
+    "媒体报道",
+    "合作方资料"
+  ],
+  "items": [
+    {
+      "title": "WAIC 2026 官方网站",
+      "url": "https://www.worldaic.com.cn/",
+      "category": "官方入口",
+      "source": "WAIC 官方",
+      "summary": "大会官网，包含论坛、展览、嘉宾、报名等官方信息。"
+    },
+    {
+      "title": "WAIC 2026 观众注册与入场指南",
+      "url": "https://www.worldaic.com.cn/news/19b04b32c58a4cd0b2c1c05445a80ece?tab=0",
+      "category": "参会攻略",
+      "source": "WAIC 官方",
+      "summary": "注册方式、入场须知、交通指引等参会必备信息。"
+    },
+    {
+      "title": "WAIC 2026 论坛排片 / 最新论坛活动日程",
+      "url": "https://h5.ifeng.com/c/vivoArticle/v002c1l2MbdHcvQwThZ1TMxAoOanTP1JyraorqiMA6KSg7E__?isNews=1&showComments=0",
+      "category": "论坛日程",
+      "source": "凤凰网",
+      "summary": "完整的论坛活动日程安排，包含各片区论坛排片。"
+    },
+    {
+      "title": "2026世界人工智能大会参观攻略（时间/地点/门票）",
+      "url": "http://sh.bendibao.com/news/2026713/307608.shtm",
+      "category": "参会攻略",
+      "source": "上海本地宝",
+      "summary": "展览门票价格、购票入口、公共交通、入场须知等保姆级攻略。"
+    },
+    {
+      "title": "论坛排片｜WAIC 2026最新论坛活动日程安排发布",
+      "url": "https://www.sohu.com/a/1048066866_562020",
+      "category": "论坛日程",
+      "source": "搜狐 / 上海经信委",
+      "summary": "官方发布的论坛活动日程安排，包含重点嘉宾介绍。"
+    },
+    {
+      "title": "WAIC 2026最新论坛活动日程安排发布",
+      "url": "https://www.163.com/dy/article/L1GU2M7H0552YFK1.html",
+      "category": "媒体报道",
+      "source": "网易 / 投资上海",
+      "summary": "大会主题、嘉宾阵容及论坛日程报道。"
+    },
+    {
+      "title": "论坛排片｜WAIC 2026最新论坛活动日程安排发布",
+      "url": "https://www.pingwest.com/a/315478",
+      "category": "媒体报道",
+      "source": "品玩",
+      "summary": "论坛排片信息及大会亮点解读。"
+    },
+    {
+      "title": "Hi WAIC APP 下载",
+      "url": "https://apph5.worldaic.com.cn/app-transfer",
+      "category": "官方入口",
+      "source": "WAIC 官方",
+      "summary": "大会官方 APP，用于购票、注册、查看日程。"
+    }
+  ]
+}
