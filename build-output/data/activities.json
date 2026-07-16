@@ -1,5 +1,5 @@
 {
-  "version": "20260716-1133",
+  "version": "20260716-1156",
   "total": 363,
   "official_count": 178,
   "unofficial_count": 185,
@@ -41203,7 +41203,7 @@
       "id": "web-212",
       "source_type": "unofficial",
       "kind": "side_event",
-      "waic_relation": "affiliated",
+      "waic_relation": "official",
       "download_status": "n/a",
       "source": {
         "channel": "web",
@@ -41251,7 +41251,7 @@
       "id": "web-219",
       "source_type": "unofficial",
       "kind": "side_event",
-      "waic_relation": "affiliated",
+      "waic_relation": "official",
       "download_status": "n/a",
       "source": {
         "channel": "web",
@@ -44685,7 +44685,7 @@
       "district": "世博片区",
       "room": "H4 领航舞台",
       "category": "同期活动",
-      "track": "",
+      "track": "AI GRAVITY",
       "tags": [
         "AI基础设施论坛"
       ],
@@ -49379,7 +49379,7 @@
       "id": "web-208",
       "source_type": "unofficial",
       "kind": "side_event",
-      "waic_relation": "affiliated",
+      "waic_relation": "official",
       "download_status": "n/a",
       "source": {
         "channel": "web",
@@ -49427,7 +49427,7 @@
       "id": "web-209",
       "source_type": "unofficial",
       "kind": "side_event",
-      "waic_relation": "affiliated",
+      "waic_relation": "official",
       "download_status": "n/a",
       "source": {
         "channel": "web",

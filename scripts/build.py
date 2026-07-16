@@ -89,16 +89,17 @@ def district_of(venue: str) -> str:
     return VENUE_DISTRICT.get((venue or "").strip(), "")
 
 
-# track（板块）识别：从标题+主办+标签里认出 WAIC Young/Up/AI原住民/AI GRAVITY
+# track（板块）识别：从标题+英文名+主办+标签里认出 WAIC Young/Up/AI原住民/AI GRAVITY
 def detect_track(text: str) -> str:
-    t = (text or "").lower().replace(" ", "")
-    if "waicyoung" in t or "waicyoung" in t.replace("!", ""):
+    raw = text or ""
+    t = raw.lower().replace(" ", "").replace("!", "")
+    if "waicyoung" in t:
         return "WAIC Young"
     if "waicup" in t:
         return "WAIC Up"
-    if "原住民" in text or "ainatives" in t:
+    if "原住民" in raw or "ainatives" in t:
         return "AI 原住民"
-    if "aigravity" in t:
+    if "aigravity" in t or "引力场" in raw:  # 引力场 = AI GRAVITY 计划中文名
         return "AI GRAVITY"
     return ""
 
@@ -173,7 +174,7 @@ def official_to_activity(f: dict, guest_map: dict) -> dict:
         tags.append(f["forumTag"])
     official_url = FRONT_FORUM_URL.format(uuid=uuid)
     track = detect_track(" ".join(filter(None, [
-        f.get("name"), " ".join(o["name"] for o in orgs), " ".join(tags)])))
+        f.get("name"), f.get("nameEn"), " ".join(o["name"] for o in orgs), " ".join(tags)])))
 
     search_bits = [
         f.get("name"), f.get("nameEn"), f.get("desc"),
@@ -245,6 +246,10 @@ def unofficial_to_activity(a: dict, channel: str, idx: int) -> dict:
            "exhibition_zone": "展区", "coverage": "媒体报道·资讯"}
     category = a.get("category") or CAT.get(kind, "边会·周边活动")
     waic_relation = a.get("waic_relation") or ("official" if kind == "exhibition_zone" else "affiliated")
+    # 超脑 AI 原住民计划 = 与 WAIC 官方合作的青少年 AI 公益活动（非民间边会 / 非商业），标为官方
+    _t = a.get("title") or ""
+    if "超脑" in _t and "原住民" in _t:
+        waic_relation = "official"
     # organizers：既支持 [{name,role}] 也支持字符串 organizer
     orgs = a.get("organizers") or []
     if not orgs and a.get("organizer"):

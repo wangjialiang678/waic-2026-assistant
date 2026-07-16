@@ -243,15 +243,15 @@ function renderOfficial() {
     html += `</div></div>`;
   }
 
-  // 超脑置顶：本站主办方，四天展台，方便直接加入日程（清楚标注为超脑自有活动，非官方论坛）
+  // 超脑置顶：AI 原住民计划 = 与 WAIC 官方合作的青少年 AI 公益特别展，四天展台，方便直接加入日程
   const sb = DATA.activities.find(a => a.kind === 'side_event' && a.title.includes('超脑') && a.title.includes('参展'))
           || DATA.activities.find(a => a.kind === 'side_event' && a.title.includes('超脑'));
   if (sb && !f.q && !f.category && !f.track && !f.tag) {
     html += `<div class="pin-sb">
-      <div class="pin-sb-flag">超脑 @ WAIC</div>
+      <div class="pin-sb-flag">WAIC 官方合作 · 公益</div>
       <div class="pin-sb-main">
-        <div class="pin-sb-title">AI 原住民计划 · 超脑展台（四天）</div>
-        <div class="pin-sb-desc">世博展览馆 · 三大板块 · 六大主题展区 · 每日主题议程与青少年 AI 案例</div>
+        <div class="pin-sb-title">AI 原住民计划 · 超脑（四天展台）</div>
+        <div class="pin-sb-desc">世博展览馆 · WAIC 官方合作的青少年 AI 公益特别展 · 三大板块 · 六大主题展区 · 每日主题议程</div>
       </div>
       <div class="pin-sb-actions">
         <a class="pin-sb-btn" href="superbrain.html">查看展台议程 →</a>

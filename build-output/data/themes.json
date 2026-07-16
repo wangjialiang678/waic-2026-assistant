@@ -13,11 +13,11 @@
   ],
   "waic_relations": [
     {
-      "name": "affiliated",
+      "name": "official",
       "count": 182
     },
     {
-      "name": "official",
+      "name": "affiliated",
       "count": 178
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "name": "AI GRAVITY",
-      "count": 2
+      "count": 3
     }
   ],
   "districts": [
