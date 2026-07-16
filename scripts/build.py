@@ -205,7 +205,15 @@ def official_to_activity(f: dict, guest_map: dict) -> dict:
         " ".join(g["company"] for g in guests if g["company"]),
         " ".join(o["name"] for o in orgs if o["name"]),
         " ".join(s["theme"] for s in schedule if s["theme"]),
+        # 议程演讲人也进搜索（否则按演讲人名搜不到论坛，如"王佳梁"）
+        " ".join(" ".join(s.get("speakers") or []) for s in schedule),
     ]
+    # Amplified Individual 双场 = 超脑深度参与的官方论坛（王佳梁 7/19 16:05 主旨演讲
+    # 《超越技术，如何在AI原生教育中看见独一无二的"人"》）：补标签与关键词，
+    # 让"超脑/AI原住民/青少年"的搜索命中这两场官方论坛（带真实时间地点）。
+    if "在AI中看见具体的人" in (f.get("name") or ""):
+        tags = list(dict.fromkeys(tags + ["教育", "青少年", "AI 原住民"]))
+        search_bits.append("超脑 超脑AI孵化器 SuperBrain 王佳梁 AI原住民 AI教育 青少年")
     return {
         "id": aid,
         "source_type": "official",
@@ -929,6 +937,11 @@ def main():
             intel.append(to_intel_record(a, "wechat"))
     for a in web_cov:
         if _sig(a.get("title")) not in promoted:
+            intel.append(to_intel_record(a, "web"))
+    # 抽取源里人工改判为 coverage 的条目（如超脑演讲的公众号报道）也归入情报站
+    # （activities 里保留原 ID 防日程引用失效，但搜索/四板块/日报不再当活动展示）
+    for a in (ext_web_acts + ext_wx_acts + ext_cimi_acts):
+        if a.get("kind") == "coverage":
             intel.append(to_intel_record(a, "web"))
     (out_data / "intel.json").write_text(json.dumps({
         "version": version, "total": len(intel),

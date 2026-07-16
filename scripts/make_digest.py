@@ -60,7 +60,7 @@ def main():
 
     todays = []
     for a in acts:
-        if a.get("kind") == "exhibition_zone":
+        if a.get("kind") in ("exhibition_zone", "coverage"):
             continue
         d = a.get("date") or ""
         if d == target or date_in_span(d, target):

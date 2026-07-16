@@ -59,7 +59,7 @@ def _date_in_span(span: str, date: str) -> bool:
 def _acts_on(store, date: str) -> list[dict]:
     out = []
     for a in store.activities:
-        if a.get("kind") == "exhibition_zone":
+        if a.get("kind") in ("exhibition_zone", "coverage"):
             continue
         d = a.get("date") or ""
         if d == date or _date_in_span(d, date):

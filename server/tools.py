@@ -195,6 +195,8 @@ def _kw_relevance(a: dict, keyword: str) -> int:
             best = max(best, 2)
         elif (kw in desc) or (nkw and len(nkw) >= 2 and nkw in desc):
             best = max(best, 1)
+        elif len(kw) >= 3 and kw in (a.get("search_text") or ""):
+            best = max(best, 1)   # 弱命中：议程演讲人/嘉宾名（如"王佳梁"）；≥3字防短词噪声
     return best
 
 
@@ -203,7 +205,7 @@ def search_activities(store, day=None, district=None, category=None, track=None,
     date = store.date_for_day(day) if day is not None else None
     out = []
     for a in store.activities:
-        if a.get("kind") == "exhibition_zone":
+        if a.get("kind") in ("exhibition_zone", "coverage"):
             continue
         if not _act_on_day(a, day, date):
             continue
@@ -281,7 +283,7 @@ def plan_day(store, interests=None, day=None, constraints=None) -> dict:
     # 候选：该天、有开始时间的活动
     cands = []
     for a in store.activities:
-        if a.get("kind") == "exhibition_zone":
+        if a.get("kind") in ("exhibition_zone", "coverage"):
             continue
         if not _act_on_day(a, day, date):
             continue

@@ -321,7 +321,9 @@ function renderOfficial() {
       sorted.forEach(a => { const d = a.day || 0; (groups[d] = groups[d] || []).push(a); });
       Object.keys(groups).sort((x, y) => (+x || 99) - (+y || 99)).forEach(d => {
         const meta = DAY_META[d];
-        html += `<div class="day-group-head"><span class="dnum">${meta ? 'Day ' + d : '时间待定'}</span><span class="ddate mono">${meta ? meta.date + ' · ' + meta.label : ''}</span><span class="dcount">${groups[d].length} 场</span></div>`;
+        // day=0 组：多为跨天全程活动（date 是区间，如超脑四天体验区），不是"待定"
+        const spanning = !meta && groups[d].some(a => (a.date || '').indexOf('~') >= 0);
+        html += `<div class="day-group-head"><span class="dnum">${meta ? 'Day ' + d : (spanning ? '跨天 · 全程' : '时间待定')}</span><span class="ddate mono">${meta ? meta.date + ' · ' + meta.label : (spanning ? '7/17–20 每天开放' : '')}</span><span class="dcount">${groups[d].length} 场</span></div>`;
         html += groups[d].map(renderActivityCard).join('');
       });
     } else {
