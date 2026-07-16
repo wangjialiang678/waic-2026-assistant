@@ -202,6 +202,7 @@ function renderOfficialControls() {
 
   document.getElementById('controls').innerHTML = `
     <div class="controls-note" style="--vc:var(--official)">官方板块 = 官网发布的 <strong>${nForum} 场论坛</strong> + <strong>${nVenue} 场馆内活动</strong> + <strong>${nZone} 大展区</strong>。「场馆活动」= 在官方展馆内、但不在官网论坛 API 里的活动。</div>
+    <button class="planner-btn" id="planner-open" type="button">🗓 帮我规划这一天 · 按兴趣排无撞车动线 →</button>
     <div class="day-tabs" id="day-tabs">
       ${['', '1', '2', '3', '4'].map(d => `<button class="day-tab${f.day === d ? ' active' : ''}" data-day="${d}">${d === '' ? '全部' : 'Day ' + d + ' <span class="dw">' + (DAY_META[d].label) + '</span>'}</button>`).join('')}
     </div>
@@ -216,6 +217,8 @@ function renderOfficialControls() {
 
   bindDayTabs('official');
   bindSearch('official');
+  const _pb = document.getElementById('planner-open');
+  if (_pb) _pb.addEventListener('click', () => window.WAICPlanner && window.WAICPlanner.open(F.official.day || '1'));
   F.official.track = '';   // 官方板块不做 track 筛选（官方仅 4 场带 track，track 在「边会」板块才有意义）
   [['f-district', 'district'], ['f-venue', 'venue'], ['f-category', 'category'], ['f-tag', 'tag']]
     .forEach(([id, key]) => document.getElementById(id).addEventListener('change', e => { F.official[key] = e.target.value; renderOfficial(); }));

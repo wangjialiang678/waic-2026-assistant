@@ -1132,3 +1132,37 @@ body.soc-lock { overflow: hidden; }
 .mapnav { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .mapnav a { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; color: var(--official); background: var(--official-tint); padding: 0.4rem 0.8rem; border-radius: 7px; }
 .mapnav a:hover { background: var(--official); color: #fff !important; text-decoration: none; }
+
+/* ============================ 一日行程规划器 ============================ */
+.planner-btn { display: block; width: 100%; margin: 0.6rem 0 0; padding: 0.7rem 1rem; background: var(--official-tint); color: var(--official-deep); border: 1px dashed var(--official); border-radius: 8px; font-family: var(--font-sans); font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: background 0.15s, color 0.15s; }
+.planner-btn:hover { background: var(--official); color: #fff; }
+.pl-root { position: fixed; inset: 0; z-index: 1200; display: flex; align-items: center; justify-content: center; }
+.pl-mask { position: absolute; inset: 0; background: rgba(12,16,22,0.5); }
+.pl-panel { position: relative; width: min(560px, calc(100vw - 1.6rem)); max-height: 88vh; display: flex; flex-direction: column; background: var(--paper); border-radius: 14px; box-shadow: 0 30px 70px -20px rgba(10,14,20,0.6); overflow: hidden; border: 1px solid var(--rule-2); }
+.pl-head { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.2rem; background: linear-gradient(120deg, var(--official) 0%, var(--official-deep) 90%); color: #fff; }
+.pl-title { font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem; }
+.pl-x { background: rgba(255,255,255,0.16); color: #fff; border: none; width: 32px; height: 32px; border-radius: 8px; cursor: pointer; font-size: 1rem; }
+.pl-body { flex: 1; overflow-y: auto; padding: 1.1rem 1.2rem; -webkit-overflow-scrolling: touch; }
+.pl-form { display: flex; flex-direction: column; gap: 0.5rem; }
+.pl-fk { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600; color: var(--ink-soft); margin-top: 0.5rem; }
+.pl-days, .pl-paces { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pl-day, .pl-pace { font-family: var(--font-sans); font-size: 0.84rem; padding: 0.4rem 0.7rem; border: 1px solid var(--rule-2); border-radius: 7px; background: var(--surface); color: var(--ink-soft); cursor: pointer; }
+.pl-day span { color: var(--ink-mute); font-size: 0.72rem; }
+.pl-day.on, .pl-pace.on { background: var(--official); border-color: var(--official); color: #fff; }
+.pl-day.on span { color: rgba(255,255,255,0.8); }
+.pl-ints { display: flex; flex-wrap: wrap; gap: 0.3rem; font-size: 0.8rem; }
+.pl-ints span { color: var(--official-deep); background: var(--official-tint); padding: 0.1rem 0.5rem; border-radius: 100px; }
+.pl-ints em { color: var(--ink-mute); font-style: normal; }
+.pl-gen { margin-top: 0.8rem; padding: 0.7rem; background: var(--official); color: #fff; border: none; border-radius: 8px; font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; cursor: pointer; }
+.pl-rnote { font-size: 0.84rem; color: var(--ink-soft); margin: 1rem 0 0.7rem; }
+.pl-switch { font-size: 0.76rem; color: var(--side-deep); margin: 0.3rem 0; }
+.pl-item { display: flex; gap: 0.7rem; align-items: flex-start; padding: 0.7rem 0; border-top: 1px solid var(--rule); }
+.pl-item.pl-sb { background: var(--side-tint); border-radius: 8px; padding: 0.7rem 0.6rem; border-top: none; }
+.pl-time { font-family: var(--font-mono); font-size: 0.8rem; color: var(--official-deep); font-weight: 600; white-space: nowrap; min-width: 5.5rem; }
+.pl-main { flex: 1; }
+.pl-t { font-family: var(--font-serif); font-weight: 600; font-size: 0.98rem; color: var(--ink); }
+.pl-meta { font-size: 0.8rem; color: var(--ink-mute); margin-top: 0.15rem; }
+.pl-detail { font-size: 0.8rem; color: var(--official); align-self: center; }
+.pl-acts { margin-top: 1rem; }
+.pl-addall { width: 100%; padding: 0.7rem; background: var(--official-deep); color: #fff; border: none; border-radius: 8px; font-family: var(--font-sans); font-weight: 600; cursor: pointer; }
+.pl-empty { color: var(--ink-mute); text-align: center; padding: 1.5rem; }
