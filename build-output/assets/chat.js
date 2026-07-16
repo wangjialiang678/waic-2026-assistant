@@ -25,9 +25,14 @@
   const convo   = [];       // [{role,content}] 送后端的对话历史
 
   const INTEREST_OPTIONS = [
-    '大模型', '具身智能 / 机器人', 'AGI / 前沿', 'AI 芯片 / 算力', '投融资',
-    'AI 应用落地', '自动驾驶', 'AI for Science', '医疗健康', 'AI 安全 / 治理',
-    '开发者 / 开源', 'AIGC / 内容',
+    // 产业方向
+    '大模型', '具身智能·机器人', 'AI芯片·算力', 'AI应用落地', '智能制造·工业',
+    '智能驾驶·交通', 'AI+医疗健康', 'AI+金融', 'AI for Science', 'AIGC·文娱',
+    'AGI·世界模型', '智能硬件·终端',
+    // 视角与目的
+    '投融资·找项目', '创业·出海找合作', '开发者·开源', 'AI安全·治理', '边会·社交局', '青年·人才',
+    // 超脑相关
+    'AI教育', '青少年·带娃逛展', '一人公司·OPC',
   ];
   const EXAMPLES = [
     '帮我排满 7/18 关注具身智能的一天',
@@ -162,11 +167,29 @@
     const chosen = new Set(readProfile().interests);
     const chips = INTEREST_OPTIONS.map(t =>
       `<button class="wc-int-chip${chosen.has(t) ? ' on' : ''}" data-interest="${esc(t)}" type="button">${esc(t)}</button>`).join('');
+    const custom = [...chosen].filter(t => !INTEREST_OPTIONS.includes(t));
+    const customChips = custom.map(t =>
+      `<button class="wc-int-chip on custom" data-interest="${esc(t)}" type="button">${esc(t)} <span class="x">✕</span></button>`).join('');
     root.querySelector('#wc-drawer').innerHTML = `
       <div class="wc-drawer-h">我关注的方向 <small>（可多选，帮助 AI 更懂你；仅存在你的浏览器）</small></div>
-      <div class="wc-int-chips">${chips}</div>`;
+      <div class="wc-int-chips">${chips}</div>
+      ${custom.length ? `<div class="wc-int-custom-list">${customChips}</div>` : ''}
+      <div class="wc-int-add">
+        <input type="text" id="wc-int-input" class="wc-int-input" placeholder="自定义方向，如 AI 教育、AI OPC…" maxlength="16" autocomplete="off">
+        <button class="wc-int-addbtn" id="wc-int-add" type="button">添加</button>
+      </div>`;
+    const inp = root.querySelector('#wc-int-input');
+    const add = () => {
+      const v = (inp.value || '').trim();
+      if (!v) return;
+      const p = readProfile(); const set = new Set(p.interests); set.add(v); p.interests = [...set]; writeProfile(p);
+      inp.value = ''; renderDrawer(); const ni = root.querySelector('#wc-int-input'); if (ni) ni.focus();
+    };
+    root.querySelector('#wc-int-add').addEventListener('click', add);
+    inp.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); add(); } });
   }
   function onDrawerClick(e) {
+    if (e.target.closest('#wc-int-add') || e.target.closest('#wc-int-input')) return;
     const chip = e.target.closest('[data-interest]');
     if (!chip) return;
     const t = chip.dataset.interest;
@@ -175,7 +198,7 @@
     if (set.has(t)) set.delete(t); else set.add(t);
     p.interests = [...set];
     writeProfile(p);
-    chip.classList.toggle('on');
+    renderDrawer();
   }
 
   /* ------------------------------ 空状态 / coming-soon ------------------------------ */

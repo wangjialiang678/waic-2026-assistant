@@ -103,6 +103,8 @@ async function loadData() {
     bindTabs();
     updateMineBadge();
     setView('official');
+    routeFromHash();
+    window.addEventListener('hashchange', routeFromHash);
   } catch (e) {
     document.getElementById('view-content').innerHTML =
       `<p class="loading">加载失败：${esc(e.message)}<br>请确认在 build-output/ 目录下启动了本地服务。</p>`;
@@ -143,9 +145,19 @@ function bindTabs() {
     });
   });
 }
+// 顶层导航 / 直达链接：#mine #official #side #exhibitors #intel
+const HASH_VIEWS = { mine: 'mine', official: 'official', side: 'side', exhibitors: 'exhibitors', intel: 'intel' };
+function routeFromHash() {
+  const h = (location.hash || '').replace('#', '');
+  if (!HASH_VIEWS[h]) return;
+  setView(HASH_VIEWS[h]);
+  const p = document.getElementById('panel');
+  if (p) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 function setView(v) {
   CURRENT_VIEW = v;
   document.querySelectorAll('[data-view]').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+  document.querySelectorAll('.nav-mine').forEach(b => b.classList.toggle('active', v === 'mine'));
   const controls = document.getElementById('controls');
   const content = document.getElementById('view-content');
   content.classList.toggle('grid', v === 'exhibitors');
@@ -208,26 +220,50 @@ function renderOfficial() {
   const cnt = document.getElementById('count');
   if (cnt) cnt.textContent = `显示 ${progs.length} / ${kindCount('official_program')} 场论坛`;
 
-  // zones band
+  // zones band —— 用官方介绍 + 官方大图 + 亮点
   const zones = DATA.activities.filter(a => a.kind === 'exhibition_zone');
   let html = '';
   if (zones.length) {
-    html += `<div class="zones-block"><div class="zones-label">展区导览 · Exhibition Zones（${zones.length}）</div><div class="zones-grid">`;
+    html += `<div class="zones-block"><div class="zones-label">展区导览 · Exhibition Zones（${zones.length}）<span class="zones-sub">四大片区场馆 · 点开看官方定位 / 亮点 / 地图</span></div><div class="zones-grid">`;
     html += zones.map(z => {
       const d = ZONE_DESC[z.title] || ZONE_DESC[z.venue] || { role: '展区', desc: z.district || '' };
-      return `<a class="zone-card" href="activity.html?id=${encodeURIComponent(z.id)}">
-        <span class="z-role">${esc(d.role)}</span>
-        <div class="z-name">${esc(z.title)}</div>
-        <div class="z-desc">${esc(d.desc)}${z.district ? ' · ' + esc(z.district) : ''}</div>
+      const blurb = zoneBlurb(z) || d.desc;
+      const cover = z.cover_img ? `<div class="z-cover" style="background-image:url('${esc(z.cover_img)}')"></div>` : '';
+      return `<a class="zone-card${z.cover_img ? ' has-cover' : ''}" href="activity.html?id=${encodeURIComponent(z.id)}">
+        ${cover}
+        <div class="z-body">
+          <span class="z-role">${esc(d.role)}${z.district ? ' · ' + esc(z.district) : ''}</span>
+          <div class="z-name">${esc(z.title)}</div>
+          <div class="z-desc">${esc(blurb)}</div>
+          ${(z.halls && z.halls.length) ? `<div class="z-halls">${z.halls.slice(0,4).map(h => `<span>${esc(h.hall)}</span>`).join('')}</div>` : ''}
+          <span class="z-more">看展区详情 →</span>
+        </div>
       </a>`;
     }).join('');
     html += `</div></div>`;
   }
 
+  // 超脑置顶：本站主办方，四天展台，方便直接加入日程（清楚标注为超脑自有活动，非官方论坛）
+  const sb = DATA.activities.find(a => a.kind === 'side_event' && a.title.includes('超脑') && a.title.includes('参展'))
+          || DATA.activities.find(a => a.kind === 'side_event' && a.title.includes('超脑'));
+  if (sb && !f.q && !f.category && !f.track && !f.tag) {
+    html += `<div class="pin-sb">
+      <div class="pin-sb-flag">超脑 @ WAIC</div>
+      <div class="pin-sb-main">
+        <div class="pin-sb-title">AI 原住民计划 · 超脑展台（四天）</div>
+        <div class="pin-sb-desc">世博展览馆 · 三大板块 · 六大主题展区 · 每日主题议程与青少年 AI 案例</div>
+      </div>
+      <div class="pin-sb-actions">
+        <a class="pin-sb-btn" href="superbrain.html">查看展台议程 →</a>
+        ${mineBtn(sb)}
+      </div>
+    </div>`;
+  }
+
   const content = document.getElementById('view-content');
   if (!progs.length) { content.innerHTML = html + '<p class="list-note">没有匹配的论坛，试试放宽筛选或换个关键词。</p>'; return; }
 
-  const sorted = sortSchedule(progs);
+  const sorted = sortOfficial(progs);
   if (!f.day) {
     const groups = {};
     sorted.forEach(a => { const d = a.day || 0; (groups[d] = groups[d] || []).push(a); });
@@ -514,6 +550,27 @@ function sortSchedule(list) {
   });
 }
 
+// 官方论坛：先按天，再按重要度（全体会议/Keynote→主题论坛→分论坛→同期活动），同档按开始时间
+const OFFICIAL_RANK = { '全体会议': 0, '主题论坛': 1, '分论坛': 2, '同期活动': 3 };
+function sortOfficial(list) {
+  return list.slice().sort((x, y) => {
+    const dx = x.day || 99, dy = y.day || 99;
+    if (dx !== dy) return dx - dy;
+    const rx = OFFICIAL_RANK[x.category] ?? 5, ry = OFFICIAL_RANK[y.category] ?? 5;
+    if (rx !== ry) return rx - ry;
+    return (x.start_time || '99:99').localeCompare(y.start_time || '99:99');
+  });
+}
+
+// 展区卡片一句话看点：优先亮点，否则取官方简介去掉标题段后的第一句
+function zoneBlurb(z) {
+  if (z.highlights && z.highlights.length) return z.highlights[0];
+  let s = (z.description || '').replace(/\s+/g, ' ').trim();
+  s = s.replace(/^[^｜|]{2,12}[｜|][^。]{2,24}[。\s]*/, '');
+  const m = s.match(/^[^。]{6,70}。/);
+  return m ? m[0] : s.slice(0, 60);
+}
+
 function bindDayTabs(view) {
   document.querySelectorAll('#day-tabs .day-tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -574,6 +631,7 @@ function updateMineBadge() {
   const n = MINE.size;
   const el = document.getElementById('me-count'); if (el) el.textContent = n;
   const entry = document.getElementById('mine-entry'); if (entry) entry.classList.toggle('has', n > 0);
+  document.querySelectorAll('.nav-mine-n').forEach(b => { b.textContent = n || ''; b.classList.toggle('has', n > 0); });
 }
 
 function renderMineControls() {

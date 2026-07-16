@@ -1,13 +1,17 @@
 {
-  "version": "20260716-0928",
-  "last_updated": "2026-07-16T09:28:58+08:00",
+  "version": "20260716-1133",
+  "last_updated": "2026-07-16T11:33:01+08:00",
   "files": {
     "VERSION": {
-      "sha256": "72b4cbcabbb8281e263d8298ee3cac461f20ea59031095cc4cef4bd0eb436b46",
+      "sha256": "2b20c50b82c35cbca6edaf7b07606962a16b06b7d6ee19a0375fd2b7eeec39fc",
       "size": 14
     },
+    "data/venues.json": {
+      "sha256": "5ebf71bd634c68194fc17acf5ae7b9962621e01aebf7b06f4a63ec38d4b82d07",
+      "size": 1381
+    },
     "data/intel.json": {
-      "sha256": "eb80c1aa3f32f219345d7af79c1d73589621cbc31e2f5f994c6fa0c2235cb8fd",
+      "sha256": "e09d157ccc1d859f6d8dbc798512ab13769e1f4eeee8704032174c62ec72fc9e",
       "size": 173546
     },
     "data/exhibitors.json": {
@@ -19,8 +23,8 @@
       "size": 23405
     },
     "data/activities.json": {
-      "sha256": "9948c7588bde34ca48bff7e92a9f88fcb6c3641689c987b2efd901d63ef7766f",
-      "size": 2237257
+      "sha256": "dbe3465cf7cae01f78d5e1678912d23147e0ba3ff208be3669351ff22d226eea",
+      "size": 2251166
     },
     "md/unofficial/web-046-光启夜叙--Light-Night.md": {
       "sha256": "f5aa6a8144c411ce3aa0a5e1d993fde78500f89670dc29e26e1d282112824257",
@@ -2215,8 +2219,8 @@
       "size": 8501
     },
     "md/agenda/zone-世博中心.md": {
-      "sha256": "8b1e4a8e5baef6af45b3bd5f4452f8d7b7e34f36e29117487f8b6164d16dc087",
-      "size": 353
+      "sha256": "6fa9de110e10ca306e758388bb384bddf22e42ef199e67d07603bb6d079fd29b",
+      "size": 702
     },
     "md/agenda/off-548e1357f1-毕马威AI企业的商业化突围与资本进阶论坛.md": {
       "sha256": "610a3ede4d83bf39be4cb558be3125c0ea9168638e586156812f4c734cdad414",
@@ -2455,8 +2459,8 @@
       "size": 3516
     },
     "md/agenda/zone-张江科学会堂.md": {
-      "sha256": "3b03322d5a6b2a7ac600477df875b7c52c0f9221c49e5d0562a31ea072add2c6",
-      "size": 365
+      "sha256": "3675dc742f265b5b28487b6d9c2cc52750a46b69d175b2c1573f497730699a43",
+      "size": 741
     },
     "md/agenda/off-50261841a9-WAIC-Future-TechAI原生与硬科技投资生态论坛.md": {
       "sha256": "af4839dbbd68bddbd00ca99325e9e9570e82a7308005effc3f90c53e3f263723",
@@ -2603,8 +2607,8 @@
       "size": 10283
     },
     "md/agenda/zone-世博展览馆.md": {
-      "sha256": "f473383bb2b6bd7102fb4d6dfad0415bd88ef3e947c9ec4a66f46747c55aea26",
-      "size": 359
+      "sha256": "a5eb1998eb61ddc518ef5d185ddfbb11e3f87997b0b4d9e09eaa301b44a98030",
+      "size": 706
     },
     "md/agenda/off-ebca2bddba-全球视野破局智能财务新范式论坛.md": {
       "sha256": "3b4f760fd2995a31ac91a71d0c9a9cd9a97848ecec5e57c7745416f84340226a",
@@ -2863,8 +2867,8 @@
       "size": 2934
     },
     "md/agenda/zone-徐汇西岸国际会展中心.md": {
-      "sha256": "e2baa55b87721bc1cbc19c98b587461afe7067ad41aed9f5486d00e2e7cd399e",
-      "size": 389
+      "sha256": "c7aefa9032b9760cf50cd46f96cb103836c53cf593ea7e89309d5c24526c7c49",
+      "size": 777
     },
     "md/agenda/off-14fdcf97ca-WAIC思想者论坛-俞勇专场.md": {
       "sha256": "9645b9f990b5389ec9bd0b050e06eefbb3528d9a20c5d7a3302d2ab376569964",

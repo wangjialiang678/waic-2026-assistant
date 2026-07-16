@@ -8,6 +8,7 @@ function esc(s) {
   return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 function nl2p(s) { return String(s || '').split(/\n+/).filter(x => x.trim()).map(x => `<p>${esc(x.trim())}</p>`).join(''); }
+function shortHost(u) { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return '来源'; } }
 function channelLabel(ch) { return ({ 'waic-official-api': '官方来源', 'wechat': '微信公众号', 'web': '网络来源' })[ch] || '来源'; }
 function relationLabel(r) { return ({ official: '官方', affiliated: '联名 / 合作', 'co-located': '同城同期' })[r] || ''; }
 function kindClass(a) { return a.kind === 'side_event' || a.kind === 'community' ? 'k-side' : (a.kind === 'exhibition_zone' ? 'k-zone' : 'k-official'); }
@@ -96,7 +97,25 @@ function renderDetail(a) {
   if (a.cover_img) body += `<img class="cover" src="${esc(a.cover_img)}" alt="" loading="lazy" onerror="this.style.display='none'">`;
 
   if (isZone) {
-    body += `<div class="panel"><div class="panel-label">展区定位</div><div class="prose-block"><p>${esc(ZONE_DESC[a.title] || a.description || (a.district + ' 展区'))}</p><p style="color:var(--ink-mute);font-size:0.9rem">可在首页「参展商」板块按展馆筛选，查看该场馆的参展企业。</p></div></div>`;
+    const halls = a.halls || [], hi = a.highlights || [], maps = a.map_images || [];
+    body += `<div class="panel"><div class="panel-label">展区定位 · 官方介绍</div><div class="prose-block">${nl2p(a.description || (a.district + ' 展区'))}</div></div>`;
+    if (a.address || a.transit || a.district) {
+      body += `<div class="panel"><div class="panel-label">位置 · 交通</div><div class="zinfo">
+        ${a.district ? `<div class="zinfo-row"><span class="zk">片区</span><span class="zv">${esc(a.district)}</span></div>` : ''}
+        ${a.address ? `<div class="zinfo-row"><span class="zk">地址</span><span class="zv">${esc(a.address)} · <a class="zmap" href="https://uri.amap.com/search?keyword=${encodeURIComponent(a.venue || a.title)}" target="_blank" rel="noopener">高德地图 ↗</a></span></div>` : `<div class="zinfo-row"><span class="zk">地图</span><span class="zv"><a class="zmap" href="https://uri.amap.com/search?keyword=${encodeURIComponent(a.venue || a.title)}" target="_blank" rel="noopener">在高德地图查看「${esc(a.venue || a.title)}」↗</a></span></div>`}
+        ${a.transit ? `<div class="zinfo-row"><span class="zk">交通</span><span class="zv">${esc(a.transit)}</span></div>` : ''}
+      </div></div>`;
+    }
+    if (hi.length) {
+      body += `<div class="panel"><div class="panel-label">展区亮点 · 看点</div><ul class="zhi">${hi.map(h => `<li>${esc(h)}</li>`).join('')}</ul>${(a.highlights_sources && a.highlights_sources.length) ? `<div class="zsrc">来源：${a.highlights_sources.map(s => `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(shortHost(s))}</a>`).join(' · ')}</div>` : ''}</div>`;
+    }
+    if (halls.length) {
+      body += `<div class="panel"><div class="panel-label">分馆导览</div><div class="zhalls">${halls.map(h => `<div class="zhall"><span class="zhall-n">${esc(h.hall)}</span><span class="zhall-t">${esc(h.theme || '')}</span></div>`).join('')}</div></div>`;
+    }
+    if (maps.length) {
+      body += `<div class="panel"><div class="panel-label">展区 / 导览图</div>${maps.map(m => `<img class="zmapimg" src="${esc(m)}" alt="展区导览图" loading="lazy" onerror="this.style.display='none'">`).join('')}</div>`;
+    }
+    body += `<div class="panel"><div class="panel-label">谁在这个展区</div><div class="prose-block">到首页「参展商」板块按展馆「<strong>${esc(a.venue)}</strong>」筛选，即可查看该场馆的参展企业。</div></div>`;
   }
 
   // registration panel (side events, prominent, near top)
@@ -115,7 +134,7 @@ function renderDetail(a) {
   body += renderSourcePanel(a, src, url, kc);
 
   const descLabel = a.source_type === 'official' ? '简介' : '内容摘要';
-  if (a.description) body += `<div class="panel"><div class="panel-label">${descLabel}</div><div class="prose-block">${nl2p(a.description)}</div>${a.description_en ? `<div class="prose-block" style="margin-top:1rem;color:var(--ink-mute);font-size:0.9rem">${nl2p(a.description_en)}</div>` : ''}</div>`;
+  if (a.description && !isZone) body += `<div class="panel"><div class="panel-label">${descLabel}</div><div class="prose-block">${nl2p(a.description)}</div>${a.description_en ? `<div class="prose-block" style="margin-top:1rem;color:var(--ink-mute);font-size:0.9rem">${nl2p(a.description_en)}</div>` : ''}</div>`;
   else if (a.original_excerpt) body += `<div class="panel"><div class="panel-label">${descLabel}</div><div class="prose-block">${nl2p(a.original_excerpt)}</div></div>`;
 
   body += renderOrganizers(a.organizers);

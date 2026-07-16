@@ -321,27 +321,40 @@ def load_json(path: Path, default):
 
 # ---------- 展区（4 片区场馆）----------
 
-def exhibition_zone_to_activity(area: dict) -> dict:
+def exhibition_zone_to_activity(area: dict, enrich: dict | None = None) -> dict:
     detail = area.get("detail") or {}
+    enrich = enrich or {}
     title = area.get("title") or detail.get("title") or ""
-    uuid = detail.get("uuid") or ""
+    uuid = area.get("uuid") or detail.get("uuid") or ""
     desc = strip_html(detail.get("introduction") or "")
+    # 亮点/H1-H4/地图 由 enrich（研究员产出 raw/official/zones_enrich.json）补充
+    highlights = enrich.get("highlights") or []
+    halls = enrich.get("halls") or []
+    hall_txt = " ".join(f"{h.get('hall','')} {h.get('theme','')}" for h in halls)
     return {
         "id": "zone-" + (uuid[:10] or to_slug(title)),
         "source_type": "official", "kind": "exhibition_zone", "waic_relation": "official",
         "source": {"channel": "waic-official-api", "publisher": "WAIC官方",
                    "url": "https://www.worldaic.com.cn/", "retrieved_at": RETRIEVED_AT},
-        "title": title, "title_en": detail.get("titleEn") or "",
+        "title": title, "title_en": detail.get("titleEn") or area.get("titleEn") or "",
         "description": desc, "description_en": strip_html(detail.get("introductionEn") or ""),
         "date": "", "day": None, "start_time": "", "end_time": "",
         "venue": title, "district": district_of(title), "room": "",
         "category": "展区", "track": "", "tags": [],
         "registration_required": None, "registration_url": "", "price": "",
         "cover_img": detail.get("coverUrl") or "",
+        # —— 展区增强字段 ——
+        "address": enrich.get("address") or "",
+        "transit": enrich.get("transit") or "",
+        "highlights": highlights,
+        "highlights_sources": enrich.get("sources") or [],
+        "halls": halls,
+        "map_images": enrich.get("map_images") or [],
         "organizers": [], "guests": [], "participants": [], "schedule": [],
         "official_url": "https://www.worldaic.com.cn/", "article_md": "", "original_excerpt": "",
         "detail_md": f"md/agenda/zone-{to_slug(title)}.md",
-        "search_text": (title + " " + desc + " 展区 " + district_of(title)).lower(),
+        "search_text": (title + " " + desc + " 展区 " + district_of(title) + " "
+                        + " ".join(highlights) + " " + hall_txt).lower(),
         "_sort_key": (0, "00"),  # 展区排最前
     }
 
@@ -649,13 +662,18 @@ def main():
         activities.append(official_to_activity(f, guest_map))
     print(f"     {len(forums)} 场官方 · 嘉宾名映射 {len(guest_map)} 人")
 
-    # 1b. 展区（4 片区场馆）
+    # 1b. 展区（4 片区场馆）—— 官方介绍/大图在 areaDetails；地址/交通/亮点/H1-H4 由 zones_enrich.json 补充
     exh_raw = load_json(raw / "official" / "exhibitions.json", {})
     areas = exh_raw.get("areas") or {}
     area_items = list(areas.values()) if isinstance(areas, dict) else areas
+    area_details = exh_raw.get("areaDetails") or {}
+    zones_enrich = load_json(raw / "official" / "zones_enrich.json", {})  # {venue: {address,transit,highlights,halls,map_images,sources}}
     for area in area_items:
-        activities.append(exhibition_zone_to_activity(area))
-    print(f"     {len(area_items)} 个展区")
+        uuid = area.get("uuid") or ""
+        det = (area_details.get(uuid) or {}).get("detail") or {}
+        merged = {**area, "detail": det}
+        activities.append(exhibition_zone_to_activity(merged, zones_enrich.get(area.get("title", ""))))
+    print(f"     {len(area_items)} 个展区（介绍 {sum(1 for a in area_items if (area_details.get(a.get('uuid','')) or {}).get('detail'))} 带官方简介，{len(zones_enrich)} 带增强）")
 
     # 2. 边会/周边/社群/上海同期 + 从资讯抽取的活动 → 汇总后去重
     print("[2] 边会/周边/社群/抽取活动...")

@@ -1,11 +1,11 @@
 {
-  "version": "20260716-0928",
+  "version": "20260716-1133",
   "total": 363,
   "official_count": 178,
   "unofficial_count": 185,
   "activities": [
     {
-      "id": "zone-世博中心",
+      "id": "zone-2572b91885",
       "source_type": "official",
       "kind": "exhibition_zone",
       "waic_relation": "official",
@@ -16,9 +16,9 @@
         "retrieved_at": "2026-07-16"
       },
       "title": "世博中心",
-      "title_en": "",
-      "description": "",
-      "description_en": "",
+      "title_en": "Expo Center",
+      "description": "世博中心｜前沿思想策源地\n\n世博中心将作为2026 WAIC前沿思想的核心策源地，汇聚百场论坛、顶级对话与全球趋势研判。这里聚焦人工智能发展的战略方向与产业风向，连接全球领军企业、专家学者与创新力量，成为观察AI未来走向的重要窗口。",
+      "description_en": "Expo Center | Source of Frontier Ideas\n\nThe Expo Center will serve as the core source of frontier thinking at WAIC 2026, bringing together hundreds of forums, high-level dialogues, and global trend insights. Focusing on the strategic direction and industrial momentum of AI development, it will connect leading enterprises, experts, scholars, and innovators worldwide, becoming a key window into the future of AI.",
       "date": "",
       "day": null,
       "start_time": "",
@@ -32,7 +32,21 @@
       "registration_required": null,
       "registration_url": "",
       "price": "",
-      "cover_img": "",
+      "cover_img": "https://static.worldaic.com.cn/media/20260624/964c0f978e564009863c4213df058587.jpg",
+      "address": "上海市浦东新区世博大道1500号（2号门）",
+      "transit": "地铁 8 号线中华艺术宫站 3 号口 / 13 号线世博大道站 1 号口",
+      "highlights": [
+        "论坛主阵地：全大会 140 余场论坛、1400 余位嘉宾，世博片区聚焦『基石·征程·边界·生态』四大维度（算力基建 / 大模型 / AI4S / 智能体）",
+        "首创高水平国际学术会议 WAIC Academic，姚期智任大会主席；已确定 9 位图灵奖 / 诺奖得主参会，『强化学习之父』Richard Sutton 作主旨演讲",
+        "主要承担开幕式 / 主论坛 / 主题论坛，与世博展览馆步行可达，建议预留一整天；论坛需在官方『Hi WAIC』App 提前预约"
+      ],
+      "highlights_sources": [
+        "https://www.worldaic.com.cn/",
+        "https://www.shobserver.com/sgh/detail?id=4020404",
+        "https://finance.sina.com.cn/wm/2026-07-15/doc-inihwvxc7924204.shtml"
+      ],
+      "halls": [],
+      "map_images": [],
       "organizers": [],
       "guests": [],
       "participants": [],
@@ -41,10 +55,10 @@
       "article_md": "",
       "original_excerpt": "",
       "detail_md": "md/agenda/zone-世博中心.md",
-      "search_text": "世博中心  展区 世博片区"
+      "search_text": "世博中心 世博中心｜前沿思想策源地\n\n世博中心将作为2026 waic前沿思想的核心策源地，汇聚百场论坛、顶级对话与全球趋势研判。这里聚焦人工智能发展的战略方向与产业风向，连接全球领军企业、专家学者与创新力量，成为观察ai未来走向的重要窗口。 展区 世博片区 论坛主阵地：全大会 140 余场论坛、1400 余位嘉宾，世博片区聚焦『基石·征程·边界·生态』四大维度（算力基建 / 大模型 / ai4s / 智能体） 首创高水平国际学术会议 waic academic，姚期智任大会主席；已确定 9 位图灵奖 / 诺奖得主参会，『强化学习之父』richard sutton 作主旨演讲 主要承担开幕式 / 主论坛 / 主题论坛，与世博展览馆步行可达，建议预留一整天；论坛需在官方『hi waic』app 提前预约 "
     },
     {
-      "id": "zone-世博展览馆",
+      "id": "zone-5704a0800b",
       "source_type": "official",
       "kind": "exhibition_zone",
       "waic_relation": "official",
@@ -55,9 +69,9 @@
         "retrieved_at": "2026-07-16"
       },
       "title": "世博展览馆",
-      "title_en": "",
-      "description": "",
-      "description_en": "",
+      "title_en": "SWEECC",
+      "description": "世博展览馆｜全景应用展示窗\n\n世博展览馆将打造AI全景应用展示窗口，集中呈现行业应用、核心技术、具身智能与创投孵化等板块内容。从产业落地到前沿探索，从技术突破到场景体验，观众可在这里系统感受人工智能赋能千行百业的现实图景。",
+      "description_en": "SWEECC | Window to Panoramic AI Applications\n\nThe Expo Exhibition Center will serve as a panoramic showcase for AI applications, spotlighting industry use cases, core technologies, embodied intelligence, venture capital, and incubation. From industrial deployment to frontier exploration, from technological breakthroughs to immersive scenario-based experiences, visitors will gain a comprehensive view of how AI is empowering industries across the board.",
       "date": "",
       "day": null,
       "start_time": "",
@@ -71,7 +85,39 @@
       "registration_required": null,
       "registration_url": "",
       "price": "",
-      "cover_img": "",
+      "cover_img": "https://static.worldaic.com.cn/media/20260624/d2a5229eaf474b19ac067347db7ad78e.jpg",
+      "address": "上海市浦东新区国展路1099号（南门）／博成路850号（北门）",
+      "transit": "地铁 13 号线世博大道站 1 号口 / 8 号线中华艺术宫站 3 号口 / 7 号线耀华路站 1 号口",
+      "highlights": [
+        "全景应用展示窗：108 款芯片、261 款大模型、208 款具身智能终端、超 300 台真机集中亮相",
+        "H3 具身馆 300+ 机器人真机同场（近年最大规模）：宇树 GD01 载人变形机甲、智元远征 A3 Ultra、傅利叶 GR 全系",
+        "重磅新品：MiniMax M3、阶跃 STEPX Neo（目前唯一 L3 级智能体手机）、百度 DuMate、蚂蚁『阿福』AI 家医",
+        "H4 从全球 1200+ 项目筛出 158 家初创 + 22 个 OPC 项目，红杉 / 高瓴 / 真格等 80 余家机构、200 余位投资人设资本对接专区"
+      ],
+      "highlights_sources": [
+        "https://www.shobserver.com/sgh/detail?id=4020404",
+        "https://m.jiemian.com/article/14750594.html",
+        "https://eu.36kr.com/zh/p/3893513971431938"
+      ],
+      "halls": [
+        {
+          "hall": "H1 · 应用与生态馆",
+          "theme": "AI 全产业链应用：通用 / 多模态 / 垂类 / 工业大模型、AI 智能体、AI 基础设施、金融科技、AI4S、AI 终端。代表：阿里、百度、华为、腾讯、蚂蚁、商汤、科大讯飞、金山办公、MiniMax"
+        },
+        {
+          "hall": "H2 · 技术与创新馆",
+          "theme": "算力与硬科技：智能驾驶、电力能源底座、通用大算力 GPGPU / 端侧芯片、算网通信。代表：昆仑芯、沐曦、摩尔线程、燧原、天数智芯、东方算芯、新华三、中兴、理想（马赫 100）"
+        },
+        {
+          "hall": "H3 · 具身智能馆",
+          "theme": "机器人 / 具身智能专属馆：核心零部件、灵巧手、人形 / 四足机器人、具身模型。代表：智元、宇树、傅利叶、银河通用、星动纪元、云深处、绿的谐波、强脑科技"
+        },
+        {
+          "hall": "H4 · 全域链接馆",
+          "theme": "WAIC Future Tech 创投生态：158 家初创 + 22 个 OPC 项目，设领航舞台 / 创新舞台 / 开发者展区，含初创路演、技术开放麦、资本对接"
+        }
+      ],
+      "map_images": [],
       "organizers": [],
       "guests": [],
       "participants": [],
@@ -80,10 +126,10 @@
       "article_md": "",
       "original_excerpt": "",
       "detail_md": "md/agenda/zone-世博展览馆.md",
-      "search_text": "世博展览馆  展区 世博片区"
+      "search_text": "世博展览馆 世博展览馆｜全景应用展示窗\n\n世博展览馆将打造ai全景应用展示窗口，集中呈现行业应用、核心技术、具身智能与创投孵化等板块内容。从产业落地到前沿探索，从技术突破到场景体验，观众可在这里系统感受人工智能赋能千行百业的现实图景。 展区 世博片区 全景应用展示窗：108 款芯片、261 款大模型、208 款具身智能终端、超 300 台真机集中亮相 h3 具身馆 300+ 机器人真机同场（近年最大规模）：宇树 gd01 载人变形机甲、智元远征 a3 ultra、傅利叶 gr 全系 重磅新品：minimax m3、阶跃 stepx neo（目前唯一 l3 级智能体手机）、百度 dumate、蚂蚁『阿福』ai 家医 h4 从全球 1200+ 项目筛出 158 家初创 + 22 个 opc 项目，红杉 / 高瓴 / 真格等 80 余家机构、200 余位投资人设资本对接专区 h1 · 应用与生态馆 ai 全产业链应用：通用 / 多模态 / 垂类 / 工业大模型、ai 智能体、ai 基础设施、金融科技、ai4s、ai 终端。代表：阿里、百度、华为、腾讯、蚂蚁、商汤、科大讯飞、金山办公、minimax h2 · 技术与创新馆 算力与硬科技：智能驾驶、电力能源底座、通用大算力 gpgpu / 端侧芯片、算网通信。代表：昆仑芯、沐曦、摩尔线程、燧原、天数智芯、东方算芯、新华三、中兴、理想（马赫 100） h3 · 具身智能馆 机器人 / 具身智能专属馆：核心零部件、灵巧手、人形 / 四足机器人、具身模型。代表：智元、宇树、傅利叶、银河通用、星动纪元、云深处、绿的谐波、强脑科技 h4 · 全域链接馆 waic future tech 创投生态：158 家初创 + 22 个 opc 项目，设领航舞台 / 创新舞台 / 开发者展区，含初创路演、技术开放麦、资本对接"
     },
     {
-      "id": "zone-徐汇西岸国际会展中心",
+      "id": "zone-2a8e0955ad",
       "source_type": "official",
       "kind": "exhibition_zone",
       "waic_relation": "official",
@@ -94,9 +140,9 @@
         "retrieved_at": "2026-07-16"
       },
       "title": "徐汇西岸国际会展中心",
-      "title_en": "",
-      "description": "",
-      "description_en": "",
+      "title_en": "WEST BUND ICEC",
+      "description": "徐汇西岸国际会展中心｜未来科技体验场\n\n徐汇西岸国际会展中心将突出“可感知、可体验”的未来科技氛围，重点展示智能终端、尖端科技与沉浸式互动体验。依托西岸开放、多元、创新的城市气质，这里将让AI从概念走向现场，成为公众近距离触摸未来生活的体验场。",
+      "description_en": "West Bund ICEC | Future Tech Experience Hub\n\nThe Xuhui West Bund International Convention Center will create a future-tech atmosphere that can be seen, felt, and experienced, with a focus on smart devices, cutting-edge technologies, and immersive interactive experiences. Drawing on the West Bund&rsquo;s open, diverse, and innovative urban character, the venue will bring AI out of the realm of concepts and into real-life settings, giving the public a hands-on glimpse of future living.",
       "date": "",
       "day": null,
       "start_time": "",
@@ -110,7 +156,21 @@
       "registration_required": null,
       "registration_url": "",
       "price": "",
-      "cover_img": "",
+      "cover_img": "https://static.worldaic.com.cn/media/20260624/efdaaad3202b45bc9ae091e168e65a71.jpg",
+      "address": "上海市徐汇区龙腾大道2555号一带（徐汇滨江 · 西岸）",
+      "transit": "地铁 11 号线龙耀路站 1 号口",
+      "highlights": [
+        "未来科技体验场 · 主线『生活之岸』：近 1 万㎡、100+ 企业 200+ 产品，57 项国内首发首秀、64 款可上手消费级 AI 产品，会期 30+ 场论坛",
+        "四大片区：A 未来文娱与数字感知（生数 Vidu / 影眸 / B站）· B 未来终端与生活方式（荣耀 / 网易有道 / 讯飞）· C 智能穿戴与具身智能（Rokid / 李未可 / 陪伴机器人）· D 公共能量场（新品发布 / 路演 / 机器人乐队）",
+        "明星展项：荣耀 Robot Phone（全球首款内置四自由度机械云台的具身手机）、Rokid 乐奇 AI 眼镜、影眸 Hyper3D（4 秒出百万面 3D）、网易有道『龙虾』桌面级 AI 智能体"
+      ],
+      "highlights_sources": [
+        "https://m.36kr.com/p/3893445621512706",
+        "https://m.jiemian.com/article/14750594.html",
+        "https://hao.cnyes.com/post/259187"
+      ],
+      "halls": [],
+      "map_images": [],
       "organizers": [],
       "guests": [],
       "participants": [],
@@ -119,10 +179,10 @@
       "article_md": "",
       "original_excerpt": "",
       "detail_md": "md/agenda/zone-徐汇西岸国际会展中心.md",
-      "search_text": "徐汇西岸国际会展中心  展区 西岸片区"
+      "search_text": "徐汇西岸国际会展中心 徐汇西岸国际会展中心｜未来科技体验场\n\n徐汇西岸国际会展中心将突出“可感知、可体验”的未来科技氛围，重点展示智能终端、尖端科技与沉浸式互动体验。依托西岸开放、多元、创新的城市气质，这里将让ai从概念走向现场，成为公众近距离触摸未来生活的体验场。 展区 西岸片区 未来科技体验场 · 主线『生活之岸』：近 1 万㎡、100+ 企业 200+ 产品，57 项国内首发首秀、64 款可上手消费级 ai 产品，会期 30+ 场论坛 四大片区：a 未来文娱与数字感知（生数 vidu / 影眸 / b站）· b 未来终端与生活方式（荣耀 / 网易有道 / 讯飞）· c 智能穿戴与具身智能（rokid / 李未可 / 陪伴机器人）· d 公共能量场（新品发布 / 路演 / 机器人乐队） 明星展项：荣耀 robot phone（全球首款内置四自由度机械云台的具身手机）、rokid 乐奇 ai 眼镜、影眸 hyper3d（4 秒出百万面 3d）、网易有道『龙虾』桌面级 ai 智能体 "
     },
     {
-      "id": "zone-张江科学会堂",
+      "id": "zone-60c82192d9",
       "source_type": "official",
       "kind": "exhibition_zone",
       "waic_relation": "official",
@@ -133,9 +193,9 @@
         "retrieved_at": "2026-07-16"
       },
       "title": "张江科学会堂",
-      "title_en": "",
-      "description": "",
-      "description_en": "",
+      "title_en": "ZHANGJIANG SCIENCE HALL",
+      "description": "张江科学会堂｜智能算力芯引擎\n\n张江科学会堂将围绕智能算力与硬科技创新，展现算力底座、自主可控、软硬协同和全栈整合能力。依托张江雄厚的科创生态与产业基础，这里将呈现人工智能背后的核心驱动力，凸显上海在AI基础能力建设中的关键支撑。",
+      "description_en": "ZHANGJIANG SCIENCE HALL | Core Engine for Intelligent Computing\n\nZhangjiang Science Hall will center on intelligent computing power and hard-tech innovation, showcasing computing infrastructure, self-reliant technologies, software-hardware synergy, and full-stack integration capabilities. Backed by Zhangjiang&rsquo;s strong innovation ecosystem and industrial foundation, the venue will spotlight the core forces powering AI and underscore Shanghai&rsquo;s key role in building foundational AI capabilities.",
       "date": "",
       "day": null,
       "start_time": "",
@@ -149,7 +209,22 @@
       "registration_required": null,
       "registration_url": "",
       "price": "",
-      "cover_img": "",
+      "cover_img": "https://static.worldaic.com.cn/media/20260624/3c8373dde436467fb267eb528b6bea9d.jpg",
+      "address": "上海市浦东新区海科路1393号",
+      "transit": "地铁 13 号线学林路站 1 号口",
+      "highlights": [
+        "智能算力芯引擎 · 主线『技术之芯』：国产算力『镇馆之宝』华为 Atlas 950 SuperPoD 超节点真机首秀（现场 1024 昇腾卡），并展 Atlas 950 SuperCluster 50 万卡集群",
+        "东方算芯 DF1000（全球首颗软件定义近存计算 3D 芯片）、曙光『8000 登峰』十万卡国产 AI 超集群、中兴 OEX 超节点、阿里磐久 AL128 超节点",
+        "楼层布局：1F 海科厅（AI 大算力芯片 / 异构算力 / 国产 GPU 集群）· 2F 张江厅（智算整机 / 液冷算力系统 / 全栈算力基础设施）",
+        "配套体验：人机机甲格斗、AI 智能乒乓 / 网球、人机赛跑、仿生机器狗、XR 虚实对战 + 算力产业对接会"
+      ],
+      "highlights_sources": [
+        "https://k.sina.com.cn/article_5044281310_12ca99fde02002jfra.html",
+        "https://www.guancha.cn/politics/2026_07_11_823386.shtml",
+        "https://hao.cnyes.com/post/259187"
+      ],
+      "halls": [],
+      "map_images": [],
       "organizers": [],
       "guests": [],
       "participants": [],
@@ -158,7 +233,7 @@
       "article_md": "",
       "original_excerpt": "",
       "detail_md": "md/agenda/zone-张江科学会堂.md",
-      "search_text": "张江科学会堂  展区 张江片区"
+      "search_text": "张江科学会堂 张江科学会堂｜智能算力芯引擎\n\n张江科学会堂将围绕智能算力与硬科技创新，展现算力底座、自主可控、软硬协同和全栈整合能力。依托张江雄厚的科创生态与产业基础，这里将呈现人工智能背后的核心驱动力，凸显上海在ai基础能力建设中的关键支撑。 展区 张江片区 智能算力芯引擎 · 主线『技术之芯』：国产算力『镇馆之宝』华为 atlas 950 superpod 超节点真机首秀（现场 1024 昇腾卡），并展 atlas 950 supercluster 50 万卡集群 东方算芯 df1000（全球首颗软件定义近存计算 3d 芯片）、曙光『8000 登峰』十万卡国产 ai 超集群、中兴 oex 超节点、阿里磐久 al128 超节点 楼层布局：1f 海科厅（ai 大算力芯片 / 异构算力 / 国产 gpu 集群）· 2f 张江厅（智算整机 / 液冷算力系统 / 全栈算力基础设施） 配套体验：人机机甲格斗、ai 智能乒乓 / 网球、人机赛跑、仿生机器狗、xr 虚实对战 + 算力产业对接会 "
     },
     {
       "id": "off-cf0d412893",
