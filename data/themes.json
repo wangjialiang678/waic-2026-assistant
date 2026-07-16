@@ -3,42 +3,66 @@
     {
       "id": "人才生态",
       "name": "人才生态",
-      "activity_count": 25,
+      "activity_count": 26,
       "description": ""
     },
     {
       "id": "算力-通用智算",
       "name": "算力-通用智算",
-      "activity_count": 16,
+      "activity_count": 19,
+      "description": ""
+    },
+    {
+      "id": "投融资生态",
+      "name": "投融资生态",
+      "activity_count": 10,
       "description": ""
     },
     {
       "id": "产业发展-AI重塑",
       "name": "产业发展-AI重塑",
-      "activity_count": 9,
+      "activity_count": 10,
+      "description": ""
+    },
+    {
+      "id": "AI基础设施论坛",
+      "name": "AI基础设施论坛",
+      "activity_count": 8,
       "description": ""
     },
     {
       "id": "数据",
       "name": "数据",
+      "activity_count": 8,
+      "description": ""
+    },
+    {
+      "id": "科学技术-科学智能",
+      "name": "科学技术-科学智能",
       "activity_count": 7,
       "description": ""
     },
     {
       "id": "模型",
       "name": "模型",
+      "activity_count": 7,
+      "description": ""
+    },
+    {
+      "id": "治理",
+      "name": "治理",
       "activity_count": 6,
       "description": ""
     },
     {
-      "id": "投融资生态",
-      "name": "投融资生态",
+      "id": "具身智能-具身机器人技术及应用落地",
+      "name": "具身智能-具身机器人技术及应用落地",
       "activity_count": 6,
       "description": ""
     },
     {
-      "id": "AI基础设施论坛",
-      "name": "AI基础设施论坛",
+      "id": "民生福祉-教育",
+      "name": "民生福祉-教育",
       "activity_count": 5,
       "description": ""
     },
@@ -55,12 +79,6 @@
       "description": ""
     },
     {
-      "id": "具身智能-具身机器人技术及应用落地",
-      "name": "具身智能-具身机器人技术及应用落地",
-      "activity_count": 5,
-      "description": ""
-    },
-    {
       "id": "算力-新型计算与先进架构",
       "name": "算力-新型计算与先进架构",
       "activity_count": 5,
@@ -73,20 +91,20 @@
       "description": ""
     },
     {
-      "id": "治理",
-      "name": "治理",
+      "id": "产业发展-AI产业落地",
+      "name": "产业发展-AI产业落地",
       "activity_count": 4,
       "description": ""
     },
     {
-      "id": "民生福祉-教育",
-      "name": "民生福祉-教育",
+      "id": "科学技术",
+      "name": "科学技术",
       "activity_count": 4,
       "description": ""
     },
     {
-      "id": "科学技术-科学智能",
-      "name": "科学技术-科学智能",
+      "id": "民生福祉",
+      "name": "民生福祉",
       "activity_count": 4,
       "description": ""
     },
@@ -97,14 +115,14 @@
       "description": ""
     },
     {
-      "id": "安全",
-      "name": "安全",
+      "id": "产业发展-金融",
+      "name": "产业发展-金融",
       "activity_count": 3,
       "description": ""
     },
     {
-      "id": "科学技术",
-      "name": "科学技术",
+      "id": "安全",
+      "name": "安全",
       "activity_count": 3,
       "description": ""
     },
@@ -127,20 +145,8 @@
       "description": ""
     },
     {
-      "id": "产业发展-AI产业落地",
-      "name": "产业发展-AI产业落地",
-      "activity_count": 2,
-      "description": ""
-    },
-    {
-      "id": "产业发展-金融",
-      "name": "产业发展-金融",
-      "activity_count": 2,
-      "description": ""
-    },
-    {
-      "id": "民生福祉",
-      "name": "民生福祉",
+      "id": "标准国际化",
+      "name": "标准国际化",
       "activity_count": 2,
       "description": ""
     },
@@ -157,146 +163,14 @@
       "description": ""
     },
     {
-      "id": "标准国际化",
-      "name": "标准国际化",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "AI基础设施论坛,算力-通用智算,产业发展-AI产业落地",
-      "name": "AI基础设施论坛,算力-通用智算,产业发展-AI产业落地",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "投融资生态,人才生态,开源生态",
-      "name": "投融资生态,人才生态,开源生态",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
       "id": "科学技术-工程智能",
       "name": "科学技术-工程智能",
       "activity_count": 1,
       "description": ""
     },
     {
-      "id": "投融资生态,人才生态,产业发展",
-      "name": "投融资生态,人才生态,产业发展",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "产业发展-AI产业落地,产业发展-金融",
-      "name": "产业发展-AI产业落地,产业发展-金融",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "AI基础设施论坛,数据,模型,具身智能-具身机器人技术及应用落地,投融资生态",
-      "name": "AI基础设施论坛,数据,模型,具身智能-具身机器人技术及应用落地,投融资生态",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "产业发展-金融,产业发展-AI重塑",
-      "name": "产业发展-金融,产业发展-AI重塑",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "算力-通用智算,AI基础设施论坛,算力,开源生态",
-      "name": "算力-通用智算,AI基础设施论坛,算力,开源生态",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "投融资生态,融合生态,产业发展",
-      "name": "投融资生态,融合生态,产业发展",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "具身智能-具身机器人技术及应用落地,产业发展-AI产业落地",
-      "name": "具身智能-具身机器人技术及应用落地,产业发展-AI产业落地",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "治理,投融资生态,产业发展",
-      "name": "治理,投融资生态,产业发展",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "投融资生态,产业发展",
-      "name": "投融资生态,产业发展",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "具身智能,产业发展,模型",
-      "name": "具身智能,产业发展,模型",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "算力-通用智算,算力,产业发展",
-      "name": "算力-通用智算,算力,产业发展",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "产业发展-AI重塑,产业发展",
-      "name": "产业发展-AI重塑,产业发展",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "算力-通用智算,算力-新型计算与先进架构,开源生态,产业发展-AI重塑",
-      "name": "算力-通用智算,算力-新型计算与先进架构,开源生态,产业发展-AI重塑",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "民生福祉,科学技术",
-      "name": "民生福祉,科学技术",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "AI基础设施论坛,产业发展-交通,产业发展-AI重塑",
-      "name": "AI基础设施论坛,产业发展-交通,产业发展-AI重塑",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "民生福祉-教育,产业发展-AI重塑,模型",
-      "name": "民生福祉-教育,产业发展-AI重塑,模型",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "科学技术,人才生态,民生福祉-教育",
-      "name": "科学技术,人才生态,民生福祉-教育",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "科学技术-科学智能,产业发展-AI产业落地,投融资生态",
-      "name": "科学技术-科学智能,产业发展-AI产业落地,投融资生态",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "模型,具身智能-世界模型,具身智能-具身机器人技术及应用落地,投融资生态,具身智能,AI基础设施论坛,具身智能-物理AI",
-      "name": "模型,具身智能-世界模型,具身智能-具身机器人技术及应用落地,投融资生态,具身智能,AI基础设施论坛,具身智能-物理AI",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "人才生态,开源生态,投融资生态,产业发展",
-      "name": "人才生态,开源生态,投融资生态,产业发展",
+      "id": "具身智能",
+      "name": "具身智能",
       "activity_count": 1,
       "description": ""
     },
@@ -307,26 +181,14 @@
       "description": ""
     },
     {
-      "id": "消费提质-消费,产业发展-AI产业落地,科学技术",
-      "name": "消费提质-消费,产业发展-AI产业落地,科学技术",
+      "id": "消费提质-消费",
+      "name": "消费提质-消费",
       "activity_count": 1,
       "description": ""
     },
     {
-      "id": "产业发展-AI产业落地,投融资生态,融合生态",
-      "name": "产业发展-AI产业落地,投融资生态,融合生态",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "科学技术-科学智能,科学技术-工程智能,科学技术-数理基础,科学技术",
-      "name": "科学技术-科学智能,科学技术-工程智能,科学技术-数理基础,科学技术",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "消费提质-广告,消费提质-消费,产业发展,消费提质",
-      "name": "消费提质-广告,消费提质-消费,产业发展,消费提质",
+      "id": "消费提质-广告",
+      "name": "消费提质-广告",
       "activity_count": 1,
       "description": ""
     },
@@ -339,36 +201,6 @@
     {
       "id": "具身智能-物理AI",
       "name": "具身智能-物理AI",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "科学技术-科学智能,具身智能-具身机器人技术及应用落地,产业发展-AI产业落地,产业发展-AI重塑,消费提质-消费,消费提质-广告",
-      "name": "科学技术-科学智能,具身智能-具身机器人技术及应用落地,产业发展-AI产业落地,产业发展-AI重塑,消费提质-消费,消费提质-广告",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "数据,模型",
-      "name": "数据,模型",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "民生福祉,治理",
-      "name": "民生福祉,治理",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "治理,产业发展-AI产业落地,人才生态,产业发展",
-      "name": "治理,产业发展-AI产业落地,人才生态,产业发展",
-      "activity_count": 1,
-      "description": ""
-    },
-    {
-      "id": "标准国际化,投融资生态",
-      "name": "标准国际化,投融资生态",
       "activity_count": 1,
       "description": ""
     }
