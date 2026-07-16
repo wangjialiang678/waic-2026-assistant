@@ -6,3 +6,7 @@ node_modules/
 .DS_Store
 *.bak.*
 server/.venv/
+
+# 用户数据库绝不入仓
+*.db
+user_state.db

@@ -28,6 +28,7 @@ from fastapi.responses import JSONResponse, StreamingResponse
 
 import data
 import store_state
+import store_social
 import tools
 from llm import run_chat
 
@@ -368,3 +369,102 @@ async def state_put(request: Request):
     st = store_state.put_state(device, schedule, interests, inferred, contact, updated_at)
     _log_event("state", ip8=_ip8(ip), dev=device[:6], n_sch=len(schedule), n_int=len(interests))
     return st
+
+
+# ================= 社交速配 M9（无登录·兴趣匹配·双向 like 才露联系方式） =================
+# 隐私：联系方式只在双向匹配后露出；候选卡不含 contact；一键 optout；可 WAIC_SOCIAL=off 全关。
+SOCIAL_LIMITER = TokenBucket(capacity=120, refill_per_sec=120 / 60.0)   # 每设备 120/分钟
+
+
+@app.get("/api/social/config")
+def social_config():
+    return {"enabled": store_social.ENABLED}
+
+
+@app.get("/api/social/profile")
+def social_get_profile(device: str = Query("")):
+    if not store_social.ENABLED:
+        return JSONResponse({"error": "social_disabled"}, status_code=404)
+    if not store_state.valid_device(device):
+        return JSONResponse({"error": "bad_device"}, status_code=400)
+    return store_social.get_profile(device) or {"device": device, "enabled": False}
+
+
+@app.post("/api/social/profile")
+async def social_save_profile(request: Request):
+    if not store_social.ENABLED:
+        return JSONResponse({"error": "social_disabled"}, status_code=404)
+    try:
+        body = await request.json()
+    except Exception:  # noqa: BLE001
+        body = {}
+    device = (body.get("device") or "").strip()
+    if not store_state.valid_device(device):
+        return JSONResponse({"error": "bad_device"}, status_code=400)
+    if not SOCIAL_LIMITER.allow(device):
+        return JSONResponse({"error": "rate_limited"}, status_code=429)
+    enabled = bool(body.get("enabled"))
+    intro = str(body.get("intro") or "")[:80]
+    offer = str(body.get("offer") or "")[:120]
+    seeking = str(body.get("seeking") or "")[:120]
+    tags = [str(t)[:24] for t in (body.get("tags") or []) if t][:12]
+    role = str(body.get("role") or "")[:16]
+    c = body.get("contact")
+    contact = None
+    if isinstance(c, dict) and c.get("value"):
+        contact = {"type": str(c.get("type", ""))[:16], "value": str(c.get("value", ""))[:80]}
+    st = store_social.save_profile(device, enabled, intro, offer, seeking, tags, contact, role)
+    _log_event("social", sub="profile", dev=device[:6], enabled=int(enabled))
+    return st
+
+
+@app.get("/api/social/candidates")
+def social_candidates(device: str = Query(""), limit: int = Query(20, ge=1, le=50)):
+    if not store_social.ENABLED:
+        return JSONResponse({"error": "social_disabled"}, status_code=404)
+    if not store_state.valid_device(device):
+        return JSONResponse({"error": "bad_device"}, status_code=400)
+    return {"items": store_social.candidates(device, limit=limit)}
+
+
+@app.post("/api/social/like")
+async def social_like(request: Request):
+    if not store_social.ENABLED:
+        return JSONResponse({"error": "social_disabled"}, status_code=404)
+    try:
+        body = await request.json()
+    except Exception:  # noqa: BLE001
+        body = {}
+    device = (body.get("device") or "").strip()
+    target = (body.get("target") or "").strip()
+    if not store_state.valid_device(device) or not store_state.valid_device(target) or device == target:
+        return JSONResponse({"error": "bad_device"}, status_code=400)
+    if not SOCIAL_LIMITER.allow(device):
+        return JSONResponse({"error": "rate_limited"}, status_code=429)
+    res = store_social.like(device, target)
+    _log_event("social", sub="like", dev=device[:6], matched=int(res.get("matched", False)))
+    return res
+
+
+@app.get("/api/social/matches")
+def social_matches(device: str = Query("")):
+    if not store_social.ENABLED:
+        return JSONResponse({"error": "social_disabled"}, status_code=404)
+    if not store_state.valid_device(device):
+        return JSONResponse({"error": "bad_device"}, status_code=400)
+    return {"items": store_social.matches(device)}
+
+
+@app.post("/api/social/optout")
+async def social_optout(request: Request):
+    if not store_social.ENABLED:
+        return JSONResponse({"error": "social_disabled"}, status_code=404)
+    try:
+        body = await request.json()
+    except Exception:  # noqa: BLE001
+        body = {}
+    device = (body.get("device") or "").strip()
+    if not store_state.valid_device(device):
+        return JSONResponse({"error": "bad_device"}, status_code=400)
+    store_social.optout(device)
+    return {"ok": True}

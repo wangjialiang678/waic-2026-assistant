@@ -1082,3 +1082,48 @@ ul.zhi li { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
 .addsrc { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
 .addsrc li { font-size: 0.9rem; color: var(--ink-soft); }
 .addsrc a { color: var(--official); display: inline-flex; align-items: center; gap: 0.3rem; }
+
+/* ============================ 社交速配 M9 ============================ */
+.nav-links .nav-social { color: var(--intel-deep); font-weight: 600; cursor: pointer; }
+.nav-links .nav-social:hover { color: var(--intel); }
+@media (max-width: 520px){ .nav-links .nav-social{ font-size: 0.82rem; } }
+body.soc-lock { overflow: hidden; }
+.soc-root { position: fixed; inset: 0; z-index: 1200; display: flex; align-items: center; justify-content: center; }
+.soc-mask { position: absolute; inset: 0; background: rgba(12,16,22,0.5); }
+.soc-panel { position: relative; width: min(520px, calc(100vw - 1.6rem)); max-height: 88vh; display: flex; flex-direction: column;
+  background: var(--paper); border: 1px solid var(--rule-2); border-radius: 14px; box-shadow: 0 30px 70px -20px rgba(10,14,20,0.6); overflow: hidden; }
+.soc-head { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.2rem; background: linear-gradient(120deg, var(--intel) 0%, var(--intel-deep) 90%); color: #fff; }
+.soc-title { font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem; }
+.soc-x { background: rgba(255,255,255,0.16); color: #fff; border: none; width: 32px; height: 32px; border-radius: 8px; cursor: pointer; font-size: 1rem; }
+.soc-tabs { display: flex; border-bottom: 1px solid var(--rule); background: var(--surface-2); }
+.soc-tab { flex: 1; padding: 0.7rem; background: none; border: none; cursor: pointer; font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-mute); border-bottom: 2px solid transparent; }
+.soc-tab.active { color: var(--intel-deep); border-bottom-color: var(--intel); font-weight: 600; }
+.soc-body { flex: 1; overflow-y: auto; padding: 1.1rem 1.2rem; -webkit-overflow-scrolling: touch; }
+.soc-note { padding: 0.7rem 1.2rem; font-size: 0.76rem; color: var(--ink-mute); background: var(--surface-2); border-top: 1px solid var(--rule); line-height: 1.55; }
+.soc-empty { color: var(--ink-mute); font-size: 0.92rem; line-height: 1.7; text-align: center; padding: 2rem 0.5rem; }
+/* 表单 */
+.soc-form { display: flex; flex-direction: column; gap: 0.9rem; }
+.soc-consent { display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.88rem; color: var(--ink-soft); line-height: 1.5; background: var(--intel-tint); padding: 0.7rem 0.8rem; border-radius: 8px; }
+.soc-field { display: flex; flex-direction: column; gap: 0.3rem; }
+.soc-k { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600; color: var(--ink-soft); }
+.soc-form input, .soc-contact select, .soc-contact input { font-family: var(--font-sans); font-size: 0.9rem; padding: 0.5rem 0.7rem; border: 1px solid var(--rule-2); border-radius: 7px; background: var(--surface); color: var(--ink); }
+.soc-form input:focus, .soc-contact select:focus, .soc-contact input:focus { outline: none; border-color: var(--intel); }
+.soc-contact { display: flex; flex-direction: column; gap: 0.3rem; }
+.soc-contact-row { display: flex; gap: 0.5rem; }
+.soc-contact-row select { flex: none; }
+.soc-contact-row input { flex: 1; min-width: 0; }
+.soc-actions { display: flex; gap: 0.6rem; margin-top: 0.3rem; }
+.soc-btn { font-family: var(--font-sans); font-size: 0.86rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 7px; cursor: pointer; border: 1px solid var(--rule-2); background: var(--surface); color: var(--ink-soft); }
+.soc-btn.primary { background: var(--intel); border-color: var(--intel); color: #fff; }
+.soc-btn.primary:hover { background: var(--intel-deep); }
+.soc-btn.ghost:hover { border-color: var(--intel); color: var(--intel); }
+/* 候选/匹配卡 */
+.soc-card { border: 1px solid var(--rule); border-radius: 10px; padding: 0.9rem 1rem; margin-bottom: 0.8rem; background: var(--surface); }
+.soc-card.matched { border-left: 3px solid var(--intel); }
+.soc-c-intro { font-family: var(--font-serif); font-weight: 600; font-size: 1.02rem; color: var(--ink); }
+.soc-c-line { font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.35rem; }
+.soc-c-line b { color: var(--ink-mute); font-weight: 600; font-size: 0.78rem; margin-right: 0.3rem; }
+.soc-c-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; }
+.soc-tag { font-family: var(--font-sans); font-size: 0.72rem; color: var(--intel-deep); background: var(--intel-tint); padding: 0.1rem 0.5rem; border-radius: 100px; }
+.soc-c-acts { display: flex; gap: 0.5rem; margin-top: 0.7rem; justify-content: flex-end; }
+.soc-c-contact { margin-top: 0.7rem; padding-top: 0.6rem; border-top: 1px dashed var(--rule); font-size: 0.9rem; color: var(--ink-soft); }
