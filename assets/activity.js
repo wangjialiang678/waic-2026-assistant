@@ -1,0 +1,346 @@
+// WAIC 2026 参展指南 · 论坛详情页（summary-first 版）
+
+const FAVORITES_KEY = 'waic_favorites';
+
+let currentActivity = null;
+let favoriteIds = new Set();
+
+/* ============================================================
+   Utilities
+   ============================================================ */
+
+function escape(s) {
+  if (s == null) return '';
+  return String(s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  }[c]));
+}
+
+function truncate(text, maxLength) {
+  if (!text) return '';
+  let t = String(text).replace(/\s+/g, ' ').trim();
+  if (t.length <= maxLength) return t;
+  return t.slice(0, maxLength - 1) + '…';
+}
+
+function firstSentence(text, maxLength = 80) {
+  if (!text) return '暂无简介';
+  const t = String(text).replace(/\s+/g, ' ').trim();
+  const m = t.match(/^.+?[。！？.!?](?=\s|$)/);
+  const sentence = m ? m[0] : t;
+  return truncate(sentence, maxLength);
+}
+
+function formatTimeRange(start_time, end_time, day, date_label) {
+  const start = start_time ? start_time.slice(11, 16) : '?';
+  const end = end_time ? end_time.slice(11, 16) : '?';
+
+  let date = date_label;
+  if (!date && start_time) {
+    const m = start_time.match(/2026-(\d{2})-(\d{2})/);
+    if (m) date = `7月${parseInt(m[2], 10)}日`;
+  }
+
+  const dayPart = day ? `Day ${day} · ` : '';
+  return `${dayPart}${date || '待定'} ${start} – ${end}`;
+}
+
+function setSectionContent(id, html) {
+  const details = document.getElementById(id);
+  if (!details) return;
+  const content = details.querySelector('.detail-section-content');
+  if (content) content.innerHTML = html;
+}
+
+/* ============================================================
+   Favorites
+   ============================================================ */
+
+function getFavorites() {
+  try {
+    const raw = localStorage.getItem(FAVORITES_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveFavorites() {
+  try {
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify([...favoriteIds]));
+  } catch (e) {
+    console.warn('无法保存收藏', e);
+  }
+}
+
+function updateFavoriteButton() {
+  const btn = document.getElementById('btn-favorite');
+  if (!btn || !currentActivity) return;
+  const id = String(currentActivity.id);
+  const active = favoriteIds.has(id);
+  btn.classList.toggle('active', active);
+  btn.textContent = active ? '已收藏' : '收藏';
+  btn.setAttribute('aria-label', active ? '取消收藏' : '收藏');
+}
+
+function toggleFavorite() {
+  if (!currentActivity) return;
+  const id = String(currentActivity.id);
+  if (favoriteIds.has(id)) {
+    favoriteIds.delete(id);
+  } else {
+    favoriteIds.add(id);
+  }
+  saveFavorites();
+  updateFavoriteButton();
+}
+
+/* ============================================================
+   Share
+   ============================================================ */
+
+async function shareActivity() {
+  const url = window.location.href;
+  const title = currentActivity ? currentActivity.title : document.title;
+  const text = currentActivity
+    ? `推荐看看 WAIC 2026 论坛：${currentActivity.title}`
+    : 'WAIC 2026 参展指南';
+
+  if (navigator.share) {
+    try {
+      await navigator.share({ title, text, url });
+      return;
+    } catch (e) {
+      if (e.name !== 'AbortError') {
+        console.warn('Web Share 失败', e);
+      }
+    }
+  }
+
+  try {
+    await navigator.clipboard.writeText(url);
+    showToast('链接已复制到剪贴板');
+  } catch (e) {
+    console.warn('复制失败', e);
+    showToast('分享链接：' + url);
+  }
+}
+
+function showToast(message) {
+  let toast = document.getElementById('share-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'share-toast';
+    toast.className = 'share-toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+/* ============================================================
+   Data loading
+   ============================================================ */
+
+async function loadActivity() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const container = document.querySelector('.detail-hero .container');
+
+  if (!id) {
+    if (container) {
+      container.innerHTML = '<p class="loading">缺少论坛 ID，<a href="./">返回论坛列表</a></p>';
+    }
+    return;
+  }
+
+  try {
+    const res = await fetch('/data/activities.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const activities = data.activities || [];
+    const act = activities.find(a => String(a.id) === id);
+
+    if (!act) {
+      if (container) {
+        container.innerHTML = `<p class="loading">未找到论坛 ${escape(id)}，<a href="./">返回论坛列表</a></p>`;
+      }
+      return;
+    }
+
+    favoriteIds = new Set(getFavorites().map(String));
+    renderDetail(act);
+  } catch (e) {
+    console.error(e);
+    if (container) {
+      container.innerHTML = `<p class="loading">加载失败：${escape(e.message)}，<a href="./">返回论坛列表</a></p>`;
+    }
+  }
+}
+
+/* ============================================================
+   Rendering
+   ============================================================ */
+
+function renderDetail(act) {
+  currentActivity = act;
+
+  document.title = `${act.title} · WAIC 2026 参展指南`;
+
+  const container = document.querySelector('.detail-hero .container');
+  if (container) {
+    const loading = container.querySelector('.loading');
+    if (loading) loading.style.display = 'none';
+  }
+
+  const categoryEl = document.getElementById('detail-category');
+  if (categoryEl) categoryEl.textContent = act.container?.name || '论坛';
+
+  const titleEl = document.getElementById('detail-title');
+  if (titleEl) titleEl.textContent = act.title;
+
+  const enEl = document.getElementById('detail-en');
+  if (enEl) enEl.textContent = act.title_en || '';
+
+  const summaryEl = document.getElementById('detail-summary');
+  if (summaryEl) summaryEl.textContent = firstSentence(act.description, 80);
+
+  const timeEl = document.getElementById('detail-time');
+  if (timeEl) {
+    timeEl.textContent = formatTimeRange(act.start_time, act.end_time, act.day, act.date_label);
+  }
+
+  const locationEl = document.getElementById('detail-location');
+  if (locationEl) locationEl.textContent = act.venue || '待定';
+
+  const hallEl = document.getElementById('detail-hall');
+  if (hallEl) hallEl.textContent = act.honeycomb?.name || '待定';
+
+  const officialEl = document.getElementById('detail-official');
+  if (officialEl) {
+    if (act.official_url) {
+      officialEl.href = act.official_url;
+      officialEl.style.display = 'inline-flex';
+    } else {
+      officialEl.style.display = 'none';
+    }
+  }
+
+  updateFavoriteButton();
+
+  renderDescription(act);
+  renderAgenda(act);
+  renderGuests(act);
+  renderMap(act);
+  renderSuperbrain(act);
+
+  document.getElementById('btn-favorite')?.addEventListener('click', toggleFavorite);
+  document.getElementById('btn-share')?.addEventListener('click', shareActivity);
+}
+
+function renderDescription(act) {
+  const desc = act.description || act.description_en || '';
+  if (!desc) {
+    setSectionContent('detail-description', '<p>暂无论坛简介。</p>');
+    return;
+  }
+  let html = '';
+  if (act.description) {
+    html += `<p>${escape(act.description).replace(/\n/g, '<br>')}</p>`;
+  }
+  if (act.description_en) {
+    html += `<p class="description-en">${escape(act.description_en).replace(/\n/g, '<br>')}</p>`;
+  }
+  setSectionContent('detail-description', html);
+}
+
+function renderAgenda(act) {
+  const periods = act.periods || act.agenda;
+  if (!Array.isArray(periods) || periods.length === 0) {
+    setSectionContent('detail-agenda', '<p>暂无详细议程</p>');
+    return;
+  }
+
+  const items = periods.map(p => {
+    const start = p.start ? p.start.slice(11, 16) : '?';
+    const end = p.end ? p.end.slice(11, 16) : '?';
+    const title = p.title ? `<span class="agenda-title">${escape(p.title)}</span>` : '';
+    return `<li><time>${start} – ${end}</time>${title}</li>`;
+  }).join('');
+
+  setSectionContent('detail-agenda', `<ul class="agenda-timeline">${items}</ul>`);
+}
+
+function renderGuests(act) {
+  const conveners = act.conveners;
+  if (!Array.isArray(conveners) || conveners.length === 0) {
+    setSectionContent('detail-guests', '<p>暂无嘉宾信息</p>');
+    return;
+  }
+
+  const cards = conveners.map(c => {
+    const name = typeof c === 'string' ? c : (c.name || '嘉宾');
+    const title = typeof c === 'object' && c ? (c.title || '') : '';
+    return `
+      <div class="guest-card">
+        <div class="guest-avatar" aria-hidden="true"></div>
+        <div class="guest-info">
+          <div class="guest-name">${escape(name)}</div>
+          ${title ? `<div class="guest-title">${escape(title)}</div>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  setSectionContent('detail-guests', `<div class="guest-list">${cards}</div>`);
+}
+
+function renderMap(act) {
+  const venue = act.venue || '待定';
+  const hall = act.honeycomb?.name || '';
+  const html = `
+    <div class="map-info">
+      <div class="map-row"><strong>场馆：</strong>${escape(hall || '待定')}</div>
+      <div class="map-row"><strong>地点：</strong>${escape(venue)}</div>
+      <p class="map-note">现场请参照 WAIC 官方指引</p>
+    </div>
+    <div class="map-placeholder">
+      <img src="https://placehold.co/600x300?text=Map" alt="场地位置示意图">
+    </div>
+  `;
+  setSectionContent('detail-map', html);
+}
+
+function renderSuperbrain(act) {
+  const card = document.getElementById('superbrain-card');
+  if (!card) return;
+  const sb = act.superbrain || {};
+
+  if (!sb.recommended && !sb.michael_speaking && !sb.ai_native_related) {
+    card.style.display = 'none';
+    return;
+  }
+
+  const reasons = [];
+  if (sb.michael_speaking) reasons.push('Michael 主讲');
+  if (sb.ai_native_related) reasons.push('AI 原住民计划相关');
+  if (sb.recommended && reasons.length === 0) reasons.push('超脑推荐');
+
+  card.innerHTML = `
+    <div class="superbrain-card-title">${escape(sb.badge_label || '超脑推荐')}</div>
+    <p>根据你的兴趣和已收藏论坛，这场活动可能与你的日程高度相关。</p>
+    ${reasons.length ? `<p class="superbrain-reasons">${escape(reasons.join(' · '))}</p>` : ''}
+  `;
+  card.style.display = 'block';
+}
+
+/* ============================================================
+   Boot
+   ============================================================ */
+
+loadActivity();

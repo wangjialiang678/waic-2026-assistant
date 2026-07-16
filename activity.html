@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>论坛详情 · WAIC 2026 参展指南</title>
+<meta name="description" content="WAIC 2026 世界人工智能大会论坛详情 · 超脑 AI 孵化器">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">WAIC 2026 参展指南</a>
+    <div class="nav-links">
+      <a href="/">← 全部论坛</a>
+      <a href="/install.html" class="nav-kb">接入 AI Agent</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="detail-hero">
+    <div class="container">
+      <a href="/" class="back-link">← 全部论坛</a>
+
+      <p class="loading">加载中...</p>
+
+      <div id="detail-category" class="detail-label">分类</div>
+      <h1 id="detail-title">论坛标题</h1>
+      <p id="detail-en" class="detail-en">English Subtitle</p>
+      <p id="detail-summary" class="detail-summary">一句话摘要，帮助参观者快速判断这场论坛是否值得参加。</p>
+
+      <div class="detail-keyinfo">
+        <div class="keyinfo-card">
+          <div class="label">时间</div>
+          <div id="detail-time" class="value">待定</div>
+        </div>
+        <div class="keyinfo-card">
+          <div class="label">地点</div>
+          <div id="detail-location" class="value">待定</div>
+        </div>
+        <div class="keyinfo-card">
+          <div class="label">场馆</div>
+          <div id="detail-hall" class="value">待定</div>
+        </div>
+      </div>
+
+      <div class="detail-actions">
+        <button type="button" id="btn-favorite" class="btn">收藏</button>
+        <a id="detail-official" href="#" target="_blank" rel="noopener" class="btn btn-primary">官网详情页</a>
+        <button type="button" id="btn-share" class="btn">分享</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-body">
+    <div class="container">
+      <div class="detail-sections">
+        <details id="detail-description" class="detail-section" open>
+          <summary>论坛简介</summary>
+          <div class="detail-section-content">
+            <p>论坛简介将在加载后显示。</p>
+          </div>
+        </details>
+
+        <details id="detail-agenda" class="detail-section">
+          <summary>议程</summary>
+          <div class="detail-section-content">
+            <p>议程将在加载后显示。</p>
+          </div>
+        </details>
+
+        <details id="detail-guests" class="detail-section">
+          <summary>嘉宾</summary>
+          <div class="detail-section-content">
+            <p>嘉宾名单将在加载后显示。</p>
+          </div>
+        </details>
+
+        <details id="detail-map" class="detail-section">
+          <summary>位置</summary>
+          <div class="detail-section-content">
+            <p>位置信息将在加载后显示。</p>
+          </div>
+        </details>
+      </div>
+
+      <aside class="detail-sidebar">
+        <div id="superbrain-card" class="superbrain-card" style="display:none">
+          <div class="superbrain-card-title">超脑推荐</div>
+          <p>根据你的兴趣和已收藏论坛，这场活动可能与你的日程高度相关。</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="about">
+  <div class="container">
+    <div>
+      <div class="col-title">WAIC 2026 参展指南</div>
+      <p>数据版本 <span id="data-version" class="mono">...</span></p>
+      <p>本平台由 <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener">超脑 AI 孵化器</a> 搭建维护</p>
+      <p>活动来源 <a href="https://www.worldaic.com.cn/" target="_blank" rel="noopener">WAIC 官方</a></p>
+    </div>
+    <div>
+      <div class="col-title">超脑 AI 孵化器</div>
+      <p><a href="https://www.superbrain-ai.com" target="_blank" rel="noopener"><strong>超脑链官网 · www.superbrain-ai.com</strong></a></p>
+      <p>让热爱，在真实世界创造未来</p>
+      <p>Michael：从 10 后创作者视角出发，把 AI 放回真实世界的问题现场。</p>
+    </div>
+    <div>
+      <div class="col-title">技术接入</div>
+      <p><a href="/install.html">AI Agent Skill</a></p>
+      <p><a href="/data/activities.json" target="_blank">论坛 API</a></p>
+      <p><a href="/VERSION" target="_blank">数据版本</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/activity.js"></script>
+</body>
+</html>

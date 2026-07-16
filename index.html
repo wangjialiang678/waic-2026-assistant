@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WAIC 2026 参展指南 · 超脑 AI 孵化器</title>
+<meta name="description" content="WAIC 2026 世界人工智能大会参展指南 · AI 原住民计划 · 175 场论坛聚合 · 三地四馆 · AI Agent 可接入">
+<meta property="og:title" content="WAIC 2026 参展指南 · 超脑 AI 孵化器">
+<meta property="og:description" content="AI 原住民计划 · 175 场论坛 · 三地四馆 · 智能伙伴 共创未来">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">WAIC 2026 参展指南</a>
+    <div class="nav-links">
+      <a href="#list">论坛</a>
+      <a href="/ai-native.html">AI 原住民计划</a>
+      <a href="#about">关于</a>
+      <a href="/install.html" class="nav-kb">接入 AI Agent</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<section class="superbrain-hero" id="ai-native">
+  <div class="sb-hero-content">
+    <div class="sb-hero-text">
+      <div class="eyebrow">超脑 AI 孵化器 · AI 原住民计划</div>
+      <h2>10 后用 AI，回应真实世界</h2>
+      <p class="hero-subtitle">7.17 - 7.20 · 西岸国际会展中心 4 楼 · 47 位 10 后创作者</p>
+      <div class="sb-hero-actions">
+        <a href="/ai-native.html" class="btn btn-primary">了解 AI 原住民计划</a>
+        <a href="#list" class="btn">浏览论坛</a>
+      </div>
+    </div>
+    <div class="sb-hero-stats">
+      <div class="stat"><div class="n" id="stat-creators">47</div><div class="l">位 10 后创作者</div></div>
+      <div class="stat"><div class="n" id="stat-activities">…</div><div class="l">场论坛</div></div>
+      <div class="stat"><div class="n" id="stat-days">4</div><div class="l">天 · 7/17-20</div></div>
+      <div class="stat"><div class="n" id="stat-honeycombs">…</div><div class="l">个场馆</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="list">
+  <div class="day-tabs-mobile" aria-label="日期筛选">
+    <button class="day-tab active" data-day="1">Day 1 · 7/17</button>
+    <button class="day-tab" data-day="2">Day 2 · 7/18</button>
+    <button class="day-tab" data-day="3">Day 3 · 7/19</button>
+    <button class="day-tab" data-day="4">Day 4 · 7/20</button>
+  </div>
+
+  <div class="page-layout">
+    <aside class="day-sidebar">
+      <nav class="day-nav" aria-label="日期导航">
+        <button class="day-nav-item active" data-day="1">Day 1 · 7/17 周四</button>
+        <button class="day-nav-item" data-day="2">Day 2 · 7/18 周五</button>
+        <button class="day-nav-item" data-day="3">Day 3 · 7/19 周六</button>
+        <button class="day-nav-item" data-day="4">Day 4 · 7/20 周日</button>
+      </nav>
+    </aside>
+
+    <div class="list-main">
+      <div class="list-toolbar">
+        <input type="search" id="q" placeholder="搜索论坛名、地点、关键词…">
+        <select id="filter-container" aria-label="分类筛选">
+          <option value="">全部分类</option>
+        </select>
+        <select id="filter-hall" aria-label="场馆筛选">
+          <option value="">全部场馆</option>
+        </select>
+        <button id="btn-my-schedule" class="btn btn-primary" type="button">我的日程</button>
+      </div>
+
+      <div class="cards-grid" id="list-content">
+        <div class="skeleton-cards" aria-hidden="true">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<aside class="drawer" id="schedule-drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <h3>我的日程</h3>
+    <button class="drawer-close" id="schedule-drawer-close" type="button" aria-label="关闭">×</button>
+  </div>
+  <div class="drawer-body">
+    <div class="schedule-empty">你还没有收藏任何论坛。</div>
+    <div class="schedule-list" id="schedule-list"></div>
+  </div>
+</aside>
+
+<div class="easter-egg" id="easter-egg" aria-hidden="true">
+  <div class="easter-egg-backdrop"></div>
+  <div class="easter-egg-card">
+    <button class="easter-egg-close" id="easter-egg-close" type="button" aria-label="关闭">×</button>
+    <div class="easter-egg-content">
+      <p class="easter-egg-quote">“让热爱，在真实世界创造未来。”</p>
+      <p class="easter-egg-name">Michael</p>
+      <p class="easter-egg-role">超脑 AI 孵化器创始人</p>
+      <p class="easter-egg-hint">谢谢你找到了这个彩蛋 🥚</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer" id="about">
+  <div class="container">
+    <div>
+      <div class="col-title">WAIC 2026 参展指南</div>
+      <p>数据版本 <span id="data-version" class="mono">...</span></p>
+      <p>本平台由 <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener">超脑 AI 孵化器</a> 搭建维护</p>
+      <p>活动来源 <a href="https://www.worldaic.com.cn/" target="_blank" rel="noopener">WAIC 官方</a></p>
+    </div>
+    <div>
+      <div class="col-title">超脑 AI 孵化器</div>
+      <p><a href="https://www.superbrain-ai.com" target="_blank" rel="noopener"><strong>超脑链官网 · www.superbrain-ai.com</strong></a></p>
+      <p>让热爱，在真实世界创造未来</p>
+      <p>Michael：从 10 后创作者视角出发，把 AI 放回真实世界的问题现场。</p>
+    </div>
+    <div>
+      <div class="col-title">技术接入</div>
+      <p><a href="/install.html">AI Agent Skill</a></p>
+      <p><a href="/data/activities.json" target="_blank">论坛 API</a></p>
+      <p><a href="/VERSION" target="_blank">数据版本</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/app.js"></script>
+</body>
+</html>
