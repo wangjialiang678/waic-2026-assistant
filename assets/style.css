@@ -1175,6 +1175,30 @@ p:last-child {
   padding-left: 1rem;
 }
 
+.noscript-warning {
+  background: var(--card);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--ink-soft);
+}
+
+.noscript-warning strong {
+  display: block;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.noscript-warning p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.loading-text {
+  color: var(--ink-mute);
+}
+
 .agenda-timeline {
   list-style: none;
   display: flex;
