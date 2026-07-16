@@ -1,0 +1,126 @@
+{
+  "categories": [
+    {
+      "id": "综合论坛",
+      "name": "综合论坛",
+      "activity_count": 45,
+      "description": ""
+    },
+    {
+      "id": "大模型与AI基础",
+      "name": "大模型与AI基础",
+      "activity_count": 35,
+      "description": ""
+    },
+    {
+      "id": "产业与工业智能化",
+      "name": "产业与工业智能化",
+      "activity_count": 32,
+      "description": ""
+    },
+    {
+      "id": "算力与AI芯片",
+      "name": "算力与AI芯片",
+      "activity_count": 22,
+      "description": ""
+    },
+    {
+      "id": "教育与人才发展",
+      "name": "教育与人才发展",
+      "activity_count": 9,
+      "description": ""
+    },
+    {
+      "id": "治理标准与政策",
+      "name": "治理标准与政策",
+      "activity_count": 7,
+      "description": ""
+    },
+    {
+      "id": "前沿科技与探索",
+      "name": "前沿科技与探索",
+      "activity_count": 5,
+      "description": ""
+    },
+    {
+      "id": "机器人与具身智能",
+      "name": "机器人与具身智能",
+      "activity_count": 5,
+      "description": ""
+    },
+    {
+      "id": "金融与科技投资",
+      "name": "金融与科技投资",
+      "activity_count": 4,
+      "description": ""
+    },
+    {
+      "id": "内容创意与AIGC",
+      "name": "内容创意与AIGC",
+      "activity_count": 4,
+      "description": ""
+    },
+    {
+      "id": "能源与可持续发展",
+      "name": "能源与可持续发展",
+      "activity_count": 3,
+      "description": ""
+    },
+    {
+      "id": "医疗与生命科学",
+      "name": "医疗与生命科学",
+      "activity_count": 3,
+      "description": ""
+    },
+    {
+      "id": "女性与多元发展",
+      "name": "女性与多元发展",
+      "activity_count": 1,
+      "description": ""
+    }
+  ],
+  "honeycombs": [
+    {
+      "id": "世博中心",
+      "name": "世博中心",
+      "activity_count": 91,
+      "description": ""
+    },
+    {
+      "id": "世博展览馆",
+      "name": "世博展览馆",
+      "activity_count": 28,
+      "description": ""
+    },
+    {
+      "id": "西岸国际会展中心",
+      "name": "西岸国际会展中心",
+      "activity_count": 25,
+      "description": ""
+    },
+    {
+      "id": "世博桐森酒店",
+      "name": "世博桐森酒店",
+      "activity_count": 13,
+      "description": ""
+    },
+    {
+      "id": "其他场馆",
+      "name": "其他场馆",
+      "activity_count": 8,
+      "description": ""
+    },
+    {
+      "id": "世博滨江酒店",
+      "name": "世博滨江酒店",
+      "activity_count": 5,
+      "description": ""
+    },
+    {
+      "id": "张江科学会堂",
+      "name": "张江科学会堂",
+      "activity_count": 5,
+      "description": ""
+    }
+  ]
+}

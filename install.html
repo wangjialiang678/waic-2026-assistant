@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>接入 AI Agent · WAIC 2026 参展指南</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">WAIC 2026 参展指南</a>
+    <div class="nav-links">
+      <a href="/">← 全部论坛</a>
+      <a href="/ai-native.html">AI 原住民计划</a>
+      <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener" class="nav-kb">超脑链官网 →</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<section class="install-hero">
+  <div class="container">
+    <div class="install-hero-content">
+      <div class="eyebrow">Agent Skill</div>
+      <h1>让你的 AI<br>读懂 WAIC。</h1>
+      <p class="install-subtitle">这里说的"AI Agent"泛指你用的 AI 工具——<strong>OpenClaw（龙虾）</strong>、<strong>Hermes（爱马仕）</strong>、<strong>Claude Code</strong>、<strong>WorkBuddy</strong>，或任何有 shell 能力的 Agent。不用你动手装任何东西，让它自己去读、去取数据、回答你。</p>
+    </div>
+  </div>
+</section>
+
+<section class="install-body">
+  <div class="container">
+    <div class="install-layout">
+
+      <div class="install-main">
+
+        <div class="install-section">
+          <div class="install-section-header">
+            <span class="section-num">01</span>
+            <h2>把下面这段话发给你的 AI</h2>
+          </div>
+          <p>复制下面这段话，发给你的 AI Agent。它会自己读文档、下数据、装好——然后主动告诉你可以怎么开始问。</p>
+
+          <div class="copy-block">
+            <button class="copy-btn" onclick="copyText('prompt-install')">复制</button>
+            <pre id="prompt-install">请按照 https://waic2026.superbrain-ai.com/INSTALL.md 里的说明，把这个 WAIC 2026 参展指南 Skill 装到我的环境里——你自己决定放在哪儿合适。装完之后告诉我可以怎么开始问你。</pre>
+          </div>
+
+          <p>AI 会按服务器上的 <a href="/INSTALL.md" target="_blank">INSTALL.md</a> 做三件事：</p>
+          <ol class="install-steps">
+            <li>下载说明书 <a href="/SKILL.md" target="_blank">SKILL.md</a> 到它自己的 Skill 目录</li>
+            <li>下载数据压缩包 <a href="/bundle.tar.gz" target="_blank">bundle.tar.gz</a> 并解压到当前工作目录的 <code>WAIC2026/</code> 子目录</li>
+            <li>主动给你几个典型问题，让你直接开始问</li>
+          </ol>
+        </div>
+
+        <div class="install-section">
+          <div class="install-section-header">
+            <span class="section-num">02</span>
+            <h2>装好之后，你可以这样问</h2>
+          </div>
+          <p>Skill 让你的 AI 对 WAIC 几乎全知。几个真实可用的对话——</p>
+
+          <div class="scenario-list">
+            <div class="scenario-card">
+              <div class="scenario-num">01</div>
+              <div class="scenario-body">
+                <div class="scenario-q">今天下午世博中心有哪些跟 AI 芯片相关的论坛？</div>
+                <div class="scenario-a">AI 按时间 + 地点 + 主题筛选，包含对论坛标题和详情的全文搜索。</div>
+              </div>
+            </div>
+
+            <div class="scenario-card">
+              <div class="scenario-num">02</div>
+              <div class="scenario-body">
+                <div class="scenario-q">我在西岸国际会展中心，接下来 2 小时附近有什么值得去？</div>
+                <div class="scenario-a">AI 按场地和时间窗口筛选，告诉你就近的 3-5 场，附每场一句话介绍。</div>
+              </div>
+            </div>
+
+            <div class="scenario-card">
+              <div class="scenario-num">03</div>
+              <div class="scenario-body">
+                <div class="scenario-q">帮我规划 Day 2 的日程，尽量避免时间冲突，偏好大模型与 AI 基础类。</div>
+                <div class="scenario-a">AI 筛选 → 检查时间重叠 → 给你一份日程表。</div>
+              </div>
+            </div>
+
+            <div class="scenario-card">
+              <div class="scenario-num">04</div>
+              <div class="scenario-body">
+                <div class="scenario-q">超脑 AI 孵化器这次在 WAIC 有哪些相关论坛？</div>
+                <div class="scenario-a">AI 按超脑标签过滤，列出相关论坛的时间、地点、主题。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="install-section">
+          <div class="install-section-header">
+            <span class="section-num">03</span>
+            <h2>为什么这么简单</h2>
+          </div>
+          <p>传统接入模式是："AI → 适配层 → API"。要为每个数据源写一个 MCP Server 或 API 网关，开发成本高。</p>
+          <p>我们的做法是："AI → 文件系统"。数据在本地，AI 用 <code>cat</code> / <code>grep</code> / 读 JSON 就能查。给 AI 一份 markdown 文档和 shell 访问，剩下交给它。</p>
+          <blockquote class="install-quote">
+            「把龙虾从鱼缸放回大海」——把 AI 放回完整的上下文里。
+            <span class="quote-attr">—— 超脑 AI 孵化器</span>
+          </blockquote>
+        </div>
+
+      </div>
+
+      <aside class="install-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-title">还没 AI Agent？</div>
+          <p>任何有 shell 能力的 AI 工具都能用，比如 Claude Code、OpenClaw、Cursor Agent 等。</p>
+          <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener" class="btn btn-ghost">了解超脑 AI 孵化器</a>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-title">数据在本地</div>
+          <p>Skill 会把数据下载到你自己的电脑里，AI 直接读本地文件，不需要联网查询。</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="col-title">WAIC 2026 参展指南</div>
+      数据版本 <span id="data-version" class="mono">2026-07-15</span><br>
+      本平台由 <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener">超脑 AI 孵化器</a> 搭建维护<br>
+      活动来源 <a href="https://www.worldaic.com.cn/" target="_blank" rel="noopener">WAIC 官方</a>
+    </div>
+    <div>
+      <div class="col-title">超脑 AI 孵化器</div>
+      <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener"><strong>超脑链官网 · www.superbrain-ai.com</strong></a><br>
+      让热爱，在真实世界创造未来<br>
+      Michael：从 10 后创作者视角出发，把 AI 放回真实世界的问题现场。
+    </div>
+    <div>
+      <div class="col-title">技术接入</div>
+      <a href="/install.html">AI Agent Skill</a> · <a href="/data/activities.json" target="_blank">论坛 API</a><br>
+      <a href="/VERSION" target="_blank">数据版本</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function copyText(id) {
+  const el = document.getElementById(id);
+  const txt = el.innerText || el.textContent;
+  navigator.clipboard.writeText(txt).then(() => {
+    const btn = event.target;
+    const orig = btn.textContent;
+    btn.textContent = '已复制 ✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 1500);
+  });
+}
+</script>
+
+</body>
+</html>

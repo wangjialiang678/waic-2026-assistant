@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 原住民计划 · WAIC 2026 · 超脑 AI 孵化器</title>
+<meta name="description" content="WAIC 2026 AI 原住民计划：10 后用 AI 回应真实世界。47 个项目，三大板块，Michael 演讲。">
+<meta property="og:title" content="AI 原住民计划 · WAIC 2026">
+<meta property="og:description" content="10 后用 AI，回应真实世界。47 个项目，三大板块，Michael 演讲，现场见。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  .ai-hero {
+    padding: clamp(4rem, 10vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(180deg, var(--paper) 0%, var(--ivory) 100%);
+  }
+  .ai-hero-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    text-align: center;
+  }
+  .ai-hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.15;
+    font-weight: 600;
+    margin: 0.8rem 0 1rem;
+  }
+  .ai-hero .tagline {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--ink-soft);
+    max-width: 36ch;
+    margin: 0 auto 1.5rem;
+  }
+  .ai-hero .hero-meta {
+    font-family: var(--font-sans);
+    color: var(--ink-mute);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+
+  .ai-stats {
+    padding: clamp(2.5rem, 6vw, 4rem) 0;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .stats-grid {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  @media (max-width: 860px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .stats-grid { grid-template-columns: 1fr; } }
+  .stat-card {
+    padding: 1.6rem 1.4rem;
+    background: var(--ivory);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--forest);
+    border-radius: 2px;
+    text-align: center;
+  }
+  .stat-value {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: var(--forest-deep);
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: var(--font-sans);
+    color: var(--ink-mute);
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+  }
+
+  .ai-intro {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    background: var(--ivory);
+  }
+  .ai-intro-inner {
+    max-width: var(--text-w);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    text-align: center;
+  }
+  .ai-intro .question {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 600;
+    color: var(--forest-deep);
+    margin-bottom: 1.2rem;
+  }
+  .ai-intro p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--ink-soft);
+  }
+
+  .ai-stories {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+  }
+  .ai-stories-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  .ai-stories h2 {
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  .story-group {
+    margin-bottom: 3rem;
+  }
+  .story-group-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--forest-deep);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .story-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .story-card {
+    background: var(--ivory);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 1.5rem;
+  }
+  .story-card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--ink);
+  }
+  .story-card-author {
+    font-family: var(--font-sans);
+    color: var(--bronze-deep);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  .story-card-summary {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+
+  .ai-blocks {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+  }
+  .ai-blocks-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  .ai-blocks h2 {
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .block-card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--clay);
+    border-radius: 2px;
+    padding: 1.8rem;
+  }
+  .block-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .block-card .subtitle {
+    font-family: var(--font-sans);
+    color: var(--bronze-deep);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .block-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+
+  .ai-michael {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    background: var(--ivory);
+    border-top: 1px solid var(--rule);
+  }
+  .ai-michael-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  .ai-michael h2 {
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .michael-card {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--clay);
+    border-radius: 2px;
+  }
+  .michael-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+  .michael-speaker {
+    font-family: var(--font-sans);
+    color: var(--ink-soft);
+    margin-bottom: 0.4rem;
+  }
+  .michael-time {
+    font-family: var(--font-sans);
+    color: var(--ink-mute);
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .ai-cta {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    text-align: center;
+  }
+  .ai-cta-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  .ai-cta h2 {
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+  .ai-cta p {
+    color: var(--ink-soft);
+    margin-bottom: 1.5rem;
+  }
+  .cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">WAIC 2026 参展指南</a>
+    <div class="nav-links">
+      <a href="/index.html#list">论坛</a>
+      <a href="/ai-native.html">AI 原住民计划</a>
+      <a href="/index.html#about">关于</a>
+      <a href="/install.html" class="nav-kb">接入 AI Agent</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<section class="ai-hero">
+  <div class="ai-hero-inner">
+    <div class="eyebrow">超脑 AI 孵化器 · WAIC 2026</div>
+    <h1>AI 原住民计划</h1>
+    <p class="tagline">10 后用 AI，回应真实世界</p>
+    <p class="hero-meta">2026.07.17 - 07.20 · 上海 · 徐汇西岸国际会展中心 4 楼</p>
+  </div>
+</section>
+
+<section class="ai-stats">
+  <div class="stats-grid" id="ai-stats-grid">
+    <div class="stat-card"><div class="stat-value">47</div><div class="stat-label">入选项目</div></div>
+    <div class="stat-card"><div class="stat-value">40+</div><div class="stat-label">现场 demo</div></div>
+    <div class="stat-card"><div class="stat-value">10+</div><div class="stat-label">城市共同参与</div></div>
+    <div class="stat-card"><div class="stat-value">8 岁</div><div class="stat-label">最小创作者</div></div>
+    <div class="stat-card"><div class="stat-value">6 大</div><div class="stat-label">主题展区</div></div>
+    <div class="stat-card"><div class="stat-value">3 个</div><div class="stat-label">沉浸式体验空间</div></div>
+  </div>
+</section>
+
+<section class="ai-intro">
+  <div class="ai-intro-inner">
+    <div class="question" id="ai-question">你想用 AI，帮谁？</div>
+    <p id="ai-intro-text">当大人们还在焦虑 AI 会不会抢饭碗、孩子该学什么才跟得上，这帮 10 后已经动手了。47 个项目，47 种回应。他们先看见一个具体的人，再看见一个问题，然后试着用 AI 做出回应。</p>
+  </div>
+</section>
+
+<section class="ai-stories">
+  <div class="ai-stories-inner" id="ai-stories-content">
+    <h2>47 个回答里，有几个故事</h2>
+    <!-- stories rendered by JS -->
+  </div>
+</section>
+
+<section class="ai-blocks">
+  <div class="ai-blocks-inner" id="ai-blocks-content">
+    <h2>4 天，三大板块</h2>
+    <!-- blocks rendered by JS -->
+  </div>
+</section>
+
+<section class="ai-michael">
+  <div class="ai-michael-inner">
+    <h2>Michael 演讲</h2>
+    <div class="michael-card">
+      <div class="michael-title" id="michael-title">在 AI 中，看见具体的人</div>
+      <div class="michael-speaker" id="michael-speaker">王佳梁（Michael）· 超脑 AI 孵化器发起人</div>
+      <div class="michael-time" id="michael-time">2026-07-19 · WAIC AI 教育论坛</div>
+      <a href="/index.html#list" class="btn btn-primary" id="michael-cta">查看相关论坛</a>
+    </div>
+  </div>
+</section>
+
+<section class="ai-cta">
+  <div class="ai-cta-inner">
+    <h2>来现场看看</h2>
+    <p>7 月 17 日 - 20 日，上海西岸，听他们亲口回答：我想用 AI 帮谁。</p>
+    <div class="cta-actions">
+      <a href="/index.html#list" class="btn" id="cta-secondary">返回论坛列表</a>
+      <button id="btn-copy-share" class="btn btn-primary" type="button">复制分享文案</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" id="about">
+  <div class="container">
+    <div>
+      <div class="col-title">WAIC 2026 参展指南</div>
+      <p>数据版本 <span id="data-version" class="mono">...</span></p>
+      <p>本平台由 <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener">超脑 AI 孵化器</a> 搭建维护</p>
+      <p>活动来源 <a href="https://www.worldaic.com.cn/" target="_blank" rel="noopener">WAIC 官方</a></p>
+    </div>
+    <div>
+      <div class="col-title">超脑 AI 孵化器</div>
+      <p><a href="https://www.superbrain-ai.com" target="_blank" rel="noopener"><strong>超脑链官网 · www.superbrain-ai.com</strong></a></p>
+      <p>让热爱，在真实世界创造未来</p>
+      <p>Michael：从 10 后创作者视角出发，把 AI 放回真实世界的问题现场。</p>
+    </div>
+    <div>
+      <div class="col-title">技术接入</div>
+      <p><a href="/install.html">AI Agent Skill</a></p>
+      <p><a href="/data/activities.json" target="_blank">论坛 API</a></p>
+      <p><a href="/data/ai-native.json" target="_blank">AI 原住民 API</a></p>
+      <p><a href="/VERSION" target="_blank">数据版本</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const shareText = 'WAIC 2026 · AI 原住民计划：10 后用 AI，回应真实世界。7.17-7.20 上海西岸见。';
+
+  function esc(s) {
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function renderStats(stats) {
+    const statsGrid = document.getElementById('ai-stats-grid');
+    if (!statsGrid || !stats || !Array.isArray(stats)) return;
+    statsGrid.innerHTML = stats.map(s =>
+      '<div class="stat-card"><div class="stat-value">' + esc(s.value) + '</div><div class="stat-label">' + esc(s.label) + '</div></div>'
+    ).join('');
+  }
+
+  function renderStories(stories) {
+    const container = document.getElementById('ai-stories-content');
+    if (!container || !stories || !Array.isArray(stories)) return;
+    const html = '<h2>47 个回答里，有几个故事</h2>' + stories.map(g =>
+      '<div class="story-group">' +
+        '<div class="story-group-title">' + esc(g.title) + '</div>' +
+        '<div class="story-cards">' + g.items.map(item =>
+          '<div class="story-card">' +
+            '<div class="story-card-title">' + esc(item.project) + '</div>' +
+            '<div class="story-card-author">' + esc(item.name) + (item.age ? ' · ' + esc(item.age) : '') + '</div>' +
+            '<p class="story-card-summary">' + esc(item.summary) + '</p>' +
+          '</div>'
+        ).join('') +
+        '</div>' +
+      '</div>'
+    ).join('');
+    container.innerHTML = html;
+  }
+
+  function renderBlocks(blocks) {
+    const container = document.getElementById('ai-blocks-content');
+    if (!container || !blocks || !Array.isArray(blocks)) return;
+    const html = '<h2>4 天，三大板块</h2>' +
+      '<div class="blocks-grid">' + blocks.map(b =>
+        '<div class="block-card">' +
+          '<h3>' + esc(b.title) + '</h3>' +
+          '<div class="subtitle">' + esc(b.subtitle) + '</div>' +
+          '<p>' + esc(b.description) + '</p>' +
+        '</div>'
+      ).join('') + '</div>';
+    container.innerHTML = html;
+  }
+
+  function renderMichael(m) {
+    if (!m) return;
+    const title = document.getElementById('michael-title');
+    const speaker = document.getElementById('michael-speaker');
+    const time = document.getElementById('michael-time');
+    if (title) title.textContent = m.title;
+    if (speaker) speaker.textContent = m.speaker + ' · ' + m.role;
+    if (time) time.textContent = m.date + ' · ' + m.forum;
+  }
+
+  async function load() {
+    try {
+      const res = await fetch('/data/ai-native.json');
+      if (!res.ok) throw new Error('status ' + res.status);
+      const data = await res.json();
+
+      if (data.question) {
+        const q = document.getElementById('ai-question');
+        if (q) q.textContent = data.question;
+      }
+      if (data.intro) {
+        const intro = document.getElementById('ai-intro-text');
+        if (intro) intro.textContent = data.intro;
+      }
+      renderStats(data.stats);
+      renderStories(data.stories);
+      renderBlocks(data.blocks);
+      renderMichael(data.michael_talk);
+
+      if (data.cta && data.cta.primary) {
+        const cta = document.getElementById('michael-cta');
+        if (cta) cta.textContent = data.cta.primary;
+      }
+      // cta-secondary keeps its static label "返回论坛列表"
+    } catch (e) {
+      // Leave static fallback content in place.
+    }
+  }
+
+  const copyBtn = document.getElementById('btn-copy-share');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(shareText);
+        const original = copyBtn.textContent;
+        copyBtn.textContent = '已复制';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.textContent = original;
+          copyBtn.classList.remove('copied');
+        }, 1500);
+      } catch (err) {
+        copyBtn.textContent = '复制失败';
+        setTimeout(() => { copyBtn.textContent = '复制分享文案'; }, 1500);
+      }
+    });
+  }
+
+  load();
+})();
+</script>
+</body>
+</html>
