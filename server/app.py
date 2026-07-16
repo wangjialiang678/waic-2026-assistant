@@ -274,9 +274,9 @@ def digest(
     interest_list = [s.strip() for s in interests.split(",") if s.strip()]
     date = store.date_for_day(day)
 
-    # 当天有时间的活动
+    # 当天有时间的活动（含跨天区间活动，如超脑四天展）
     cands = [a for a in store.activities
-             if (a.get("day") == day or a.get("date") == date)
+             if tools._act_on_day(a, day, date)
              and a.get("kind") != "exhibition_zone" and a.get("start_time")]
 
     def score(a):

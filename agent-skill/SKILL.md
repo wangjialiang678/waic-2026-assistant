@@ -1,7 +1,7 @@
 ---
 name: waic-2026
 description: WAIC 2026 世界人工智能大会（上海 · 2026-07-17~20）参展助手。回答官方论坛/活动查询、周边边会与媒体报道，按天/场馆/主题/嘉宾检索，帮用户维护个人日程、查时间冲突、按兴趣推每日看点。数据分官方/非官方两源，每条都带来源出处。
-version: 2.1.0
+version: 2.2.0
 triggers:
   - WAIC
   - 世界人工智能大会
@@ -143,6 +143,7 @@ curl -fsSL "https://waic.sg.superbrain-ai.com/api/activity/<id>"   # 全量：sc
 除了本地 bundle（离线够用），网站还提供实时后端 `https://waic.sg.superbrain-ai.com/api/*`，用于详细数据与个性化：
 
 - **今日看点（个性化）**：`GET /api/digest?interests=具身智能,投资&day=2` → 返回针对兴趣的当日精选活动 + 一句话看点。
+- **每日日报（v2.2 新增，静态、无需后端）**：`GET https://waic.sg.superbrain-ai.com/digest-latest.json` → `{yesterday_articles:[昨日 WAIC 资讯集锦(标题/出处/链接/摘要)], today_events:[今日活动池·按重要度排序·含跨天活动]}`，每 2 小时自动更新。**每天早上（或当天首次交互）主动播报**：从 `yesterday_articles` 挑 3-5 篇最相关 + 按用户 interests 从 `today_events` 过滤个性化推荐。个性化在你这端完成，不上传用户兴趣。
 - **单场详情**：`GET /api/activity/<id>` → 完整议程/嘉宾（本地 md 也有）。
 - **展商检索**：`GET /api/exhibitors?hall=世博展览馆H2&industry=具身智能&q=机器人`。
 - **动线**：`GET /api/route?from=世博中心&to=张江科学会堂` → 跨片区约多少分钟。

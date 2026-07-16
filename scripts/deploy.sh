@@ -36,6 +36,9 @@ echo "[4/5] 全量 → 服务端私有 $PRIVATE_DATA / $PRIVATE_MD ..."
 ssh $SSH_OPTS "$SERVER" "mkdir -p $PRIVATE_DATA $PRIVATE_MD"
 rsync -az -e "ssh $SSH_OPTS" "$ROOT/build-output/data/" "$SERVER:$PRIVATE_DATA"
 rsync -az -e "ssh $SSH_OPTS" "$ROOT/build-output/md/"   "$SERVER:$PRIVATE_MD"
+# waic-api 启动时加载数据 → 必须重启才吃到新私有层
+ssh $SSH_OPTS "$SERVER" "sudo -n systemctl restart waic-api && systemctl is-active waic-api" \
+  && echo "     waic-api 已重启" || echo "     ⚠ waic-api 重启失败（新数据未生效）"
 
 echo "[5/5] 精简 → 公开 $REMOTE_PATH（data 用 data-lite；不发全量 data/ 与官方议程 md/agenda）..."
 rsync -avz --delete -e "ssh $SSH_OPTS" --exclude='.DS_Store' \
