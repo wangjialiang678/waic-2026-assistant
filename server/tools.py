@@ -83,7 +83,8 @@ def _act_brief(a: dict) -> dict:
         "registration_required": a.get("registration_required"),
         "registration_url": a.get("registration_url", ""),
         "price": a.get("price", ""),
-        "source_type": a.get("source_type", ""),  # official / unofficial → 让模型标来源
+        "source_type": a.get("source_type", ""),  # official / unofficial → 信息来源是否官网发布
+        "waic_relation": a.get("waic_relation", ""),  # official=WAIC官方合作项目(如超脑)，即使来源非官网
         "tags": a.get("tags", []),
     }
 
