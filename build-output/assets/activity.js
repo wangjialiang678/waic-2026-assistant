@@ -44,8 +44,20 @@ async function loadActivity() {
   const id = new URLSearchParams(location.search).get('id');
   if (!id) { root.innerHTML = shell('<p class="loading">缺少活动 ID。<a href="index.html">返回首页</a></p>'); return; }
   try {
-    const data = await (await fetch('data/activities.json')).json();
-    const a = (data.activities || []).find(x => String(x.id) === String(id));
+    let a = null;
+    // 详情走 API 取全量（议程/嘉宾等在服务端）；API 不可用则降级到静态索引层（部分信息）
+    try {
+      const ctrl = new AbortController();
+      const to = setTimeout(() => ctrl.abort(), 4500);
+      const r = await fetch('/api/activity/' + encodeURIComponent(id), { signal: ctrl.signal });
+      clearTimeout(to);
+      if (r.ok) { const j = await r.json(); if (j && !j.error) a = j; }
+    } catch (e) { /* API 不可用 → 降级 */ }
+    if (!a) {
+      const data = await (await fetch('data/activities.json')).json();
+      a = (data.activities || []).find(x => String(x.id) === String(id));
+      if (a) a._lite = true;   // 仅索引层：完整议程/嘉宾可能不全
+    }
     if (!a) { root.innerHTML = shell(`<p class="loading">未找到活动 <code>${esc(id)}</code>。<a href="index.html">返回首页</a></p>`); return; }
     document.title = `${a.title} · WAIC 2026 参展助手`;
     root.innerHTML = renderDetail(a);

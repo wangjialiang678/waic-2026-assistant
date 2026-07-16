@@ -106,7 +106,11 @@ jq -r '.activities[] | select(.source_type=="official" and .day==2 and .venue=="
 或直接对 `search_text` 做关键词匹配（已 lower-case，含标题/简介/嘉宾/主办/议程主题）。
 
 ### 查单场详情
-读 `WAIC2026/md/agenda/<id>-*.md`（官方，含议程演讲人+嘉宾简介）或 `WAIC2026/md/unofficial/<id>-*.md`（非官方）。
+**bundle 只带索引层**（时间/地点/类别/tags 等，够规划）；官方论坛的**完整议程 + 嘉宾简介在服务端**：
+```bash
+curl -fsSL "https://waic.sg.superbrain-ai.com/api/activity/<id>"   # 全量：schedule(演讲人)+guests(简介)+简介
+```
+非官方边会摘要可直接读本地 `WAIC2026/md/unofficial/<id>-*.md`。（数据分层保护：详细数据不随 bundle 公开裸发。）
 
 ### 查周边/边会
 `jq '.activities[] | select(.kind=="side_event")'` —— 记得标注"非官方"+来源。
