@@ -1083,7 +1083,10 @@ ul.zhi li { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
 .addsrc li { font-size: 0.9rem; color: var(--ink-soft); }
 .addsrc a { color: var(--official); display: inline-flex; align-items: center; gap: 0.3rem; }
 
-/* ============================ 社交速配 M9 ============================ */
+/* ======================= 人脉对接（社交速配 M9）======================= */
+/* 关键：这些弹窗根用 display:flex，会盖掉 hidden 属性 → 必须显式守卫，
+   否则 root.hidden=true 无效：页面加载即显示、点关闭也隐藏不掉。 */
+.soc-root[hidden], .pl-root[hidden], .cms-root[hidden] { display: none; }
 .nav-links .nav-social { color: var(--intel-deep); font-weight: 600; cursor: pointer; }
 .nav-links .nav-social:hover { color: var(--intel); }
 @media (max-width: 520px){ .nav-links .nav-social{ font-size: 0.82rem; } }

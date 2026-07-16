@@ -1,5 +1,5 @@
 /* ============================================================
-   social.js — 社交速配（M9）。无登录，匿名同步码为身份。
+   social.js — 人脉对接（社交速配 M9）。无登录，匿名同步码为身份。
    隐私：显式同意才开启；联系方式只在双向匹配后露出；一键删除全部社交数据。
    后端不可用 / WAIC_SOCIAL=off → 入口自动隐藏。
    ============================================================ */
@@ -24,7 +24,7 @@
     document.querySelectorAll('.nav-links').forEach(nav => {
       if (nav.querySelector('.nav-social')) return;
       const a = document.createElement('a');
-      a.href = 'javascript:void 0'; a.className = 'nav-social'; a.textContent = '社交速配';
+      a.href = 'javascript:void 0'; a.className = 'nav-social'; a.textContent = '人脉对接';
       a.addEventListener('click', open);
       const cta = nav.querySelector('.nav-cta');
       nav.insertBefore(a, cta || null);
@@ -35,14 +35,14 @@
     root = document.createElement('div');
     root.className = 'soc-root'; root.hidden = true;
     root.innerHTML = `<div class="soc-mask"></div><div class="soc-panel" role="dialog" aria-modal="true">
-      <header class="soc-head"><span class="soc-title">社交速配 · 找同频的人</span><button class="soc-x" aria-label="关闭">✕</button></header>
+      <header class="soc-head"><span class="soc-title">人脉对接 · 找同频的人</span><button class="soc-x" aria-label="关闭">✕</button></header>
       <div class="soc-tabs">
         <button class="soc-tab" data-tab="me">我的名片</button>
         <button class="soc-tab" data-tab="discover">发现</button>
         <button class="soc-tab" data-tab="matches">我的匹配</button>
       </div>
       <div class="soc-body" id="soc-body"></div>
-      <div class="soc-note">匿名，无需登录。<strong>联系方式只在双方互相「感兴趣」后才互相看到</strong>；随时可一键删除全部社交资料。</div>
+      <div class="soc-note">匿名，无需登录。<strong>联系方式只在双方互相「感兴趣」后才互相看到</strong>；随时可一键删除全部对接资料。</div>
     </div>`;
     document.body.appendChild(root);
     root.querySelector('.soc-x').addEventListener('click', close);
@@ -73,7 +73,7 @@
     const tags = (p.tags && p.tags.length) ? p.tags : readInterests().slice(0, 6);
     body.innerHTML = `
       <div class="soc-form">
-        <label class="soc-consent"><input type="checkbox" id="soc-enabled" ${p.enabled ? 'checked' : ''}> 我同意加入社交速配，并按下方设置向他人展示（不含联系方式）</label>
+        <label class="soc-consent"><input type="checkbox" id="soc-enabled" ${p.enabled ? 'checked' : ''}> 我同意加入人脉对接，并按下方设置向他人展示（不含联系方式）</label>
         <div class="soc-field"><span class="soc-k">一句话介绍你自己</span><input id="soc-intro" maxlength="40" value="${esc(p.intro || '')}" placeholder="如：做青少年 AI 教育的创业者"></div>
         <div class="soc-field"><span class="soc-k">我能提供</span><input id="soc-offer" maxlength="60" value="${esc(p.offer || '')}" placeholder="如：AI 课程资源 / 渠道 / 技术"></div>
         <div class="soc-field"><span class="soc-k">我在找</span><input id="soc-seeking" maxlength="60" value="${esc(p.seeking || '')}" placeholder="如：投资人 / 合作方 / 同行"></div>
@@ -89,7 +89,7 @@
         </div>
         <div class="soc-actions">
           <button class="soc-btn primary" id="soc-save">保存</button>
-          <button class="soc-btn ghost" id="soc-delete">删除我的社交资料</button>
+          <button class="soc-btn ghost" id="soc-delete">删除我的对接资料</button>
         </div>
       </div>`;
     body.querySelector('#soc-save').addEventListener('click', saveProfile);
@@ -114,13 +114,13 @@
   }
 
   async function deleteProfile() {
-    if (!confirm('确定删除你的全部社交资料（名片、like、匹配）？此操作不可撤销。')) return;
+    if (!confirm('确定删除你的全部对接资料（名片、感兴趣、匹配）？此操作不可撤销。')) return;
     try { await api('/api/social/optout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ device: device() }) }); } catch (e) {}
     profile = null; TAB = 'me'; render();
   }
 
   async function renderDiscover(body) {
-    if (!profile || !profile.enabled) { body.innerHTML = `<div class="soc-empty">先在「我的名片」里开启社交速配，才能发现同频的人。</div>`; return; }
+    if (!profile || !profile.enabled) { body.innerHTML = `<div class="soc-empty">先在「我的名片」里开启人脉对接，才能发现同频的人。</div>`; return; }
     body.innerHTML = `<div class="soc-empty">加载中…</div>`;
     try { const r = await api('/api/social/candidates?device=' + encodeURIComponent(device())); cands = r.items || []; } catch (e) { cands = []; }
     if (!cands.length) { body.innerHTML = `<div class="soc-empty">暂时没有更多同频的人。稍后再来看看——会期里加入的人会越来越多。</div>`; return; }
