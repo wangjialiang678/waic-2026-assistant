@@ -59,32 +59,37 @@
 
   <section class="detail-body">
     <div class="container">
+      <noscript class="noscript-warning">
+        <strong>需要启用 JavaScript</strong>
+        <p>本页通过 JavaScript 从 data/activities.json 加载论坛详情。请开启浏览器 JavaScript 后刷新。</p>
+      </noscript>
+
       <div class="detail-sections">
         <details id="detail-description" class="detail-section" open>
           <summary>论坛简介</summary>
           <div class="detail-section-content">
-            <p>论坛简介将在加载后显示。</p>
+            <p class="loading-text">加载中…</p>
           </div>
         </details>
 
         <details id="detail-agenda" class="detail-section">
           <summary>议程</summary>
           <div class="detail-section-content">
-            <p>议程将在加载后显示。</p>
+            <p class="loading-text">加载中…</p>
           </div>
         </details>
 
         <details id="detail-guests" class="detail-section">
           <summary>嘉宾</summary>
           <div class="detail-section-content">
-            <p>嘉宾名单将在加载后显示。</p>
+            <p class="loading-text">加载中…</p>
           </div>
         </details>
 
         <details id="detail-map" class="detail-section">
           <summary>位置</summary>
           <div class="detail-section-content">
-            <p>位置信息将在加载后显示。</p>
+            <p class="loading-text">加载中…</p>
           </div>
         </details>
 
@@ -99,7 +104,7 @@
               <span id="transcript-count" class="transcript-count"></span>
             </div>
             <div class="transcript-list" id="transcript-list">
-              <p>转录内容将在加载后显示。</p>
+              <p class="loading-text">加载中…</p>
             </div>
             <div class="transcript-contribute" id="transcript-contribute" style="display:none">
               <p>暂无共享转录。如果你有现场笔记、录音转录或会议纪要，欢迎提交，帮助更多参会者回顾。</p>
