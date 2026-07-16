@@ -125,6 +125,35 @@ def _time_key(a: dict) -> str:
 
 
 # ============ 工具实现 ============
+def _norm_kw(kw: str) -> str:
+    """归一关键词提升召回：去掉 AI/人工智能/+/·/空格。AI教育→教育，AI+金融→金融。"""
+    k = (kw or "").lower().strip()
+    for junk in ("人工智能", "ai", "+", " ", "·"):
+        k = k.replace(junk, "")
+    return k or (kw or "").lower().strip()
+
+
+def _kw_relevance(a: dict, keyword: str) -> int:
+    """相关度：0=不相关；1=仅短描述命中；2=归一词命中标题/标签/track；3=原词命中标题/标签/track。
+    只在高精度字段(标题/tags/track/类别)判强相关，避免命中议程/嘉宾简介里的顺带一提。"""
+    if not keyword:
+        return 1
+    kw = keyword.lower().strip()
+    nkw = _norm_kw(keyword)
+    primary = " ".join([
+        a.get("title", "") or "", " ".join(a.get("tags") or []),
+        a.get("track", "") or "", a.get("category", "") or "",
+    ]).lower()
+    if kw and kw in primary:
+        return 3
+    if nkw and len(nkw) >= 2 and nkw in primary:
+        return 2
+    desc = ((a.get("description") or "")[:160]).lower()
+    if (kw and kw in desc) or (nkw and len(nkw) >= 2 and nkw in desc):
+        return 1
+    return 0
+
+
 def search_activities(store, day=None, district=None, category=None, track=None,
                       keyword=None, need_registration=None, limit=20) -> dict:
     date = store.date_for_day(day) if day is not None else None
@@ -143,13 +172,26 @@ def search_activities(store, day=None, district=None, category=None, track=None,
         if need_registration is not None:
             if _needs_registration(a) != bool(need_registration):
                 continue
-        if keyword and not _kw_hit(_act_search_blob(a), keyword):
-            continue
-        out.append(a)
+        if keyword:
+            rel = _kw_relevance(a, keyword)
+            if rel <= 0:
+                continue
+        else:
+            rel = 1
+        out.append((rel, a))
 
-    out.sort(key=lambda a: (a.get("date") or "9999", _time_key(a)))
+    # 相关性优先（标题/标签命中 > 描述命中），再按日期/时间；去重同 id
+    out.sort(key=lambda t: (-t[0], t[1].get("date") or "9999", _time_key(t[1])))
+    seen, picked = set(), []
+    for _, a in out:
+        aid = a.get("id")
+        if aid in seen:
+            continue
+        seen.add(aid)
+        picked.append(a)
+        if len(picked) >= limit:
+            break
     total = len(out)
-    picked = out[:limit]
     return {
         "model": {"total": total, "returned": len(picked),
                   "items": [_act_brief(a) for a in picked]},

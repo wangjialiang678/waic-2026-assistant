@@ -1001,6 +1001,9 @@ body.wc-open-lock { overflow: hidden; }
 .vb-chip { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600; color: var(--side-deep); background: var(--side-tint); padding: 0.1rem 0.45rem; border-radius: 3px; }
 .unverified-chip { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600; color: #8a6a1e; background: #f6efdb; border: 1px solid #e6d9b0; padding: 0.08rem 0.45rem; border-radius: 3px; }
 
+/* 展商品牌名徽章（注册名≠品牌，如 行吟信息=小红书） */
+.exh-name .exh-brand { display: inline-block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; color: #fff; background: var(--exh-deep); padding: 0.08rem 0.5rem; border-radius: 4px; margin-right: 0.45rem; vertical-align: middle; }
+
 /* 推荐 · 更多 WAIC 工具 */
 .recommend { padding: clamp(2rem, 5vw, 3.4rem) 0; border-top: 1px solid var(--rule); background: var(--surface-2); }
 .rec-head { text-align: center; margin-bottom: 1.6rem; }

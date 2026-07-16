@@ -280,9 +280,17 @@
     const items = Array.isArray(evt.items) ? evt.items : [];
     if (!items.length) return;
     const kind = evt.kind === 'exhibitor' ? 'exhibitor' : 'activity';
+    // 跨多轮工具调用去重：同一条卡只显示一次（修复 AI 多轮检索导致的重复）
+    if (!m._seenCards) m._seenCards = new Set();
+    const fresh = items.filter(it => {
+      const key = kind + ':' + (it && it.id != null ? it.id : ((it && it.title) || JSON.stringify(it)));
+      if (m._seenCards.has(key)) return false;
+      m._seenCards.add(key); return true;
+    });
+    if (!fresh.length) return;
     const wrap = document.createElement('div');
     wrap.className = 'wc-cards-block';
-    wrap.innerHTML = items.map(it => kind === 'exhibitor' ? exhibitorCardHTML(it) : activityCardHTML(it)).join('');
+    wrap.innerHTML = fresh.map(it => kind === 'exhibitor' ? exhibitorCardHTML(it) : activityCardHTML(it)).join('');
     m.cards.appendChild(wrap);
     scrollBottom();
   }

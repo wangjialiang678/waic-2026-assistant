@@ -404,6 +404,22 @@ async function ensureExhibitors() {
   const d = await res.json();
   DATA.exhibitors = d.exhibitors || [];
   DATA.exhFacets = d.facets || {};
+  // 合入品牌别名：注册名≠品牌名（如 行吟信息科技=小红书）→ 卡片标品牌 + 品牌进 search_text 让搜品牌能命中
+  try {
+    const ar = await fetch('assets/exhibitor-aliases.json');
+    if (ar.ok) {
+      const aliases = await ar.json();
+      const byId = {};
+      aliases.forEach(a => { if (a.id) byId[a.id] = a; });
+      DATA.exhibitors.forEach(e => {
+        const hit = byId[e.id] || aliases.find(a => a.match && (e.name || '').includes(a.match));
+        if (hit && hit.brand) {
+          e.brand = hit.brand;
+          e.search_text = (e.search_text || '') + ' ' + hit.brand + ' ' + (hit.aliases || []).join(' ');
+        }
+      });
+    }
+  } catch (err) { /* 别名可选，失败不影响 */ }
 }
 
 function renderExhControls() {
@@ -477,7 +493,7 @@ function renderExhCard(e) {
     <div class="exh-head">
       <div class="exh-logo">${e.logo ? `<img src="${esc(e.logo)}" alt="" onerror="this.parentNode.textContent='${esc(initial)}'">` : esc(initial)}</div>
       <div class="exh-main">
-        <div class="exh-name">${esc(e.name)}${e.name_en ? `<span class="en">${esc(e.name_en)}</span>` : ''}</div>
+        <div class="exh-name">${e.brand ? `<span class="exh-brand" title="品牌 / 常用名">${esc(e.brand)}</span>` : ''}${esc(e.name)}${e.name_en ? `<span class="en">${esc(e.name_en)}</span>` : ''}</div>
         <div class="exh-meta">
           ${firstBooth ? `<span class="exh-booth">${esc(firstBooth.no)}</span>` : ''}
           ${firstBooth ? `<span class="exh-hall">${esc(firstBooth.hall)}</span>` : ''}
