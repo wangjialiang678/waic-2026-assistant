@@ -4,6 +4,8 @@ const FAVORITES_KEY = 'waic_favorites';
 
 let currentActivity = null;
 let favoriteIds = new Set();
+let currentTranscript = null;
+let currentTranscriptEntries = [];
 
 /* ============================================================
    Utilities
@@ -18,6 +20,17 @@ function escape(s) {
     '"': '&quot;',
     "'": '&#39;',
   }[c]));
+}
+
+function escapeRegExp(s) {
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function highlightTerms(text, terms) {
+  if (!terms || !terms.length || !text) return text;
+  const sorted = [...terms].sort((a, b) => b.length - a.length);
+  const re = new RegExp('(' + sorted.map(escapeRegExp).join('|') + ')', 'gi');
+  return String(text).replace(re, m => `<mark>${escape(m)}</mark>`);
 }
 
 function truncate(text, maxLength) {
@@ -160,9 +173,12 @@ async function loadActivity() {
   }
 
   try {
-    const res = await fetch('/data/activities.json');
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+    const [aRes, tRes] = await Promise.all([
+      fetch('/data/activities.json'),
+      fetch('/data/transcripts.json'),
+    ]);
+    if (!aRes.ok) throw new Error(`HTTP ${aRes.status}`);
+    const data = await aRes.json();
     const activities = data.activities || [];
     const act = activities.find(a => String(a.id) === id);
 
@@ -173,8 +189,13 @@ async function loadActivity() {
       return;
     }
 
+    let transcripts = { transcripts: {} };
+    if (tRes.ok) {
+      transcripts = await tRes.json();
+    }
+
     favoriteIds = new Set(getFavorites().map(String));
-    renderDetail(act);
+    renderDetail(act, transcripts.transcripts || {});
   } catch (e) {
     console.error(e);
     if (container) {
@@ -187,8 +208,10 @@ async function loadActivity() {
    Rendering
    ============================================================ */
 
-function renderDetail(act) {
+function renderDetail(act, transcriptsMap = {}) {
   currentActivity = act;
+  currentTranscript = transcriptsMap[String(act.id)] || { entries: [] };
+  currentTranscriptEntries = currentTranscript.entries || [];
 
   document.title = `${act.title} · WAIC 2026 参展指南`;
 
@@ -237,10 +260,12 @@ function renderDetail(act) {
   renderAgenda(act);
   renderGuests(act);
   renderMap(act);
+  renderTranscript();
   renderSuperbrain(act);
 
   document.getElementById('btn-favorite')?.addEventListener('click', toggleFavorite);
   document.getElementById('btn-share')?.addEventListener('click', shareActivity);
+  document.getElementById('transcript-search')?.addEventListener('input', onTranscriptSearch);
 }
 
 function renderDescription(act) {
@@ -314,6 +339,82 @@ function renderMap(act) {
     </div>
   `;
   setSectionContent('detail-map', html);
+}
+
+function renderTranscript() {
+  const metaEl = document.getElementById('transcript-meta');
+  const listEl = document.getElementById('transcript-list');
+  const countEl = document.getElementById('transcript-count');
+  const contribEl = document.getElementById('transcript-contribute');
+  const contribLink = document.getElementById('transcript-contribute-link');
+
+  const entries = currentTranscriptEntries;
+
+  if (metaEl) {
+    const updated = currentTranscript.updated_at;
+    const source = currentTranscript.source;
+    const contributors = (currentTranscript.contributors || []).join('、');
+    let metaHtml = '';
+    if (updated) metaHtml += `<span>更新于 ${escape(updated)}</span>`;
+    if (source) metaHtml += `<span>来源：${escape(source)}</span>`;
+    if (contributors) metaHtml += `<span>贡献者：${escape(contributors)}</span>`;
+    metaEl.innerHTML = metaHtml || '<span>暂无转录元数据</span>';
+  }
+
+  if (!entries.length) {
+    if (listEl) listEl.innerHTML = '';
+    if (countEl) countEl.textContent = '';
+    if (contribEl) contribEl.style.display = 'block';
+    if (contribLink && currentActivity) {
+      const subject = encodeURIComponent(`提交 WAIC 2026 论坛转录：${currentActivity.title}`);
+      const body = encodeURIComponent(`论坛 ID：${currentActivity.id}\n论坛标题：${currentActivity.title}\n\n请在此粘贴转录内容、笔记或录音链接：`);
+      contribLink.href = `mailto:hi@superbrain-ai.com?subject=${subject}&body=${body}`;
+    }
+    return;
+  }
+
+  if (contribEl) contribEl.style.display = 'none';
+  renderTranscriptEntries(entries, '');
+  if (countEl) countEl.textContent = `共 ${entries.length} 条`;
+}
+
+function renderTranscriptEntries(entries, query) {
+  const listEl = document.getElementById('transcript-list');
+  const countEl = document.getElementById('transcript-count');
+  if (!listEl) return;
+
+  const terms = query.trim().split(/\s+/).filter(t => t.length >= 1);
+  const filtered = terms.length
+    ? entries.filter(e => terms.some(t => (e.text || '').toLowerCase().includes(t.toLowerCase()) || (e.speaker || '').toLowerCase().includes(t.toLowerCase())))
+    : entries;
+
+  if (countEl) countEl.textContent = `共 ${filtered.length} 条${terms.length ? ' / 匹配 ' + terms.map(t => `「${t}」`).join(' ') : ''}`;
+
+  if (!filtered.length) {
+    listEl.innerHTML = '<p class="transcript-empty">没有匹配的转录内容。</p>';
+    return;
+  }
+
+  const html = filtered.map(e => {
+    const time = escape(e.time || '');
+    const speaker = escape(e.speaker || '');
+    const text = highlightTerms(e.text || '', terms);
+    return `
+      <div class="transcript-entry">
+        <div class="transcript-entry-header">
+          <time>${time || ''}</time>
+          <span class="transcript-speaker">${speaker || '嘉宾'}</span>
+        </div>
+        <p class="transcript-text">${text}</p>
+      </div>
+    `;
+  }).join('');
+  listEl.innerHTML = html;
+}
+
+function onTranscriptSearch(e) {
+  const query = e.target.value || '';
+  renderTranscriptEntries(currentTranscriptEntries, query);
 }
 
 function renderSuperbrain(act) {
