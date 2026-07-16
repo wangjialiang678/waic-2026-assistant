@@ -45,11 +45,16 @@ def main():
     intel = json.loads((DATA / "intel.json").read_text())
     arts = intel.get("articles") or []
 
-    y_arts = [a for a in arts if (a.get("date") or "")[:10] in (yesterday, today)]
+    def real_link(a):
+        # 只留可点开的真链：丢弃搜狗断链、空链
+        u = a.get("url") or ""
+        return u.startswith("http") and "weixin.sogou.com" not in u
+
+    y_arts = [a for a in arts if (a.get("date") or "")[:10] in (yesterday, today) and real_link(a)]
     y_arts.sort(key=lambda a: a.get("date") or "", reverse=True)
     yesterday_articles = [{
         "title": a.get("title", ""), "publisher": a.get("publisher", ""),
-        "date": a.get("date", ""), "url": a.get("url") or a.get("sogou_url") or "",
+        "date": a.get("date", ""), "url": a.get("url") or "",
         "summary": (a.get("summary") or "")[:140],
     } for a in y_arts[:20]]
 

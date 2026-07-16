@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 from datetime import datetime
 from pathlib import Path
@@ -76,6 +77,87 @@ def tavily(query, domains, days, key):
         return json.loads(r.read()).get("results", [])
 
 
+# ---- cimidata（次幂）微信搜一搜：拿真 mp.weixin.qq.com 文章链，替代搜狗断链 ----
+CIMI_HOST = "https://www.cimidata.com/"
+CIMI_QUERIES = ["WAIC 2026 世界人工智能大会", "世界人工智能大会 上海", "WAIC 2026"]
+
+
+def _cimi_env():
+    aid = os.environ.get("CIMI_APP_ID", "")
+    sec = os.environ.get("CIMI_APP_SECRET", "")
+    if not (aid and sec):
+        env = ROOT / ".env"
+        if env.is_file():
+            t = env.read_text()
+            ma = re.search(r"^CIMI_APP_ID=(.+)$", t, re.M)
+            ms = re.search(r"^CIMI_APP_SECRET=(.+)$", t, re.M)
+            aid = aid or (ma.group(1).strip() if ma else "")
+            sec = sec or (ms.group(1).strip() if ms else "")
+    return aid, sec
+
+
+def cimi_token(aid, sec):
+    req = urllib.request.Request(
+        CIMI_HOST + "api/token",
+        data=json.dumps({"app_id": aid, "app_secret": sec}).encode(),
+        headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return json.loads(r.read())["data"]["access_token"]
+
+
+def cimi_search(keyword, token, page=1):
+    req = urllib.request.Request(
+        CIMI_HOST + "api/v3/articles/search?access_token=" + urllib.parse.quote(token),
+        data=json.dumps({"keyword": keyword, "page": page}).encode(),
+        headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=25) as r:
+        d = json.loads(r.read()).get("data") or {}
+    return d.get("items") or []
+
+
+def collect_cimi(known_urls, known_titles):
+    """微信搜一搜 → 真链文章列表（跳过已知/搜狗/自家域）。失败降级返回 []。"""
+    aid, sec = _cimi_env()
+    if not (aid and sec):
+        print("[fetch_intel] 无 CIMI 凭证，跳过微信搜一搜")
+        return []
+    try:
+        token = cimi_token(aid, sec)
+    except Exception as e:  # noqa: BLE001
+        print(f"[fetch_intel] cimidata token 失败: {e}")
+        return []
+    out = []
+    for kw in CIMI_QUERIES:
+        try:
+            items = cimi_search(kw, token)
+        except Exception as e:  # noqa: BLE001
+            print(f"[fetch_intel] cimi 搜索失败({kw}): {e}")
+            continue
+        for it in items:
+            url = (it.get("content_url") or "").split("#")[0]
+            title = re.sub(r"<[^>]+>", "", it.get("title") or "").strip()
+            if not url or not title or "sogou.com" in url:
+                continue
+            if any(d in url for d in OWN_DOMAINS):
+                continue
+            if url in known_urls or norm_title(title) in known_titles:
+                continue
+            known_urls.add(url)
+            known_titles.add(norm_title(title))
+            out.append({
+                "title": title,
+                "kind": "coverage",
+                "publisher": it.get("nickname") or "微信公众号",
+                "date": (it.get("published_at") or "")[:10],
+                "summary": "",
+                "url": url,
+                "auto_collected": True,
+                "source_api": "cimidata",
+                "collected_at": datetime.now().strftime("%F %T"),
+            })
+    return out
+
+
 def main():
     key = os.environ.get("TAVILY_API_KEY", "")
     if not key:
@@ -84,10 +166,6 @@ def main():
             m = re.search(r"^TAVILY_API_KEY=(.+)$", env.read_text(), re.M)
             if m:
                 key = m.group(1).strip()
-    if not key:
-        print("[fetch_intel] 无 TAVILY_API_KEY，跳过采集")
-        return 0
-
     known_urls, known_titles = collect_known()
     try:
         data = json.loads(ARTICLES.read_text()) if ARTICLES.is_file() else []
@@ -99,7 +177,11 @@ def main():
         return 0
 
     added = []
-    for q, domains, days in QUERIES:
+    # 源①：cimidata 微信搜一搜（真 mp.weixin 链）
+    added.extend(collect_cimi(known_urls, known_titles))
+
+    # 源②：Tavily（官网/主流媒体报道）；无 key 则只用 cimidata
+    for q, domains, days in (QUERIES if key else []):
         try:
             results = tavily(q, domains, days, key)
         except Exception as e:  # noqa: BLE001
