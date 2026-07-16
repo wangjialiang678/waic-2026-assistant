@@ -125,10 +125,11 @@ class TokenBucket:
         return True
 
 
-# 20 chat/分钟 → 容量 20，每 3 秒回 1 个令牌
-CHAT_LIMITER = TokenBucket(capacity=20, refill_per_sec=20 / 60.0)
-# 状态同步：读写较轻，每 IP 60/分钟（防刷/防扫）
-STATE_LIMITER = TokenBucket(capacity=60, refill_per_sec=60 / 60.0)
+# 限流按"同步码(设备)"计，避免大会现场共享 WiFi(同一 NAT 公网 IP) 误伤正常用户；
+# 另加一个宽松的 per-IP 上限只兜底真正的滥用（一个 IP 刷大量设备码）。
+CHAT_LIMITER = TokenBucket(capacity=40, refill_per_sec=40 / 60.0)       # 每设备 40 chat/分钟（个人够用）
+CHAT_IP_LIMITER = TokenBucket(capacity=300, refill_per_sec=300 / 60.0)  # 每 IP 300/分钟 兜底（会场 NAT 也够）
+STATE_LIMITER = TokenBucket(capacity=180, refill_per_sec=180 / 60.0)    # 状态同步很轻，每设备 180/分钟
 
 
 def _client_ip(request: Request) -> str:
@@ -166,6 +167,8 @@ async def chat(request: Request):
     user_messages = body.get("messages") or []
     my_schedule = body.get("my_schedule") or []
     profile = body.get("profile") or {}
+    _dev = (body.get("device") or "").strip()
+    rl_key = _dev if store_state.valid_device(_dev) else ip   # 限流键：优先同步码，回退 IP
 
     q = ""
     for m in reversed(user_messages):
@@ -179,7 +182,7 @@ async def chat(request: Request):
         n_cards = 0
         status = "ok"
         # 限流：超限 → 发 error 事件（保持 SSE 契约，不 429 直断）
-        if not CHAT_LIMITER.allow(ip):
+        if not CHAT_LIMITER.allow(rl_key) or not CHAT_IP_LIMITER.allow(ip):
             _log_event("chat", ip8=_ip8(ip), q=q, frm=frm, status="ratelimited")
             yield _sse({"type": "error", "message": "请求过于频繁，请稍后再试。"})
             yield _sse({"type": "done"})
@@ -330,8 +333,6 @@ def state_get(device: str = Query("", description="匿名同步码")):
 @app.post("/api/state")
 async def state_put(request: Request):
     ip = _client_ip(request)
-    if not STATE_LIMITER.allow(ip):
-        return JSONResponse({"error": "rate_limited"}, status_code=429)
     try:
         body = await request.json()
     except Exception:  # noqa: BLE001
@@ -339,6 +340,8 @@ async def state_put(request: Request):
     device = (body.get("device") or "").strip()
     if not store_state.valid_device(device):
         return JSONResponse({"error": "bad_device"}, status_code=400)
+    if not STATE_LIMITER.allow(device):   # 按同步码限流，避免共享 IP 误伤
+        return JSONResponse({"error": "rate_limited"}, status_code=429)
 
     # 尺寸/类型收敛，防滥用
     schedule = [str(x)[:64] for x in (body.get("schedule") or []) if x][:500]

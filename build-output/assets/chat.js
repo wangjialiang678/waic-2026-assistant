@@ -26,11 +26,11 @@
 
   const INTEREST_OPTIONS = [
     // 产业方向
-    '大模型', '具身智能·机器人', 'AI芯片·算力', 'AI应用落地', '智能制造·工业',
+    '大模型', '智能体·Agent', '具身智能·机器人', 'AI芯片·算力', 'AI应用落地', '智能制造·工业',
     '智能驾驶·交通', 'AI+医疗健康', 'AI+金融', 'AI for Science', 'AIGC·文娱',
     'AGI·世界模型', '智能硬件·终端',
     // 视角与目的
-    '投融资·找项目', '创业·出海找合作', '开发者·开源', 'AI安全·治理', '边会·社交局', '青年·人才',
+    '投融资·找项目', '创业·出海找合作', '创作者·Builders', '开发者·开源', 'AI安全·治理', '边会·社交局', '青年·人才',
     // 超脑相关
     'AI教育', '青少年·带娃逛展', '一人公司·OPC',
   ];
@@ -53,6 +53,16 @@
     catch (e) { return { interests: [] }; }
   }
   function writeProfile(p) { try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) {} if (window.WAICSync) window.WAICSync.touch(); }
+  // 自动选择：行为推断权重达阈值(≥2，如加入2场同标签活动)的方向，自动升为"已关注"，无需手动勾
+  function promoteInferred() {
+    let p; try { p = JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}'); } catch (e) { p = {}; }
+    if (!Array.isArray(p.interests)) p.interests = [];
+    const inf = (p.inferred && typeof p.inferred === 'object') ? p.inferred : {};
+    let changed = false;
+    Object.keys(inf).forEach(t => { if (inf[t] >= 2 && !p.interests.includes(t)) { p.interests.push(t); changed = true; } });
+    if (changed) writeProfile(p);
+    return p.interests;
+  }
   function fetchTimeout(url, ms, opts) {
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), ms);
@@ -144,6 +154,7 @@
 
   /* ------------------------------ 面板开合 ------------------------------ */
   function openPanel() {
+    promoteInferred();   // 打开时把行为推断的方向自动升为已关注
     root.hidden = false;
     document.body.classList.add('wc-open-lock');
     requestAnimationFrame(() => root.classList.add('open'));
@@ -164,7 +175,7 @@
     else { d.classList.remove('show'); setTimeout(() => { d.hidden = true; }, 200); }
   }
   function renderDrawer() {
-    const chosen = new Set(readProfile().interests);
+    const chosen = new Set(promoteInferred());   // 先把行为推断的高权重方向自动升为已关注
     const chips = INTEREST_OPTIONS.map(t =>
       `<button class="wc-int-chip${chosen.has(t) ? ' on' : ''}" data-interest="${esc(t)}" type="button">${esc(t)}</button>`).join('');
     const custom = [...chosen].filter(t => !INTEREST_OPTIONS.includes(t));
@@ -212,7 +223,7 @@
 
   /* ------------------------------ 空状态 / coming-soon ------------------------------ */
   function renderEmpty() {
-    const interests = readProfile().interests;
+    const interests = promoteInferred();
     const chips = EXAMPLES.map(q => `<button class="wc-ex" data-ask="${esc(q)}" type="button">${esc(q)}</button>`).join('');
     bodyEl.innerHTML = `
       <div class="wc-empty">
@@ -351,6 +362,7 @@
       messages: convo.slice(-MAX_TURNS),
       my_schedule: readMySchedule(),
       profile: readProfile(),
+      device: (window.WAICSync ? window.WAICSync.code() : ''),   // 限流按同步码计，避免共享 WiFi(同 IP) 误伤
     };
 
     let acc = '';

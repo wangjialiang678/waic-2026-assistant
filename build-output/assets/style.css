@@ -781,7 +781,7 @@ body.wc-open-lock { overflow: hidden; }
   flex: none; overflow: hidden; background: var(--surface-2); border-bottom: 1px solid var(--rule);
   max-height: 0; padding: 0 1.1rem; transition: max-height 0.24s ease, padding 0.24s ease;
 }
-.wc-settings-drawer.show { max-height: 220px; padding: 0.85rem 1.1rem; }
+.wc-settings-drawer.show { max-height: min(62vh, 440px); overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 0.85rem 1.1rem; }
 .wc-drawer-h { font-size: 0.82rem; font-weight: 600; color: var(--ink-soft); margin-bottom: 0.6rem; }
 .wc-drawer-h small { font-weight: 400; color: var(--ink-mute); font-size: 0.72rem; }
 .wc-int-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }

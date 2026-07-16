@@ -61,6 +61,16 @@ async function loadActivity() {
     if (!a) { root.innerHTML = shell(`<p class="loading">未找到活动 <code>${esc(id)}</code>。<a href="index.html">返回首页</a></p>`); return; }
     document.title = `${a.title} · WAIC 2026 参展助手`;
     root.innerHTML = renderDetail(a);
+    // 浏览详情也算兴趣信号（轻权重 0.5，随同步上行）
+    try {
+      const pk = 'waic2026.profile.v1';
+      const p = JSON.parse(localStorage.getItem(pk) || '{}');
+      if (!p.inferred || typeof p.inferred !== 'object') p.inferred = {};
+      const terms = [...new Set([...(a.tags || []).flatMap(t => String(t).split(',').map(s => s.trim())), a.track].filter(Boolean))];
+      terms.forEach(t => { if (t && t.length <= 20) p.inferred[t] = Math.round(((p.inferred[t] || 0) + 0.5) * 1000) / 1000; });
+      localStorage.setItem(pk, JSON.stringify(p));
+      if (window.WAICSync) window.WAICSync.touch();
+    } catch (e) { /* 忽略 */ }
     const mb = document.getElementById('detail-mine');
     if (mb) mb.addEventListener('click', () => {
       const on = toggleMine(mb.dataset.id);
