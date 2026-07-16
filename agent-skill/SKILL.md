@@ -1,7 +1,7 @@
 ---
 name: waic-2026
 description: WAIC 2026 世界人工智能大会（上海 · 2026-07-17~20）参展助手。回答官方论坛/活动查询、周边边会与媒体报道，按天/场馆/主题/嘉宾检索，帮用户维护个人日程、查时间冲突、按兴趣推每日看点。数据分官方/非官方两源，每条都带来源出处。
-version: 2.2.0
+version: 2.3.0
 triggers:
   - WAIC
   - 世界人工智能大会
@@ -173,7 +173,7 @@ curl -fsSL "https://waic.sg.superbrain-ai.com/api/activity/<id>"   # 全量：sc
 ```json
 { "code": "QP2S-PX33" }
 ```
-没有同步码也能正常用（纯本地），只是不跨端同步。
+**用户没有同步码？自己生成一个**（推送轮询和画像同步都需要 device ID）：从 `ABCDEFGHJKLMNPQRSTUVWXYZ23456789` 里随机取 8 位、中间加连字符（如 `K7M2-9QXP`），存进 `sync.json` 并首次 `POST /api/state` 注册。告诉用户这串码可抄到网站/其他设备实现互通。
 
 **拉取（会话开始、若有 code）**：
 ```bash
@@ -191,6 +191,43 @@ curl -fsS -X POST "https://waic.sg.superbrain-ai.com/api/state" -H 'Content-Type
 字段映射：网站 `schedule` ↔ skill `my-schedule.json.added`；`interests`/`inferred` ↔ `profile.json`；`updated_at` ↔ `last_updated`。合并 = 整体 last-write-wins（按 updated_at）。
 
 **隐私**：同步码是匿名随机串、不含身份；只同步用户自己的日程/兴趣；用户要停就删掉 `sync.json`。
+
+## 会期推送（v2.3 · 每日速报，轮询式）
+
+会期（7/16–7/20）服务端每天开 4 个推送窗口：**09:00 早报、21:00 晚报（全员）**，**12:00、16:00（定向：只推画像命中的内容）**。你通过定时轮询把它变成"主动推送"体验：
+
+**装机一次**：抽一个 0–20 的随机分钟数存 `WAIC2026/my/push.json`（错峰，防全网同秒轰服务器）：
+```json
+{ "jitter_min": 13, "delivered": {} }
+```
+**注册定时任务**（若你的宿主支持 cron/routine，如 OpenClaw）：每天 4 次，在 `09:13 / 12:13 / 16:13 / 21:13`（09 12 16 21 + 你的 jitter_min）各跑一次下面的轮询。不支持定时的宿主：每天用户首次交互时补跑一次。
+
+**每次轮询**：
+```bash
+CODE=$(jq -r .code WAIC2026/my/sync.json)
+LAST=$(jq -r ".delivered[\"$(date +%m%d)\"] // \"\"" WAIC2026/my/push.json)
+curl -fsSL "https://waic.sg.superbrain-ai.com/api/push?device=$CODE&last=$LAST"
+```
+- `ready:false` → **静默**，什么都不说（未到窗口/已投递/定向未命中都属正常）。
+- `ready:true` → 把 `title + sections` 整理成一条简洁播报给用户（文章带链接、活动带时间地点，2-8 条），并把 `delivery_id` 记回 `push.json.delivered`（同窗口绝不重复播报）。
+- 服务端已按该同步码的画像个性化；没画像时可带 `&interests=兴趣1,兴趣2` 兜底。
+
+## 人脉对接（v2.3 · 找同频的人）
+
+网站的「人脉对接」skill 里也能用：帮用户在参会者里找同频的人，**双方互相「感兴趣」才互露联系方式**。
+
+**填名片**（全部自愿；先明确征得用户同意再上传）：
+```bash
+curl -fsS -X POST "https://waic.sg.superbrain-ai.com/api/social/profile" -H 'Content-Type: application/json' -d '{
+  "device":"'$CODE'", "enabled":true,
+  "intro":"做青少年 AI 教育的创业者", "offer":"课程资源/渠道", "seeking":"投资人/合作方",
+  "tags":["AI教育","投融资"], "contact":{"type":"微信","value":"xxx"} }'
+```
+**发现**：`GET /api/social/candidates?device=$CODE` → 同频候选（无联系方式）。逐张念给用户，用户说感兴趣就：
+**表态**：`POST /api/social/like` `{"device":$CODE,"target":"<对方device>"}` → 返回 `matched:true` 时才有对方联系方式，播报"互相感兴趣，匹配成功🎉"。
+**我的匹配**：`GET /api/social/matches?device=$CODE`。**退出并删除**：`POST /api/social/optout`。
+- 隐私三条：匿名（无手机号身份）；联系方式只在双向匹配后互露；用户说删就 optout 一键清空。
+- 名片同时会让 12:00/16:00 的定向推送更懂用户（画像信号）。
 
 ## 你不要做的事
 

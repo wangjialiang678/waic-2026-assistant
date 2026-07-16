@@ -1,0 +1,19 @@
+{
+  "_comment": "轮询推送编排（运营可改，改完 systemctl restart waic-api 生效）。窗口=开放区间内轮询都有效，去重靠 delivery_id=日期-窗口名。audience=all 全员 / targeted 仅画像命中。breaking=手动置顶重大新闻（命中日期+窗口即全员推）。",
+  "enabled": true,
+  "period": { "start": "2026-07-16", "end": "2026-07-21" },
+  "windows": [
+    { "name": "morning",   "at": "09:00", "open_from": "07:30", "open_until": "11:29", "audience": "all",      "kind": "早报" },
+    { "name": "noon",      "at": "12:00", "open_from": "11:30", "open_until": "15:29", "audience": "targeted", "kind": "定向速报" },
+    { "name": "afternoon", "at": "16:00", "open_from": "15:30", "open_until": "20:29", "audience": "targeted", "kind": "定向速报" },
+    { "name": "evening",   "at": "21:00", "open_from": "20:30", "open_until": "23:59", "audience": "all",      "kind": "晚报" }
+  ],
+  "targeting": [
+    { "interest_any": ["投资", "投融资", "投融资·找项目", "一人公司·OPC", "OPC"], "topics": ["投融资", "融资", "基金", "资本", "投资"] },
+    { "interest_any": ["具身智能", "机器人", "具身智能·机器人"], "topics": ["具身", "机器人", "人形"] },
+    { "interest_any": ["AI教育", "教育", "青少年", "超脑", "亲子"], "topics": ["教育", "青少年", "儿童", "超脑", "亲子"] },
+    { "interest_any": ["大模型", "基础模型"], "topics": ["大模型", "开源模型", "基础模型"] },
+    { "interest_any": ["AI安全·治理", "治理"], "topics": ["治理", "安全", "对齐", "监管"] }
+  ],
+  "breaking": []
+}

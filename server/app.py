@@ -21,12 +21,14 @@ import json
 import logging
 import time
 from collections import defaultdict
+from datetime import datetime
 
 from fastapi import FastAPI, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 
 import data
+import push
 import store_cms
 import store_state
 import store_social
@@ -314,6 +316,34 @@ def digest(
 
     return {"day": day, "date": date, "interests": interest_list,
             "summary": summary, "items": items}
+
+
+# ================= 轮询式个性化推送（设计见 docs/推送系统设计-20260716.md） =================
+# 客户端会期每天 4 窗口错峰轮询；服务端按窗口+画像编排返回。无状态去重（last=delivery_id）。
+PUSH_LIMITER = TokenBucket(capacity=30, refill_per_sec=30 / 60.0)   # 每设备 30/分钟（轮询本应每窗口 1 次）
+
+
+@app.get("/api/push")
+def push_get(
+    device: str = Query("", description="匿名同步码（推荐，画像取服务端）"),
+    interests: str = Query("", description="兴趣兜底（未同步画像时用），逗号/斜杠分隔"),
+    last: str = Query("", description="上次收到的 delivery_id（去重）"),
+    _now: str = Query("", description="测试用时间覆盖 YYYY-MM-DDTHH:MM（仅影响内容选择）"),
+):
+    rl_key = device if store_state.valid_device(device) else "anon"
+    if not PUSH_LIMITER.allow(rl_key):
+        return JSONResponse({"ready": False, "window": "ratelimited"}, status_code=429)
+    now = None
+    if _now:
+        try:
+            now = datetime.strptime(_now, "%Y-%m-%dT%H:%M").replace(tzinfo=push.CST)
+        except ValueError:
+            now = None
+    result = push.build_push(data.get_store(), device=device, interests=interests,
+                             last=last, now=now)
+    _log_event("push", device=device[:12], window=result.get("window"),
+               ready=result.get("ready"))
+    return result
 
 
 # ================= 用户状态同步（无登录，匿名同步码为键） =================
