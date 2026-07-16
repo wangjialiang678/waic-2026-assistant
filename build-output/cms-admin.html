@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>展商认领审核 · WAIC 参展助手（内部）</title>
+<meta name="robots" content="noindex">
+<style>
+  body { margin:0; background:#0f1420; color:#e7ecf3; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height:1.6; }
+  .wrap { max-width:760px; margin:0 auto; padding:28px 18px 80px; }
+  h1 { font-size:20px; } .sub { color:#93a0b5; font-size:14px; margin-bottom:20px; }
+  .bar { display:flex; gap:8px; margin-bottom:18px; }
+  input { flex:1; padding:9px 12px; background:#141925; border:1px solid #2a3446; border-radius:8px; color:#e7ecf3; }
+  button { padding:9px 14px; border:none; border-radius:8px; cursor:pointer; font-weight:600; }
+  .load { background:#3b6ef5; color:#fff; }
+  .card { background:#141925; border:1px solid #232a38; border-radius:10px; padding:14px 16px; margin:12px 0; }
+  .co { font-weight:700; font-size:16px; }
+  .meta { color:#93a0b5; font-size:13px; margin:4px 0 10px; word-break:break-all; }
+  .acts { display:flex; gap:8px; }
+  .ap { background:#1f8a52; color:#fff; } .rj { background:#8a3d3d; color:#fff; }
+  .empty { color:#93a0b5; padding:24px 0; text-align:center; }
+  .note { color:#93a0b5; font-size:12px; margin-top:24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>展商认领审核</h1>
+  <div class="sub">内部工具。核验营业执照（通过展商留的联系方式线下确认）后，批准或驳回。官方数据只读，仅批准「编辑层」。</div>
+  <div class="bar">
+    <input id="tok" type="password" placeholder="管理 token（WAIC_CMS_TOKEN）" autocomplete="off">
+    <button class="load" onclick="load()">加载待审</button>
+  </div>
+  <div id="list"><div class="empty">输入 token 后加载。</div></div>
+  <div class="note">token 存于服务器 /etc/waic/api.env 的 WAIC_CMS_TOKEN，只在本页内存里用、不落地。</div>
+</div>
+<script>
+  var tok = '';
+  async function load() {
+    tok = document.getElementById('tok').value.trim();
+    const list = document.getElementById('list');
+    list.innerHTML = '<div class="empty">加载中…</div>';
+    try {
+      const r = await fetch('/api/cms/pending?token=' + encodeURIComponent(tok));
+      if (!r.ok) { list.innerHTML = '<div class="empty">token 无效或无权限。</div>'; return; }
+      const d = await r.json();
+      if (!d.items || !d.items.length) { list.innerHTML = '<div class="empty">没有待审的认领。</div>'; return; }
+      list.innerHTML = d.items.map(function (i) {
+        return '<div class="card" data-eid="' + i.exhibitor_id + '" data-dev="' + i.device + '">' +
+          '<div class="co">' + esc(i.company) + '</div>' +
+          '<div class="meta">联系方式：' + esc(i.contact) + ' · 展商id ' + esc(i.exhibitor_id).slice(0, 10) + ' · ' + esc(i.created_at) + '</div>' +
+          '<div class="acts"><button class="ap" onclick="review(this,\'approve\')">通过</button>' +
+          '<button class="rj" onclick="review(this,\'reject\')">驳回</button></div></div>';
+      }).join('');
+    } catch (e) { list.innerHTML = '<div class="empty">网络错误。</div>'; }
+  }
+  async function review(btn, action) {
+    const card = btn.closest('.card');
+    let note = '';
+    if (action === 'reject') { note = prompt('驳回原因（可选，会展示给展商）：') || ''; }
+    btn.textContent = '处理中…';
+    try {
+      const r = await fetch('/api/cms/review', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: tok, exhibitor_id: card.dataset.eid, device: card.dataset.dev, action: action, note: note }) });
+      const d = await r.json();
+      if (d.status) { card.style.opacity = 0.4; card.querySelector('.acts').innerHTML = '<span style="color:#93a0b5">已' + (action === 'approve' ? '通过' : '驳回') + '</span>'; }
+    } catch (e) { btn.textContent = '失败'; }
+  }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
+</script>
+</body>
+</html>

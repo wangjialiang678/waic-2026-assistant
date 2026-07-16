@@ -27,6 +27,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 
 import data
+import store_cms
 import store_state
 import store_social
 import tools
@@ -468,3 +469,81 @@ async def social_optout(request: Request):
         return JSONResponse({"error": "bad_device"}, status_code=400)
     store_social.optout(device)
     return {"ok": True}
+
+
+# ================= 展商自助 CMS M11（认领→审核→受限编辑；官方层只读，编辑层独立合并） =================
+CMS_LIMITER = TokenBucket(capacity=60, refill_per_sec=60 / 60.0)
+
+
+@app.get("/api/cms/overrides")
+def cms_overrides():
+    return store_cms.overrides()
+
+
+@app.get("/api/cms/status")
+def cms_status(device: str = Query(""), exhibitor_id: str = Query("")):
+    if not store_state.valid_device(device) or not exhibitor_id:
+        return JSONResponse({"error": "bad_request"}, status_code=400)
+    return store_cms.my_status(exhibitor_id[:40], device)
+
+
+@app.post("/api/cms/claim")
+async def cms_claim(request: Request):
+    try:
+        body = await request.json()
+    except Exception:  # noqa: BLE001
+        body = {}
+    device = (body.get("device") or "").strip()
+    eid = (body.get("exhibitor_id") or "").strip()[:40]
+    if not store_state.valid_device(device) or not eid:
+        return JSONResponse({"error": "bad_request"}, status_code=400)
+    if not CMS_LIMITER.allow(device):
+        return JSONResponse({"error": "rate_limited"}, status_code=429)
+    company = str(body.get("company") or "")
+    contact = str(body.get("contact") or "")
+    if not company or not contact:
+        return JSONResponse({"error": "need_company_contact"}, status_code=400)
+    st = store_cms.claim(eid, device, company, contact)
+    _log_event("cms", sub="claim", dev=device[:6], eid=eid[:8])
+    return st
+
+
+@app.post("/api/cms/edit")
+async def cms_edit(request: Request):
+    try:
+        body = await request.json()
+    except Exception:  # noqa: BLE001
+        body = {}
+    device = (body.get("device") or "").strip()
+    eid = (body.get("exhibitor_id") or "").strip()[:40]
+    if not store_state.valid_device(device) or not eid:
+        return JSONResponse({"error": "bad_request"}, status_code=400)
+    if not CMS_LIMITER.allow(device):
+        return JSONResponse({"error": "rate_limited"}, status_code=429)
+    st = store_cms.save_edit(eid, device, str(body.get("intro") or ""),
+                             str(body.get("website") or ""), str(body.get("extra") or ""))
+    if st.get("error"):
+        return JSONResponse(st, status_code=403)
+    _log_event("cms", sub="edit", dev=device[:6], eid=eid[:8])
+    return st
+
+
+@app.get("/api/cms/pending")
+def cms_pending(token: str = Query("")):
+    if not store_cms.admin_ok(token):
+        return JSONResponse({"error": "forbidden"}, status_code=403)
+    return {"items": store_cms.pending()}
+
+
+@app.post("/api/cms/review")
+async def cms_review(request: Request):
+    try:
+        body = await request.json()
+    except Exception:  # noqa: BLE001
+        body = {}
+    if not store_cms.admin_ok(str(body.get("token") or "")):
+        return JSONResponse({"error": "forbidden"}, status_code=403)
+    eid = (body.get("exhibitor_id") or "").strip()[:40]
+    device = (body.get("device") or "").strip()
+    action = "approve" if body.get("action") == "approve" else "reject"
+    return store_cms.review(eid, device, action, str(body.get("note") or ""))

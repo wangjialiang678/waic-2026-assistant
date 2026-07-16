@@ -423,6 +423,17 @@ async function ensureExhibitors() {
       });
     }
   } catch (err) { /* 别名可选，失败不影响 */ }
+  // 合入商家自助编辑（CMS 通过审核的内容）→ 覆盖简介/补官网，前端标「商家提供」；官方数据不动
+  try {
+    const or = await fetch('/api/cms/overrides');
+    if (or.ok) {
+      const ov = await or.json();
+      DATA.exhibitors.forEach(e => {
+        const o = ov[e.id];
+        if (o) { e.cms = o; if (o.intro) e.intro = o.intro; if (o.website) e.website = o.website; }
+      });
+    }
+  } catch (err) { /* CMS 可选 */ }
 }
 
 function renderExhControls() {
@@ -513,6 +524,8 @@ function renderExhCard(e) {
       ${e.business_scope ? `<div class="row"><div class="k">业务范围</div>${esc(e.business_scope)}</div>` : ''}
       ${e.partner_level ? `<div class="row"><div class="k">合作级别</div>${esc(e.partner_level)}</div>` : ''}
       ${e.role ? `<div class="row"><div class="k">角色</div>${esc(e.role)}</div>` : ''}
+      ${e.cms ? `<div class="row"><div class="k">商家提供</div><div>${e.website ? `<a href="${esc(e.website)}" target="_blank" rel="noopener" data-ext="1">官网 ↗</a>` : ''}${e.cms.extra ? ' · ' + esc(e.cms.extra) : ''} <span class="cms-by">商家提供</span></div></div>` : ''}
+      <div class="row"><button class="exh-claim" data-cms="${esc(e.id)}" type="button">是这家展商？认领 / 编辑本展台 →</button></div>
     </div>
   </div>`;
 }
@@ -669,6 +682,8 @@ document.getElementById('view-content').addEventListener('click', e => {
   if (e.target.closest('[data-ext]')) return;
   if (e.target.closest('.card-title a')) return;
   if (e.target.closest('#load-more')) return;
+  const claim = e.target.closest('[data-cms]');
+  if (claim) { e.stopPropagation(); const ex = DATA.exhibitors && DATA.exhibitors.find(x => String(x.id) === claim.dataset.cms); if (window.WAICCms && ex) window.WAICCms.open(ex); return; }
   const exh = e.target.closest('.exh-card');
   if (exh) { exh.classList.toggle('expanded'); return; }
   const card = e.target.closest('.card');
