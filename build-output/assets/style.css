@@ -1127,3 +1127,8 @@ body.soc-lock { overflow: hidden; }
 .soc-tag { font-family: var(--font-sans); font-size: 0.72rem; color: var(--intel-deep); background: var(--intel-tint); padding: 0.1rem 0.5rem; border-radius: 100px; }
 .soc-c-acts { display: flex; gap: 0.5rem; margin-top: 0.7rem; justify-content: flex-end; }
 .soc-c-contact { margin-top: 0.7rem; padding-top: 0.6rem; border-top: 1px dashed var(--rule); font-size: 0.9rem; color: var(--ink-soft); }
+
+/* 一键多端导航 */
+.mapnav { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.mapnav a { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; color: var(--official); background: var(--official-tint); padding: 0.4rem 0.8rem; border-radius: 7px; }
+.mapnav a:hover { background: var(--official); color: #fff !important; text-decoration: none; }

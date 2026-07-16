@@ -9,6 +9,19 @@ function esc(s) {
 }
 function nl2p(s) { return String(s || '').split(/\n+/).filter(x => x.trim()).map(x => `<p>${esc(x.trim())}</p>`).join(''); }
 function shortHost(u) { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return '来源'; } }
+// 一键多端导航（按场馆名检索，无需经纬度）
+function mapNavLinks(venue) {
+  if (!venue) return '';
+  const q = encodeURIComponent(venue + ' 上海');
+  const links = [
+    ['高德', 'https://uri.amap.com/search?keyword=' + q],
+    ['百度', 'https://map.baidu.com/search/' + q],
+    ['Apple', 'https://maps.apple.com/?q=' + q],
+    ['Google', 'https://www.google.com/maps/search/?api=1&query=' + q],
+  ];
+  return `<div class="panel"><div class="panel-label">导航到 · ${esc(venue)}</div>
+    <div class="mapnav">${links.map(([n, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener" data-ext="1">${esc(n)}地图 ↗</a>`).join('')}</div></div>`;
+}
 function channelLabel(ch) { return ({ 'waic-official-api': '官方来源', 'wechat': '微信公众号', 'web': '网络来源' })[ch] || '来源'; }
 function relationLabel(r) { return ({ official: '官方', affiliated: '联名 / 合作', 'co-located': '同城同期' })[r] || ''; }
 function kindClass(a) { return a.kind === 'side_event' || a.kind === 'community' ? 'k-side' : (a.kind === 'exhibition_zone' ? 'k-zone' : 'k-official'); }
@@ -158,6 +171,8 @@ function renderDetail(a) {
   if ((a.additional_sources || []).length) {
     body += `<div class="panel"><div class="panel-label">相关报道 / 其他来源</div><ul class="addsrc">${a.additional_sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.publisher || shortHost(s.url))} ${ICON_EXT}</a></li>`).join('')}</ul></div>`;
   }
+
+  if (a.venue && !isZone) body += mapNavLinks(a.venue);
 
   const descLabel = a.source_type === 'official' ? '简介' : '内容摘要';
   if (a.description && !isZone) body += `<div class="panel"><div class="panel-label">${descLabel}</div><div class="prose-block">${nl2p(a.description)}</div>${a.description_en ? `<div class="prose-block" style="margin-top:1rem;color:var(--ink-mute);font-size:0.9rem">${nl2p(a.description_en)}</div>` : ''}</div>`;
