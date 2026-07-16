@@ -246,9 +246,14 @@ def unofficial_to_activity(a: dict, channel: str, idx: int) -> dict:
            "exhibition_zone": "展区", "coverage": "媒体报道·资讯"}
     category = a.get("category") or CAT.get(kind, "边会·周边活动")
     waic_relation = a.get("waic_relation") or ("official" if kind == "exhibition_zone" else "affiliated")
-    # 超脑 AI 原住民计划 = 与 WAIC 官方合作的青少年 AI 公益活动（非民间边会 / 非商业），标为官方
+    # 超脑 AI 原住民计划 = 与 WAIC 官方合作的青少年 AI 公益活动（非民间边会 / 非商业），标为官方；
+    # 并补「超脑/教育/青少年/AI原住民」等关键词与标签，保证搜索能命中
     _t = a.get("title") or ""
-    if "超脑" in _t and "原住民" in _t:
+    _is_superbrain = "超脑" in _t
+    sb_keywords = ("超脑 超脑AI孵化器 SuperBrain AI教育 教育 青少年 青少年AI 少儿 K12 中学生 小学生 10后 AI原住民 原住民计划"
+                   if _is_superbrain else "")
+    sb_tags = ["教育", "青少年", "AI 原住民"] if _is_superbrain else []
+    if _is_superbrain and "原住民" in _t:
         waic_relation = "official"
     # organizers：既支持 [{name,role}] 也支持字符串 organizer
     orgs = a.get("organizers") or []
@@ -261,7 +266,7 @@ def unofficial_to_activity(a: dict, channel: str, idx: int) -> dict:
     search_bits = [
         a.get("title"), a.get("summary") or a.get("description"), a.get("publisher"),
         a.get("source_site"), a.get("venue") or a.get("event_venue"), a.get("organizer"),
-        a.get("target_audience"), track,
+        a.get("target_audience"), track, sb_keywords,
         " ".join(p if isinstance(p, str) else p.get("name", "") for p in participants),
     ]
     source = {
@@ -283,6 +288,8 @@ def unofficial_to_activity(a: dict, channel: str, idx: int) -> dict:
         "kind": kind,
         "waic_relation": waic_relation,
         "download_status": download_status,
+        # 无任何来源链接（含搜狗）→ 无法核验，前端可标「待核实」并降低排序权重
+        "unverified": not (source.get("url") or source.get("sogou_url")),
         "source": source,
         "title": a.get("title") or "",
         "title_en": "",
@@ -297,7 +304,7 @@ def unofficial_to_activity(a: dict, channel: str, idx: int) -> dict:
         "room": a.get("room") or "",
         "category": category,
         "track": track,
-        "tags": a.get("tags") or [],
+        "tags": (a.get("tags") or []) + sb_tags,
         "registration_required": a.get("registration_required"),
         "registration_url": a.get("registration_url") or "",
         "price": a.get("price") or "",
@@ -556,14 +563,55 @@ def build_themes(activities: list) -> dict:
 # ---------- 边会去重 + 情报库 ----------
 
 def _sig(title: str) -> str:
-    return re.sub(r"[\s\W_]+", "", (title or "")).lower()[:12]
+    """标题归一化核心名，用于跨源去重。
+    去 WAIC/年份 → 剥主办方前缀（“商汤科技·基座大模型…” → “基座大模型…”）
+    → 去英文/数字（副标题、编号），保留括号内中文（区分“青春与锋芒/深耕与守望”等场次）。"""
+    t = (title or "").strip()
+    t = re.sub(r"(WAIC\s*2026|2026\s*WAIC|WAIC2026|2026WAIC|WAIC)", "", t, flags=re.I)
+    for sep in ("·", "｜", "|"):
+        if sep in t:
+            cand = max(t.split(sep), key=len)          # 主办前缀通常较短，取最长段为核心名
+            if len(re.sub(r"[^一-鿿]", "", cand)) >= 6:
+                t = cand
+            break
+    t = re.sub(r"[A-Za-z0-9]+", "", t)
+    t = re.sub(r"[\s\W_（）()「」·、,.:：|｜—\-《》【】“”\"'!！?？~～]+", "", t)
+    return t.lower()
+
+
+# 人工核对过的边会近似重复组：同组任一关键子串命中即视同一活动。
+# （机械模糊匹配会把“XX之夜（同后缀）”这类系列误并，故长尾用白名单显式处理）
+SIDE_DUP_GROUPS = [
+    ["阿里云主题论坛"],
+    ["智启具身论坛"],
+    ["清华科创夜", "清华朋友圈"],
+    ["文客松"],
+    ["穿越者之夜"],
+    ["思想者论坛"],          # 3 条系列概览重复（6 个具名专场已并入官方）
+    ["100 AI Founders"],    # 3 条同一场 Private Dinner 的不同措辞
+]
+
+# 人工核对：标题差异过大、机械去重抓不到，但确为官方论坛重复描述的边会。
+# （边会标题需全部包含左侧关键词）→ 归入右侧官方论坛（核心名匹配）。
+CURATED_SIDE_TO_OFFICIAL = [
+    (("Datawhale", "线下论坛"), "心智与智能青年生态论坛"),  # 三条“具体名称未披露”占位，实为该官方论坛
+]
+
+
+def _dedup_key(title: str) -> str:
+    """边会内去重键：先查人工白名单组，否则回退归一化核心名。"""
+    t = title or ""
+    for i, grp in enumerate(SIDE_DUP_GROUPS):
+        if any(kw in t for kw in grp):
+            return f"__sidegrp{i}"
+    return _sig(title)
 
 
 def dedup_side_events(acts: list) -> list:
     """按标题签名去重，重复项把来源合并进 additional_sources、并补空字段。"""
     kept, index = [], {}
     for a in acts:
-        k = _sig(a.get("title"))
+        k = _dedup_key(a.get("title"))
         if k and k in index:
             base = index[k]
             u = (a.get("source") or {}).get("url")
@@ -706,13 +754,33 @@ def main():
         side_acts.append(unofficial_to_activity(a, pick_channel(a), i))
     before = len(side_acts)
     side_acts = dedup_side_events(side_acts)
-    # 跨官方去重：与官方论坛同名的抽取活动，并入官方 additional_sources，不重复列进边会
-    off_index = {_sig(a["title"]): a for a in activities
-                 if a["source_type"] == "official" and a.get("kind") == "official_program"}
+    # 跨官方去重：与官方论坛同名/同实的抽取活动，并入官方 additional_sources，不重复列进边会。
+    # 匹配三档：① 归一化核心名相等 ② 官方核心名(≥8)作为子串出现在边会核心名里 ③ 人工核对映射。
+    off_index = {}
+    for a in activities:
+        if a["source_type"] == "official" and a.get("kind") == "official_program":
+            k = _sig(a["title"])
+            if len(k) >= 6:
+                off_index.setdefault(k, a)
+
+    def match_official(side_title):
+        k = _sig(side_title)
+        if len(k) >= 6 and k in off_index:
+            return off_index[k]
+        if len(k) >= 8:
+            for ok, oa in off_index.items():
+                if len(ok) >= 8 and ok in k:      # 官方规范名完整出现在边会标题核心里
+                    return oa
+        for kws, off_core in CURATED_SIDE_TO_OFFICIAL:
+            if all(kw in (side_title or "") for kw in kws):
+                oa = off_index.get(_sig(off_core))
+                if oa:
+                    return oa
+        return None
+
     final_side, merged_off = [], 0
     for s in side_acts:
-        k = _sig(s.get("title"))
-        off = off_index.get(k) if k else None
+        off = match_official(s.get("title"))
         if off:
             u = (s.get("source") or {}).get("url")
             if u and u != off.get("official_url"):

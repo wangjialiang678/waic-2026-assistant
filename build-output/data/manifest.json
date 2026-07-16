@@ -1,9 +1,9 @@
 {
-  "version": "20260716-1156",
-  "last_updated": "2026-07-16T11:56:34+08:00",
+  "version": "20260716-1205",
+  "last_updated": "2026-07-16T12:05:25+08:00",
   "files": {
     "VERSION": {
-      "sha256": "7e6593e9c795d2eae2caa469a7dceb3af348d7b427af1d6d3d2bc129367dca74",
+      "sha256": "8e12690cd388b7636239a4cfcef8ade8869e7245f03bddc12e7ae4d296bc4363",
       "size": 14
     },
     "data/venues.json": {
@@ -11,20 +11,20 @@
       "size": 1381
     },
     "data/intel.json": {
-      "sha256": "623b7ddf35605b717844493d35702b417c477a5660d11bd829e2205431b031cb",
-      "size": 173546
+      "sha256": "e656456805ba6e5d135c08ebac1c2e18f8b1adec6d51835a8cf0e5051e84a226",
+      "size": 195132
     },
     "data/exhibitors.json": {
       "sha256": "c6320da13c63339f6c2593a96b0a3b8355526e100dc78c2c5b2426cd02d52232",
       "size": 2545250
     },
     "data/themes.json": {
-      "sha256": "8b2058a079abede9a09f23bc1a4441114f0f55e11d84b6a0aa8480a1c932e8eb",
-      "size": 23405
+      "sha256": "0717692b3ff4673a89342eba42ad77624525ea394310c9ceadae457a8b8bbecd",
+      "size": 23076
     },
     "data/activities.json": {
-      "sha256": "4a70c954b8a9042dc82489fa5a5760469edf2c362cc40f47c41ec347f44e0f8e",
-      "size": 2251168
+      "sha256": "236efc007321ca13415189330ea90663a7054937298354d56bf70d3f106a66fe",
+      "size": 2238837
     },
     "md/unofficial/web-046-光启夜叙--Light-Night.md": {
       "sha256": "f5aa6a8144c411ce3aa0a5e1d993fde78500f89670dc29e26e1d282112824257",
@@ -103,8 +103,8 @@
       "size": 819
     },
     "md/unofficial/web-069-WAIC思想者论坛姚期智-Richard-Sutton-朱松纯-俞勇-李开复-郭.md": {
-      "sha256": "599a448e54d1a488c173b24f974609ed1a4309ea9e8efa4f6dca9f3c1438d9c7",
-      "size": 656
+      "sha256": "49051e3a1b829bfeaa9f1f171d47d510edd187afa35e436b28a1d8d6f0d9a741",
+      "size": 688
     },
     "md/unofficial/web-225-WAIC2026-人工智能引领产业变革思客会.md": {
       "sha256": "304811c0515df034b2ba8a6b4e38d944e6cfb96e936ac12eeff1e7719431a83f",
@@ -183,8 +183,8 @@
       "size": 439
     },
     "md/unofficial/web-088-WAIC-UP-AI创作者之夜.md": {
-      "sha256": "88e89589ec86b8a93d2abbc10a950fd0abd0fbfb0dd18722ed5ea6e8c70e2865",
-      "size": 492
+      "sha256": "eb066a9c816c2e2999cf9fd56e1806be663100a1ca47b560546a7058b30a39f6",
+      "size": 460
     },
     "md/unofficial/web-124-WAIC-8家韩国AI企业需求大公开联合研发-OEM代工-投融资-人才引进.md": {
       "sha256": "c21ee6c3f472e7596b2e46a45ed6cbe4616cf1b1ae48ad12ffeef6208a1d4651",
@@ -326,6 +326,14 @@
       "sha256": "bdc651221b64dab06b9ae5dd933a3b25f7d84d4f194c622ac84f20c1b11a14b9",
       "size": 676
     },
+    "md/unofficial/web-187-高鹄资本AI-Frontier-talks-论坛.md": {
+      "sha256": "6c0a393a029575d9b7d77526ab23be3103c7aed7f21f658139025908ba155092",
+      "size": 416
+    },
+    "md/unofficial/web-025-GO-SUMMIT--WAIC-上海AGI-Villa-周年活动.md": {
+      "sha256": "cab732f64fb822262ac0551311f323c9c2392ae531f5a554dc5bf638e4c53497",
+      "size": 485
+    },
     "md/unofficial/web-068-Founder-ParkWAIC-上海见企业-Agent-落地的关键问题.md": {
       "sha256": "a2a771f6caf3cec89e7ed08f8bd7486ec21edf0b9409b945e079c9463707f694",
       "size": 534
@@ -341,6 +349,10 @@
     "md/unofficial/web-037-2026世界人工智能大会徐汇会场逛展攻略附展商名录.md": {
       "sha256": "f6547848a421dea93d389f7c52c6aec19cf719becf1f87036ad63e556dcb8bd5",
       "size": 519
+    },
+    "md/unofficial/web-049-WAIC-2026-Private-Dinner100-AI-Founders-.md": {
+      "sha256": "3011a29bdb9f37b71a9c5a662fcf0128018296db37be25d1ea835cbc4c56f543",
+      "size": 555
     },
     "md/unofficial/web-050-干杯吧具身第二期.md": {
       "sha256": "680536e4ac9d40556dfd386541fb39afc370f65836a4120604718f303aef86e5",
@@ -451,8 +463,8 @@
       "size": 537
     },
     "md/unofficial/web-012-WAIC-FUTURE-TECH-Pitching-CompetitionSta.md": {
-      "sha256": "774f50554852fa299387d02eabf0c84655e0595fcc9090f84168f4d9a410b928",
-      "size": 664
+      "sha256": "6a7c084dbb5b3ccc3f3cf1a49a011bbb6d1bf93f0433b9a12f9b530824d37393",
+      "size": 535
     },
     "md/unofficial/wx-058-入场须知2026上海母婴展今日开幕门票参观指南展位图.md": {
       "sha256": "094aaedccc547b24e275d67c609e9f6e308f8bddf60ffb66288f4bd2b3a40dae",
@@ -506,6 +518,10 @@
       "sha256": "bd6dc8c400cfcd82a54090312a0902cdffc1dbae457ca92c5822000112b9b791",
       "size": 482
     },
+    "md/unofficial/wx-310-2026世界人工智能大会-人工智能国际标准化论坛.md": {
+      "sha256": "9fd915d9f874edaf400d56cb5b660578445ef79b888d0e7ee9950db619c8246c",
+      "size": 898
+    },
     "md/unofficial/wx-145-WAIC2026光算力论坛更多重磅嘉宾揭晓Scale-up光互连圆桌阵容豪华亮相.md": {
       "sha256": "6a945a21014202434f996914b6b85aa4148a221f6dd5dcc9aa9e20bd01eee1e2",
       "size": 478
@@ -537,6 +553,14 @@
     "md/unofficial/web-048-WAIC-2026-Complete-Guide--Why-Zhangjiang.md": {
       "sha256": "773b347ce45d59cce2a8ca012d2a5c81e660e36a7d7f721c601e9c2fe92c4345",
       "size": 455
+    },
+    "md/unofficial/web-100-WAIC-2026-PRIVATE-DINNER100-AI-Founders闭.md": {
+      "sha256": "17bc370c3b32d33ac118457fe0d2150eb5b701df0d7632021387da1e61b47b5d",
+      "size": 564
+    },
+    "md/unofficial/web-130-WAIC-UP-AI创作者之夜哈佛商业评论中国--信睿科技评论.md": {
+      "sha256": "3ca2ee8c66c5c061e8a7c197e04b76a8cd8ba1985923ed6ca139ee8f323300bc",
+      "size": 630
     },
     "md/unofficial/web-094-WAIC-Future-Tech-创投生态175-早期项目展--资本对接.md": {
       "sha256": "14834deb200bb612777a885f0c86bdc16ee72b82281f544cc905dbe368ebd5f3",
@@ -574,6 +598,10 @@
       "sha256": "a4d51a41c2e9483c7be71ea7f9fcf5222da23ce4a372a4a066b35e150e130f50",
       "size": 554
     },
+    "md/unofficial/web-163-WAIC-企业家论坛.md": {
+      "sha256": "d75985d1c992437c927f456e9100295806b8d1e6b98d2ea72beb216b1764d76b",
+      "size": 599
+    },
     "md/unofficial/wx-176-大会预告丨WAIC2026最新论坛活动日程安排发布.md": {
       "sha256": "66d1f4acee231dc1446c041669e3b7c755f033394ee305f65cee0990aa6f65c5",
       "size": 453
@@ -581,6 +609,10 @@
     "md/unofficial/web-099-商汤基座大模型论坛SenseNova-U1-Pro.md": {
       "sha256": "bf0b553792c91828218ba6b6345585fb72225b643fbe17f34afccee7369106f8",
       "size": 503
+    },
+    "md/unofficial/web-170-思朗科技超智融合驱动AI4S算力论坛.md": {
+      "sha256": "e658e4398c3f5ac65f4f472d0b564482cedb35273afb405c826df81d7e32a1dd",
+      "size": 420
     },
     "md/unofficial/web-108-WAIC-2026-主论坛下午场.md": {
       "sha256": "1e938684f276319286410e1cfcf4c9587ff4065e1716758659cabf1506cdcbf6",
@@ -807,8 +839,8 @@
       "size": 506
     },
     "md/unofficial/web-065-有鹿机器人通用具身智能大脑赋能商用机器人产业化实践暨-AI130S-新品发布会.md": {
-      "sha256": "033624a4364c40aad15921dd5ddbffd49f3cd40039dc6979751aba9f4d1b9ab2",
-      "size": 552
+      "sha256": "f54378ac81d74ada210ce31be5058adcffcec1e5aa53d7ca117ba6311de4c1d4",
+      "size": 584
     },
     "md/unofficial/web-014-阿里云主题论坛Agentic-Cloud-智能体时代的基础设施.md": {
       "sha256": "df3c93029af6acade09e07c04141b52820d532e0beeefc7debbaf509cbcd76bb",
@@ -837,6 +869,10 @@
     "md/unofficial/web-052-Demo-DayPhysical-AI-Camp16-家-Voice-First.md": {
       "sha256": "3ad20aac47fdbbecf0e5a47509666e870044f0efc3fddcaf1884d3c514eb97d0",
       "size": 575
+    },
+    "md/unofficial/wx-319-2026世界人工智能大会智能社会论坛.md": {
+      "sha256": "be715b228106501f83c8a34e60fb3ca2fcbeac92f368d3200b62949970a029f7",
+      "size": 1152
     },
     "md/unofficial/wx-144-科创周刊工信部今年人形机器人整机产量有望破十万台一季度人形机器人出口增长2102.md": {
       "sha256": "1862566ce00c0a0436f50745a5928843cd660ff64db57edd4ef81aaff3608c1e",
@@ -878,6 +914,10 @@
       "sha256": "c36491477a728207e5e90a314b4aac434fda8e10e5671415cc14e1707937418f",
       "size": 468
     },
+    "md/unofficial/web-061-WAIC-Future-Tech-创投生态175-早期项目展--资本对接.md": {
+      "sha256": "14834deb200bb612777a885f0c86bdc16ee72b82281f544cc905dbe368ebd5f3",
+      "size": 624
+    },
     "md/unofficial/web-233-2026WAIC-全球创新项目路演全赛道全球招募.md": {
       "sha256": "0db08a9dc9171f92bb7fae32936536fa6da3653d2fe2c4f9a015f0c535ddad46",
       "size": 449
@@ -917,6 +957,10 @@
     "md/unofficial/wx-090-蚂蚁开源-WAIC2026活动汇总论坛展览和多场-Side-Event等你来玩.md": {
       "sha256": "6abe55e8b74000cb782920a4c152c856947ef00ec85e2955493eda7797ddc7b2",
       "size": 457
+    },
+    "md/unofficial/wx-278-2026中国AI盛典.md": {
+      "sha256": "87d20b6dc838dafa876df34feaae85dfaac36617bbfd0b814b43c795f6e703ef",
+      "size": 640
     },
     "md/unofficial/web-016-WAIC预告丨人工智能的全球发展与治理共赢与共治之路智源社区.md": {
       "sha256": "47b2281f7941b76a57e56ded7528888099da0e74616e853d4d3333873ea5f1f9",
@@ -995,12 +1039,12 @@
       "size": 629
     },
     "md/unofficial/web-007-Booming-NightWAIC-前夜-100-位-AI-创始人无议程畅聊蓝驰.md": {
-      "sha256": "152f58b0efbf6b8a81c96f77aabd102eeb4cb3c64e8fee0738ab3f7c02c52b64",
-      "size": 751
+      "sha256": "2acfbd9c21af8b072a369c050a5e8b7a0c9d44d8e1c751034c971ce9a5f5cf9e",
+      "size": 673
     },
     "md/unofficial/web-006-文客松-AI创业者投资人酒会陆家嘴-716.md": {
-      "sha256": "9fce16c38894fc5754d11bd656f1231693bdf287885d5839f16d235803326f8a",
-      "size": 648
+      "sha256": "c0ff650b9d14ec1bcb7be741f3e24877a63cdc6965edec60619c9836619c7111",
+      "size": 739
     },
     "md/unofficial/wx-101-2027WAIC世界人工智能大会超全参观指南可直接收藏预约交通路线避坑.md": {
       "sha256": "c2b33f1c9fff0882f23491698c2f115772d7fb76ac5252a4024fcda0389146cc",
@@ -1123,8 +1167,8 @@
       "size": 694
     },
     "md/unofficial/web-004-WAIC-的清华朋友圈之夜-THUWAIC-FT-Networking-Nigh.md": {
-      "sha256": "0cd7ca5129da4ca937fdc526b3545267a248ab71552479a9d218dbc17db936c0",
-      "size": 850
+      "sha256": "3b39c476ab509a0ff63002ccbb8c94a1f23c898e783049498126e2d60c841cc1",
+      "size": 925
     },
     "md/unofficial/web-026-WAIC-Academic-2026首届世界人工智能大会学术.md": {
       "sha256": "3fe7b1d8a92b872389658cbd225a9b9e83c35f4c236e18d446aa0701e99648af",
@@ -1146,6 +1190,10 @@
       "sha256": "10962eb5a9407d2db6dcfd9aa5014171d4410268b084744ab56ff8d63343a557",
       "size": 503
     },
+    "md/unofficial/web-072-WAIC-Future-Tech-初创路演物理跃迁-AI4S-全球聚变系列.md": {
+      "sha256": "b723dd104db46fb5dc291b3eb9402d0ceae5f2640b39b3dbc81950b1dc6cd245",
+      "size": 630
+    },
     "md/unofficial/web-074-AI-TASTE-PARTY.md": {
       "sha256": "dcd1b58334c24ecf9eab088e5da1a18be059f361713e75830f80c79050a3f172",
       "size": 527
@@ -1153,6 +1201,10 @@
     "md/unofficial/web-046-WAIC-2026-观众注册300款AI产品全球首发聚展网.md": {
       "sha256": "a73965a982241186e1bca0485ea2a34aa67f5fbc8c708ab66d5a53db3feecf7d",
       "size": 486
+    },
+    "md/unofficial/web-022-Booming-Night--世界之外.md": {
+      "sha256": "ed710208bc9625b46ebae5451fa08964f68fe497b6e6d14b2044a01ccef77953",
+      "size": 579
     },
     "md/unofficial/wx-047-国产原创技术集中亮相世界人工智能大会即将举行.md": {
       "sha256": "9a2299117cae3c365ca0f4dab08c73d0a3eff54278ce4736494dbdf5f498ac32",
@@ -1302,6 +1354,10 @@
       "sha256": "f960e5f537e2cd0060f306b105fce3330588b9a52dc52505d6a0842570636784",
       "size": 548
     },
+    "md/unofficial/web-075-Demo-Day--Physical-AI-Camp超音速计划-2026--Ph.md": {
+      "sha256": "d7e8ff31502389946eb47ffe3fce798e3d0801688fd61a939f75cabcf96dd517",
+      "size": 637
+    },
     "md/unofficial/wx-321-WAIC思想者论坛回到原点拆解AI的第一性原理.md": {
       "sha256": "f40c1f55c5a9f64c23dd13b47223124b7ac2a46096dc76657ef03c73b0f28e5a",
       "size": 903
@@ -1359,8 +1415,8 @@
       "size": 411
     },
     "md/unofficial/web-067-智元智启具身论坛.md": {
-      "sha256": "e9bdc67433206db7718473e3610e2beabedf79125e12b69f9d7d031eb1bca4b5",
-      "size": 493
+      "sha256": "dbf237a792688bbe1f878daf57d62eb7a1e176b2c1e0614172e29df406d6f9bb",
+      "size": 526
     },
     "md/unofficial/wx-180-未来触手可及2026世界人工智能大会普通人也能玩转的科技盛宴.md": {
       "sha256": "830ecdbed65da135db1a0ae53ad325948fdc899532a4342bf93b0a54a9b8556e",
@@ -1381,6 +1437,10 @@
     "md/unofficial/wx-099-成绩查询第九届全国青少年人工智能创新挑战赛开源硬件创意智造专项赛选拔赛及入围决赛.md": {
       "sha256": "7f54fb7eeb23d1d091b05ea28b4c32fbe310819a5a9de1d0eba7e41ee656029e",
       "size": 544
+    },
+    "md/unofficial/wx-263-WAIC思想者论坛姚期智-李开复等专场.md": {
+      "sha256": "10d6f2f9f165972367a19713f11c375602fb21ab6d5e9acf0e81412739305c9d",
+      "size": 707
     },
     "md/unofficial/wx-106-WAIC2026重磅看点蓝芯算力解锁-RISCVAI-智通融合新范式.md": {
       "sha256": "212f5e91a476de4c7b2a38355159279d94904a6277d1a3260cf6a424a141ee62",
@@ -1411,8 +1471,8 @@
       "size": 692
     },
     "md/unofficial/web-002-WAIC-Afterparty--智元元苼生态之夜.md": {
-      "sha256": "013142dff713d0b7a60c140a7a6ac44fff6896cc9ddd86bdee0501d7f975ce26",
-      "size": 740
+      "sha256": "d49135943ac42d8a18c17f63b9f4309eca484292da504244e623cc5bf6a493d2",
+      "size": 599
     },
     "md/unofficial/web-081-AI穿越者之夜.md": {
       "sha256": "6b55fa66016d685c1bcc25fee2aa2f6ccbda6a33ab051e17bcef13813a63ead0",
@@ -1469,6 +1529,10 @@
     "md/unofficial/wx-013-WAIC2026一图抢先看超聚变展台解锁智企进化路径.md": {
       "sha256": "4df3b2a769496e972a517035c690951214e3e00f8be4aabbc80b057e4e14cb0b",
       "size": 449
+    },
+    "md/unofficial/web-124-智法共生法律大模型推理革新论坛.md": {
+      "sha256": "c199a90f6d308c0e420c04cdd8efa2957a14841929e5e339c1a2538aa820c837",
+      "size": 399
     },
     "md/unofficial/wx-019-WAIC2026倒计时2天携手昇腾燃动未来.md": {
       "sha256": "6769cd7f9519f7f23c888adf050a54876dbe28917961f796d3d10559dd454647",
@@ -1533,6 +1597,10 @@
     "md/unofficial/wx-076-718截止报名-WAIC2026全球AI数智文创创新应用巅峰路演盛典.md": {
       "sha256": "f7e1e8d8ca469060450ebee05109bfb1dc4d9f19e246e858d87882d3f2637e42",
       "size": 495
+    },
+    "md/unofficial/web-161-Airwallex-空中云汇领航AI驱动的全球金融变革论坛.md": {
+      "sha256": "40c3386ba5d3a3156db52d202eeeeb2e89b134e56a57ce81d2c11f157a27c751",
+      "size": 443
     },
     "md/unofficial/wx-163-上饶市青少年科技普及协会成为-2026世界人工智能大会分论坛协办单位.md": {
       "sha256": "01e7f36e8df620ef6e35560376c7f21c0395b30f46857dfd2b37a7ad01dada9c",
@@ -1628,6 +1696,10 @@
     },
     "md/unofficial/wx-037-世界人工智能大会即将开展展位图-活动日程安排详情攻略请查收.md": {
       "sha256": "9a2a3fec72be122cbce72d3691d07b4b8b642a93c7f375c6cff5fcab3968f394",
+      "size": 481
+    },
+    "md/unofficial/web-232-2026世界人工智能大会智法共生法律大模型推理革新与应用生态论坛.md": {
+      "sha256": "951e7a743bf78cc65591038720070c86d9901d07138a5ed31958582a12645ced",
       "size": 481
     },
     "md/unofficial/web-042-PROBLEM-MARKET--STORYTELLING-HACKATHON-真.md": {
@@ -1826,6 +1898,10 @@
       "sha256": "b18eee1aa95a911387cb282d6962be7c1c062641a5fda03bdf85259a5e860fe5",
       "size": 468
     },
+    "md/unofficial/wx-314-WAIC-City-Walk.md": {
+      "sha256": "503407e98bb639b1c7c98993e3195b3301b7f1d31579fa11fa574af423b3811b",
+      "size": 753
+    },
     "md/unofficial/web-003-WAIC-2026-PRIVATE-DINNER100-AI-Founders-.md": {
       "sha256": "f39597bfb053cc5381a5ad0b1a95e3a7a4770dd4c3fb2c73ff035def9a0e5d36",
       "size": 719
@@ -1898,6 +1974,10 @@
       "sha256": "48bca4a5c548887e96f75939f208137fbd7718bc24b6d2cbfc9e0edaaa733115",
       "size": 554
     },
+    "md/unofficial/web-143-WAIC-AI-Nightfall-全球智识之夜WAIC-UP--咔嗒Lab.md": {
+      "sha256": "f469765fb20d8b8b372ad1b6a8d22119346e805d66b5fc7f65aee2e4e8473521",
+      "size": 504
+    },
     "md/unofficial/web-077-源来有饭WAIC-专场.md": {
       "sha256": "fd6c6a2e77786de4ba9c8b82f05ce342f8cdfb25c24111290cb67c22318d76a3",
       "size": 424
@@ -1950,6 +2030,10 @@
       "sha256": "e5e8c211dbe19009934248ec94187c2900d5ab5e50ca25fee04695909a80ebf8",
       "size": 798
     },
+    "md/unofficial/web-027-WAIC-Afterparty出海增长到底怎么搞暨-创新壬--港科大上海中心-N.md": {
+      "sha256": "5d1ae078933683e749ea21df896f9526a5c3d108cb706332244d76948f2b2dd2",
+      "size": 667
+    },
     "md/unofficial/web-208-超脑-AI-原住民体验计划WAIC论坛演讲在AI中看见具体的人.md": {
       "sha256": "50c69d9aa2bddc990b9883235075cb63805c30c1d6c7fc01cf11250d64a9b50f",
       "size": 533
@@ -1983,8 +2067,8 @@
       "size": 460
     },
     "md/unofficial/web-008-GO-SUMMIT--WAIC-Shanghai--AGI-Villa-Anni.md": {
-      "sha256": "e5bb0ccab4f765225f555da346aab574def9b9870634ee099600b81de477818f",
-      "size": 770
+      "sha256": "3a3efaaa4f452f852eb96f081036ec68ea8c99e3303e76de1bc86c0c09ba73c6",
+      "size": 707
     },
     "md/unofficial/wx-186-每日AI新闻速览-20260708.md": {
       "sha256": "73296b14101d7fad2a1cad70bab69301fd1855e8b5e00ce60e1bafef0a72c676",
@@ -2033,6 +2117,10 @@
     "md/unofficial/web-118-WAIC-2026-科学智能论坛AI4S-从辅助计算到自主发现.md": {
       "sha256": "be9eeaa4426dec613228466e8aaf5133fe2d81dd7dc0f1efc9eb3b3d62c65926",
       "size": 460
+    },
+    "md/unofficial/web-080-WAIC-Afterparty创新王--香港科技大学上海中心.md": {
+      "sha256": "f960e5f537e2cd0060f306b105fce3330588b9a52dc52505d6a0842570636784",
+      "size": 548
     },
     "md/unofficial/wx-213-要闻持续推进人工智能产业生态建设静安区举办WAIC2026预热专场活动.md": {
       "sha256": "65d22283314917fe26ad939eba5d55ef6290d15e4797549b1f937756b48b14ca",

@@ -208,7 +208,11 @@ function renderOfficialControls() {
 
 function renderOfficial() {
   const f = F.official;
-  let progs = DATA.activities.filter(a => a.kind === 'official_program');
+  // 有搜索/筛选时，把超脑等「官方合作」的活动(side_event+relation=official)也并入官方日程结果，保证搜得到；
+  // 无筛选的默认视图只显官方论坛(超脑由置顶卡代表)，避免与置顶卡重复。
+  const filtering = !!(f.q || f.category || f.track || f.tag || f.venue || f.district);
+  let progs = DATA.activities.filter(a => a.kind === 'official_program'
+    || (filtering && a.kind === 'side_event' && a.waic_relation === 'official'));
   if (f.day) progs = progs.filter(a => String(a.day) === f.day);
   if (f.district) progs = progs.filter(a => a.district === f.district);
   if (f.venue) progs = progs.filter(a => a.venue === f.venue);
