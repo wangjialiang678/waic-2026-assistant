@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>接入 AI 助手 · WAIC 2026 参展助手</title>
+<style>
+  :root{--bg:#0b0e14;--card:#141925;--fg:#e7ecf3;--mut:#93a0b5;--acc:#3b6ef5;--line:#232a38}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,"PingFang SC","Microsoft YaHei",Segoe UI,sans-serif;line-height:1.7}
+  .wrap{max-width:780px;margin:0 auto;padding:32px 20px 80px}
+  a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+  .back{color:var(--mut);font-size:14px}
+  h1{font-size:26px;margin:18px 0 6px} .sub{color:var(--mut);margin-bottom:28px}
+  h2{font-size:18px;margin:32px 0 10px;border-left:3px solid var(--acc);padding-left:10px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0}
+  code,pre{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+  pre{background:#0f1420;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:13px;color:#cdd8ea}
+  code{background:#0f1420;padding:1px 6px;border-radius:5px;font-size:.92em}
+  ul{padding-left:20px} li{margin:5px 0}
+  .tag{display:inline-block;background:rgba(59,110,245,.15);color:#9db8ff;border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px;margin-bottom:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/">← 返回 WAIC 2026 参展助手</a>
+  <h1>接入 AI 助手</h1>
+  <div class="sub">把 WAIC 2026 全量日程装进你的 AI（Claude Code / OpenClaw 等），随时问「今天世博中心有哪些大模型论坛」「有没有需要报名的 afterparty」。</div>
+
+  <h2>它能做什么</h2>
+  <div class="card">
+    <span class="tag">174 官方论坛</span><span class="tag">4 展区</span><span class="tag">148 边会/周边</span><span class="tag">1020 参展商</span><span class="tag">208 资讯</span>
+    <ul>
+      <li>查官方论坛/展区：按天、场馆、片区、类别、主题、嘉宾检索</li>
+      <li>查边会/周边/社群活动：时间地点、是否需注册、票价、报名链接</li>
+      <li>查参展商展台：按展馆(H1-H4/西岸/张江)、行业、名称检索</li>
+      <li>帮你维护个人日程、查时间冲突；每条信息都带官方/非官方来源</li>
+    </ul>
+  </div>
+
+  <h2>安装（一条命令）</h2>
+  <div class="card">
+    <p>把这份「AI 说明书」放进你的 skills 目录：</p>
+    <pre>mkdir -p ~/.claude/skills/waic-2026
+curl -fsSL https://waic.sg.superbrain-ai.com/SKILL.md -o ~/.claude/skills/waic-2026/SKILL.md</pre>
+    <p>然后在对话里问任何 WAIC 相关问题即可，AI 会自动拉取最新数据。</p>
+  </div>
+
+  <h2>数据接口（也可直接用）</h2>
+  <div class="card">
+    <ul>
+      <li><a href="/VERSION">/VERSION</a> — 数据版本号</li>
+      <li><a href="/bundle.tar.gz">/bundle.tar.gz</a> — 全量数据包（活动+情报+参展商 md/json）</li>
+      <li><a href="/data/activities.json">/data/activities.json</a> — 326 条活动（官方+边会，带来源）</li>
+      <li><a href="/data/exhibitors.json">/data/exhibitors.json</a> — 1020 家参展商</li>
+      <li><a href="/data/intel.json">/data/intel.json</a> — 208 篇资讯素材</li>
+    </ul>
+  </div>
+
+  <p class="sub" style="margin-top:36px">由 <a href="https://www.superbrain-ai.com">超脑 AI 孵化器</a> 制作 · 数据聚合自 WAIC 官网与公开渠道，非官方发布，一切以大会官方为准。</p>
+</div>
+</body>
+</html>

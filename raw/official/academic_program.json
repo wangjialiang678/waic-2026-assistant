@@ -1,0 +1,395 @@
+{
+ "source": "https://waica2026.worldaic.com.cn/program/program-glance/",
+ "tables": [
+  {
+   "index": 0,
+   "caption": "Saturday, July 18, 20262026年7月18日（星期六）",
+   "rows": [
+    [
+     "Time 时间",
+     "Session 议程",
+     "Venue 地点"
+    ],
+    [
+     "09:00–12:00",
+     "WAICA Opening Ceremony WAICA 开幕式",
+     "Shanghai World Expo Exhibition & Convention Center — Meeting Room 2 世博展览馆 — 2 号会议室"
+    ],
+    [
+     "14:00–17:00",
+     "WAICA Main Track Session 1 (Best Paper Award Session) WAICA 主会技术报告专场 1（最佳论文奖专场）",
+     "Shanghai World Expo Exhibition & Convention Center — Meeting Room 8 世博展览馆 — 8 号会议室"
+    ]
+   ]
+  },
+  {
+   "index": 1,
+   "caption": "Sunday, July 19, 20262026年7月19日（星期日）",
+   "rows": [
+    [
+     "Time 时间",
+     "Session 议程",
+     "Venue 地点"
+    ],
+    [
+     "09:00–12:00",
+     "WAICA Main Track Session 2 WAICA 主会技术报告专场 2",
+     "Shanghai World Expo Center — Medium Meeting Room 431 世博中心 — 中型会议室 431"
+    ],
+    [
+     "09:00–12:00",
+     "WAICA Workshop (Multi-Modal Agents for Science) WAICA 专题研讨会（科学多模态智能体研讨会）",
+     "West Bund Shanghai — Shanghai Hall, 5F 徐汇西岸国展 — 5 楼上海厅"
+    ],
+    [
+     "09:00–12:00",
+     "WAICA Workshop (AI for Mathematical Modelling and Scientific Computing) WAICA 专题研讨会（数学建模与科学计算中的人工智能）",
+     "Shanghai World Expo Exhibition & Convention Center — Meeting Room 8 世博展览馆 — 8 号会议室"
+    ],
+    [
+     "14:00–17:00",
+     "WAICA Main Track Session 3 WAICA 主会技术报告专场 3",
+     "Shanghai World Expo Center — Medium Meeting Room 431 世博中心 — 中型会议室 431"
+    ],
+    [
+     "14:00–17:00",
+     "WAICA Workshop (Frontiers of Space-Based Intelligent Computing: Large Models, Agent Systems, and Space-Air-Ground Integration) WAICA 专题研讨会（天基智能计算前沿：大模型、智能体系统与空天地一体化）",
+     "West Bund Shanghai — Meeting Room 401 徐汇西岸国展 — 会议室 401"
+    ],
+    [
+     "14:00–17:00",
+     "WAICA Workshop (AI Acceleration in Quantum Computing) WAICA 专题研讨会（人工智能驱动的量子计算加速）",
+     "West Bund Shanghai — Shanghai Hall, 5F 徐汇西岸国展 — 5 楼上海厅"
+    ]
+   ]
+  },
+  {
+   "index": 2,
+   "caption": "Monday, July 20, 20262026年7月20日（星期一）",
+   "rows": [
+    [
+     "Time 时间",
+     "Session 议程",
+     "Venue 地点"
+    ],
+    [
+     "09:00–12:00",
+     "WAICA Main Track Session 4 WAICA 主会技术报告专场 4",
+     "Shanghai World Expo Center — Medium Meeting Room 431 世博中心 — 中型会议室 431"
+    ],
+    [
+     "09:00–12:00",
+     "WAICA Main Track Session 5 WAICA 主会技术报告专场 5",
+     "Shanghai World Expo Center — Medium Meeting Room 430 世博中心 — 中型会议室 430"
+    ],
+    [
+     "09:00–12:00",
+     "WAICA Main Track Session 6 WAICA 主会技术报告专场 6",
+     "Shanghai World Expo Center — Medium Meeting Room 515 世博中心 — 中型会议室 515"
+    ],
+    [
+     "09:00–12:00",
+     "WAICA Workshop (Spatial Interaction for Embodied Intelligence) WAICA 专题研讨会（具身智能空间交互研讨会）",
+     "Shanghai World Expo Center — Medium Meeting Room 518 世博中心 — 中型会议室 518"
+    ],
+    [
+     "09:00–12:00",
+     "WAICA Young Elite Forum WAICA 青年菁英会",
+     "Shanghai World Expo Center — Medium Meeting Room 616 世博中心 — 中型会议室 616"
+    ]
+   ]
+  },
+  {
+   "index": 3,
+   "caption": "WAICA Main Track Session 1 (Best Paper Award Session)WAICA 主会技术报告专场 1（最佳论文奖专场）",
+   "rows": [
+    [
+     "Time 时间",
+     "Title 论文标题"
+    ],
+    [
+     "14:00–14:15",
+     "Branching Policy Optimization: Sandbox-Native Language Agent Reinforcement Learning"
+    ],
+    [
+     "14:15–14:30",
+     "Disagreement and Beyond: Boosting Semi-supervised Medical Image Segmentation with Data Perturbation and Model Stabilization"
+    ],
+    [
+     "14:30–14:45",
+     "Enhancing Vision Foundation Models via Multimodal Continual Pre-Training"
+    ],
+    [
+     "14:45–15:00",
+     "Generative Visual Transmission: Rethinking Computation, Bandwidth, and Memory in Video Communication"
+    ],
+    [
+     "15:00–15:15",
+     "Hierarchical Constrained Reinforcement Learning with Dynamic Boundary for Spatio-Temporal Vehicle-to-Grid Scheduling"
+    ],
+    [
+     "15:15–15:30",
+     "MCPVerse: An Expansive, Real-World Benchmark for Agentic Tool Use"
+    ],
+    [
+     "15:30–15:45",
+     "Reinforcement Learning with Physical Feedback for Stable 3D Molecular Generation"
+    ],
+    [
+     "15:45–16:00",
+     "SGC-CLIP: Semantic Graph Guided Calibration for Class-Incremental Learning"
+    ],
+    [
+     "16:00–16:15",
+     "StepPrune: Stepwise Sequential Token Selection for Multimodal Large Language Models"
+    ],
+    [
+     "16:15–16:30",
+     "TIDAL: Tidal Intelligent Dynamic Allocation and Scheduling for Large-scale Federated GPU Clusters"
+    ]
+   ]
+  },
+  {
+   "index": 4,
+   "caption": "WAICA Main Track Session 2WAICA 主会技术报告专场 2",
+   "rows": [
+    [
+     "Time 时间",
+     "Title 论文标题"
+    ],
+    [
+     "09:00–09:30",
+     "Academician You He Keynote (Invited Talk) 何友院士报告（特邀报告）"
+    ],
+    [
+     "09:30–09:45",
+     "CAST: Mitigating Object Hallucination in Large Vision-Language Models via Caption-Guided Visual Attention Steering"
+    ],
+    [
+     "09:45–10:00",
+     "FAST-LSD: Frequency-Spatial and Scale-Selective Transformer for Image-Event Line Segment Detection"
+    ],
+    [
+     "10:00–10:15",
+     "Geometry-Aware Debiasing for Visual Question Answering via Mitigating Neural Collapse"
+    ],
+    [
+     "10:15–10:30",
+     "MASD: Multi-Agent Structured Diagnosis for Zero-Shot Industrial Defect Inspection"
+    ],
+    [
+     "10:30–10:45",
+     "SC2A-DKF: Structure-Constrained Color-Aware Dynamic Kernel Filtering for Out-of-Distribution Image Denoising"
+    ],
+    [
+     "10:45–11:00",
+     "SG-Layout: Structured Scene Graph–Guided Layout Generation with LLMs"
+    ],
+    [
+     "11:00–11:15",
+     "SkyVLaM: Multimodal Large Language Model for UAV Video Understanding in Remote Sensing"
+    ],
+    [
+     "11:15–11:30",
+     "OphVLM-R1: Efficient Ophthalmic Reasoning via Curriculum RL"
+    ]
+   ]
+  },
+  {
+   "index": 5,
+   "caption": "WAICA Main Track Session 3WAICA 主会技术报告专场 3",
+   "rows": [
+    [
+     "Time 时间",
+     "Title 论文标题"
+    ],
+    [
+     "14:00–14:15",
+     "3D-SSD: A 3D Networked Decoupled SSD Architecture for AI Workloads on High-Density NAND Flash"
+    ],
+    [
+     "14:15–14:30",
+     "Byzantine Robust Distributed Learning with High-dimensional Efficiency"
+    ],
+    [
+     "14:30–14:45",
+     "CATCH: Cross-Resolution Attention for Communication Throughput Prediction with Coupled Heterogeneous Features"
+    ],
+    [
+     "14:45–15:00",
+     "CTM: Structure-Aware Incremental Placement for Large-Model GPU Clusters"
+    ],
+    [
+     "15:00–15:15",
+     "EdgeSwapLLM: SLO-Aware Multi-Model Concurrent Inference for Edge LLM Serving"
+    ],
+    [
+     "15:15–15:30",
+     "F2T: Fast Failover in LLM Training with Near-Zero Overhead State Management"
+    ],
+    [
+     "15:30–15:45",
+     "FlowLM: Few-Step Language Modeling via Diffusion-to-Flow Adaptation"
+    ],
+    [
+     "15:45–16:00",
+     "Gate Entropy Reveals Quantization Fragility: Zero-Cost Mixed-Precision Allocation for Attention-Residual LLMs"
+    ],
+    [
+     "16:00–16:15",
+     "Morphling: Train Deep and Decode Shallow for Accelerated Speculative Decoding"
+    ],
+    [
+     "16:15–16:30",
+     "Not All Tokens Are Equal: Inflation-Aware Routing for Agentic LLM Systems"
+    ],
+    [
+     "16:30–16:45",
+     "From Stateless to Situated: Building a Psychological World for LLM-Based Agents"
+    ]
+   ]
+  },
+  {
+   "index": 6,
+   "caption": "WAICA Main Track Session 4WAICA 主会技术报告专场 4",
+   "rows": [
+    [
+     "Time 时间",
+     "Title 论文标题"
+    ],
+    [
+     "09:00–09:15",
+     "A Deep Research Benchmark with Consensus-Derived Gold Rubrics for Distinguishing Financial Report Quality"
+    ],
+    [
+     "09:15–09:30",
+     "A Renewable Benchmark for Failure Diagnosis in Research-Level Mathematical Reasoning"
+    ],
+    [
+     "09:30–09:45",
+     "AIDABench: AI Data Analytics Benchmark"
+    ],
+    [
+     "09:45–10:00",
+     "Anchoring Intent and Verifying Locally: Towards Robust Multi-Turn Search with LLMs"
+    ],
+    [
+     "10:00–10:15",
+     "DebateArena: Tracking Pending Judgments and Disagreements in Multi-Agent Debate over Open Event Streams"
+    ],
+    [
+     "10:15–10:30",
+     "MULTI-Bench: A Multi-Turn Interactive Benchmark for Assessing Emotional Intelligence Ability of Spoken Dialogue Models"
+    ],
+    [
+     "10:30–10:45",
+     "ParaASR: Multi-Token Prediction for Fast and Long-Context LLM-Based Speech Recognition"
+    ],
+    [
+     "10:45–11:00",
+     "PhysUniBench: A Multi-Modal Physics Reasoning Benchmark at Undergraduate Level"
+    ],
+    [
+     "11:00–11:15",
+     "Step-Level Preference Learning for Generative Agents in Social Simulations"
+    ]
+   ]
+  },
+  {
+   "index": 7,
+   "caption": "WAICA Main Track Session 5WAICA 主会技术报告专场 5",
+   "rows": [
+    [
+     "Time 时间",
+     "Title 论文标题"
+    ],
+    [
+     "09:00–09:15",
+     "Act, Sense, Act: Learning Active Perception from Large-Scale Egocentric Human Data"
+    ],
+    [
+     "09:15–09:30",
+     "BlitzBough: An Efficient Privacy-Preserving Inference Framework for Decision Trees by Communication Optimization"
+    ],
+    [
+     "09:30–09:45",
+     "HIRED: Hierarchical Interdisciplinary Research Team Formation via Dual-Layer Semantic Alignment"
+    ],
+    [
+     "09:45–10:00",
+     "InternBootcamp: Boosting LLM Reasoning with Verifiable Task Scaling"
+    ],
+    [
+     "10:00–10:15",
+     "Liability Frameworks for Agentic AI Systems"
+    ],
+    [
+     "10:15–10:30",
+     "RoboFAC: A Comprehensive Framework for Robotic Failure Analysis and Correction"
+    ],
+    [
+     "10:30–10:45",
+     "Source-Prior-Driven Selective Adaptation for Efficient Diffusion Model Finetuning"
+    ],
+    [
+     "10:45–11:00",
+     "Statistical Calibration for LLM Watermark Detection Under Cross-Lingual Attacks"
+    ],
+    [
+     "11:00–11:15",
+     "StepState: Sparse Step States for Multi-Step Reasoning"
+    ],
+    [
+     "11:15–11:30",
+     "TAPER: Task-Adaptive Pairwise Energy Regularization for Graph Neural Networks"
+    ]
+   ]
+  },
+  {
+   "index": 8,
+   "caption": "WAICA Main Track Session 6WAICA 主会技术报告专场 6",
+   "rows": [
+    [
+     "Time 时间",
+     "Title 论文标题"
+    ],
+    [
+     "09:00–09:15",
+     "A Physics-informed Synthetic X-ray Dataset for Miniature Robot Swarm Tracking"
+    ],
+    [
+     "09:15–09:30",
+     "Beyond Accuracy: Can LLMs Provide Biologically Grounded Evidence in Sequence-Based Omics Tasks?"
+    ],
+    [
+     "09:30–09:45",
+     "Cross-Reaction Transfer Learning: From Simple Hydrogenation to Complex Hydroformylation via Mechanistic Subspace Alignment"
+    ],
+    [
+     "09:45–10:00",
+     "Developing and validating a GraphRAG-LLM for thematic analysis on transcripts in healthcare research"
+    ],
+    [
+     "10:00–10:15",
+     "DyLAC: Latent Dynamics Clustering for Trajectory Data with Application to Mandibular Motion"
+    ],
+    [
+     "10:15–10:30",
+     "MARTA: Mask-driven Anchored Reinforcement learning with Transformer-hypergraph Architecture for Interpretable Brain Disorder Diagnosis"
+    ],
+    [
+     "10:30–10:45",
+     "RSPMA: Rollout-Stabilized Predictive Mesh Adaptation for Autoregressive Graph PDE Rollout"
+    ],
+    [
+     "10:45–11:00",
+     "scMDDM: A generative cellular world model for transcriptome modeling toward virtual cells"
+    ],
+    [
+     "11:00–11:15",
+     "SIGMA: Spectral-Implicit Generative Manifold Architecture for Spatiotemporal Turbulence Synthesis"
+    ]
+   ]
+  }
+ ]
+}

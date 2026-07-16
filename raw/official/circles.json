@@ -1,0 +1,135 @@
+{
+ "_note": "截至抓取时(2026-07-16)，前端 /circle/* 页面全部重定向到 /circle/coming-soon，5 个板块基本未上线。以下为各板块 API key 映射 + introductionDetail 接口返回内容(多数为空)。注意后端数据录入疑似错位：circle/connect/introductionDetail 返回的是 AI GRAVITY 文案。",
+ "circles": {
+  "ai-gravity": {
+   "apiKey": "ai",
+   "frontendRoute": "/circle/ai-gravity",
+   "menuName": "AI Industry New Economy / AI产业新经济",
+   "status": "coming-soon (前端重定向)",
+   "eventList_total": 0,
+   "introductionDetail": null,
+   "eventYear": [],
+   "eventList": []
+  },
+  "connect": {
+   "apiKey": "connect",
+   "frontendRoute": "/circle/connect",
+   "menuName": "Connect",
+   "status": "coming-soon (前端重定向)",
+   "eventList_total": 0,
+   "introductionDetail": {
+    "uuid": "0b8b085554ec43698d25bdae82423746",
+    "name": "AI GRAVITY CONVERGIN",
+    "nameEn": "AI GRAVITY CONVERGIN",
+    "subTitle": "Pioneer the global blue ocean of Al business, unlock the transformative power of Al.",
+    "subTitleEn": "Pioneer the global blue ocean of Al business, unlock the transformative power of Al.",
+    "coreList": [
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/c1e77b28b5c14551867c525379095075.png",
+      "title": "Bridging Al Ecosystems",
+      "titleEn": "Bridging Al Ecosystems",
+      "brief": "Facilitate a multi-party collaboration mechanism involving government, enterprises, and startups.",
+      "briefEn": "Facilitate a multi-party collaboration mechanism involving government, enterprises, and startups."
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation",
+      "brief": "Focus on real-worlds cenarios to accelerate the deploynent of Al solutions.",
+      "briefEn": "Focus on real-worlds cenarios to accelerate the deploynent of Al solutions."
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation",
+      "brief": "Focus on real-worlds cenarios to accelerate the deploynent of Al solutions.",
+      "briefEn": "Focus on real-worlds cenarios to accelerate the deploynent of Al solutions."
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation",
+      "brief": "Focus on real-worlds cenarios to accelerate the deploynent of Al solutions.",
+      "briefEn": "Focus on real-worlds cenarios to accelerate the deploynent of Al solutions."
+     }
+    ],
+    "sectorsList": [
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/c1e77b28b5c14551867c525379095075.png",
+      "title": "Bridging Al Ecosystems",
+      "titleEn": "Bridging Al Ecosystems"
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation"
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation"
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation"
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation"
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation"
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation"
+     },
+     {
+      "imgUrl": "https://static.worldaic.com.cn/media/20260514/a0d78317d30747b3a60ceb3c2ffa7623.png",
+      "title": "Driving Regional Innovation",
+      "titleEn": "Driving Regional Innovation"
+     }
+    ],
+    "brief": "AI GRAVITY is dedicated to using Al as a bridge to connect emerging innovation markets across the Asia-Pacific, Middle East, and Europe.\nBy creating a high-level customized platform for region-focused activities, engaging governments, enterprises, investors, and academia, Al GRAVITY fosters a cross-border Al ecosystem that enables knowedge sharing, technology adoption, and business colaboration - empowering regional Al ecosystems to achieve long-term growth and breakthrough innovation.",
+    "briefEn": "AI GRAVITY is dedicated to using Al as a bridge to connect emerging innovation markets across the Asia-Pacific, Middle East, and Europe.\nBy creating a high-level customized platform for region-focused activities, engaging governments, enterprises, investors, and academia, Al GRAVITY fosters a cross-border Al ecosystem that enables knowedge sharing, technology adoption, and business colaboration - empowering regional Al ecosystems to achieve long-term growth and breakthrough innovation."
+   },
+   "eventYear": [],
+   "eventList": []
+  },
+  "future-tech": {
+   "apiKey": "tech",
+   "frontendRoute": "/circle/future-tech",
+   "menuName": "Future Tech",
+   "status": "coming-soon (前端重定向)",
+   "eventList_total": 0,
+   "introductionDetail": null,
+   "eventYear": [],
+   "eventList": []
+  },
+  "waic-up": {
+   "apiKey": "up",
+   "frontendRoute": "/circle/waic-up",
+   "menuName": "WAIC UP",
+   "status": "coming-soon (前端重定向)",
+   "eventList_total": 0,
+   "introductionDetail": null,
+   "eventYear": [],
+   "eventList": []
+  },
+  "young": {
+   "apiKey": "young",
+   "frontendRoute": "/circle/young",
+   "menuName": "Young",
+   "status": "coming-soon (前端重定向)",
+   "eventList_total": 0,
+   "introductionDetail": null,
+   "eventYear": [],
+   "eventList": []
+  }
+ }
+}

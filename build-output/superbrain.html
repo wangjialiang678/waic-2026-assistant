@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>超脑 @ WAIC 2026 · 青少年 AI 特别展</title>
+<meta name="description" content="超脑 AI 孵化器承接 WAIC 2026 青少年创新板块 —— 47 个青少年 AI 项目、12 城、平均 14 岁。青少年会客厅 45 场、超脑小课堂 13 项、生命力博物馆线上特别展。10 后用 AI，回应真实世界。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="超脑 AI 孵化器">
+<meta property="og:url" content="https://waic.sg.superbrain-ai.com/superbrain.html">
+<meta property="og:title" content="超脑 @ WAIC 2026 · 青少年 AI 特别展">
+<meta property="og:description" content="47 个项目 · 12 城 · 平均 14 岁 · 最小 10 岁。青少年会客厅 45 场 + 超脑小课堂 13 项 + 生命力博物馆线上特别展。10 后用 AI，回应真实世界。">
+<meta property="og:image" content="https://waic.sg.superbrain-ai.com/assets/og-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="超脑 @ WAIC 2026 · 青少年 AI 特别展">
+<meta name="twitter:image" content="https://waic.sg.superbrain-ai.com/assets/og-share.png">
+<!-- 字体走系统栈（PingFang/Songti/SF Mono），不外链 Google Fonts -->
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ========== 超脑专题页 · 页面级样式（沿用四色语义系统） ========== */
+/* 页面签名色 = 琥珀（side），与主站入口条一致 */
+.sb-hero { border-top: 3px solid var(--side); }
+.sb-hero .flag { color: var(--side-deep); background: var(--side-tint); }
+.sb-hero h1 em::after { background: rgba(154, 101, 22, 0.26); }
+
+/* hero 右侧事实卡 */
+.sb-factcard {
+  background: var(--surface); border: 1px solid var(--rule); border-top: 3px solid var(--side);
+  border-radius: 8px; padding: 1.3rem 1.4rem; box-shadow: var(--shadow-card);
+}
+.sb-factcard .fc-row { padding: 0.65rem 0; border-bottom: 1px solid var(--rule); }
+.sb-factcard .fc-row:last-child { border-bottom: none; padding-bottom: 0; }
+.sb-factcard .fc-row:first-child { padding-top: 0; }
+.sb-factcard .fc-k { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 0.28rem; }
+.sb-factcard .fc-v { font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink); line-height: 1.55; }
+.sb-factcard .fc-v .mono { color: var(--side-deep); }
+
+/* 大数字 tiles：复用 .stat；数字用页面色 */
+.sb-stat .n { color: var(--ink); }
+
+/* 通用 section 间距 */
+.sb-section { padding: clamp(2.2rem, 5vw, 3.4rem) 0 0.6rem; }
+.sb-section.first { padding-top: clamp(1.6rem, 4vw, 2.6rem); }
+.sb-lead { color: var(--ink-soft); font-size: 0.98rem; line-height: 1.75; max-width: 62ch; margin-top: 0.4rem; }
+
+/* 主旨演讲高亮面板 */
+.sb-keynote {
+  background: linear-gradient(135deg, var(--official-deep) 0%, var(--official) 70%, #0d2c45 100%);
+  color: #fff; border-radius: 12px; padding: clamp(1.4rem, 4vw, 2.2rem);
+  margin-top: 1.2rem; box-shadow: var(--shadow-card); position: relative; overflow: hidden;
+}
+.sb-keynote::before {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 88% 10%, #000, transparent 70%);
+          mask-image: radial-gradient(ellipse 60% 70% at 88% 10%, #000, transparent 70%);
+}
+.sb-keynote > * { position: relative; z-index: 1; }
+.sb-kn-flag { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: rgba(255,255,255,0.14); padding: 0.25rem 0.7rem; border-radius: 100px; }
+.sb-kn-flag .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--side); box-shadow: 0 0 0 0 rgba(154,101,22,0.6); animation: pulse 2s infinite; }
+.sb-kn-title { font-family: var(--font-serif); font-weight: 700; font-size: clamp(1.4rem, 3.6vw, 2.05rem); line-height: 1.28; margin: 0.9rem 0 0.5rem; }
+.sb-kn-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.3rem; font-family: var(--font-sans); font-size: 0.9rem; color: rgba(255,255,255,0.82); }
+.sb-kn-meta .m { display: inline-flex; align-items: center; gap: 0.4rem; }
+.sb-kn-meta .mono { color: #fff; }
+.sb-kn-quote { font-family: var(--font-serif); font-size: clamp(1.05rem, 2.4vw, 1.32rem); line-height: 1.6; margin-top: 1.3rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.18); color: #fff; }
+.sb-kn-quote .em { color: #f4d9a8; }
+
+/* 三层叙事 */
+.sb-layers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-top: 1rem; }
+@media (max-width: 760px) { .sb-layers { grid-template-columns: 1fr; } }
+.sb-layer { background: var(--surface); border: 1px solid var(--rule); border-top: 3px solid var(--lc, var(--official)); border-radius: 8px; padding: 1.1rem 1.2rem; }
+.sb-layer .ly-k { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--lc, var(--official)); }
+.sb-layer .ly-t { font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem; color: var(--ink); margin: 0.35rem 0 0.4rem; }
+.sb-layer .ly-d { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.65; }
+.sb-layer.l-product { --lc: var(--exh); }
+.sb-layer.l-people  { --lc: var(--side); }
+.sb-layer.l-society { --lc: var(--intel); }
+
+/* 创始人语 */
+.sb-founder { margin-top: 1.2rem; padding: 1.1rem 1.4rem; border-left: 3px solid var(--side); background: var(--side-tint); border-radius: 0 8px 8px 0; }
+.sb-founder .fq { font-family: var(--font-serif); font-size: 1.05rem; line-height: 1.7; color: var(--side-deep); }
+.sb-founder .fby { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-mute); margin-top: 0.5rem; }
+
+/* 生命力博物馆 feature */
+.sb-museum {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(1rem, 3vw, 2rem); align-items: center;
+  margin-top: 1.2rem; padding: clamp(1.4rem, 4vw, 2rem);
+  background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--intel); border-radius: 12px; box-shadow: var(--shadow-card);
+}
+@media (max-width: 760px) { .sb-museum { grid-template-columns: 1fr; } }
+.sb-museum .mu-tag { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; color: var(--intel-deep); background: var(--intel-tint); display: inline-block; padding: 0.16rem 0.6rem; border-radius: 4px; }
+.sb-museum .mu-title { font-family: var(--font-serif); font-weight: 700; font-size: clamp(1.3rem, 3vw, 1.7rem); color: var(--ink); margin: 0.7rem 0 0.5rem; }
+.sb-museum .mu-desc { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.7; }
+.sb-museum .mu-cta { text-align: center; }
+.sb-museum .mu-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.85rem 1.4rem; background: var(--intel); color: #fff !important; border-radius: 8px; font-family: var(--font-sans); font-weight: 600; font-size: 0.98rem; transition: background 0.16s, transform 0.16s; }
+.sb-museum .mu-btn:hover { background: var(--intel-deep); transform: translateY(-1px); }
+.sb-museum .mu-url { display: block; font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-mute); margin-top: 0.6rem; word-break: break-all; }
+
+/* 议程：会客厅卡片 exh 变体 */
+.card.k-exh { --c-line: var(--exh-line); --c-strong: var(--exh); }
+.card.k-exh .kind-chip { background: var(--exh-tint); color: var(--exh-deep); }
+
+/* 会客厅卡片网格 */
+.sb-salon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(272px, 1fr)); gap: 0.7rem; margin-top: 0.9rem; }
+.sb-salon-grid .card { cursor: default; }
+.sb-salon-grid .card:hover { transform: none; box-shadow: none; border-color: var(--rule); }
+.sb-salon-grid .card .card-title { margin-bottom: 0.5rem; }
+
+/* 子标题条 */
+.sb-subhead { display: flex; align-items: baseline; gap: 0.7rem; margin: 1.6rem 0 0.2rem; }
+.sb-subhead .sh-t { font-family: var(--font-serif); font-weight: 700; font-size: 1.2rem; color: var(--ink); }
+.sb-subhead .sh-n { font-family: var(--font-mono); font-size: 0.78rem; color: #fff; background: var(--vc, var(--side)); padding: 0.08rem 0.55rem; border-radius: 100px; }
+.sb-subhead .sh-d { font-size: 0.82rem; color: var(--ink-mute); margin-left: auto; }
+
+/* 小课堂 sched 块 */
+.sb-classroom { background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--official); border-radius: 8px; padding: 0.6rem 1.3rem; margin-top: 0.9rem; }
+.sb-classroom .sched-row.hl .sched-body .theme { color: var(--official-deep); }
+.sb-classroom .sched-row.hl .sess { background: var(--official-tint); color: var(--official-deep); border-color: rgba(29,81,120,0.25); }
+.sb-classroom .sched-time { color: var(--official-deep); }
+.sb-cr-note { font-size: 0.8rem; color: var(--ink-mute); margin: 0.6rem 0 0.2rem; line-height: 1.6; }
+
+.sb-privacy-note { display: flex; gap: 0.5rem; font-size: 0.82rem; color: var(--side-deep); background: var(--side-tint); border-radius: 6px; padding: 0.6rem 0.9rem; margin-top: 0.9rem; line-height: 1.6; }
+.sb-privacy-note .pn-ic { flex: none; }
+
+/* 案例卡片 */
+.sb-cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.7rem; margin-top: 1rem; }
+.sb-case { background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--side-line); border-radius: 8px; padding: 1.05rem 1.25rem; transition: box-shadow 0.16s, transform 0.16s; }
+.sb-case:hover { box-shadow: var(--shadow-card); transform: translateY(-2px); }
+.sb-case .cs-badge { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; color: var(--exh-deep); background: var(--exh-tint); padding: 0.1rem 0.5rem; border-radius: 3px; }
+.sb-case .cs-title { font-family: var(--font-serif); font-weight: 700; font-size: 1.08rem; color: var(--ink); line-height: 1.4; margin: 0.5rem 0 0.4rem; }
+.sb-case .cs-desc { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.65; }
+.sb-case .cs-org { font-family: var(--font-sans); font-size: 0.78rem; color: var(--ink-mute); margin-top: 0.7rem; padding-top: 0.6rem; border-top: 1px dashed var(--rule); }
+
+/* 合作机构 */
+.sb-orgs { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+.sb-org { display: flex; align-items: center; gap: 0.55rem; padding: 0.6rem 1rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 100px; font-size: 0.9rem; color: var(--ink); }
+.sb-org .og-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.sb-org.host { border-color: var(--side-line); background: var(--side-tint); font-weight: 600; color: var(--side-deep); }
+
+/* 地点交通 */
+.sb-venue { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.9rem; margin-top: 1rem; }
+.sb-venue .vn { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 1.05rem 1.2rem; }
+.sb-venue .vn .vk { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 0.4rem; }
+.sb-venue .vn .vv { font-size: 0.95rem; color: var(--ink); line-height: 1.6; }
+.sb-venue .vn .vv .mono { color: var(--official-deep); }
+
+.sb-cta-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.3rem; }
+
+/* 展区导览 */
+.sb-expo { margin-top: 1.1rem; }
+.sb-expo-frame {
+  position: relative; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--rule); border-radius: 12px; background: var(--surface-2);
+  box-shadow: var(--shadow-card); cursor: zoom-in;
+}
+.sb-expo-frame img { display: block; width: 100%; max-width: 100%; height: auto; }
+.sb-expo-cap {
+  display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  margin-top: 0.7rem; font-size: 0.85rem; color: var(--ink-mute);
+}
+.sb-expo-cap .zt { display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--font-sans); font-weight: 600; color: var(--side-deep); }
+.sb-expo-cap .dot-sep { color: var(--rule-2); }
+
+/* 学员作品掠影 gallery */
+.sb-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(216px, 1fr)); gap: 0.8rem; margin-top: 1rem; }
+.sb-shot {
+  border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: var(--surface);
+  box-shadow: var(--shadow-card); transition: transform 0.16s, box-shadow 0.16s; cursor: zoom-in;
+}
+.sb-shot:hover { transform: translateY(-3px); box-shadow: 0 16px 40px -18px rgba(18,21,27,0.42); }
+.sb-shot .shot-img { aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface-2); }
+.sb-shot .shot-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sb-shot .shot-cap { padding: 0.6rem 0.85rem 0.75rem; }
+.sb-shot .shot-t { font-family: var(--font-serif); font-weight: 700; font-size: 0.93rem; color: var(--ink); line-height: 1.35; }
+.sb-shot .shot-d { font-size: 0.75rem; color: var(--ink-mute); margin-top: 0.18rem; }
+.sb-gallery-note { font-size: 0.8rem; color: var(--ink-mute); margin-top: 0.9rem; line-height: 1.6; display: flex; gap: 0.45rem; }
+
+/* 图片灯箱 */
+.sb-lb {
+  position: fixed; inset: 0; z-index: 300; display: none; align-items: center; justify-content: center;
+  background: rgba(10,12,16,0.9); padding: 5vw 4vw; cursor: zoom-out;
+}
+.sb-lb.open { display: flex; }
+.sb-lb img { max-width: 100%; max-height: 86vh; border-radius: 8px; object-fit: contain; box-shadow: 0 24px 70px -22px rgba(0,0,0,0.8); }
+.sb-lb-cap { position: absolute; left: 0; right: 0; bottom: 2.2vh; text-align: center; color: rgba(255,255,255,0.9); font-family: var(--font-sans); font-size: 0.85rem; padding: 0 4vw; }
+.sb-lb-close { position: absolute; top: 3.5vh; right: 5vw; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; background: rgba(255,255,255,0.14); font-size: 1.4rem; line-height: 1; }
+
+@media (max-width: 640px) {
+  .sb-subhead .sh-d { display: none; }
+  .sb-salon-grid { grid-template-columns: 1fr; }
+  .sb-gallery { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+  .sb-shot .shot-cap { padding: 0.5rem 0.6rem 0.6rem; }
+  .sb-shot .shot-t { font-size: 0.85rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="mark"></span>
+      WAIC 2026 参展助手 <small>SuperBrain</small>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-hide-mobile">← 全部日程</a>
+      <a href="#agenda">展台议程</a>
+      <a href="install.html" class="nav-cta">接入 AI 助手 →</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ Hero ============ -->
+<section class="hero sb-hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker rise">
+        <span class="flag">超脑 @ WAIC · 2026</span>
+        <span>青少年 AI 特别展</span>
+        <span>·</span>
+        <span>上海徐汇西岸 · 7 月 17–20 日</span>
+      </div>
+      <h1 class="rise-1">10 后用 AI，<br><em>回应真实世界</em>。</h1>
+      <p class="hero-sub rise-2">超脑 AI 孵化器承接 WAIC 2026 青少年创新板块，在西岸国际会展中心设「青少年会客厅」与「青少年 AI 特别展」两大现场区域，外加一场线上特别展。47 个来自全国的青少年 AI 项目在这里，第一次站上世界舞台。</p>
+      <div class="hero-ctas rise-3">
+        <a href="#agenda" class="btn btn-primary">看展台议程</a>
+        <a href="https://vitality-museum.wexiyi.com/waic" target="_blank" rel="noopener" class="btn btn-ghost">逛线上特别展 →</a>
+      </div>
+    </div>
+    <div class="sb-factcard rise-2">
+      <div class="fc-row">
+        <div class="fc-k">承接板块</div>
+        <div class="fc-v">青少年会客厅 · 青少年 AI 特别展 · 线上特别展</div>
+      </div>
+      <div class="fc-row">
+        <div class="fc-k">地点</div>
+        <div class="fc-v">徐汇西岸国际会展中心 · <span class="mono">北门四楼</span><br>「未来科技体验场」</div>
+      </div>
+      <div class="fc-row">
+        <div class="fc-k">会期</div>
+        <div class="fc-v"><span class="mono">7/17 – 7/20</span> · 每天 <span class="mono">9:00–17:00</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 大数字 ============ -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat s-side sb-stat"><div class="n">47</div><div class="l">青少年 AI 项目</div></div>
+    <div class="stat s-exh sb-stat"><div class="n">12</div><div class="l">来自城市</div></div>
+    <div class="stat s-official sb-stat"><div class="n">14</div><div class="l">平均年龄（岁）</div></div>
+    <div class="stat s-intel sb-stat"><div class="n">10</div><div class="l">最小年龄（岁）</div></div>
+    <div class="stat s-zone sb-stat"><div class="n">45+13</div><div class="l">会客厅场 + 小课堂项</div></div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ============ 展区导览 ============ -->
+<section class="sb-section first" id="expo">
+  <div class="section-head">
+    <span class="eyebrow">现场导览 · 展区平面</span>
+    <h2>到了西岸，往这几个区走</h2>
+    <p class="sb-lead">整个「AI 原住民体验区」按 8 个区块划分：AI 文创、AI 影视、AI for Good、AI 科创 + AI 游戏、AI 学习、会客厅、理念区、线上展。对着这张平面图，找你想看的项目。</p>
+  </div>
+  <div class="sb-expo">
+    <div class="sb-expo-frame" data-zoom="assets/media/expo-map.jpg" data-cap="2026 WAIC · AI 原住民体验区 · 西岸国际会展中心四楼">
+      <img src="assets/media/expo-map.jpg" alt="超脑 @ WAIC 2026 · AI 原住民体验区展区平面示意图，含 AI 文创 / AI 影视 / AI for Good / AI 科创 + AI 游戏 / AI 学习 / 会客厅 / 理念区 / 线上展 八大区块与展台、会客厅、小课堂时间表" width="1800" height="1012" loading="lazy">
+    </div>
+    <div class="sb-expo-cap">
+      <span class="zt">🔍 点击查看大图</span>
+      <span class="dot-sep">·</span>
+      <span>AI 原住民体验区 · 西岸国际会展中心四楼（北门四楼「未来科技体验场」）</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI 原住民体验计划 ============ -->
+<section class="sb-section" id="natives">
+  <div class="section-head">
+    <span class="eyebrow">重点 · AI 原住民体验计划</span>
+    <h2>不是技术展示，是一代人的登台</h2>
+    <p class="sb-lead">超脑在 WAIC 的核心叙事：这不是又一场技术秀，而是这一代「AI 原住民」——出生在 AI 时代、把 AI 当母语的 10 后——第一次站上世界舞台，展示他们用 AI 回应真实世界问题的作品。</p>
+  </div>
+
+  <div class="sb-keynote">
+    <span class="sb-kn-flag"><span class="dot"></span> 开幕主旨演讲</span>
+    <div class="sb-kn-title">「AI 原住民体验计划」主旨演讲</div>
+    <div class="sb-kn-meta">
+      <span class="m">主讲 <b>王佳梁 Michael</b> · 超脑 AI 孵化器创始人</span>
+      <span class="m">时间 <span class="mono">07/17 09:15–10:00</span></span>
+      <span class="m">地点 西岸北门四楼</span>
+    </div>
+    <div class="sb-kn-quote">「我们不是来展示技术的，是来让世界看见——<span class="em">这一代 AI 原住民，正在用 AI 回应真实世界的问题。</span>」</div>
+  </div>
+
+  <div class="sb-layers">
+    <div class="sb-layer l-product">
+      <div class="ly-k">产品层</div>
+      <div class="ly-t">真实解决问题的 AI</div>
+      <div class="ly-d">每个项目都指向一个真实的社会问题——从人工耳蜗辅助到无障碍出行，AI 是回应世界的工具，不是炫技的玩具。</div>
+    </div>
+    <div class="sb-layer l-people">
+      <div class="ly-k">人物层</div>
+      <div class="ly-t">10 后创作者的故事</div>
+      <div class="ly-d">平均 14 岁、最小 10 岁的创作者，来自全国 12 城。他们为什么做、怎么做、想帮谁——每个项目背后都是一个人的故事。</div>
+    </div>
+    <div class="sb-layer l-society">
+      <div class="ly-k">社会层</div>
+      <div class="ly-t">AI 时代培养什么样的人</div>
+      <div class="ly-d">当 AI 成为基础设施，教育要回答的不再是「学什么技能」，而是「成为什么样的人」。这是超脑想和世界讨论的问题。</div>
+    </div>
+  </div>
+
+  <div class="sb-founder">
+    <div class="fq">「超脑不是培训机构，我们是中国青少年 AI 创作者的发现者和连接者。把舞台交给孩子，世界会看见他们的答案。」</div>
+    <div class="fby">—— 王佳梁 Michael，超脑 AI 孵化器创始人</div>
+  </div>
+</section>
+
+<!-- ============ 生命力博物馆 ============ -->
+<section class="sb-section" id="museum">
+  <div class="section-head">
+    <span class="eyebrow">线上特别展</span>
+    <h2>生命力博物馆 · WAIC 特别展</h2>
+  </div>
+  <div class="sb-museum">
+    <div>
+      <span class="mu-tag">AI 十天搭建 · 人文策展</span>
+      <div class="mu-title">把学员的作品与故事，搬进一座会呼吸的线上博物馆</div>
+      <div class="mu-desc">「生命力博物馆」由超脑成员月亮（张婵媛）在没有技术背景的情况下，用 AI 十天搭建而成，呈现超脑青少年学员的 AI 作品与创作故事。它是这次 WAIC 现场展的线上延伸，随时随地可逛。</div>
+    </div>
+    <div class="mu-cta">
+      <a href="https://vitality-museum.wexiyi.com/waic" target="_blank" rel="noopener" class="mu-btn">进入线上特别展 →</a>
+      <span class="mu-url">vitality-museum.wexiyi.com/waic</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 展台活动议程 ============ -->
+<section class="sb-section" id="agenda">
+  <div class="section-head">
+    <span class="eyebrow">现场议程 · 7/17 – 7/20</span>
+    <h2>超脑展台活动议程</h2>
+    <p class="sb-lead">「青少年会客厅」20 分钟一档、共 45 场现场访谈；「超脑小课堂」含主旨演讲、思辨会、特别展发布、颁证与 AI for Good 论坛，共 13 项。按日期切换查看。</p>
+  </div>
+
+  <div style="--vc: var(--side); --vtint: var(--side-tint);">
+    <div class="day-tabs" id="sb-day-tabs" role="tablist"></div>
+    <div id="sb-day-body"></div>
+  </div>
+
+  <div class="sb-privacy-note">
+    <span class="pn-ic">🔒</span>
+    <span>为保护未成年人隐私，本页仅展示项目名称、展位与所属机构，<b>不公开学员姓名</b>。现场以统一海报口径为准。</span>
+  </div>
+</section>
+
+<!-- ============ 入选项目案例 ============ -->
+<section class="sb-section" id="cases">
+  <div class="section-head">
+    <span class="eyebrow">入选项目 · AI for Good</span>
+    <h2>他们想用 AI，帮到具体的人</h2>
+    <p class="sb-lead">47 个入选项目里，有一条格外动人的主线：无障碍与公益。这些 10 后创作者，把 AI 对准了那些常被忽略的真实需求。</p>
+  </div>
+  <div class="sb-cases">
+    <div class="sb-case">
+      <span class="cs-badge">听障 · 无障碍</span>
+      <div class="cs-title">回音 Echo · 人工耳蜗术后辅助眼镜</div>
+      <div class="cs-desc">为人工耳蜗术后使用者设计的辅助眼镜，帮助他们把「听」的世界，也「看」得见。</div>
+      <div class="cs-org">深圳科创学院</div>
+    </div>
+    <div class="sb-case">
+      <span class="cs-badge">视障 · 无障碍</span>
+      <div class="cs-title">盲人助跑</div>
+      <div class="cs-desc">用 AI 做视障跑者的「陪跑员」，让看不见的人，也能安心迈开脚步奔跑。</div>
+      <div class="cs-org">超脑 AI 孵化器</div>
+    </div>
+    <div class="sb-case">
+      <span class="cs-badge">视障 · 无障碍</span>
+      <div class="cs-title">黑暗中的勇气 · 盲人足球</div>
+      <div class="cs-desc">围绕盲人足球的 AI 尝试，让视障球员在赛场上「听」得更清楚、跑得更有底气。</div>
+      <div class="cs-org">Empact China</div>
+    </div>
+    <div class="sb-case">
+      <span class="cs-badge">陪伴 · 情感</span>
+      <div class="cs-title">HOLO DORO · 全息智能共养宠物</div>
+      <div class="cs-desc">用全息投影养一只「会陪你」的宠物，回应独处与孤独，也守护一份牵挂。</div>
+      <div class="cs-org">深圳科创学院</div>
+    </div>
+    <div class="sb-case">
+      <span class="cs-badge">肢体 · 无障碍</span>
+      <div class="cs-title">无障碍赛车游戏</div>
+      <div class="cs-desc">重新设计操作方式，让身体不便的玩家，也能享受竞速与游戏的快乐。</div>
+      <div class="cs-org">超脑 AI 孵化器</div>
+    </div>
+    <div class="sb-case">
+      <span class="cs-badge">沟通 · 无障碍</span>
+      <div class="cs-title">声桥 Echo Bridge</div>
+      <div class="cs-desc">为沟通障碍者架一座「声音的桥」，让表达和被听见，变得更容易一点。</div>
+      <div class="cs-org">WaytoAGI-EDU</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 学员作品掠影 ============ -->
+<section class="sb-section" id="showcase">
+  <div class="section-head">
+    <span class="eyebrow">作品掠影 · 往期</span>
+    <h2>超脑学员 AI 作品掠影（往期）</h2>
+    <p class="sb-lead">这些是超脑学员在往期活动中做出来的 AI 作品——原创 IP、无障碍产品、构音障碍辅助、视障助跑平台。不是本次 WAIC 的现场项目，而是想让你先感受一下：10 后用 AI，能做出什么样的东西。</p>
+  </div>
+  <div class="sb-gallery">
+    <figure class="sb-shot" data-zoom="assets/media/changweimao-comic.jpg" data-cap="长尾喵 · AI 原创 IP 四格漫画（往期学员作品）">
+      <div class="shot-img"><img src="assets/media/changweimao-comic.jpg" alt="长尾喵 AI 原创 IP 四格漫画" loading="lazy"></div>
+      <figcaption class="shot-cap"><div class="shot-t">长尾喵</div><div class="shot-d">AI 原创 IP · 四格漫画</div></figcaption>
+    </figure>
+    <figure class="sb-shot" data-zoom="assets/media/xiaobaozi.jpg" data-cap="小包子 · AI 原创 IP 形象（往期学员作品）">
+      <div class="shot-img"><img src="assets/media/xiaobaozi.jpg" alt="小包子 AI 原创 IP 形象" loading="lazy"></div>
+      <figcaption class="shot-cap"><div class="shot-t">小包子</div><div class="shot-d">AI 原创 IP · 亲子形象</div></figcaption>
+    </figure>
+    <figure class="sb-shot" data-zoom="assets/media/zhumangpao-poster.jpg" data-cap="助盲跑 · 视障助跑平台海报（往期学员作品）">
+      <div class="shot-img"><img src="assets/media/zhumangpao-poster.jpg" alt="助盲跑 视障助跑平台海报：点亮地图，让爱无碍" loading="lazy"></div>
+      <figcaption class="shot-cap"><div class="shot-t">助盲跑</div><div class="shot-d">视障助跑 · 志愿者匹配平台</div></figcaption>
+    </figure>
+    <figure class="sb-shot" data-zoom="assets/media/gongming-cover.jpg" data-cap="共鸣 Project Resonance · 构音障碍语音识别训练系统（往期学员作品）">
+      <div class="shot-img"><img src="assets/media/gongming-cover.jpg" alt="共鸣 构音障碍语音识别训练系统" loading="lazy"></div>
+      <figcaption class="shot-cap"><div class="shot-t">共鸣 Resonance</div><div class="shot-d">构音障碍 · 语音识别训练</div></figcaption>
+    </figure>
+    <figure class="sb-shot" data-zoom="assets/media/shijiewujie.jpg" data-cap="视界无界 · 盲文 OCR 与视障智能生活平台（往期学员作品）">
+      <div class="shot-img"><img src="assets/media/shijiewujie.jpg" alt="视界无界 盲文 OCR 与视障智能生活平台" loading="lazy"></div>
+      <figcaption class="shot-cap"><div class="shot-t">视界无界</div><div class="shot-d">盲文 OCR · 视障智能生活</div></figcaption>
+    </figure>
+    <figure class="sb-shot" data-zoom="assets/media/wujie-platform.jpg" data-cap="无界 · AI 无障碍教学平台（往期学员作品）">
+      <div class="shot-img"><img src="assets/media/wujie-platform.jpg" alt="无界 AI 无障碍教学平台" loading="lazy"></div>
+      <figcaption class="shot-cap"><div class="shot-t">无界</div><div class="shot-d">AI 无障碍教学平台</div></figcaption>
+    </figure>
+    <figure class="sb-shot" data-zoom="assets/media/solo-runner.jpg" data-cap="Solo Runner · 视障陪跑引导线实拍（往期学员作品）">
+      <div class="shot-img"><img src="assets/media/solo-runner.jpg" alt="Solo Runner 视障陪跑引导线实拍" loading="lazy"></div>
+      <figcaption class="shot-cap"><div class="shot-t">Solo Runner</div><div class="shot-d">视障陪跑 · 引导线实拍</div></figcaption>
+    </figure>
+    <figure class="sb-shot" data-zoom="assets/media/peipao-app.jpg" data-cap="视障陪跑小程序 · 跑者地图导航（往期学员作品）">
+      <div class="shot-img"><img src="assets/media/peipao-app.jpg" alt="视障陪跑小程序 跑者地图导航界面" loading="lazy"></div>
+      <figcaption class="shot-cap"><div class="shot-t">陪跑小程序</div><div class="shot-d">视障跑者 · 地图导航</div></figcaption>
+    </figure>
+  </div>
+  <div class="sb-gallery-note">
+    <span>ℹ️</span>
+    <span>以上为超脑<b>往期</b>学员 AI 作品，用于呈现创作风貌，不代表本次 WAIC 现场展出的具体项目。本次入选项目以现场议程与统一海报口径为准。</span>
+  </div>
+</section>
+
+<!-- ============ 合作机构 ============ -->
+<section class="sb-section" id="partners">
+  <div class="section-head">
+    <span class="eyebrow">共同发起</span>
+    <h2>合作机构</h2>
+    <p class="sb-lead">这次青少年 AI 特别展，由超脑联合全国多家青少年科创教育机构共同呈现。</p>
+  </div>
+  <div class="sb-orgs">
+    <span class="sb-org host"><span class="og-dot" style="background:var(--side)"></span>超脑 AI 孵化器</span>
+    <span class="sb-org"><span class="og-dot" style="background:var(--exh)"></span>艺下如何</span>
+    <span class="sb-org"><span class="og-dot" style="background:var(--official)"></span>夏山</span>
+    <span class="sb-org"><span class="og-dot" style="background:var(--intel)"></span>深圳科创学院</span>
+    <span class="sb-org"><span class="og-dot" style="background:var(--exh)"></span>WaytoAGI-EDU</span>
+    <span class="sb-org"><span class="og-dot" style="background:var(--official)"></span>Empact China</span>
+    <span class="sb-org"><span class="og-dot" style="background:var(--intel)"></span>北京栩多科技</span>
+    <span class="sb-org"><span class="og-dot" style="background:var(--exh)"></span>清华 OpenMAIC</span>
+    <span class="sb-org"><span class="og-dot" style="background:var(--side)"></span>点萌科创</span>
+  </div>
+</section>
+
+<!-- ============ 地点 / 交通 ============ -->
+<section class="sb-section" id="venue" style="padding-bottom: 3rem;">
+  <div class="section-head">
+    <span class="eyebrow">现场 · 地点交通</span>
+    <h2>怎么来</h2>
+  </div>
+  <div class="sb-venue">
+    <div class="vn">
+      <div class="vk">地点</div>
+      <div class="vv">上海徐汇 · 西岸国际会展中心<br><span class="mono">北门四楼</span>「未来科技体验场」<br>龙耀路 7 号</div>
+    </div>
+    <div class="vn">
+      <div class="vk">地铁</div>
+      <div class="vv"><span class="mono">11 号线</span> 龙耀路站 <span class="mono">1 号口</span> 出<br>步行约 600 米</div>
+    </div>
+    <div class="vn">
+      <div class="vk">开放时间</div>
+      <div class="vv"><span class="mono">7 月 17 – 20 日</span><br>每天 <span class="mono">9:00 – 17:00</span></div>
+    </div>
+  </div>
+  <div class="sb-cta-row">
+    <a href="index.html" class="btn btn-ghost">← 回 WAIC 参展助手</a>
+    <a href="https://vitality-museum.wexiyi.com/waic" target="_blank" rel="noopener" class="btn btn-primary" style="border-color:var(--intel);background:var(--intel);">逛线上特别展 →</a>
+  </div>
+</section>
+
+</div><!-- /.container -->
+
+</main>
+
+<!-- 图片灯箱 -->
+<div class="sb-lb" id="sb-lb" role="dialog" aria-modal="true" aria-label="图片查看">
+  <span class="sb-lb-close" aria-hidden="true">✕</span>
+  <img src="" alt="">
+  <div class="sb-lb-cap"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-brand">
+      <img class="foot-qr" src="assets/superbrain-qr.png" alt="超脑公众号二维码" width="98" height="98" loading="lazy">
+      <div>
+        <div class="col-title">超脑 AI 孵化器<br>× 王佳梁 AI OPC 工作室</div>
+        <div class="fnote">
+          <strong>联名出品 · 带着青少年一起 AI for Good</strong><br>
+          扫码关注 <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener">超脑公众号</a><br>
+          内容有误？关注公众号留言<span class="mono">纠错</span>，我们会更新
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="col-title">这一届的数字</div>
+      <div class="fnote">
+        入选项目 <strong>47</strong> · 来自 <strong>12</strong> 城 · 平均 <strong>14</strong> 岁 · 最小 <strong>10</strong> 岁<br>
+        青少年会客厅 <strong>45</strong> 场 · 超脑小课堂 <strong>13</strong> 项<br>
+        以主办方与超脑现场最终发布为准
+      </div>
+    </div>
+    <div>
+      <div class="col-title">更多</div>
+      <div class="fnote">
+        <a href="index.html">WAIC 2026 参展助手（全部日程）→</a><br>
+        <a href="https://vitality-museum.wexiyi.com/waic" target="_blank" rel="noopener">生命力博物馆 · 线上特别展 →</a><br>
+        <a href="install.html">把日程装进你的 AI 助手 →</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ========== 超脑展台议程数据（不含学员姓名） ========== */
+const SB_AGENDA = [
+  { key:"17", label:"07/17", wd:"周五",
+    classroom:[
+      { t:"09:15–10:00", theme:"「AI 原住民体验计划」主旨演讲", sess:"主旨演讲", who:"王佳梁 Michael", hl:true },
+      { t:"12:00–12:45", theme:"线上展「生命力博物馆」发布 · 颁发证书（一）", sess:"特别展发布", who:"月亮" },
+      { t:"15:45–16:30", theme:"脑洞是第一生产力：青少年用 AI 创建的丰富世界", sess:"分享", who:"乐乐" }
+    ],
+    salon:[
+      { t:"10:00–10:20", proj:"回音 Echo · 人工耳蜗术后辅助眼镜", booth:"4.1", org:"深圳科创学院" },
+      { t:"10:20–10:40", proj:"铮铮眼镜", booth:"4.6", org:"点萌科创" },
+      { t:"10:40–11:00", proj:"HOLO DORO · 全息智能共养宠物", booth:"4.2", org:"深圳科创学院" },
+      { t:"11:00–11:20", proj:"星心", booth:"3.1", org:"北京栩多科技" },
+      { t:"11:20–11:40", proj:"声桥 Echo Bridge", booth:"3.1", org:"WaytoAGI-EDU" },
+      { t:"11:40–12:00", proj:"盲盒：出走的小包子", booth:"1", org:"艺下如何" },
+      { t:"13:30–13:50", proj:"天意将秋", booth:"2", org:"夏山" },
+      { t:"13:50–14:10", proj:"巡星 · 寻心", booth:"2", org:"夏山" },
+      { t:"14:10–14:30", proj:"止战之战", booth:"2", org:"夏山" },
+      { t:"14:30–14:50", proj:"未来电梯 AI 小满", booth:"4.4", org:"WaytoAGI-EDU" },
+      { t:"14:50–15:10", proj:"动励打卡", booth:"4.3", org:"北京栩多科技" },
+      { t:"15:10–15:30", proj:"黑暗中的勇气 · 盲人足球", booth:"3.3", org:"Empact China" }
+    ] },
+  { key:"18", label:"07/18", wd:"周六",
+    classroom:[
+      { t:"09:15–10:00", theme:"思辨会：10 后创业，是新路径，还是又一轮卷王赛", sess:"思辨会", who:"刁劲翀" },
+      { t:"12:00–12:45", theme:"未来属于怎样的孩子？ · 颁发证书（二）", sess:"分享 · 颁证", who:"Mira" },
+      { t:"15:45–16:30", theme:"思辨会：AI 交给孩子，是失控还是成长？", sess:"思辨会", who:"刁劲翀" }
+    ],
+    salon:[
+      { t:"10:00–10:20", proj:"SpiralMAIC", booth:"4.7", org:"清华 OpenMAIC" },
+      { t:"10:20–10:40", proj:"涂鸦战争：纸上觉醒", booth:"4.4", org:"WaytoAGI-EDU" },
+      { t:"10:40–11:00", proj:"智学平台", booth:"4.7", org:"超脑 AI 孵化器" },
+      { t:"10:40–11:00", proj:"创新学习 Larry Academy", booth:"4.7", org:"超脑 AI 孵化器" },
+      { t:"11:00–11:20", proj:"1moji", booth:"1", org:"闽西职业技术学院" },
+      { t:"11:20–12:00", proj:"艺术疗愈：梦境重现实验室", booth:"1", org:"艺下如何" },
+      { t:"11:20–12:00", proj:"鸟鸟世界 · 游戏 + IP", booth:"1", org:"艺下如何" },
+      { t:"11:20–12:00", proj:"把心情别在身上", booth:"1", org:"艺下如何" },
+      { t:"11:20–12:00", proj:"味觉回声 · 把味觉做成包装设计", booth:"1", org:"艺下如何" },
+      { t:"13:30–13:50", proj:"指间跳动", booth:"3.5", org:"闽西职业技术学院" },
+      { t:"13:50–14:10", proj:"袋鼠之战", booth:"2", org:"夏山" },
+      { t:"14:10–14:30", proj:"天空梦想家", booth:"2", org:"夏山" },
+      { t:"14:10–14:30", proj:"战争", booth:"2", org:"夏山" },
+      { t:"14:30–14:50", proj:"Polis", booth:"4.2", org:"深圳科创学院" },
+      { t:"14:50–15:10", proj:"SceneBlocks 幕块启", booth:"4.2", org:"深圳科创学院" },
+      { t:"15:10–15:30", proj:"PaperLight · 纯视觉无接触空中钢琴", booth:"4.2", org:"深圳科创学院" }
+    ] },
+  { key:"19", label:"07/19", wd:"周日",
+    classroom:[
+      { t:"09:15–10:00", theme:"思辨会：AI 原住民，有话说", sess:"思辨会", who:"刁劲翀" },
+      { t:"12:00–12:15", theme:"颁发证书（三）", sess:"颁证", who:"Maomao" },
+      { t:"15:45–16:30", theme:"思辨会：AI 时代，优秀家长的基本素养", sess:"思辨会", who:"刁劲翀" }
+    ],
+    salon:[
+      { t:"10:00–10:20", proj:"共鸣原音", booth:"3.6", org:"中局" },
+      { t:"10:20–10:40", proj:"无界", booth:"3.3", org:"超脑 AI 孵化器" },
+      { t:"10:40–11:00", proj:"盲人助跑", booth:"3.4", org:"超脑 AI 孵化器" },
+      { t:"13:30–13:50", proj:"SoilSense", booth:"3.2", org:"上海中学国际部" },
+      { t:"13:50–14:10", proj:"Operon", booth:"4.5", org:"超脑 AI 孵化器" },
+      { t:"14:10–14:30", proj:"《岁月书》· 人生回忆录 App", booth:"4.4", org:"WaytoAGI-EDU" },
+      { t:"14:30–14:50", proj:"宝珠奶酪", booth:"4.5", org:"超脑 AI 孵化器" }
+    ] },
+  { key:"20", label:"07/20", wd:"周一",
+    classroom:[
+      { t:"09:15–10:00", theme:"思辨会：娃 + AI = ？", sess:"思辨会", who:"John Wu" },
+      { t:"12:00–12:45", theme:"AI for Good 圆桌论坛 + 签约仪式", sess:"论坛 · 签约", who:"Weiwei 等" },
+      { t:"13:00–13:15", theme:"颁发证书（四）", sess:"颁证", who:"Maomao" },
+      { t:"15:45–16:30", theme:"AI for Good 论坛", sess:"论坛", who:"詹娜 + 超脑学员" }
+    ],
+    salon:[
+      { t:"10:00–10:20", proj:"OC 幻境", booth:"4.3", org:"北京栩多科技" },
+      { t:"10:20–10:40", proj:"梦核校园", booth:"4.4", org:"超脑 AI 孵化器" },
+      { t:"11:00–11:20", proj:"狄邦易物", booth:"4.7", org:"超脑 AI 孵化器" },
+      { t:"11:00–11:20", proj:"狄邦单词通", booth:"4.7", org:"超脑 AI 孵化器" },
+      { t:"11:20–11:40", proj:"基于 YOLO-Stutter 的防口吃演讲稿修订软件", booth:"3.2", org:"上海中学国际部" },
+      { t:"11:40–12:00", proj:"AMI BOT · 趋势筛选平台", booth:"4.3", org:"北京栩多科技" },
+      { t:"13:30–14:50", proj:"Profile Pilot · 基于 AI 的 GitHub 开发者分析系统", booth:"3.2", org:"上海中学国际部" },
+      { t:"13:50–14:10", proj:"无障碍赛车游戏", booth:"3.6", org:"超脑 AI 孵化器" },
+      { t:"14:10–14:30", proj:"步步有伴", booth:"3.4", org:"超脑 AI 孵化器" },
+      { t:"14:30–14:50", proj:"Realmefy / FrostLoop", booth:"4.5", org:"超脑 AI 孵化器" }
+    ] }
+];
+
+(function(){
+  const tabsEl = document.getElementById('sb-day-tabs');
+  const bodyEl = document.getElementById('sb-day-body');
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  function renderDay(day){
+    const cr = day.classroom.map(r =>
+      `<div class="sched-row${r.hl?' hl':''}">
+        <div class="sched-time">${esc(r.t)}</div>
+        <div class="sched-body">
+          <span class="sess">${esc(r.sess)}</span>
+          <div class="theme">${esc(r.theme)}</div>
+          <div class="speakers"><span class="sp-label">主讲 </span>${esc(r.who)}</div>
+        </div>
+      </div>`).join('');
+
+    const sl = day.salon.map(s =>
+      `<div class="card k-exh">
+        <div class="card-meta">
+          <span class="time">${esc(s.t)}</span>
+          <span class="kind-chip">展位 ${esc(s.booth)}</span>
+        </div>
+        <div class="card-title">${esc(s.proj)}</div>
+        <div class="card-tags"><span class="tag">${esc(s.org)}</span></div>
+      </div>`).join('');
+
+    return `
+      <div class="sb-subhead" style="--vc:var(--official)">
+        <span class="sh-t">超脑小课堂</span>
+        <span class="sh-n">${day.classroom.length}</span>
+        <span class="sh-d">主旨演讲 · 思辨会 · 特别展发布 · 颁证 · AI for Good 论坛</span>
+      </div>
+      <div class="sb-classroom"><div class="sched">${cr}</div></div>
+      <div class="sb-cr-note">思辨会欢迎家长与孩子现场报名；颁证与 AI for Good 圆桌 / 论坛为现场环节。</div>
+
+      <div class="sb-subhead" style="--vc:var(--exh)">
+        <span class="sh-t">青少年会客厅</span>
+        <span class="sh-n">${day.salon.length}</span>
+        <span class="sh-d">每档约 20 分钟 · 现场访谈</span>
+      </div>
+      <div class="sb-salon-grid">${sl}</div>
+    `;
+  }
+
+  function select(key){
+    SB_AGENDA.forEach(d => {
+      const t = tabsEl.querySelector(`[data-day="${d.key}"]`);
+      if (t) t.classList.toggle('active', d.key === key);
+    });
+    const day = SB_AGENDA.find(d => d.key === key);
+    bodyEl.innerHTML = renderDay(day);
+  }
+
+  tabsEl.innerHTML = SB_AGENDA.map(d =>
+    `<button class="day-tab" data-day="${d.key}" role="tab">${d.label}<span class="dw">${d.wd}</span></button>`
+  ).join('');
+  tabsEl.addEventListener('click', e => {
+    const b = e.target.closest('[data-day]');
+    if (b) select(b.dataset.day);
+  });
+  select(SB_AGENDA[0].key);
+})();
+
+/* ========== 图片灯箱（展区图 + 学员作品） ========== */
+(function(){
+  const lb = document.getElementById('sb-lb');
+  if (!lb) return;
+  const lbImg = lb.querySelector('img');
+  const lbCap = lb.querySelector('.sb-lb-cap');
+  function open(src, cap){
+    lbImg.src = src; lbImg.alt = cap || '';
+    lbCap.textContent = cap || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    lb.classList.remove('open');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('[data-zoom]').forEach(el => {
+    el.addEventListener('click', () => open(el.dataset.zoom, el.dataset.cap || ''));
+  });
+  lb.addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
+})();
+</script>
+</body>
+</html>

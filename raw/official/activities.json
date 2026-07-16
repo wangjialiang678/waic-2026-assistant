@@ -1,0 +1,63 @@
+{
+ "characteristicActivity": {
+  "total": 3,
+  "data": [
+   {
+    "uuid": "b9130050395949f58ad4f2f95e5b9746",
+    "activityType": "333",
+    "activityCoverPhone": "https://static.worldaic.com.cn/media/20260202/00964e12b9184b1f8ad594edcbda4ef8.png",
+    "activityCoverPc": "https://static.worldaic.com.cn/media/20260202/2bde9341ebfb4244a57b9dc92c4073ed.png",
+    "isRecommend": "0",
+    "orderNumber": "1",
+    "startTime": "",
+    "endTime": "",
+    "address": "推荐申报",
+    "addressEn": "",
+    "sonReqOne": [],
+    "sonReqTwo": [],
+    "sonList": []
+   },
+   {
+    "uuid": "2729bb67ee23421e94f5d3d5c2f81cb8",
+    "activityType": "c92dd366da6745858def0ba78414b220",
+    "activityCoverPhone": "https://static.worldaic.com.cn/media/20260317/16c02b48b14d493b981fa3f0ce04dc53.png",
+    "activityCoverPc": "https://static.worldaic.com.cn/media/20260317/bf0c487da1464fd289cf2d4f12c76110.png",
+    "isRecommend": "0",
+    "orderNumber": "2",
+    "startTime": "03-05 00:00",
+    "endTime": "04-26 23:59",
+    "address": "上海",
+    "addressEn": "Shanghai",
+    "sonReqOne": [],
+    "sonReqTwo": [],
+    "sonList": []
+   },
+   {
+    "uuid": "354323c22b2440b4bf18d4bfd4b87cbd",
+    "activityType": "98b126f595354761b6242f2ea28a6d06",
+    "activityCoverPhone": "https://static.worldaic.com.cn/media/20260630/bc37c307ccb24dd3b56aea24f764b787.png",
+    "activityCoverPc": "https://static.worldaic.com.cn/media/20260630/ea5e045642f442f4b4be69afb2d3a028.png",
+    "isRecommend": "0",
+    "orderNumber": "4",
+    "startTime": "",
+    "endTime": "",
+    "address": "",
+    "addressEn": "",
+    "sonReqOne": [],
+    "sonReqTwo": [],
+    "sonList": []
+   }
+  ],
+  "err": "success"
+ },
+ "innovateAnnouncement": {
+  "data": [],
+  "total": 0,
+  "err": "success"
+ },
+ "talentsAnnouncement": {
+  "data": [],
+  "total": 0,
+  "err": "success"
+ }
+}

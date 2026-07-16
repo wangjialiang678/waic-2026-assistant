@@ -1,0 +1,1585 @@
+{
+  "activities": [
+    {
+      "title": "全球工业人工智能国际合作论坛",
+      "theme": "工业AI / 新型工业化",
+      "description": "促进人工智能技术赋能新型工业化,在2026世界人工智能大会(WAIC)期间,将举办全球工业人工智能国际合作论坛.本次论坛以“...",
+      "organizer": "上海人工智能研究院",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "上海人工智能研究院",
+        "url": "",
+        "article_title": "【WAIC2026】从全球共识走向产业落地,这场工业 AI 国际论坛亮点满满!"
+      },
+      "original_excerpt": "促进人工智能技术赋能新型工业化,在2026世界人工智能大会(WAIC)期间,将举办全球工业人工智能国际合作论坛.本次论坛以“..."
+    },
+    {
+      "title": "壹沓科技「Agentic AI进场·重塑全球供应链」主题论坛",
+      "theme": "Agentic AI / 供应链",
+      "description": "7月18日,上海市世博中心518会议室,世界人工智能大会壹沓科技“Agentic AI进场·重塑全球供应链”主题论坛即将重磅启幕!上海...",
+      "organizer": "壹沓科技",
+      "event_date": "2026-07-18",
+      "venue": "上海世博中心518会议室",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "壹沓科技",
+        "url": "",
+        "article_title": "壹沓科技WAIC2026| 倒计时3天,最新议程出炉!全球供应链顶流已集结!"
+      },
+      "original_excerpt": "7月18日,上海市世博中心518会议室,世界人工智能大会壹沓科技“Agentic AI进场·重塑全球供应链”主题论坛即将重磅启幕!上海..."
+    },
+    {
+      "title": "超聚变「共建智能体时代」论坛",
+      "theme": "智能体 / 智企",
+      "description": "WAIC2026超聚变“共建智能体时代”论坛详细议程抢先看!02WAIC2026邀请函|超聚变诚邀您共建智能体时代,共话“智企”未来...",
+      "organizer": "超聚变",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "超聚变",
+        "url": "",
+        "article_title": "WAIC2026|一图抢先看超聚变展台,解锁「智企进化路径」"
+      },
+      "original_excerpt": "WAIC2026超聚变“共建智能体时代”论坛详细议程抢先看!02WAIC2026邀请函|超聚变诚邀您共建智能体时代,共话“智企”未来..."
+    },
+    {
+      "title": "WAIC2026 阿里云主题论坛",
+      "theme": "云原生 / 智能体(AgentTeams、AgentLoop、STAROps)",
+      "description": "7/17-7/20,WAIC现场见WAIC2026阿里云的完整议程分享给大家.AgentTeams、AgentLoop、STAROps 的产品技术负责人大会期间...",
+      "organizer": "阿里云",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "阿里云云原生",
+        "url": "",
+        "article_title": "WAIC2026阿里云主题论坛倒计时!"
+      },
+      "original_excerpt": "7/17-7/20,WAIC现场见WAIC2026阿里云的完整议程分享给大家.AgentTeams、AgentLoop、STAROps 的产品技术负责人大会期间..."
+    },
+    {
+      "title": "2026世界人工智能大会·低空经济论坛",
+      "theme": "低空经济 / AI",
+      "description": "2026世界人工智能大会·低空经济论坛将于7月18日下午在希尔顿酒店(长宁区云纱路188号)举行.本届论坛以“AI智联低空 链启未...",
+      "organizer": "上海长宁(长宁区)",
+      "event_date": "2026-07-18",
+      "venue": "希尔顿酒店(长宁区云纱路188号)",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "上海长宁",
+        "url": "",
+        "article_title": "2026世界人工智能大会·低空经济论坛将在长宁举办"
+      },
+      "original_excerpt": "2026世界人工智能大会·低空经济论坛将于7月18日下午在希尔顿酒店(长宁区云纱路188号)举行.本届论坛以“AI智联低空 链启未..."
+    },
+    {
+      "title": "2026WAIC 中国信通院智能体论坛(从大模型到智能体:迈向自主智能新纪元)",
+      "theme": "智能体",
+      "description": "WAIC2026“从大模型到智能体:迈向自主智能新纪元论坛—智能... 论坛议程编辑:月亮校审:友辰往期回顾重磅嘉宾 | 智象未来梅涛...",
+      "organizer": "中国信通院华东分院",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "中国信通院华东分院",
+        "url": "",
+        "article_title": "重磅公布!2026WAIC中国信通院智能体论坛完整议程正式揭晓"
+      },
+      "original_excerpt": "WAIC2026“从大模型到智能体:迈向自主智能新纪元论坛—智能... 论坛议程编辑:月亮校审:友辰往期回顾重磅嘉宾 | 智象未来梅涛..."
+    },
+    {
+      "title": "2026WAIC「摩尔线程·词元时代 万物智能」主题论坛",
+      "theme": "算力 / 词元经济",
+      "description": "yu摩尔线程·词元时代 万物智能论坛 论坛时间:7月18日 09:30-11:30 论坛地点:世博展览馆1B会议室WAIC2026将于7月17日在上海...",
+      "organizer": "摩尔线程",
+      "event_date": "2026-07-18",
+      "venue": "世博展览馆1B会议室",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "科幻嘉年华",
+        "url": "",
+        "article_title": "活动预告:2026WAIC“摩尔线程·词元时代 万物智能”主题论坛"
+      },
+      "original_excerpt": "yu摩尔线程·词元时代 万物智能论坛 论坛时间:7月18日 09:30-11:30 论坛地点:世博展览馆1B会议室WAIC2026将于7月17日在上海..."
+    },
+    {
+      "title": "超脑 AI 原住民体验计划(WAIC论坛演讲《在AI中,看见具体的人》)",
+      "theme": "青少年AI / AI for Good",
+      "description": "WAIC论坛演讲《在AI中,看见具体的人》;7 月 17–20 日,47 ...AIforGood| 真实用户已使用 | 18 日下午可采访案例二:狄邦单词...",
+      "organizer": "超脑AI孵化器",
+      "event_date": "2026-07-17~20",
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "见乐商务咨询",
+        "url": "",
+        "article_title": "WAIC2026 · 47个10后用AI回应真实世界 |AI原住民体验计划"
+      },
+      "original_excerpt": "WAIC论坛演讲《在AI中,看见具体的人》;7 月 17–20 日,47 ...AIforGood| 真实用户已使用 | 18 日下午可采访案例二:狄邦单词..."
+    },
+    {
+      "title": "超脑 AI 原住民计划参展(四天·三大板块·六大主题展区)",
+      "theme": "青少年AI / 展区",
+      "description": "个方向,每个都在回应真实世界展厅全天开放,走到哪聊到哪.AI 文创区有孩子用 AI 做的画和 IP 设计;AI 影视区放着他们自己写的短...",
+      "organizer": "超脑AI孵化器",
+      "event_date": "2026-07-17~20",
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "超脑AI孵化器",
+        "url": "",
+        "article_title": "超脑AI 原住民计划参展全指南:四天,三大板块,六大主题展区|世界人工智能大会2026"
+      },
+      "original_excerpt": "个方向,每个都在回应真实世界展厅全天开放,走到哪聊到哪.AI 文创区有孩子用 AI 做的画和 IP 设计;AI 影视区放着他们自己写的短..."
+    },
+    {
+      "title": "WAIC2026 全球AI数智文创·创新应用巅峰路演盛典",
+      "theme": "AI文创 / 路演",
+      "description": "WAIC2026全球AI数智文创·创新应用巅峰路演盛典一活动背景... 五议程安排时间环节内容13:30-14:00签到与体验嘉宾签到,现场 ...",
+      "organizer": "上海市嘉定区科技创新服务联合会",
+      "event_date": null,
+      "venue": null,
+      "registration_required": true,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "上海市嘉定区科技创新服务联合会",
+        "url": "",
+        "article_title": "7.18截止报名 |WAIC2026全球AI数智文创·创新应用巅峰路演盛典"
+      },
+      "original_excerpt": "WAIC2026全球AI数智文创·创新应用巅峰路演盛典一活动背景... 五议程安排时间环节内容13:30-14:00签到与体验嘉宾签到,现场 ..."
+    },
+    {
+      "title": "蚂蚁开源@WAIC2026(AGI基础设施与普惠实践论坛及多场Side Event)",
+      "theme": "开源 / AGI基础设施",
+      "description": "WAIC2026分论坛:AGI 基础设施与普惠实践论坛时间:7 月 19 日 14:00-17:00地点:上海世博中心 518 厅蚂蚁集团 inclusionAI 与 ...",
+      "organizer": "蚂蚁集团 inclusionAI / 蚂蚁开源",
+      "event_date": "2026-07-19",
+      "venue": "上海世博中心518厅",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "蚂蚁开源",
+        "url": "",
+        "article_title": "蚂蚁开源 @WAIC2026活动汇总:论坛、展览和多场 Side Event,等你来玩"
+      },
+      "original_excerpt": "WAIC2026分论坛:AGI 基础设施与普惠实践论坛时间:7 月 19 日 14:00-17:00地点:上海世博中心 518 厅蚂蚁集团 inclusionAI 与 ..."
+    },
+    {
+      "title": "超脑 AI 原住民计划 / 王佳梁 WAIC论坛演讲",
+      "theme": "青少年AI / AI for Good / 无障碍",
+      "description": "故事要从杭州2050大会说起.无障碍游戏厅里,一个画面让所有人... 7月19日,在 WAIC 论坛上,超脑AI 孵化器发起人王佳梁将带来一...",
+      "organizer": "超脑AI孵化器",
+      "event_date": "2026-07-19",
+      "venue": "WAIC论坛",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "超脑AI孵化器",
+        "url": "",
+        "article_title": "12 岁少年用 AI 帮残障人士打开游戏世界的大门|世界人工智能大会2026·AI 原住民计划"
+      },
+      "original_excerpt": "故事要从杭州2050大会说起.无障碍游戏厅里,一个画面让所有人... 7月19日,在 WAIC 论坛上,超脑AI 孵化器发起人王佳梁将带来一..."
+    },
+    {
+      "title": "WAIC2026 前沿AI与智能体安全论坛",
+      "theme": "AI安全 / 治理",
+      "description": "由安远AI主办的世界人工智能大会(WAIC)2026前沿AI与智能体... 论坛嘉宾安远AI,持续推动全球AI安全对话安远AI是AI安全与治理...",
+      "organizer": "安远AI",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "安远AI",
+        "url": "",
+        "article_title": "重磅嘉宾阵容|聚焦前沿AI与智能体安全,WAIC2026安远AI汇聚全球专家共议AI治理新路径"
+      },
+      "original_excerpt": "由安远AI主办的世界人工智能大会(WAIC)2026前沿AI与智能体... 论坛嘉宾安远AI,持续推动全球AI安全对话安远AI是AI安全与治理..."
+    },
+    {
+      "title": "WAIC2026 硅星人 AI青年场分论坛",
+      "theme": "Agent / 具身 / AI应用 / 青年",
+      "description": "今年,硅星人在WAIC2026搞了一场「反套路」的分论坛——AI青...嘉宾阵容本身就是趋势 够实战:从「纯技术讨论」转向「PMF验...",
+      "organizer": "硅星人Pro",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "硅星人Pro",
+        "url": "",
+        "article_title": "WAIC2026青年场:Agent、具身、AI应用——来见真正“在打仗”的人"
+      },
+      "original_excerpt": "今年,硅星人在WAIC2026搞了一场「反套路」的分论坛——AI青...嘉宾阵容本身就是趋势 够实战:从「纯技术讨论」转向「PMF验..."
+    },
+    {
+      "title": "WAIC2026论坛|智赋生命·医创未来——AI驱动生命健康产业全链条革新",
+      "theme": "AI + 生命健康",
+      "description": "重磅嘉宾云集论坛将邀请来自政府主管部门、国内知名高校、三甲...2026WAIC生命健康专区            系列活动组委会编  辑  |  傅   昱排  ...",
+      "organizer": "上海科技大学 / 2026WAIC生命健康专区系列活动组委会",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "上海科技大学",
+        "url": "",
+        "article_title": "WAIC2026论坛预告|智赋生命·医创未来——AI驱动生命健康产业全链条革新"
+      },
+      "original_excerpt": "重磅嘉宾云集论坛将邀请来自政府主管部门、国内知名高校、三甲...2026WAIC生命健康专区            系列活动组委会编  辑  |  傅   昱排  ..."
+    },
+    {
+      "title": "2026WAIC AI赋能生命健康新范式论坛",
+      "theme": "AI + 生命健康",
+      "description": "议程首发|2026WAICAI 赋能生命健康新范式论坛,海每康创始人许磊受邀做主题分享2026WAIC上海市数理医学学会活动——AI赋能生...",
+      "organizer": "上海市数理医学学会",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "AI CARE",
+        "url": "",
+        "article_title": "议程首发|2026WAICAI 赋能生命健康新范式论坛,海每康创始人许磊受邀做主题分享"
+      },
+      "original_excerpt": "议程首发|2026WAICAI 赋能生命健康新范式论坛,海每康创始人许磊受邀做主题分享2026WAIC上海市数理医学学会活动——AI赋能生..."
+    },
+    {
+      "title": "2026WAIC 启明创投·创业与投资论坛——从算力原点到应用落地的进化征程",
+      "theme": "创投 / 创业与投资",
+      "description": "论坛议程如下期待您现场聆听嘉宾的精彩洞见!公众报名方式指引...2026.6.30启明观点 | 启明创投邝子平:拥抱周期、穿越周期,AI将...",
+      "organizer": "启明创投",
+      "event_date": null,
+      "venue": null,
+      "registration_required": true,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "启明创投",
+        "url": "",
+        "article_title": "议程首发 |2026WAIC启明创投·创业与投资论坛——从算力原点到应用落地的进化征程"
+      },
+      "original_excerpt": "论坛议程如下期待您现场聆听嘉宾的精彩洞见!公众报名方式指引...2026.6.30启明观点 | 启明创投邝子平:拥抱周期、穿越周期,AI将..."
+    },
+    {
+      "title": "WAIC2026 星工聚将 活动(图灵奖 Richard Sutton 出席)",
+      "theme": "AI / 前沿",
+      "description": "为主题的2026世界人工智能大会(WAIC2026)将在上海浦东世... 本次活动不仅邀请到图灵奖Richard Sutton的出席,还将汇聚一线...",
+      "organizer": "星工聚将",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "星工聚将",
+        "url": "",
+        "article_title": "星动态|WAIC2026星工聚将重磅环节全攻略"
+      },
+      "original_excerpt": "为主题的2026世界人工智能大会(WAIC2026)将在上海浦东世... 本次活动不仅邀请到图灵奖Richard Sutton的出席,还将汇聚一线..."
+    },
+    {
+      "title": "超脑 AI 原住民计划(我们问了47位10后:你想用AI帮谁?)",
+      "theme": "青少年AI / AI for Good",
+      "description": "世界人工智能大会期间,一个叫「AI 原住民计划」的青少年 AI 特... 在 AI 中,看见具体的人7月19日,在 WAIC 论坛上,超脑AI 孵化...",
+      "organizer": "超脑AI孵化器",
+      "event_date": "2026-07-19",
+      "venue": "WAIC论坛",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "超脑AI孵化器",
+        "url": "",
+        "article_title": "我们问了 47 位 10 后:你想用 AI 帮谁?|世界人工智能大会2026·AI 原住民计划"
+      },
+      "original_excerpt": "世界人工智能大会期间,一个叫「AI 原住民计划」的青少年 AI 特... 在 AI 中,看见具体的人7月19日,在 WAIC 论坛上,超脑AI 孵化..."
+    },
+    {
+      "title": "WAIC2026 曦智科技「光计算+光互连,双轮驱动的AI基础设施新范式」论坛",
+      "theme": "光算力 / AI基础设施",
+      "description": "曦智科技“光计算+光互连,双轮驱动的AI基础设施新范式论坛”将于7月18日WAIC期间正式举行.第二批嘉宾阵容,今日公布——中...",
+      "organizer": "曦智科技",
+      "event_date": "2026-07-18",
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "曦智科技",
+        "url": "",
+        "article_title": "WAIC2026光算力论坛更多重磅嘉宾揭晓,Scale-up光互连圆桌阵容豪华亮相"
+      },
+      "original_excerpt": "曦智科技“光计算+光互连,双轮驱动的AI基础设施新范式论坛”将于7月18日WAIC期间正式举行.第二批嘉宾阵容,今日公布——中..."
+    },
+    {
+      "title": "WAIC2026 Praxis Side Event",
+      "theme": "Growth / side event",
+      "description": "WAIC2026期间值得关注的相关活动,涵盖不同主题、场景与交流形式,方便大家提前规划行程、锁定感兴趣的活动,也更高效地找...",
+      "organizer": "PraxisGrowth",
+      "event_date": "2026-07-18",
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "PraxisGrowth",
+        "url": "",
+        "article_title": "WAIC2026最全 Side events 汇总 | Praxis活动在18号晚"
+      },
+      "original_excerpt": "WAIC2026期间值得关注的相关活动,涵盖不同主题、场景与交流形式,方便大家提前规划行程、锁定感兴趣的活动,也更高效地找..."
+    },
+    {
+      "title": "静安·场景涌现 WAIC2026 静安一小时专场活动",
+      "theme": "产业生态 / 场景涌现",
+      "description": "静安·场景涌现WAIC2026静安一小时专场活动时间:7月17日14:00—15:30活动地点:世博展览馆H4馆WAICConnect 专区舞台A看...",
+      "organizer": "市北高新 / 静安区",
+      "event_date": "2026-07-17",
+      "venue": "世博展览馆H4馆 WAIC Connect专区舞台A",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "市北高新",
+        "url": "",
+        "article_title": "WAIC2026| 静安系列活动抢先看!市北国际科创区携手企业再度组团亮相"
+      },
+      "original_excerpt": "静安·场景涌现WAIC2026静安一小时专场活动时间:7月17日14:00—15:30活动地点:世博展览馆H4馆WAICConnect 专区舞台A看..."
+    },
+    {
+      "title": "WAIC2026 蚂蚁乡创 乡村振兴专题专场(AI生物科技落地乡野)",
+      "theme": "AI + 乡村振兴",
+      "description": "零排污生态厕所治理体系通过 AI 智能匹配专属降解菌群,实现乡...WAIC2026专场,将首次完整对外发布整套 AI 微生物乡村落地体...",
+      "organizer": "蚂蚁乡创",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "蚂蚁计划AP",
+        "url": "",
+        "article_title": "WAIC2026重磅前瞻|AI 生物科技落地乡野,解锁乡村零碳循环新路径"
+      },
+      "original_excerpt": "零排污生态厕所治理体系通过 AI 智能匹配专属降解菌群,实现乡...WAIC2026专场,将首次完整对外发布整套 AI 微生物乡村落地体..."
+    },
+    {
+      "title": "WAIC2026 智启具身论坛",
+      "theme": "具身智能",
+      "description": "7月19日上午,WAIC2026核心官方分论坛——智启具身论坛将于上海世博中心金厅召开.智启具身论坛由智元AGIBOT与觅蜂科技联手...",
+      "organizer": "智元AGIBOT × 觅蜂科技",
+      "event_date": "2026-07-19",
+      "venue": "上海世博中心金厅",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "机器人与智能制造",
+        "url": "",
+        "article_title": "议程公布!WAIC2026智启具身论坛来了"
+      },
+      "original_excerpt": "7月19日上午,WAIC2026核心官方分论坛——智启具身论坛将于上海世博中心金厅召开.智启具身论坛由智元AGIBOT与觅蜂科技联手..."
+    },
+    {
+      "title": "WAIC2026 人工智能引领产业变革思客会",
+      "theme": "产业变革",
+      "description": "WAIC2026人工智能引领产业变革思客会活动议程(拟)国家工业信息安全发展研究中心2026年7月10日         附件WAIC2026人工智能...",
+      "organizer": "国家工业信息安全发展研究中心",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "国家工业信息安全发展研究中心",
+        "url": "",
+        "article_title": "通知 | 关于举办WAIC2026人工智能引领产业变革思客会的通知"
+      },
+      "original_excerpt": "WAIC2026人工智能引领产业变革思客会活动议程(拟)国家工业信息安全发展研究中心2026年7月10日         附件WAIC2026人工智能..."
+    },
+    {
+      "title": "WAIC2026 乡村振兴专题专场(AI建筑医院发布,雨虹修缮×蚂蚁乡创)",
+      "theme": "AI + 乡村人居",
+      "description": "乡野新未来2026WAIC乡村振兴专题专场,是蚂蚁乡创三年深耕... 参会预告本次活动为世界人工智能大会专项生态活动,采用定向邀...",
+      "organizer": "蚂蚁乡创 × 雨虹修缮",
+      "event_date": null,
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "蚂蚁计划AP",
+        "url": "",
+        "article_title": "WAIC2026前瞻|AI 赋能乡村人居新范式!雨虹修缮*蚂蚁乡创联合打造 “AI 建筑医院” 重磅发布"
+      },
+      "original_excerpt": "乡野新未来2026WAIC乡村振兴专题专场,是蚂蚁乡创三年深耕... 参会预告本次活动为世界人工智能大会专项生态活动,采用定向邀..."
+    },
+    {
+      "title": "WAIC2026 智启具身论坛(议程公布)",
+      "theme": "具身智能",
+      "description": "#WAIC2026#智启具身论坛 #具身智能 #机器人 #智元机器人 #觅蜂科技 #数据采集 #人工智能未来 #上海科技活动 #姚卯青#黑科技",
+      "organizer": "智元机器人 × 觅蜂科技",
+      "event_date": "2026-07-19",
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "AI造物局",
+        "url": "",
+        "article_title": "WAIC2026智启具身论坛议程公布"
+      },
+      "original_excerpt": "#WAIC2026#智启具身论坛 #具身智能 #机器人 #智元机器人 #觅蜂科技 #数据采集 #人工智能未来 #上海科技活动 #姚卯青#黑科技"
+    },
+    {
+      "title": "2026WAIC「AI创新者思享汇」——纵论人机关系下一程",
+      "theme": "人机关系",
+      "description": "活动结束后,还可同步参观2026WAIC展览区,沉浸体验全球顶尖AI技术与应用成果.敬请关注7月18日现场思想碰撞.活动议程如下...",
+      "organizer": "第一财经",
+      "event_date": "2026-07-18",
+      "venue": null,
+      "registration_required": true,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "第一财经",
+        "url": "",
+        "article_title": "活动购票 |2026WAIC“AI 创新者思享汇”,纵论人机关系下一程"
+      },
+      "original_excerpt": "活动结束后,还可同步参观2026WAIC展览区,沉浸体验全球顶尖AI技术与应用成果.敬请关注7月18日现场思想碰撞.活动议程如下..."
+    },
+    {
+      "title": "WAIC2026 记忆张量 MemTensor 专题论坛(重新理解AI记忆)",
+      "theme": "AI记忆 / 模型",
+      "description": "记忆张量MemTensorWAIC2026专题论坛嘉宾阵容正式公布.7 月 17 日,记忆张量MemTensor 将在WAIC2026现场,上海世博展...",
+      "organizer": "记忆张量 MemTensor",
+      "event_date": "2026-07-17",
+      "venue": "上海世博展览馆",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "闻星AI",
+        "url": "",
+        "article_title": "WAIC2026|嘉宾阵容公布:从模型、终端到基础设施,重新理解 AI 记忆"
+      },
+      "original_excerpt": "记忆张量MemTensorWAIC2026专题论坛嘉宾阵容正式公布.7 月 17 日,记忆张量MemTensor 将在WAIC2026现场,上海世博展..."
+    },
+    {
+      "title": "中国·上海第九届青少年人工智能创新大赛(含WAIC青少年创新探究营、AI科技嘉年华)",
+      "theme": "青少年AI / 竞赛",
+      "description": "多媒体创新设计大赛,线下WAIC青少年创新探究营、AI 科技嘉年华及企业参访交流等活动,营造良好的青少年人工智能创新氛围....",
+      "organizer": "智由科创竞赛",
+      "event_date": null,
+      "venue": null,
+      "registration_required": true,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "智由科创竞赛",
+        "url": "",
+        "article_title": "关于举办中国·上海第九届青少年人工智能创新大赛的通知"
+      },
+      "original_excerpt": "多媒体创新设计大赛,线下WAIC青少年创新探究营、AI 科技嘉年华及企业参访交流等活动,营造良好的青少年人工智能创新氛围...."
+    },
+    {
+      "title": "WAIC2026·AI开放计算与智能体技术生态论坛(FlagOS)",
+      "theme": "开放计算 / 智能体 / 算力",
+      "description": "本论坛以“FlagOS筑基开放算力,Agent启幕智能涌现”为主题,将跨芯片统一智算与智能体开放生态置于同一议程内.论坛邀请中国...",
+      "organizer": "智源研究院 FlagOpen",
+      "event_date": "2026-07-19",
+      "venue": "上海世博中心",
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "智源FlagOpen",
+        "url": "",
+        "article_title": "全议程发布|WAIC2026· AI开放计算与智能体技术生态论坛:以FlagOS筑算力之基,以Agent启智能之幕"
+      },
+      "original_excerpt": "本论坛以“FlagOS筑基开放算力,Agent启幕智能涌现”为主题,将跨芯片统一智算与智能体开放生态置于同一议程内.论坛邀请中国..."
+    },
+    {
+      "title": "2026世界人工智能大会——智法共生·法律大模型推理革新与应用生态论坛",
+      "theme": "法律AI / 大模型",
+      "description": "2026世界人工智能大会——智法共生·法律大模型推理革新与应用生态论坛,聚焦法律大模型推理能力革新与应用生态建设,汇聚顶尖...",
+      "organizer": "上海市司法局",
+      "event_date": null,
+      "venue": null,
+      "registration_required": true,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "上海市司法局",
+        "url": "",
+        "article_title": "报名开始!2026世界人工智能大会——智法共生·法律大模型推理革新与应用生态论坛邀您参加"
+      },
+      "original_excerpt": "2026世界人工智能大会——智法共生·法律大模型推理革新与应用生态论坛,聚焦法律大模型推理能力革新与应用生态建设,汇聚顶尖..."
+    },
+    {
+      "title": "2026WAIC 全球创新项目路演(全赛道全球招募)",
+      "theme": "创新项目路演 / 投融资",
+      "description": "2026世界人工智能大会(WAIC)将于7月中旬在上海盛大启幕,... · 国际交流深度合作优先参与上海与国际顶尖学术组织的交流活动...",
+      "organizer": "上海市人工智能行业协会",
+      "event_date": null,
+      "venue": null,
+      "registration_required": true,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "上海市人工智能行业协会",
+        "url": "",
+        "article_title": "征集启幕|2026WAIC全球创新项目路演全赛道全球招募!链接顶级资本,登顶世界AI舞台"
+      },
+      "original_excerpt": "2026世界人工智能大会(WAIC)将于7月中旬在上海盛大启幕,... · 国际交流深度合作优先参与上海与国际顶尖学术组织的交流活动..."
+    },
+    {
+      "title": "第六届长三角青少年人工智能奥林匹克挑战赛「网安守护者」正式赛",
+      "theme": "青少年AI / 网络安全 / 竞赛",
+      "description": "长三角青少年网安专业比拼WAIC/GDPS展示机会官方主办赛事邀...人工智能时代,网络安全是数字社会建设的重要支撑.为引导青少...",
+      "organizer": "长三角青少年人工智能奥林匹克挑战赛组委会",
+      "event_date": null,
+      "venue": null,
+      "registration_required": true,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "重固家园cghome",
+        "url": "",
+        "article_title": "第六届长三角青少年人工智能奥林匹克挑战赛|“网安守护者”正式赛报名火热进行中"
+      },
+      "original_excerpt": "长三角青少年网安专业比拼WAIC/GDPS展示机会官方主办赛事邀...人工智能时代,网络安全是数字社会建设的重要支撑.为引导青少..."
+    },
+    {
+      "title": "国泰海通人工智能论坛(国泰海通首度亮相WAIC2026)",
+      "theme": "金融AI",
+      "description": "PART.01 赴一场七月盛夏WAIC2026将于7月17日至20日在上海举行.国泰海通将首度亮相世界人工智能大会,举办国泰海通人工智...",
+      "organizer": "国泰海通",
+      "event_date": "2026-07-17~20",
+      "venue": null,
+      "registration_required": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "low",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "",
+        "article_title": "展商动态|国泰海通首度亮相WAIC2026,精彩亮点抢先看"
+      },
+      "original_excerpt": "PART.01 赴一场七月盛夏WAIC2026将于7月17日至20日在上海举行.国泰海通将首度亮相世界人工智能大会,举办国泰海通人工智..."
+    },
+    {
+      "title": "WAIC2026 中国信通院智能体论坛(限量席位开放)",
+      "theme": "智能体",
+      "description": "友辰往期回顾WAIC·中国信通院智能体专场·智启新元 | 相约2026自主智能新征程重磅 | 祝贺116个优秀案例入选《2026智能经济新...",
+      "organizer": "中国信通院华东分院",
+      "event_date": null,
+      "venue": null,
+      "registration_required": true,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "中国信通院华东分院",
+        "url": "",
+        "article_title": "嘉宾阵容重磅揭晓|WAIC2026中国信通院智能体论坛限量席位开放"
+      },
+      "original_excerpt": "友辰往期回顾WAIC·中国信通院智能体专场·智启新元 | 相约2026自主智能新征程重磅 | 祝贺116个优秀案例入选《2026智能经济新..."
+    },
+    {
+      "title": "2026WAIC·智能财务论坛",
+      "theme": "智能财务",
+      "description": "蓝厅问卷征集扫码参与2026WAIC·智能财务论坛高端对话嘉宾提问问卷征集温馨提示:本次论坛共有六位对话嘉宾,您可任选一位或...",
+      "organizer": "汇付天下",
+      "event_date": null,
+      "venue": null,
+      "registration_required": true,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "confidence": "med",
+      "source": {
+        "publisher": "汇付天下",
+        "url": "",
+        "article_title": "2026WAIC·智能财务论坛报名开启丨高端对话,直面智能财务真问题"
+      },
+      "original_excerpt": "蓝厅问卷征集扫码参与2026WAIC·智能财务论坛高端对话嘉宾提问问卷征集温馨提示:本次论坛共有六位对话嘉宾,您可任选一位或..."
+    }
+  ],
+  "official_dup_count": 25,
+  "coverage_only": [
+    {
+      "title": "探营2026WAIC:走进上海“含AI量”最高的地方",
+      "account": "澎湃新闻",
+      "date": "2026-07-15",
+      "snippet": "作为此次2026WAIC主论坛的所在地——上海世博中心正在紧锣密鼓的准备中.澎湃新闻记者 吴栋 图2026年7月14日,工作人员结束一..."
+    },
+    {
+      "title": "写代码、调设备、省电费……WAIC2026上,西门子让AI真干活了",
+      "account": "界面新闻",
+      "date": "2026-07-15",
+      "snippet": "今年6月,西门子在2026年科技创新展(VivaTech2026)期间,... 本届WAIC期间,西门子将于7月18日09:30-12:00,在上海世博中..."
+    },
+    {
+      "title": "WAIC2026丨算清三本经济账,解码张江AI创新小镇的生长逻辑",
+      "account": "浦东发布",
+      "date": "2026-07-15",
+      "snippet": "一年一度的AI盛会——2026世界人工智能大会(WAIC)即将举行,也让浦东一座新崛起的小镇再次“热”出新高度.作为上海人工智..."
+    },
+    {
+      "title": "WAIC2026正式开幕!AI行业大变局:告别参数内卷,进入落地为王时代",
+      "account": "珐恩AI",
+      "date": "2026-07-15",
+      "snippet": "每年的WAIC,都是中国AI行业的“年度风向标”.7月17日—20日,2026世界人工智能大会(WAIC)在上海正式启幕.作为国内规格..."
+    },
+    {
+      "title": "谁还在卷参数?WAIC2026全是能干活的实体AI!",
+      "account": "36氪",
+      "date": "2026-07-15",
+      "snippet": "7月17日-20日,一起在WAIC2026现场,看见人工智能真正进入产业深处.过去一年,围绕AI行业的讨论正在变得更具体.大模型能力..."
+    },
+    {
+      "title": "WAIC2026世界人工智能大会逛展攻略|张江会场",
+      "account": "万众一芯 半导体投资联盟",
+      "date": "2026-07-15",
+      "snippet": "WAIC2026张江会场展商名录上下滑动查看全部文章来源:WAIC*声明:本文系原作者创作,文章内容仅代表作者个人观点.半导铁盒..."
+    },
+    {
+      "title": "WAIC2026怎么逛?FlagOS 保姆级参会指南:听论坛、打比赛、领周边",
+      "account": "智源FlagOpen",
+      "date": "2026-07-15",
+      "snippet": "7月19日,上海世博中心,WAIC2026·AI开放计算与智能体技术生态论坛即将启幕.这是WAIC2026中少有的一场——把开放计算与..."
+    },
+    {
+      "title": "受邀亮相WAIC2026|Gcow安全团队分享自研智能Agent攻防实践",
+      "account": "Gcow安全团队",
+      "date": "2026-07-15",
+      "snippet": "受邀亮相WAIC2026|Gcow安全团队分享自研智能Agent攻防实践当人工智能从“生成内容”走向“自主执行任务”,安全行业也迎来..."
+    },
+    {
+      "title": "智启芯境|灵机壹动即将亮相WAIC2026:专注灵巧手核心部件,支撑工业场景精细操作",
+      "account": "上海机电",
+      "date": "2026-07-15",
+      "snippet": "7月17日-20日,WAIC2026上海世博展览馆H3-D301,灵机壹动期待与产业伙伴在上海相见.往期回顾智启芯境|人形机器人＂中国芯＂..."
+    },
+    {
+      "title": "努比亚公布WAIC2026产品阵容:全球首款AI智能体手机 AI宠物 直播神器",
+      "account": "徐州三水数码",
+      "date": "2026-07-15",
+      "snippet": "7月15日消息,2026世界人工智能大会(WAIC)暨人工智能全球治理高级别会议将于7月17日至20日在上海举行.作为全球人工智能..."
+    },
+    {
+      "title": "WAIC2026攻略|世博,你到底还藏了多少惊喜?",
+      "account": "消费邦",
+      "date": "2026-07-15",
+      "snippet": "编辑|星奈媒体|AI大模型工场世博会场攻略WAIC20262026世界人工智能大会马上就要开了.作为今年大会的焦点,世博中心和世博展..."
+    },
+    {
+      "title": "WAIC2026即将启幕|央视镜头下的国产算力新面孔:蓝芯算力",
+      "account": "蓝芯算力",
+      "date": "2026-07-15",
+      "snippet": "WAIC2026开展倒计时 1 天央视财经探馆,蓝芯算力被“硬核点名”今天,展馆还在紧锣密鼓布展,央视财经的镜头已经率先锁定了..."
+    },
+    {
+      "title": "WAIC2026倒计时2天!这款从1200个项目中杀出重围的法律AI,到底藏着什么黑科技?",
+      "account": "青苗法鸣",
+      "date": "2026-07-15",
+      "snippet": "出席2026世界人工智能大会(WAIC) 的重要分论坛之一「智法共生——法律大模型推理革新与应用生态论坛」会议,围绕法律AI的发..."
+    },
+    {
+      "title": "WAIC2026具身智能新品提前看!",
+      "account": "高工机器人",
+      "date": "2026-07-15",
+      "snippet": "2026年7月17日至20日,2026世界人工智能大会暨人工智能全球治理高级别会议(WAIC2026)将在世博、张江、西岸三地四馆同步..."
+    },
+    {
+      "title": "WAIC2026倒计时2天|携手昇腾,燃动未来",
+      "account": "华为计算",
+      "date": "2026-07-15",
+      "snippet": "共昇腾◆往期推荐◆WAIC2026|  一图解锁昇腾参会攻略"
+    },
+    {
+      "title": "WAIC2026倒计时2天:来百融展台,当AI考官!",
+      "account": "百融云创",
+      "date": "2026-07-15",
+      "snippet": "还有2天,WAIC2026将在上海世博展览馆开幕.百融智能在H1馆D1003搭了一个特殊的“面试间”——五个真实业务场景,AI已经就..."
+    },
+    {
+      "title": "2026世界人工智能大会十大镇馆之宝公布,亮点速览",
+      "account": "澎湃新闻",
+      "date": "2026-07-15",
+      "snippet": "澎湃新闻记者 俞凯2026世界人工智能大会(WAIC2026)将于7月17日至20日在上海世博、张江、西岸“三地四馆”启幕举行.本届..."
+    },
+    {
+      "title": "9个关键词,解锁2026世界人工智能大会新亮点",
+      "account": "元宇宙三十人论坛",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会(WAIC)暨人工智能全球治理高级别会议将于7月17日至20日在上海举行作为全球人工智能领域的顶级盛会世..."
+    },
+    {
+      "title": "2026世界人工智能大会即将启幕",
+      "account": "中国科协新技术",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会(WAIC2026)即将启幕,本届大会以“智能伙伴 共创未来”为主题,7月17日—20日登陆上海浦东世博、张..."
+    },
+    {
+      "title": "2026世界人工智能大会,我们来了 | 混沌校友在WAIC",
+      "account": "混沌学园",
+      "date": "2026-07-15",
+      "snippet": "7月17日至20日,2026世界人工智能大会(WAIC)将在上海举办.本届大会首次将具身智能提升为与智算并列的核心赛道,两大赛道..."
+    },
+    {
+      "title": "倒计时2天 |2026世界人工智能大会(WAIC)参会指南请查收!",
+      "account": "思特奇",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议(简称“WAIC2026”)即将如约而至.思特奇在此特别为参会的朋友们准备..."
+    },
+    {
+      "title": "2026世界人工智能大会暨人工智能全球治理高级别会议期间本市景观照明核心区域交通管制通告",
+      "account": "警民直通车长宁",
+      "date": "2026-07-15",
+      "snippet": "为确保2026世界人工智能大会暨人工智能全球治理高级别会议期间本市景观照明核心区域道路交通安全、有序,根据《中华人民共和国..."
+    },
+    {
+      "title": "区领导带队检查2026世界人工智能大会服务保障工作",
+      "account": "上海徐汇",
+      "date": "2026-07-15",
+      "snippet": "今天(7月15日)下午,区委副书记、区长王华带队前往西岸国际会展中心、西岸穹顶艺术中心等处,检查2026世界人工智能大会服务..."
+    },
+    {
+      "title": "2026世界人工智能大会-上海见【馆报】",
+      "account": "情感计算",
+      "date": "2026-07-15",
+      "snippet": "【熊猫导读】7月17-20日,世界人工智能大会(WAIC)第九届将... 合作组织,特斯拉、谷歌、亚马逊齐聚;2026主题 ＂智能伙伴,..."
+    },
+    {
+      "title": "2026世界人工智能大会前瞻:国产算力升级,AI产业链从单点突破走向系统化兑现",
+      "account": "天下财经投资者",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会(WAIC2026)暨人工智能全球治理高级别会议于7月17日至20日在上海浦东世博、张江、徐汇西岸“三地四馆..."
+    },
+    {
+      "title": "2026世界人工智能大会(WAIC)",
+      "account": "股道酬勤168",
+      "date": "2026-07-15",
+      "snippet": "7月17日-20日,2026世界人工智能大会(WAIC),年度AI产业风向标.1100余家企业参展,超300款产品全球首发.华为Atlas 950超..."
+    },
+    {
+      "title": "2026世界人工智能大会即将启幕 上海迎来全球AI 盛会",
+      "account": "2林小露",
+      "date": "2026-07-15",
+      "snippet": "7 月 17 日至 20 日,2026世界人工智能大会暨人工智能全球治理高级别会议将在上海举行,本届大会以 “智能伙伴 共创未来” 为主..."
+    },
+    {
+      "title": "2026年中国(上海)世界人工智能大会WAIC参展商名单",
+      "account": "外贸特色",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会(WAIC)如期而至,以「智能伙伴,共创未来」为主题,于7月17日-20日在上海盛大启幕.本届大会规模再创..."
+    },
+    {
+      "title": "2026世界人工智能大会主论坛前瞻:以智能伙伴之名,共探AI发展新图景",
+      "account": "网安杰语堂",
+      "date": "2026-07-15",
+      "snippet": "想必大家都听说,人工智能即将召开一场重大会议.2026世界人工智能大会暨人工智能全球治理高级别会议定于7月17日登陆上海世博..."
+    },
+    {
+      "title": "世界人工智能大会即将开展,展位图/活动日程安排详情,攻略请查收~",
+      "account": "看展小贴士",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会时间:2026年7月17-20日地点:世博展览... 际会展中心展位图张江科学会堂展位图同期活动日程安排预登记步..."
+    },
+    {
+      "title": "2026世界人工智能大会,7月17~20日开幕,附门票+展商+交通全攻略",
+      "account": "展会一网通",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会(WAIC 2026)即将启幕,本届大会以“... 展馆分布图参展商名单会议日程交通指南1.浦东世博会场世博展览..."
+    },
+    {
+      "title": "3天后开幕!今年世界人工智能大会有多炸?5大亮点提前看",
+      "account": "小郭TechAI研习社",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议将于7月17-... 而是综合考虑你的日程、偏好、预算,直接给出最优方案.这次..."
+    },
+    {
+      "title": "曾一品受邀世界人工智能大会,出席圆桌论坛",
+      "account": "一品营销策划",
+      "date": "2026-07-15",
+      "snippet": "身份出席圆桌论坛,与全球行业专家共同探讨AI战略与应用.世界人工智能大会,由国家发改委、工信部、科技部、教育部等部委,和..."
+    },
+    {
+      "title": "WAIC2026大会议程:AI 上半场拼大模型,下半场拼 GPU 算力",
+      "account": "蓝海云GPU",
+      "date": "2026-07-15",
+      "snippet": "文末附WAIC2026大会议程.今年最值得关注的不只是哪个模型更强、哪个Agent更聪明、哪个机器人更酷,而是AI正在从“临时工具..."
+    },
+    {
+      "title": "WAIC2026前瞻:300+AI新品全球首发,开发者必知的5大技术趋势",
+      "account": "微心茄科技",
+      "date": "2026-07-15",
+      "snippet": "阶跃Agent OS定义智能体新范式WAIC2026的论坛议程中,＂开源智能体＂和＂AI Coding＂是两个高频词.阶跃星辰将在大会上展示..."
+    },
+    {
+      "title": "WAIC2026倒计时2天:当国家主席走进AI会场,中国向世界传递了什么信号?",
+      "account": "聊表心意-雅俗共赏",
+      "date": "2026-07-15",
+      "snippet": "WAIC2026倒计时2天:当国家主席走进AI会场,中国向世界传递... 而非被动参与他人制定的议程.四、从＂跟随者＂到＂主办方＂:..."
+    },
+    {
+      "title": "国产原创技术集中亮相!世界人工智能大会即将举行",
+      "account": "证券时报",
+      "date": "2026-07-15",
+      "snippet": "即将举行的2026世界人工智能大会,就是展现国产自主创新、产业全链条可控的大舞台.记者近日走访部分参展企业发现,中国人工智..."
+    },
+    {
+      "title": "工业人专属!2026WAIC期间工业领域论坛及活动一站式汇总",
+      "account": "上海市工业互联网协会",
+      "date": "2026-07-15",
+      "snippet": "WAIC前站・2026非凡大赏・上海・AI 商业峰会活动信息活动时间:7月15日-16日 09:30-17:30活动地点:上海漕河泾万丽酒店 参与..."
+    },
+    {
+      "title": "投后企业动态:2026WAIC逛展指南(璞跃生态版)",
+      "account": "PLUGANDPLAY",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会(WAIC)将在上海世博中心、世博展览馆... 点击Playbook China小程序获取更多活动资讯推荐阅读点击图片,..."
+    },
+    {
+      "title": "WAIC 2026世界人工智能大会本周五开幕!超全逛展指南请查收",
+      "account": "逛展有道",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议时间7月17日-20日地点浦东世博(世博中心、世博展览馆)浦东张江(张江科..."
+    },
+    {
+      "title": "倒计时2天 |2026世界人工智能大会(WAIC)参会指南请查收!",
+      "account": "思特奇AI原生",
+      "date": "2026-07-15",
+      "snippet": "(简称“WAIC2026”)即将如约而至.思特奇在此特别为参会的朋友们准备一份超详细的参会指南/逛展攻略,欢迎查看并收藏.关..."
+    },
+    {
+      "title": "最新 |WAIC2026交通指引与入场须知",
+      "account": "世界人工智能大会",
+      "date": "2026-07-15",
+      "snippet": "WAIC2026世界人工智能大会暨人工智能全球治理高级别会议观众... 以便错峰观展.二入场时间安排1、世博中心 | 张江科学会堂 | 西岸..."
+    },
+    {
+      "title": "WAIC2026逛展最全攻略,一篇文章说清这场AI盛会八大亮点",
+      "account": "家电新观察",
+      "date": "2026-07-15",
+      "snippet": "(WAIC2026)将在上海世博、张江、西岸“三地四馆”同步举行.本届WAIC被称为历史上规模最大、规格最高的一届,大会总展览..."
+    },
+    {
+      "title": "WAIC世界人工智能大会开展倒计时2天,三大会场参会购票攻略速存!",
+      "account": "上海展会时间表",
+      "date": "2026-07-15",
+      "snippet": "7月17-20日,WAIC2026世界人工智能大会将在上海重大启幕,会... 选错票种极易影响观展.本文整理完整购票流程,拆解各票适用场..."
+    },
+    {
+      "title": "超全攻略|WAIC2026怎么逛?一篇讲清楚",
+      "account": "谋信传媒",
+      "date": "2026-07-15",
+      "snippet": "所以这篇攻略主要解决几个问题:只有单日票应该优先逛哪里?... 世博展览馆WAICUP!2026青年观察家・思享会:7 月 19 日 13:30..."
+    },
+    {
+      "title": "【入场须知】2026上海母婴展今日开幕(门票+参观指南+展位图...)",
+      "account": "展会门票网",
+      "date": "2026-07-15",
+      "snippet": "2026-07-10【选品攻略】2026CBME上海国际孕婴童展,7月15-...2026-07-14WAIC2026上海世界人工智能大会会议日程总览(附门..."
+    },
+    {
+      "title": "WAIC2026开发者攻略:去之前花 5 分钟看完,哪些活动不能错过?",
+      "account": "BISS大别野",
+      "date": "2026-07-15",
+      "snippet": "最值得关注的内容,并按照时间整理成这份攻略,希望能帮你把时...WAIC2026具身开发者 Meetup 时间:7 月 19 日(周日)18:00–..."
+    },
+    {
+      "title": "逛展指南:WAIC2026世界人工智能大会7月17日开幕,上海将再度成为全球AI领域的焦点!",
+      "account": "ABC会展汇",
+      "date": "2026-07-15",
+      "snippet": "距离WAIC2026世界人工智能大会 暨人工智能全球治理高级别会... 西岸会场特色体验音创宇宙:国内首个青少年AI音综,7月20日西..."
+    },
+    {
+      "title": "【具身智能早报】2026.07.15WAIC进入倒计时,瑞萨押注PhysicalAI,个人机器人走进联合国",
+      "account": "夏脖士历史课",
+      "date": "2026-07-15",
+      "snippet": "Fast Reading1、WAIC定于7月17日至20日在上海举行,具身智能... PrimeBOT在联合国AIforGood全球峰会提出“个人机器人”,用..."
+    },
+    {
+      "title": "8天后开幕!WAIC2026看点全梳理:140万亿Token背后意味着什么",
+      "account": "40岁大叔杂谈",
+      "date": "2026-07-15",
+      "snippet": "如果是,这可能意味着两种情况:要么是蓝海机会,要么是即将被改造.03WAIC2026必看亮点:8天后见证历史回到大会本身,今年..."
+    },
+    {
+      "title": "WAIC2026前瞻:5大看点速览",
+      "account": "猛火投研社",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会(WAIC)暨人工智能全球治理高级别会议... 世博展览馆H3馆是专门的＂具身智能馆＂,几个值得关注的亮点..."
+    },
+    {
+      "title": "【转载】WAIC2026亮点前瞻:昇腾950超节点首次真机亮相",
+      "account": "河北博柯莱",
+      "date": "2026-07-15",
+      "snippet": "关于博柯莱博柯莱智能科技有限公司是一家专注于生命科学领域数字化转型的国家级专精特新小巨人企业,同时系工信部AI赋能新型工..."
+    },
+    {
+      "title": "WAIC2026倒计时2天|容芯致远的硬科技在Z2B-201等您",
+      "account": "北京容芯致远科技有限公司",
+      "date": "2026-07-15",
+      "snippet": "大会亮点WAIC2026以“智能伙伴,共创未来”为主题,由外交部、科技部、工业和信息化部等10个部门与上海市政府共同主办,是国..."
+    },
+    {
+      "title": "WAIC2026|行业亮点超前预告,探索千行万业新图景",
+      "account": "华为计算",
+      "date": "2026-07-15",
+      "snippet": "◆往期推荐◆WAIC2026|  一图解锁昇腾参会攻略"
+    },
+    {
+      "title": "重磅!2026世界人工智能大会7月17日上海启幕,点亮全球智能未来",
+      "account": "静享秋天的浪漫",
+      "date": "2026-07-15",
+      "snippet": "近日,官方重磅发布:2026世界人工智能大会,将于7月17日至20日在上海隆重举办. 作为全球规格最高、规模最大、影响力最广的..."
+    },
+    {
+      "title": "据央视消息,2026世界人工智能大会将于7月17号至20号在上海举行",
+      "account": "刘氏金库",
+      "date": "2026-07-15",
+      "snippet": "据央视消息,2026世界人工智能大会将于7月17号至20号在上海举行.各种AI新技术新产品集中亮相,考虑一下,如果能买到票,将到..."
+    },
+    {
+      "title": "2026世界人工智能大会,本周五7月17-20日开幕,附现场展位图+展商名录+停车指南",
+      "account": "展会全知道",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会活动时间:2026年7月17-20日活动地点:浦东世博(世博中心、世博展览馆)浦东张江(张江科学会堂)徐汇..."
+    },
+    {
+      "title": "相约WAIC2026|语言桥携LanTMS连接AI创新与全球沟通",
+      "account": "语言桥之声",
+      "date": "2026-07-15",
+      "snippet": "WAIC2026从嘉宾阵容到展览规模,本届大会均创下九届以来新高.大会首次创办高水平国际学术会议“WAICAcademic”,由图灵奖..."
+    },
+    {
+      "title": "仪电资讯|| 年度最强AI盛会?WAIC2026重磅启幕,科创力量齐聚上海!",
+      "account": "IPCH数智生态",
+      "date": "2026-07-15",
+      "snippet": "(WAIC2026)将于7月17日在上海拉开帷幕.本届大会首增“全... 集聚1400余位中外嘉宾,构建起全球AI领域最具影响力的交流平台..."
+    },
+    {
+      "title": "2026WAIC论坛攻略,你绝不能错过!",
+      "account": "智能网AINET",
+      "date": "2026-07-15",
+      "snippet": "2026WAIC攻略2026世界人工智能大会暨人工智能全球治理高级别... 10余个国际组织,集聚1500余位中外嘉宾.如此规模的盛会,当..."
+    },
+    {
+      "title": "WAIC2026全攻略:数智软件工厂从业者的参会指南 · 购票 + 交通一网打尽",
+      "account": "猹特",
+      "date": "2026-07-15",
+      "snippet": "2026世界人工智能大会(WAIC)将在上海三地四馆同步启幕.作... 拓展产业人脉,寻找合作机遇大会集聚1400余位海内外嘉宾,80..."
+    },
+    {
+      "title": "受邀参加WAIC2026:卓越睿新发布AI+知识科技赛道创新实践",
+      "account": "卓越睿新 价值汇",
+      "date": "2026-07-15",
+      "snippet": "作为本届世界人工智能大会重磅专场活动,2026WAIC产业生态专场论坛于大会期间正式举办.卓越睿新受大会官方主办方特邀,作为..."
+    },
+    {
+      "title": "WAIC2026| 复容生态伙伴闪亮集结,来找我们玩!",
+      "account": "复容投资",
+      "date": "2026-07-15",
+      "snippet": "本届WAIC,复容的几位被投及概念验证生态伙伴将共同亮相——...2026偶遇地图.欢迎来各展位和论坛活动串门、一起聊聊,或者单..."
+    },
+    {
+      "title": "2026WAIC四个展馆和论坛速通解析攻略",
+      "account": "时代之门",
+      "date": "2026-07-15",
+      "snippet": "2026:H1应用与生态→ H2技术与创新 → H3具身智能(独立) → ... 下载＂HiWAIC＂APP:集成论坛预约、活动报名、智能推荐、..."
+    },
+    {
+      "title": "【直播预告】WAIC2026周五开幕,观察者网高端直播间全程陪伴",
+      "account": "观察者网",
+      "date": "2026-07-15",
+      "snippet": "(WAIC2026)将在上海世博、张江、西岸“三地四馆”同步启...活动设置六大专题环节,覆盖训练推理转型、国产算力生态、HBM..."
+    },
+    {
+      "title": "WAIC 2026上海世界人工智能大会(会议日程+门票+入场指南)",
+      "account": "AI人工智能视界",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会(WAIC 2026)即将在上海世博展览馆、... 01大会日程总览*拟定内容请以现场为准02免责声明以上内容来源..."
+    },
+    {
+      "title": "2026 WAIC世界人工智能大会攻略(投资人篇)",
+      "account": "Zoe的AI手记",
+      "date": "2026-07-14",
+      "snippet": "世界人工智能大会日程表:论坛排片|WAIC 2026最新论坛活动日程安排发布!2026世界人工智能大会分场馆导航版(扫码获取):全..."
+    },
+    {
+      "title": "WAIC2026倒计时:超300款AI新品即将首发,这场大会有什么看头?",
+      "account": "锦上文澜业主之家",
+      "date": "2026-07-14",
+      "snippet": "从议程设置来看,今年的重心明显从＂大模型能做什么＂转向了...WAIC2026的机器人展区预计将集中展示多款人形机器人新品,..."
+    },
+    {
+      "title": "2026世界人工智能大会前瞻:300 款首发、1100 家企业、三地四馆联动,这场 AI 盛会藏着多少黑科技?",
+      "account": "元宇宙百科全书",
+      "date": "2026-07-14",
+      "snippet": "WAIC 2026 · 前瞻特稿2026世界人工智能大会WAIC 前瞻300款首发 · 1100家企业 · 三地四馆联动这场AI盛会藏着多少黑科技?7..."
+    },
+    {
+      "title": "上海世界人工智能大会:中国如何争夺未来十年产业生态主导权?",
+      "account": "会展使命必达",
+      "date": "2026-07-14",
+      "snippet": "上海世界人工智能大会:中国如何争夺未来十年产业生态主导权?作者:中视会展  总第:一百期整2026年盛夏,上海将再次成为全球..."
+    },
+    {
+      "title": "世界人工智能大会,周六,展览见!",
+      "account": "图像僧",
+      "date": "2026-07-14",
+      "snippet": "行程满满,一定能见到很多没有见过的新东西!#AI #世界人工智能大会#人工智能 #上海"
+    },
+    {
+      "title": "WAIC2026开幕在即|具身赛道值得关注什么?(内含逛展攻略)",
+      "account": "机器人产业应用",
+      "date": "2026-07-14",
+      "snippet": "02展区速览:去哪看什么表1WAIC2026三地四馆观展速览一张展览票通三片区.建议至少预留两天:一天世博看整机,一天西岸看..."
+    },
+    {
+      "title": "WAIC2026|上海世博展览馆完整逛展攻略",
+      "account": "优展通",
+      "date": "2026-07-14",
+      "snippet": "别急,这份世博片区攻略,帮你把论坛、展馆和体验玩法一次理清... #WAIC2026#2026世界人工智能大会#上海世博展览馆逛展#智能..."
+    },
+    {
+      "title": "收藏!一文看懂:WAIC2026世界人工智能大会(必备攻略指南)",
+      "account": "芯榜+",
+      "date": "2026-07-14",
+      "snippet": "WAIC2026世界人工智能大会 30 题问答版指南WAIC2026参展企... 和短信,查看客流动态,错峰观展;穿舒适鞋子,做好防暑热门论..."
+    },
+    {
+      "title": "最新 |WAIC2026交通指引与入场须知",
+      "account": "蚂蚁计划AP",
+      "date": "2026-07-14",
+      "snippet": "WAIC2026世界人工智能大会暨人工智能全球治理高级别会议观众... 以便错峰观展.二入场时间安排1、世博中心 | 张江科学会堂 | 西岸..."
+    },
+    {
+      "title": "五大教育亮点提前看!WAIC2026 即将开幕:从个性化学习 Agent 到青少年AI 创作,重新定义智能教育的未来",
+      "account": "奇点育言",
+      "date": "2026-07-14",
+      "snippet": "世界人工智能大会(WAIC)将于 7 月 17 日 - 20 日在上海举办,... 原生系统落地教育场景、青少年用 AI 创作的音乐登上专业舞台、..."
+    },
+    {
+      "title": "【成绩查询】“第九届全国青少年人工智能创新挑战赛”开源硬件创意智造专项赛选拔赛及入围决赛情况公布",
+      "account": "蘑菇云创造",
+      "date": "2026-07-14",
+      "snippet": "“第九届全国青少年人工智能创新挑战赛”开源硬件创意智造专项赛亮相WAIC| 人智共生视域下的教育实践创新国际研讨会——国际..."
+    },
+    {
+      "title": "收藏!一文看懂:WAIC2026世界人工智能大会(必备攻略指南)",
+      "account": "半导体行业联盟",
+      "date": "2026-07-14",
+      "snippet": "WAIC2026 世界人工智能大会 30 题问答版指南WAIC2026参展企... 余场论坛、青少年AI 音创活动Q18:张江科学会堂展区主要看点..."
+    },
+    {
+      "title": "2027WAIC世界人工智能大会超全参观指南|可直接收藏!(预约+交通+路线+避坑)",
+      "account": "会展新鲜报",
+      "date": "2026-07-14",
+      "snippet": "2027世界人工智能大会(WAIC2027),迎来十周年里程碑!作...青少年科普特色区域:每日初创路演、投资人对接会、免费AI绘画/..."
+    },
+    {
+      "title": "AI科技热点日报 | 2026年07月12日",
+      "account": "刘一份",
+      "date": "2026-07-14",
+      "snippet": "距WAIC2026开幕还有5天,行业预热已全面启动.一、AI治理与国际合作事件概要联合国2026人工智能向善全球峰会(AIforGood..."
+    },
+    {
+      "title": "关注 | 2026世界人工智能大会本周开幕,提前解锁五大看点",
+      "account": "易智家",
+      "date": "2026-07-14",
+      "snippet": "本届世界人工智能大会共设置论坛会议、展览展示、评奖赛事、...超脑机器人 | 迈讯科智能| 广日物流 | 航天凯特 | 新中嘉业 | 中科第..."
+    },
+    {
+      "title": "倒计时3天 |  宏创盛安WAIC2026亮点抢先看(附张江会场观众参会指南)",
+      "account": "宏创盛安hinfose",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议(WAIC2026)将于7月17日至20日在上海举办.作为国内领先的智算产品专业..."
+    },
+    {
+      "title": "WAIC2026重磅看点|蓝芯算力解锁 RISC‑V+AI 智通融合新范式",
+      "account": "蓝芯算力",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会(WAIC2026)将于7月17日至20日在上海... 以下提前揭晓蓝芯算力本次WAIC的参展亮点,三大重磅内容值得..."
+    },
+    {
+      "title": "杨浦亮相WAIC2026,精彩亮点抢先看!",
+      "account": "上海杨浦",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议(WAIC2026)将于7月17-20日在上海举办.作为上海科创中心重要承载区和数..."
+    },
+    {
+      "title": "WAIC2026|  一图解锁昇腾参会攻略",
+      "account": "华为计算",
+      "date": "2026-07-14",
+      "snippet": "◆往期推荐◆WAIC2026亮点前瞻:昇腾950超节点首次真机亮相"
+    },
+    {
+      "title": "7月17日-20日 |世界人工智能大会(WAIC 2026)宏创盛安与您不见不散",
+      "account": "宏创盛安hinfose",
+      "date": "2026-07-14",
+      "snippet": "7月17-20日世界人工智能大会(WAIC 2026)宏创盛安Z2A-507展位我们不见不散!↓ 下载APP 购票参会 ↓推荐阅读:震撼发布 | 宏创..."
+    },
+    {
+      "title": "2026世界人工智能大会7月17日于上海启幕",
+      "account": "AI助灵感",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议将于7月17日至20日在上海举办,这是大会连续第九年落地上海,本届主题定为..."
+    },
+    {
+      "title": "【规格拉满】主席讲话 | 多部委及地方政府联合主办 | 2026世界人工智能大会7月17日在上海举行",
+      "account": "三方职业技能鉴定中心",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议将于7月17日至20日在上海世博、张江、西岸三地四馆正式举办,本次大会以智..."
+    },
+    {
+      "title": "资讯:7 月17日世界人工智能大会即将举行",
+      "account": "数智新时代4931",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会核心信息 2026世界人工智能大会暨人工智能全球治理高级别会议将于7月17日至20日在上海举办,本届主题为..."
+    },
+    {
+      "title": "AI频道 |WAIC2026最高规格:国家领导人首次出席",
+      "account": "CIO时代网",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议将于7月17... 首发产品数量、嘉宾层级——2026年的WAIC都达到了前所未有的..."
+    },
+    {
+      "title": "WAIC2026火热态|可信,才是真正的智能伙伴",
+      "account": "君同未来",
+      "date": "2026-07-14",
+      "snippet": "“铸可信”,「君同未来」创始人韩蒙博士将在WAIC2026现场,与产业嘉宾共探分享 AI 治理的第一性原理.02产品发布:智能体进..."
+    },
+    {
+      "title": "2026世界人工智能大会直击:从大模型到人形机器人,AI正在重塑每一个行业",
+      "account": "上海星动力",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会(WAIC 2026)以＂智能·共生·新纪元... 2026专设了AI安全与治理论坛,探讨AI大模型的安全对齐、数据隐..."
+    },
+    {
+      "title": "世界人工智能大会+华为超节点+大模型,最具价值的6家公司(附名单)",
+      "account": "八维大数据选股",
+      "date": "2026-07-14",
+      "snippet": "2026世界人工智能大会(WAIC)将于7月17至20日在上海世博中...论坛将围绕世界模型、开源智能体、AI Coding、Token经济等前沿..."
+    },
+    {
+      "title": "WAIC2026,OpenCSG与您上海见",
+      "account": "OpenCSG社区",
+      "date": "2026-07-14",
+      "snippet": "论坛与行业交流活动:7月17日,举行签约仪式;亮相WAICOPC... 以及更加开放、可协作的AI生态如何持续生长.WAIC2026,..."
+    },
+    {
+      "title": "收藏!一文看懂:WAIC2026世界人工智能大会(必备攻略指南)",
+      "account": "半导体封装",
+      "date": "2026-07-14",
+      "snippet": "馆(应用与生态馆):AI 全产业链应用、大模型、智能体、行业落... 青年思享会夜场活动.Q24:WAICUP!2026青年观察家・思享会..."
+    },
+    {
+      "title": "WAIC2026攻略,场馆布置和论坛议程来了~",
+      "account": "头部科技",
+      "date": "2026-07-13",
+      "snippet": "文丨丁灵波WAIC2026将于7月17日至20日在上海拉开帷幕,据了... 我们整理了一下会场布局和议程,给大家提供一份逛展前攻略参考..."
+    },
+    {
+      "title": "智能伙伴 共创未来:2026世界人工智能大会启幕上海,全球AI治理中国方案重磅亮相",
+      "account": "啊昱",
+      "date": "2026-07-13",
+      "snippet": "7月13日,外交部发言人林剑在例行记者会上正式对外公布重磅消息:2026世界人工智能大会暨人工智能全球治理高级别会议,将于7..."
+    },
+    {
+      "title": "2026世界人工智能大会上海世博展览馆H4展馆:全域链接馆,看创业公司和新项目",
+      "account": "国产大模型技术服务商",
+      "date": "2026-07-13",
+      "snippet": "2026世界人工智能大会上海世博展览馆H1展馆:应用与生态馆,看AI怎么进产业2026世界人工智能大会上海世博展览馆H3展馆:机器..."
+    },
+    {
+      "title": "2026 WAIC世界人工智能大会超全逛展攻略(场馆核心版+购票避坑)",
+      "account": "深蓝的平行线",
+      "date": "2026-07-13",
+      "snippet": "2026世界人工智能大会(WAIC 2026)于7月17日-20日在上海举... 单日展览票通用浦东世博、浦东张江、徐汇西岸三大片区,片区间..."
+    },
+    {
+      "title": "2026世界人工智能大会上海世博展览馆H2展馆:技术与创新馆,看算力和硬科技",
+      "account": "大模型应用技术服务商",
+      "date": "2026-07-13",
+      "snippet": "2026世界人工智能大会上海世博展览馆H1展馆:应用与生态馆,看AI怎么进产业H2馆聚焦前沿智能科技、算力基础设施与多场景行业..."
+    },
+    {
+      "title": "2026WAIC详细观展攻略",
+      "account": "硬核机器人研究所",
+      "date": "2026-07-13",
+      "snippet": "家用服务机器人品牌 脑机交互&沉浸式体验强脑科技、全品类VR/AR体验厂商#具身智能#WAIC#算力#AR #科技#攻略"
+    },
+    {
+      "title": "WAIC2026攻略|张江,你怎么这么硬核?",
+      "account": "数据观",
+      "date": "2026-07-13",
+      "snippet": "张江会场来源 |  世界人工智能大会(转载请注明来源)编辑 |  数据君WAIC2026将于7月17日至20日在上海拉开帷幕.今年大会分设三..."
+    },
+    {
+      "title": "本周AI热点速览(07.06~7.12)",
+      "account": "AI说不啰嗦",
+      "date": "2026-07-13",
+      "snippet": "WAIC官方公布,本届大会将集中展示大量具身智能、人形机器人... “AIforGoodGlobal Commission”,重点推动人工智能在医疗、..."
+    },
+    {
+      "title": "WAIC2026启幕倒计时:四大亮点一文看懂",
+      "account": "界面新闻",
+      "date": "2026-07-13",
+      "snippet": "亮点四:全城AI漫游,从展馆到街头WAIC的触角从展馆延伸至城市街道.7月15日至20日,＂WAICCity Walk2026伴游记＂正式向公..."
+    },
+    {
+      "title": "WAIC2026亮点前瞻:昇腾950超节点首次真机亮相",
+      "account": "华为计算",
+      "date": "2026-07-13",
+      "snippet": "◆往期推荐◆WAIC2026| 请查收来自昇腾的邀请函!"
+    },
+    {
+      "title": "先睹为快!一站解锁思特奇WAIC2026全亮点",
+      "account": "思特奇运营商",
+      "date": "2026-07-13",
+      "snippet": ""
+    },
+    {
+      "title": "最新!2026WAIC世界人工智能大会,7月17-20日四馆展位图、展商名录、同期论坛",
+      "account": "展会小达人",
+      "date": "2026-07-13",
+      "snippet": "WAIC 2026世界人工智能大会7月17-20日在浦东世博展览馆、徐汇国际会展中心、张江科学会堂三地四馆同步举办.张江会场攻略张江..."
+    },
+    {
+      "title": "2026年7月17日至20日,世界人工智能大会暨人工智能全球治理高级别会议将在上海世博、张江、西岸三地四馆举行,主题为“智能伙伴 共创未来",
+      "account": "DHtalk",
+      "date": "2026-07-13",
+      "snippet": "2026年7月17日至20日,世界人工智能大会暨人工智能全球治理高级别会议将在上海世博、张江、西岸三地四馆举行,主题为“智能伙..."
+    },
+    {
+      "title": "科创周刊:工信部:今年人形机器人整机产量有望破十万台;一季度人形机器人出口增长210%;2026世界人工智能大会7月17日上海举办",
+      "account": "HRG合肥",
+      "date": "2026-07-13",
+      "snippet": "今年人形机器人整机产量有望破十万台2026世界人工智能大会将于7月17日至20日在上海举行.在7月7日召开的2026世界人工智能大..."
+    },
+    {
+      "title": "世界人工智能大会WAIC 2026下周开幕:机器人从＂后空翻＂到＂进工厂",
+      "account": "海里淘金",
+      "date": "2026-07-12",
+      "snippet": "7月17日,2026世界人工智能大会(WAIC)将在上海世博、张江、西岸“三地四馆”同步启幕.展览总面积首破10万平方米,1100余..."
+    },
+    {
+      "title": "WAIC2026攻略|人在徐汇,已经上头10086次",
+      "account": "世界人工智能大会",
+      "date": "2026-07-12",
+      "snippet": "WAIC2026徐汇会场攻略WAIC2026将于7月17日至20日在上海拉开帷幕.今年大会分设三大片区、四大场馆:世博馆走“应用之轴”..."
+    },
+    {
+      "title": "WAIC2026攻略:票怎么搞、一天怎么逛、哪些坑别踩",
+      "account": "观鱼智见",
+      "date": "2026-07-12",
+      "snippet": "西岸图源:加速进化官网(booster.tech)WAIC2026下周五开幕... 这篇攻略只讲三件事:票怎么搞、一天怎么逛、哪些坑别踩.没抢..."
+    },
+    {
+      "title": "WAIC2026亮点剧透:百度AI来了,开发者必冲",
+      "account": "蚂蚁大喇叭",
+      "date": "2026-07-12",
+      "snippet": "WAIC2026(世界人工智能大会)即将在下周五(17号)拉开序幕,该会作为全球人工智能领域最具影响力的顶级盛会之一,在外界素..."
+    },
+    {
+      "title": "WAIC前瞻丨恒生活将亮相WAIC2026!大会日程来了",
+      "account": "恒昌公司官微",
+      "date": "2026-07-12",
+      "snippet": "WAIC2026汇聚1400位嘉宾及千余名行业领军人才、龙头企业与创投代表,共同探讨AI向善、普惠发展.现已初步敲定9位图灵奖、诺..."
+    },
+    {
+      "title": "WAIC2026展通关攻略——从零部件底座到人形机,一键解锁展商核心看点!",
+      "account": "RobotQuan机器人圈",
+      "date": "2026-07-11",
+      "snippet": "这份WAIC2026逛展通关攻略,为您解锁机器人展商信息与核心看点,助您轻松观展!(展示部分机器人展商,排名不分先后)国内外..."
+    },
+    {
+      "title": "WAIC2026世界人工智能大会 我们上海见!",
+      "account": "五象云谷有限公司",
+      "date": "2026-07-11",
+      "snippet": "五象云谷WAIC2026亮点直击Token出海总枢纽·来数加工新高地 7月17日—20日,上海世博展览馆 H1-C139邀您亲临现场,见证..."
+    },
+    {
+      "title": "探秘2026世界人工智能大会的智能终端产品",
+      "account": "伊川县鸣皋镇中心小学",
+      "date": "2026-07-10",
+      "snippet": "今年逛完2026世界人工智能大会,我最大的感受是:AI终于彻底走... 比如行程规划、文件整理、消息归类、日程统筹、资料检索,它可..."
+    },
+    {
+      "title": "WAIC2026观展攻略:三地四馆怎么跑?票怎么买?哪些展台值得蹲?",
+      "account": "失眠的豆腐",
+      "date": "2026-07-10",
+      "snippet": "先存这张速览表2026世界人工智能大会(WAIC2026)暨人工智... 元攻略号口径,待官方核实名硬规:一人一票,身份证原件 + 人脸..."
+    },
+    {
+      "title": "上饶市青少年科技普及协会成为 2026世界人工智能大会分论坛协办单位",
+      "account": "科普上饶",
+      "date": "2026-07-10",
+      "snippet": "上饶市青少年科技普及协会正式成为2026世界人工智能大会分论坛协办单位,借此接轨顶尖AI行业盛会,对接前沿产业资源,拓宽科创..."
+    },
+    {
+      "title": "与时代 共昇腾|昇腾WAIC2026剧透,四大亮点抢先看",
+      "account": "中国经济周刊",
+      "date": "2026-07-10",
+      "snippet": "全球人工智能领域年度盛会——2026世界人工智能大会(WAIC...亮点一:业界最大规模超节点Atlas 950 SuperPoD真机首展作为本..."
+    },
+    {
+      "title": "灵巧手挑战4*24小时分拣,冠军机器人带来点球大战,聊着天做研发的平台 |WAIC2026亮点抢先看",
+      "account": "周到上海",
+      "date": "2026-07-10",
+      "snippet": "了解今年又将有哪些首发首秀、亮点展品.在具身智能领域,数百... 在WAIC2026的现场,加速进化的机器人将带来点球大战.除了踢..."
+    },
+    {
+      "title": "7.4-7.10:2026世界人工智能大会将于7月17日至20日举行、2025年度上海市科学技术奖获奖名单公布",
+      "account": "上海教育新闻网",
+      "date": "2026-07-10",
+      "snippet": "2026世界人工智能大会将于7月17日至20日举行.招考资讯近日,上海市教育委员会发布《关于2026年继续对报考外省市普通高校的..."
+    },
+    {
+      "title": "【观察】2026世界人工智能大会7月17日至20日在上海举行",
+      "account": "应用观察",
+      "date": "2026-07-10",
+      "snippet": "【2026世界人工智能大会7月17-20日在上海举办】2026世界人工智能大会暨人工智能全球治理高级别会议将于7月17日至20日在上海..."
+    },
+    {
+      "title": "7月17日!努比亚AI智能体手机,即将亮相世界人工智能大会",
+      "account": "好机志",
+      "date": "2026-07-10",
+      "snippet": "2026世界人工智能大会定档7月17日到20日,这次大会上要亮相全球首款AI智能体手机,努比亚已经认领了这款产品.不少人猜,这就..."
+    },
+    {
+      "title": "WAIC2026前瞻:300+AI新品首发,这5个最值得关注",
+      "account": "微心茄科技",
+      "date": "2026-07-10",
+      "snippet": "7月17日,2026世界人工智能大会(WAIC)即将在上海开幕.这...嘉宾规模:1400余位中外嘉宾,9位图灵奖/诺贝尔奖得主 产业对..."
+    },
+    {
+      "title": "大模型与智能体在2026世界人工智能大会的精彩呈现",
+      "account": "伊川县鸣皋镇中心小学",
+      "date": "2026-07-10",
+      "snippet": "本届2026世界人工智能大会,专门设立独立的大模型与智能体专属展区、主题论坛和产业对接专场,展区面积、参展企业数量、首发产..."
+    },
+    {
+      "title": "2026世界人工智能大会| 四大展馆全面开放,超千家参展商名单公布!",
+      "account": "北京物业清洁产业展览会",
+      "date": "2026-07-09",
+      "snippet": "2026世界人工智能大会将于7月17日—20日在上海举办,大会采用世博、张江、西岸三地四馆同步开展模式,其中世博展览馆为核心展..."
+    },
+    {
+      "title": "2026世界人工智能大会7月17日启幕 超300款产品将全球首发",
+      "account": "网信宿州",
+      "date": "2026-07-09",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议将于7月17日至20日在上海世博、张江、西岸“三地四馆”举办.记者从今天(..."
+    },
+    {
+      "title": "2026世界人工智能大会将于7月17日至20日举行",
+      "account": "上海人工智能研究院",
+      "date": "2026-07-09",
+      "snippet": "副市长陈杰介绍2026世界人工智能大会暨人工智能全球治理高级别... 中国科协和上海市人民政府共同主办,将于7月17日至20日在世博..."
+    },
+    {
+      "title": "《未来触手可及!2026世界人工智能大会:普通人也能玩转的科技盛宴》",
+      "account": "爱分享滴小王",
+      "date": "2026-07-08",
+      "snippet": "2026世界人工智能大会:普通人也能玩转的科技盛宴》如果你以为人工智能大会只是科技大佬的聚会,那就大错特错了!2026世界人..."
+    },
+    {
+      "title": "蓝鲸新闻*WAIC2026|视频探馆、现场直播间、专场活动、私享局,邀您共赴盛会",
+      "account": "鲸平台",
+      "date": "2026-07-08",
+      "snippet": "往期活动展示三、2026WAIC参会记者福利蓝鲸始终致力于与媒体人共同成长,为记者提供行业交流与成长平台.在全国产业大会,带..."
+    },
+    {
+      "title": "【展会动态】搭建全球AI治理交流平台,完善算力语料产业支撑,推出全民AI体验……2026世界人工智能大会权威解读→",
+      "account": "上海市会展行业协会",
+      "date": "2026-07-08",
+      "snippet": "解放日报:在刚才的介绍中提到本届大会的展览规模创历届之最,... 汤文侃:世界人工智能大会已连续成功举办八届,累计有8000余位..."
+    },
+    {
+      "title": "AI日报|Anthropic在Claude脑中挖出＂意识区＂,DeepSeek自研芯片摆脱英伟达,蚂蚁灵波让机器人＂看准＂世界",
+      "account": "像素的呼吸",
+      "date": "2026-07-08",
+      "snippet": "AIforGood峰会日内瓦开幕,上海WAIC下周揭幕.8 条正文 + 花边,5 分钟看完.�� 大模型 & 前沿【1】Anthropic 在 Claude 脑中..."
+    },
+    {
+      "title": "每日AI新闻速览 20260708",
+      "account": "小雅online",
+      "date": "2026-07-08",
+      "snippet": "联合国AIforGood峰会同期在日内瓦举办,中美欧AI治理对话进入新阶段,上海WAIC正试图成为连接技术展示与全球治理的关键节点..."
+    },
+    {
+      "title": "AI日报 2026-07-08",
+      "account": "Chestnuts Hollow",
+      "date": "2026-07-08",
+      "snippet": "为何关注:WAIC展览面积翻倍增长和新增物理AI分论坛,直接反... 联合国AIforGood全球峰会日内瓦开幕,聚焦发展中国家AI部署联..."
+    },
+    {
+      "title": "MACHINA Summit 巴黎首日成果(AI、支付与数据日报-7.8)",
+      "account": "学习雷锋好榜样",
+      "date": "2026-07-08",
+      "snippet": "WAIC2026 首发首秀.19.  联合国AIforGood全球峰会日内瓦开幕——＂AI能力建设＂成为发展中国家议程核心 7月7日,国际电信联..."
+    },
+    {
+      "title": "湾顶会·前沿资讯|2026世界人工智能大会7月17日上海开幕;AI投资重心迈向实体产业,未来6年资本开支或达7.6万亿美元",
+      "account": "湾顶会",
+      "date": "2026-07-08",
+      "snippet": "行业新闻2026世界人工智能大会7月17日上海开幕:规模创新双突破,全球首发超300款AI新产品2026世界人工智能大会将于7月17日..."
+    },
+    {
+      "title": "2026世界人工智能大会7月17日上海开幕,10 万㎡大展、300款全球首发亮点抢先看",
+      "account": "混合未来",
+      "date": "2026-07-08",
+      "snippet": "世界人工智能大会暨人工智能全球治理高级别会议举办时间: 2026 年7 月17日- 20 日(共 4 天)7 月17日:开幕日 + 专业观众日(..."
+    },
+    {
+      "title": "【参会指南】2026WAIC世界人工智能大会(上海)购票/入场须知/同期论坛日程",
+      "account": "上海展讯网",
+      "date": "2026-07-07",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议参观时间:... 02大会日程安排03同期论坛WAIC 2026数学论坛:WAIC 2026具..."
+    },
+    {
+      "title": "2026.07.06AI行业晚间复盘:联合国AI治理对话开幕,WAIC进入倒计时",
+      "account": "绎智AI智能体",
+      "date": "2026-07-07",
+      "snippet": "到应用实践(AIforGood峰会)形成完整闭环.这种从蓝图设计到... HiWAICAPP上线:基于多智能体架构的AI原生平台本届大会首次..."
+    },
+    {
+      "title": "2026世界人工智能大会7月17日启幕 超300款产品将全球首发",
+      "account": "网信上海",
+      "date": "2026-07-07",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议将于7月17日至20日在上海世博、张江、西岸“三地四馆”举办.记者从今天(..."
+    },
+    {
+      "title": "2026世界人工智能大会7月17日开幕,智算、具身两大赛道各汇聚超200家企业",
+      "account": "国际金融报",
+      "date": "2026-07-07",
+      "snippet": "介绍2026世界人工智能大会暨人工智能全球治理高级别会议筹备进... 中国科协和上海市人民政府共同主办,将于7月17日至20日在世博..."
+    },
+    {
+      "title": "2026世界人工智能大会将于7月17日至20日举行",
+      "account": "风云法眼",
+      "date": "2026-07-07",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议由外交部、... 中国科协和上海市人民政府共同主办,将于7月17日至20日在世博..."
+    },
+    {
+      "title": "报名开启!上海开放大学邀你共赴2026世界人工智能大会展览",
+      "account": "上海开大青年",
+      "date": "2026-07-06",
+      "snippet": "2026世界人工智能大会以“智能伙伴,共创未来”为主题,展览总面积超10万平方米,汇聚1100余家全球企业,推出3000余项前沿展..."
+    },
+    {
+      "title": "【亚太橡塑展】2026第23届亚太国际塑料橡胶工业展,7月8-11日参观指南!",
+      "account": "华东展会通",
+      "date": "2026-07-06",
+      "snippet": "机器人等科技展会活动汇总(其中WAIC2026世界人工智能大会7... 营养健康食品展区参观攻略+100门票限时免费领!2026-07-01"
+    },
+    {
+      "title": "AI在现实中奔跑!WAICYOUNG机器狗越障赛半决赛激战突围,巅峰对决蓄势待发!",
+      "account": "世界人工智能大会",
+      "date": "2026-07-05",
+      "snippet": "2026年7月3日,由上海市科技艺术教育中心与世界人工智能大会青创品牌WAICYOUNG联合主办的第六届长三角青少年人工智能奥林..."
+    },
+    {
+      "title": "WAIC2026倒计时——世界人工智能大会上的教育新信号",
+      "account": "郑言智境",
+      "date": "2026-07-03",
+      "snippet": "◆二、五大生态矩阵:从＂展会＂到＂生态网络＂WAIC2026不再... 集成智能活动、供需撮合、垂直内容、圈层社交——这意味着..."
+    },
+    {
+      "title": "七月双展联动 | 长飞诚邀您共赴世界人工智能大会和中国互联网大会",
+      "account": "光电通信",
+      "date": "2026-07-02",
+      "snippet": "012026世界人工智能大会7月17日-20日丨上海世博展览馆世界人工智能大会长飞公司将重点展示AI智算光纤、智算中心布线与光模块..."
+    },
+    {
+      "title": "观展报名 | 协会组团参加2026上海世界人工智能大会",
+      "account": "珠海市首席信息官协会",
+      "date": "2026-07-02",
+      "snippet": "2026世界人工智能大会暨人工智能全球治理高级别会议(WAIC ... 本届WAIC展览实行收费门票制,参加协会团组门票免费(机票住..."
+    },
+    {
+      "title": "对法律人而言,7月来沪的世界人工智能大会有哪些环节值得围观?(附观展与购票指南)",
+      "account": "星瀚微法苑",
+      "date": "2026-07-02",
+      "snippet": "世界人工智能大会(WAIC)暨人工智能全球治理高级别会议依旧... 今年展览的整体规划上,也依然有多处可“落脚”.包括世博会场..."
+    },
+    {
+      "title": "【要闻】持续推进人工智能产业生态建设,静安区举办WAIC2026预热专场活动",
+      "account": "静安科技",
+      "date": "2026-03-24",
+      "snippet": "静安区正以场景为切口、以生态为骨架,加速打造人工智能创新应...活动火热开场,为即将召开的2026世界人工智能大会(WAIC)奏..."
+    },
+    {
+      "title": "申办倒计时!WAIC2026会议活动申办,共创善智未来!",
+      "account": "复初管理视点",
+      "date": "2026-03-21",
+      "snippet": "WAIC2026活动申办开放,欢迎各界参与申报.站在AI世界中央舞台,发出AI最强音!PART.01话题方向我们聚焦基础理论、技术创新..."
+    }
+  ]
+}

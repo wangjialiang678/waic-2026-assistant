@@ -1,0 +1,2882 @@
+{
+  "version": "20260716-0928",
+  "last_updated": "2026-07-16T09:28:58+08:00",
+  "files": {
+    "VERSION": {
+      "sha256": "72b4cbcabbb8281e263d8298ee3cac461f20ea59031095cc4cef4bd0eb436b46",
+      "size": 14
+    },
+    "data/intel.json": {
+      "sha256": "eb80c1aa3f32f219345d7af79c1d73589621cbc31e2f5f994c6fa0c2235cb8fd",
+      "size": 173546
+    },
+    "data/exhibitors.json": {
+      "sha256": "c6320da13c63339f6c2593a96b0a3b8355526e100dc78c2c5b2426cd02d52232",
+      "size": 2545250
+    },
+    "data/themes.json": {
+      "sha256": "0ae0dfb0bd4199197f23bda64c2025fa3622967a4d043064d4e80fb2c5a77356",
+      "size": 23405
+    },
+    "data/activities.json": {
+      "sha256": "9948c7588bde34ca48bff7e92a9f88fcb6c3641689c987b2efd901d63ef7766f",
+      "size": 2237257
+    },
+    "md/unofficial/web-046-光启夜叙--Light-Night.md": {
+      "sha256": "f5aa6a8144c411ce3aa0a5e1d993fde78500f89670dc29e26e1d282112824257",
+      "size": 415
+    },
+    "md/unofficial/web-021-香港生产力促进局AI智能工厂展区亮相-WAIC-2026.md": {
+      "sha256": "d9e1f21070240d6e9ba7f4f1ff8fa0d78adc0e4a95f14e6d62155046ff79960f",
+      "size": 536
+    },
+    "md/unofficial/web-122-智启具身一体贯通的具身智能技术栈及落地应用论坛.md": {
+      "sha256": "13d97687e16ce7b5ad2abc5a41b44e29477b8e15880ad3918d8adafcf7984637",
+      "size": 335
+    },
+    "md/unofficial/web-023-Juliefriends--WAIC-AI-创业线下交流会.md": {
+      "sha256": "d19b84b489b4ef76d0264a6103c0fa77dfe21a1663ae0e875e5e3462277c3730",
+      "size": 531
+    },
+    "md/unofficial/wx-268-Token经济协同芯片生态论坛.md": {
+      "sha256": "ce550e944bb35e353b47dbf2847354a21c9d769c194d8a772cc03c5105189751",
+      "size": 621
+    },
+    "md/unofficial/web-022-论坛排片WAIC-2026-最新论坛活动日程安排发布.md": {
+      "sha256": "3cb54440400c55926e9c0692753b59849868b972fc149d8ad736596b3d826a8a",
+      "size": 481
+    },
+    "md/unofficial/web-091-WAIC-8家韩国AI企业需求大公开联合研发-OEM代工-投融资-人才引进.md": {
+      "sha256": "c21ee6c3f472e7596b2e46a45ed6cbe4616cf1b1ae48ad12ffeef6208a1d4651",
+      "size": 487
+    },
+    "md/unofficial/wx-279-人形机器人与具身智能创新发展论坛开放场次.md": {
+      "sha256": "3cdcc47d08339dc6b871495e831cacd0e3208e0e986c989b24665361af7e3d5b",
+      "size": 683
+    },
+    "md/unofficial/web-045-WAIC-2026-观众注册与入场指南搜狐-上海经信委.md": {
+      "sha256": "65e69e5ccbfef2f6d57e5ffced77d43bd41cb847ae57fe10797de54df231271b",
+      "size": 479
+    },
+    "md/unofficial/web-031-WAIC-UP-AI-三极夜话全球-AI-创新者夜间思享会.md": {
+      "sha256": "35b0e0404dc5ff07913e3c29167c45ea8a6507d60471d61b1fa971fc3ec2f678",
+      "size": 521
+    },
+    "md/unofficial/web-102-WAIC思想者论坛姚期智-Richard-Sutton-朱松纯-俞勇-李开复-郭.md": {
+      "sha256": "599a448e54d1a488c173b24f974609ed1a4309ea9e8efa4f6dca9f3c1438d9c7",
+      "size": 656
+    },
+    "md/unofficial/wx-252-算电冷协同-助力AI芯片释放极致算力科华数据算力基础设施与AI芯片协同发展论坛.md": {
+      "sha256": "28f899931a6452b16423520de35839352540182ff1c9bea66e1eb19b413b1f99",
+      "size": 934
+    },
+    "md/unofficial/wx-322-首届世界人工智能大会学术会议WAICA.md": {
+      "sha256": "9c640950ea64ef43aa230207eccab4eef4eab961e3425a86dd630d915fe52fa3",
+      "size": 981
+    },
+    "md/unofficial/wx-104-12-岁少年用-AI-帮残障人士打开游戏世界的大门世界人工智能大会2026AI-.md": {
+      "sha256": "d99fb77919cb3fc6f68f950371fbfe7da6c01c46ed30fd0bc422857b21ea8233",
+      "size": 503
+    },
+    "md/unofficial/web-117-WAIC特别场蓝白水手俱乐部AI闹航海夜.md": {
+      "sha256": "493d1563997b7a9f5a4823fbbbf2487161a517a1683c3a60906f4334d0a51e55",
+      "size": 473
+    },
+    "md/unofficial/web-062-WAIC-2026-世界人工智能大会主会--主论坛--展览.md": {
+      "sha256": "50815204a332eb7002f6275f5420a5307c76d349c00d47be3f308eca2cf814ed",
+      "size": 877
+    },
+    "md/unofficial/web-024-2026世界人工智能大会WAIC专题含7-17-20逐日议程.md": {
+      "sha256": "3a6ce218bdc6009f011263c92625721bf49a8d38bb225119b868919e0f8e60d1",
+      "size": 607
+    },
+    "md/unofficial/web-120-WAIC-UP-AI创作者大会WAIC-UP-DAYNIGHT-系列.md": {
+      "sha256": "3e702a8a01a736b5c39b3b3cb2230cd19cf592036c4650dad26fa3ea72c68947",
+      "size": 627
+    },
+    "md/unofficial/wx-313-具身人形机器人落地与核心零部件发展论坛.md": {
+      "sha256": "ac7dc5663e3575bcaecd10f2b880dc13b13abce44d593dc826b992c408271eb7",
+      "size": 819
+    },
+    "md/unofficial/web-069-WAIC思想者论坛姚期智-Richard-Sutton-朱松纯-俞勇-李开复-郭.md": {
+      "sha256": "599a448e54d1a488c173b24f974609ed1a4309ea9e8efa4f6dca9f3c1438d9c7",
+      "size": 656
+    },
+    "md/unofficial/web-225-WAIC2026-人工智能引领产业变革思客会.md": {
+      "sha256": "304811c0515df034b2ba8a6b4e38d944e6cfb96e936ac12eeff1e7719431a83f",
+      "size": 444
+    },
+    "md/unofficial/wx-264-基座大模型架构创新与生态合作论坛.md": {
+      "sha256": "9e6a5bfe38246773ccd9cf540783cafafa42088906fee4301ad0e2d096f2e02b",
+      "size": 638
+    },
+    "md/unofficial/wx-064-8天后开幕WAIC2026看点全梳理140万亿Token背后意味着什么.md": {
+      "sha256": "9aa6bd9f84c3b7d5ca7605735d0585a6d33ee05a792f59f9bbee5005a662cabe",
+      "size": 459
+    },
+    "md/unofficial/web-108-Demo-Day--Physical-AI-Camp超音速计划-2026--Ph.md": {
+      "sha256": "d7e8ff31502389946eb47ffe3fce798e3d0801688fd61a939f75cabcf96dd517",
+      "size": 637
+    },
+    "md/unofficial/wx-072-相约WAIC2026语言桥携LanTMS连接AI创新与全球沟通.md": {
+      "sha256": "4ac3620770c1daa2945805046da1d7fa121322220955fcde4db61073fd239d5a",
+      "size": 446
+    },
+    "md/unofficial/wx-051-投后企业动态2026WAIC逛展指南璞跃生态版.md": {
+      "sha256": "8a3530172e170092dacadd348d89c0bf9c0e2af39f615e0d85d61cb506378937",
+      "size": 439
+    },
+    "md/unofficial/web-094-WAIC-AI-Nightfall-全球智识之夜寻找全球AI游牧者.md": {
+      "sha256": "603445e9f58a15376f1744a7f03a5d49177af790f7e83db8d9b29cfc5f86e51b",
+      "size": 565
+    },
+    "md/unofficial/wx-260-AI规模化落地与增长新蓝图生态论坛.md": {
+      "sha256": "dfa43413740e03b25525f0b57192b57deba6e391439276651225b8f725fcced5",
+      "size": 656
+    },
+    "md/unofficial/wx-030-WAIC2026世界人工智能大会暨人工智能全球治理高级别会议日程总览.md": {
+      "sha256": "da289b6a5268112281de35d3c745338031faa1461fe31a694513f36bb75737de",
+      "size": 472
+    },
+    "md/unofficial/web-201-全球工业人工智能国际合作论坛.md": {
+      "sha256": "940e14041a5941fedbac84e232855d56ad5cbb701f74380c930fb5b64c4f82d0",
+      "size": 665
+    },
+    "md/unofficial/wx-167-观察2026世界人工智能大会7月17日至20日在上海举行.md": {
+      "sha256": "a63fcf69fb01ec67e704b415603faeb12e094c4e89bcd54fbad2b5dda94864fa",
+      "size": 461
+    },
+    "md/unofficial/web-144-Good-or-Bad-之夜WAIC-UP--观猹.md": {
+      "sha256": "32b29744f56a6151835f7291ef081870e7ae1d7715e772f30de8f23f25fcac3a",
+      "size": 515
+    },
+    "md/unofficial/web-072-光源资本AIN-进化时刻人工智能产业融合论坛.md": {
+      "sha256": "8dc399168c22c29b6cb43b948881a1cac5aca4707705909afba4d390f06a7e77",
+      "size": 549
+    },
+    "md/unofficial/wx-210-观展报名--协会组团参加2026上海世界人工智能大会.md": {
+      "sha256": "8238560a4f566ca57091e69e2bceecd80b451945d3476335e23c88b637414029",
+      "size": 469
+    },
+    "md/unofficial/wx-079-WAIC2026-复容生态伙伴闪亮集结来找我们玩.md": {
+      "sha256": "a07eaaa0d72664f7000bf3cce1adc759540c25f73d42c475b329d7e2cecf8875",
+      "size": 447
+    },
+    "md/unofficial/web-202-壹沓科技Agentic-AI进场重塑全球供应链主题论坛.md": {
+      "sha256": "0760a5ddf62bce6e1d18c46290d60d8edb088173ea0f69b2fd50e995e7023162",
+      "size": 567
+    },
+    "md/unofficial/web-025-主论坛丨WAIC-2026-主论坛下午场重磅揭晓.md": {
+      "sha256": "37eb1547a0f3558333d424c67a3e0f91ae68211d48b30371d95f691c64388b0d",
+      "size": 483
+    },
+    "md/unofficial/web-053-模速社群日--WAIC前夜--vLLM-Meetup推理全栈实战从芯片打到应用.md": {
+      "sha256": "9304b47da730844e3eac8a9a48588f5a1e02189853881acf8e44c1315a91c1b4",
+      "size": 559
+    },
+    "md/unofficial/web-010-WAIC-2026-会前局--AI小酒馆夜话.md": {
+      "sha256": "1a8e102e48e51898059be5aac11a0d622578cb276320dd0fe3eb8b2451521b94",
+      "size": 439
+    },
+    "md/unofficial/web-088-WAIC-UP-AI创作者之夜.md": {
+      "sha256": "88e89589ec86b8a93d2abbc10a950fd0abd0fbfb0dd18722ed5ea6e8c70e2865",
+      "size": 492
+    },
+    "md/unofficial/web-124-WAIC-8家韩国AI企业需求大公开联合研发-OEM代工-投融资-人才引进.md": {
+      "sha256": "c21ee6c3f472e7596b2e46a45ed6cbe4616cf1b1ae48ad12ffeef6208a1d4651",
+      "size": 487
+    },
+    "md/unofficial/wx-118-2026世界人工智能大会直击从大模型到人形机器人AI正在重塑每一个行业.md": {
+      "sha256": "e51fad3f6c713acd8879f32b6cbfc5c1fdbd8e304ca202e86bf057a840114b17",
+      "size": 479
+    },
+    "md/unofficial/web-234-第六届长三角青少年人工智能奥林匹克挑战赛网安守护者正式赛.md": {
+      "sha256": "583b46ca7c5d890833e9f84b7e6736d6c122599bc0d7810f7bb268df46aae64b",
+      "size": 469
+    },
+    "md/unofficial/web-183-上财智能经济生态发展论坛.md": {
+      "sha256": "c4c6b2474d01c50244b97340abe3dc194ba8cefe8dceeb24539fac09fb94075b",
+      "size": 414
+    },
+    "md/unofficial/web-104-小红书让-Builders-被看见.md": {
+      "sha256": "75592c7ce40a313ed05c3f97521200d87a2e3af9cd48f9e1233d0aa77e1c4fa4",
+      "size": 497
+    },
+    "md/unofficial/wx-143-2026年7月17日至20日世界人工智能大会暨人工智能全球治理高级别会议将在上海.md": {
+      "sha256": "ed62093811c9ea43abc00d4c6d52316c31a1bc1a760fb70f65057fee6234f17c",
+      "size": 570
+    },
+    "md/unofficial/wx-129-星动态WAIC2026星工聚将重磅环节全攻略.md": {
+      "sha256": "cc91739180cd4b4d246bf45095cd71dfa5fb1ac825d1afaa24d7f493568882b2",
+      "size": 430
+    },
+    "md/unofficial/wx-001-探营2026WAIC走进上海含AI量最高的地方.md": {
+      "sha256": "ccdb568cd8a43b6b79d4976d05aa5151cd7a4fe69efa257b0520a1d71362a796",
+      "size": 445
+    },
+    "md/unofficial/web-089-世界人工智能大会-WAIC-2026-AfterpartyAI-Hero-Ass.md": {
+      "sha256": "800f525d491bee7b3dd3b75d13cda88dd0495e369825a0afaee9f040af2b80f1",
+      "size": 569
+    },
+    "md/unofficial/wx-031-2026世界人工智能大会前瞻国产算力升级AI产业链从单点突破走向系统化兑现.md": {
+      "sha256": "f3313a0ee0b0de1f8cae32f280eecb442e45bb1cd89e95e29501a26f828be709",
+      "size": 496
+    },
+    "md/unofficial/wx-007-WAIC2026从全球共识走向产业落地这场工业-AI-国际论坛亮点满满.md": {
+      "sha256": "6ca1f8ffe1e7a0e6b9ea8d784ec84a0c76b21abca595ad621f45eee5683aaafb",
+      "size": 490
+    },
+    "md/unofficial/web-061-WAIC握手局带一个朋友来不限物种.md": {
+      "sha256": "516c72e6aaad293741a9ff4c7e88a6fdc8074b4d98e6cce56abcae14e110f9f3",
+      "size": 479
+    },
+    "md/unofficial/wx-142-最新2026WAIC世界人工智能大会7月17-20日四馆展位图展商名录同期论坛.md": {
+      "sha256": "9e0854b4dbc652a1aabb7cdb2498b9bbddabfea5788c78da55e066c4a1297c01",
+      "size": 492
+    },
+    "md/unofficial/wx-061-WAIC2026--47个10后用AI回应真实世界-AI原住民体验计划.md": {
+      "sha256": "373fa3b4310879997b9f74596434fbcd424b5cb5413d87683e5a2ef67567ae00",
+      "size": 454
+    },
+    "md/unofficial/wx-199-报名开启上海开放大学邀你共赴2026世界人工智能大会展览.md": {
+      "sha256": "612b5f483c40ad554ab55853021f33d84fa1100a357cf83272b7f4617b039ebe",
+      "size": 468
+    },
+    "md/unofficial/wx-238-WAIC-UP-之夜.md": {
+      "sha256": "5383f0d845ec3b488c0eb4b39dfeb257559b3377357c67cbb5c91d7bc31fb161",
+      "size": 627
+    },
+    "md/unofficial/web-110-Signal-Eve-创见前夜.md": {
+      "sha256": "0eec3ae61401f80a79d57394fb5b092716d6fd286d40a4f20d7b18306ad884c1",
+      "size": 463
+    },
+    "md/unofficial/wx-152-WAIC2026亮点剧透百度AI来了开发者必冲.md": {
+      "sha256": "e5f92c749ee804f4fecb79c3404869fefd1b14171134a7ae7457eac84811c3e5",
+      "size": 437
+    },
+    "md/unofficial/web-056-Juliefriends--WAIC-AI-创业线下交流会.md": {
+      "sha256": "d19b84b489b4ef76d0264a6103c0fa77dfe21a1663ae0e875e5e3462277c3730",
+      "size": 531
+    },
+    "md/unofficial/wx-087-WAIC2026倒计时超300款AI新品即将首发这场大会有什么看头.md": {
+      "sha256": "244b3951caa8876629fa8823663e525dc45a1f141ce2c9605ed9f9a035b211e9",
+      "size": 474
+    },
+    "md/unofficial/wx-044-重磅公布2026WAIC中国信通院智能体论坛完整议程正式揭晓.md": {
+      "sha256": "bbe6f4b38172822b60bddbd968da2ae80e5afb5d5d913bfa6810258fecc5b754",
+      "size": 481
+    },
+    "md/unofficial/wx-036-2026世界人工智能大会主论坛前瞻以智能伙伴之名共探AI发展新图景.md": {
+      "sha256": "0b7895753334ebf772aa8d42c9037577cce9bb831a9d662245b9de19db661742",
+      "size": 486
+    },
+    "md/unofficial/wx-202-边界定规--WAIC-2026全球AI治理负责任大国输出全球AI治理规则地图与安.md": {
+      "sha256": "b3e896379edff57c00c792d2f4df192c9ae5f5abc3f18b0500079418d80ed85c",
+      "size": 510
+    },
+    "md/unofficial/wx-138-我们问了-47-位-10-后你想用-AI-帮谁世界人工智能大会2026AI-原住.md": {
+      "sha256": "9fdc39386e5e18bf9c3b540130dfc22f6ef9c31041eef3fd7d8bda88c1f07f53",
+      "size": 487
+    },
+    "md/unofficial/web-019-Demo-DayPhysical-AI-Camp16-家-Voice-First.md": {
+      "sha256": "3ad20aac47fdbbecf0e5a47509666e870044f0efc3fddcaf1884d3c514eb97d0",
+      "size": 575
+    },
+    "md/unofficial/wx-161-通知--关于举办WAIC2026人工智能引领产业变革思客会的通知.md": {
+      "sha256": "a66b4d8f6ff3879274dbe4ed4a99a907ceb22ec92a249958c62a3f6835fff770",
+      "size": 490
+    },
+    "md/unofficial/wx-081-直播预告WAIC2026周五开幕观察者网高端直播间全程陪伴.md": {
+      "sha256": "1ffbaf316e9cb1ac3db2528ad0e1e6b9f573c2e146acde0a69a504537d490ff0",
+      "size": 462
+    },
+    "md/unofficial/wx-022-9个关键词解锁2026世界人工智能大会新亮点.md": {
+      "sha256": "6a92dfdff198d63192a8c3f29c2cf4d502e0077a253eb73efa592b37ec2b0765",
+      "size": 457
+    },
+    "md/unofficial/wx-117-WAIC2026论坛预告智赋生命医创未来AI驱动生命健康产业全链条革新.md": {
+      "sha256": "a7100de7d852943ecf091a8f0813eebcd14e535a3aeb2b1cdf5f9b45c5138184",
+      "size": 502
+    },
+    "md/unofficial/web-073-小红书让-Builders-被看见.md": {
+      "sha256": "93340b4d69809e25e953bb33d44bc2c783df197b9e012fda5c3288303dbb16fb",
+      "size": 505
+    },
+    "md/unofficial/web-057-WAIC-泡汤夜谈--限席小聚.md": {
+      "sha256": "291c81dfb83c4d66658f3d894c9d0c71494a13d896c893a8b0a0128fead6de8c",
+      "size": 485
+    },
+    "md/unofficial/web-015-APEC-Youth-AI-Creators-NightAttraX--WAIC.md": {
+      "sha256": "173306243709ed9407cd2ffc83ee5d063f804ddb9ab700add2736a3f565d3c1f",
+      "size": 623
+    },
+    "md/unofficial/wx-039-2026世界人工智能大会7月1720日开幕附门票展商交通全攻略.md": {
+      "sha256": "0fc52a447bd72e94037fb9027f0e1ab02a76dc28c8a2f6c72a681d39c92da366",
+      "size": 469
+    },
+    "md/unofficial/web-083-干杯吧具身第二期.md": {
+      "sha256": "680536e4ac9d40556dfd386541fb39afc370f65836a4120604718f303aef86e5",
+      "size": 453
+    },
+    "md/unofficial/wx-259-人工智能全球治理高级别会议WAIC主论坛.md": {
+      "sha256": "bdc651221b64dab06b9ae5dd933a3b25f7d84d4f194c622ac84f20c1b11a14b9",
+      "size": 676
+    },
+    "md/unofficial/web-068-Founder-ParkWAIC-上海见企业-Agent-落地的关键问题.md": {
+      "sha256": "a2a771f6caf3cec89e7ed08f8bd7486ec21edf0b9409b945e079c9463707f694",
+      "size": 534
+    },
+    "md/unofficial/wx-053-倒计时2天-2026世界人工智能大会WAIC参会指南请查收.md": {
+      "sha256": "f5b33f89cf0c6312db14b2c5e3e44241bd9cbe63f9fcf303fcfda345f89d85c1",
+      "size": 460
+    },
+    "md/unofficial/web-086-手工川年度见面会--WAIC-Afterparty.md": {
+      "sha256": "d931fb4e290a0d878c9b7ed598f6ee0666757f2535789260daebe2041244435c",
+      "size": 481
+    },
+    "md/unofficial/web-037-2026世界人工智能大会徐汇会场逛展攻略附展商名录.md": {
+      "sha256": "f6547848a421dea93d389f7c52c6aec19cf719becf1f87036ad63e556dcb8bd5",
+      "size": 519
+    },
+    "md/unofficial/web-050-干杯吧具身第二期.md": {
+      "sha256": "680536e4ac9d40556dfd386541fb39afc370f65836a4120604718f303aef86e5",
+      "size": 453
+    },
+    "md/unofficial/web-043-上海举行2026世界人工智能大会新闻发布会国新办.md": {
+      "sha256": "5c109b86be97a354df0efc8afe471efd22dfb86f1d6ef8f4e2fe86defc4bd921",
+      "size": 459
+    },
+    "md/unofficial/web-064-WAIC-UP-AI-三极夜话全球-AI-创新者夜间思享会.md": {
+      "sha256": "35b0e0404dc5ff07913e3c29167c45ea8a6507d60471d61b1fa971fc3ec2f678",
+      "size": 521
+    },
+    "md/unofficial/web-138-世界人工智能大会-WAIC-2026-AfterpartyAI-Hero-Ass.md": {
+      "sha256": "c7de55506e57f9b6d3be1ccb6b98030649ec3c1845c7878eae333cf6a20b0e49",
+      "size": 535
+    },
+    "md/unofficial/web-204-WAIC2026-阿里云主题论坛.md": {
+      "sha256": "4a4dd3900ef643da8c70f0ba00d11d841a5199c557413f3d5637be73ca14e5d0",
+      "size": 385
+    },
+    "md/unofficial/web-018-WAIC-2026--Artificial-Intelligence-Inter.md": {
+      "sha256": "423ff3256e4c16f016ed668286bf370ebf505b6aeea55d506260f440a46fb664",
+      "size": 420
+    },
+    "md/unofficial/web-027-姚顺雨林俊旸再同台国产算力扎堆上新WAIC-2026必看清单界面新闻.md": {
+      "sha256": "5f4184d727d8c670e9cde34a2ce48a618991836d87725189875287e3b7bb9781",
+      "size": 605
+    },
+    "md/unofficial/web-116-XR-Vision-After-Party.md": {
+      "sha256": "3cc0ba3cf8ca82f5cc35df8d9cf1928bbcee1b3fc9fb5fa01280052b15859450",
+      "size": 408
+    },
+    "md/unofficial/web-073-网易智企用可信AI构建企业新智生产力论坛.md": {
+      "sha256": "d5c390cbe3c03e0646c3b4398d1191cfd1e4969481acb0743c05b85949c387a2",
+      "size": 491
+    },
+    "md/unofficial/web-032-XR-Vision-AI-After-PartyWAIC-专场.md": {
+      "sha256": "05ea1e43f73af92c595b3c72cb7889db22a240c6f25eaa268d6516e3950c60ce",
+      "size": 462
+    },
+    "md/unofficial/wx-077-WAIC2026全攻略数智软件工厂从业者的参会指南--购票--交通一网打尽.md": {
+      "sha256": "3bc50bf8fed1fceb5dc273d099509f9a726eca3998aa3410c3823b8196acc13f",
+      "size": 466
+    },
+    "md/unofficial/wx-043-世界人工智能大会WAIC2026完整议程.md": {
+      "sha256": "990a01a1a624fffa31baa4edae85637aaeb92d86a696c88f2761f9f3703c4009",
+      "size": 434
+    },
+    "md/unofficial/web-136-WAIC-上海-FDE-线下交流活动.md": {
+      "sha256": "06ef45d7bcb1d52ab79e10cf940d721ee12cfcc79beade2b3517d4d744b1da97",
+      "size": 498
+    },
+    "md/unofficial/wx-257-京东-WAIC-2026-展区AI-进入物理世界.md": {
+      "sha256": "f5cec88983fc4a888a77c52b227ac3949bbf85cc26a5736e4a519736cb5852e7",
+      "size": 779
+    },
+    "md/unofficial/wx-197-2026世界人工智能大会将于7月17日至20日举行.md": {
+      "sha256": "f52cbfd84630dc3329cabad4b8f63b65f39d1088b5cd1d7b12c2c8ea20f2ca62",
+      "size": 453
+    },
+    "md/unofficial/wx-074-仪电资讯年度最强AI盛会WAIC2026重磅启幕科创力量齐聚上海.md": {
+      "sha256": "57d5527c5f94e2a360588e7d8ffd9231a37381225a92a40c960fe427406fb5e9",
+      "size": 470
+    },
+    "md/unofficial/wx-165-灵巧手挑战424小时分拣冠军机器人带来点球大战聊着天做研发的平台-WAIC202.md": {
+      "sha256": "8bacb22c276a0afd65a9df7a682cb9ee104965c1b73a962f47fd596042d617b3",
+      "size": 507
+    },
+    "md/unofficial/web-039-光源资本AIN-进化时刻人工智能产业融合论坛.md": {
+      "sha256": "8dc399168c22c29b6cb43b948881a1cac5aca4707705909afba4d390f06a7e77",
+      "size": 549
+    },
+    "md/unofficial/web-076-2026-世界人工智能大会--AI-创作者大会WAIC-UP-AI-创作者之夜.md": {
+      "sha256": "163a904254c9af201a37b3bab1dfad976257fe98b69351f465695d62012f0bb5",
+      "size": 642
+    },
+    "md/unofficial/wx-169-WAIC2026前瞻300AI新品首发这5个最值得关注.md": {
+      "sha256": "c43e18e6224f95b8f71af097e09a75a8e9b1594344cbcde121d38b5587f4b655",
+      "size": 435
+    },
+    "md/unofficial/wx-156-WAIC2026世界人工智能大会-我们上海见.md": {
+      "sha256": "b6f80cc0b8d31db9638aec42b68977e81bf9f329ac52143f87cd2e352dff8f7b",
+      "size": 435
+    },
+    "md/unofficial/web-223-WAIC2026-蚂蚁乡创-乡村振兴专题专场AI生物科技落地乡野.md": {
+      "sha256": "bf5fa9190ee16ad1b067c7a25e722568872ee4bf783e33c7a4389391710ab44c",
+      "size": 447
+    },
+    "md/unofficial/wx-207-嘉宾阵容重磅揭晓WAIC2026中国信通院智能体论坛限量席位开放.md": {
+      "sha256": "7d4feb9bef4ad4ab53b7dc016458a62965624115620e7c893a0c2a7f3888abfb",
+      "size": 485
+    },
+    "md/unofficial/wx-063-超脑AI-原住民计划参展全指南四天三大板块六大主题展区世界人工智能大会2026.md": {
+      "sha256": "ea7d45769b14b8741b1b01d8d35f65a06de6aa1f46e62a77c03d673629b394af",
+      "size": 506
+    },
+    "md/unofficial/web-092-AI-从-DEMO-到生意线下实操沙龙.md": {
+      "sha256": "3421599639da1739b2817849e9845afb4996f6208d9abb39369b3fc1b2b96d0c",
+      "size": 542
+    },
+    "md/unofficial/web-065-XR-Vision-AI-After-PartyWAIC-专场.md": {
+      "sha256": "05ea1e43f73af92c595b3c72cb7889db22a240c6f25eaa268d6516e3950c60ce",
+      "size": 462
+    },
+    "md/unofficial/web-129-WAIC--上海滨江轻松AI夜聚.md": {
+      "sha256": "f7c39709be2d2db69b61a0b96e6482445ec64bc757059fc863dca837656bdf79",
+      "size": 537
+    },
+    "md/unofficial/web-012-WAIC-FUTURE-TECH-Pitching-CompetitionSta.md": {
+      "sha256": "774f50554852fa299387d02eabf0c84655e0595fcc9090f84168f4d9a410b928",
+      "size": 664
+    },
+    "md/unofficial/wx-058-入场须知2026上海母婴展今日开幕门票参观指南展位图.md": {
+      "sha256": "094aaedccc547b24e275d67c609e9f6e308f8bddf60ffb66288f4bd2b3a40dae",
+      "size": 456
+    },
+    "md/unofficial/wx-040-3天后开幕今年世界人工智能大会有多炸5大亮点提前看.md": {
+      "sha256": "d2c46e90514c060d29801d96471f1ae8c5757664ae0a2176fe402efa65473bd5",
+      "size": 475
+    },
+    "md/unofficial/wx-067-WAIC2026倒计时2天容芯致远的硬科技在Z2B-201等您.md": {
+      "sha256": "13e06ade7b72998a585a4df2b2c8952f175072cb8ffd4b4abad2467c031db7a9",
+      "size": 475
+    },
+    "md/unofficial/wx-214-申办倒计时WAIC2026会议活动申办共创善智未来.md": {
+      "sha256": "2c43dd648f1c634b65fcbf26e20a386bd361c9391e40826b4f36b4db972479df",
+      "size": 449
+    },
+    "md/unofficial/wx-024-2026世界人工智能大会我们来了--混沌校友在WAIC.md": {
+      "sha256": "bef7ba722a53ac082ba7d4c80e158f8f2a27c2105bff53962f4bd2be2be55a28",
+      "size": 445
+    },
+    "md/unofficial/wx-192-参会指南2026WAIC世界人工智能大会上海购票-入场须知-同期论坛日程.md": {
+      "sha256": "52b2ab48d972af855bd338d2042cb524660cb87436e19452cf6d86934154c596",
+      "size": 480
+    },
+    "md/unofficial/wx-153-WAIC前瞻丨恒生活将亮相WAIC2026大会日程来了.md": {
+      "sha256": "d5220f43d832436ee1b2a3ae6cf20d22bb71cb8d113daf6869f663f90879477a",
+      "size": 451
+    },
+    "md/unofficial/web-035-Shanghai-to-host-record-breaking-World-A.md": {
+      "sha256": "e44a8b532f0f9011598ecc93bde1b127ab5ca13005fda3e7c9b85d47f4472232",
+      "size": 528
+    },
+    "md/unofficial/wx-154-WAIC2026-静安系列活动抢先看市北国际科创区携手企业再度组团亮相.md": {
+      "sha256": "1efd5ccd9a89e61185b2f03be701983b27526ead7f4216c2323101392478c764",
+      "size": 460
+    },
+    "md/unofficial/web-059-WAIC-前站2026-非凡大赏--上海--AI-商业峰会Unique-Bloo.md": {
+      "sha256": "2eb2f03ddeae16741a71b4d3d558ced5a6dfb17e9a0f612a96275503137e69a0",
+      "size": 661
+    },
+    "md/unofficial/web-038-WAIC-2026--清华科创夜当图灵奖遇见独角兽THUWAIC-FT-Netw.md": {
+      "sha256": "27d0f4e4c501ba7314cd4a3f9a47166e9cfb4bec9c13e610621e845f81dbd685",
+      "size": 770
+    },
+    "md/unofficial/web-044-源来有饭WAIC-专场.md": {
+      "sha256": "fd6c6a2e77786de4ba9c8b82f05ce342f8cdfb25c24111290cb67c22318d76a3",
+      "size": 424
+    },
+    "md/unofficial/wx-170-大模型与智能体在2026世界人工智能大会的精彩呈现.md": {
+      "sha256": "bd6dc8c400cfcd82a54090312a0902cdffc1dbae457ca92c5822000112b9b791",
+      "size": 482
+    },
+    "md/unofficial/wx-145-WAIC2026光算力论坛更多重磅嘉宾揭晓Scale-up光互连圆桌阵容豪华亮相.md": {
+      "sha256": "6a945a21014202434f996914b6b85aa4148a221f6dd5dcc9aa9e20bd01eee1e2",
+      "size": 478
+    },
+    "md/unofficial/wx-151-WAIC2026攻略票怎么搞一天怎么逛哪些坑别踩.md": {
+      "sha256": "a2f9dc91aaef8f91b4ceb0b7fc6fd18c55c7465dd29a9fafff4fdabfd9e7ddaa",
+      "size": 444
+    },
+    "md/unofficial/web-140-WAIC-2026-Afterparty--AI小酒馆夜话.md": {
+      "sha256": "e7574a73950c5aec9ecf96a5f578d9a98732b5fe9f6ff854e1c81d72fa50c19e",
+      "size": 433
+    },
+    "md/unofficial/web-120-青年圆桌论坛姚顺雨--林俊旸-同台对谈.md": {
+      "sha256": "b5647c25896f8ac3ee719acde9ca7abdbc51c9337533b6817de5d0b189edae8d",
+      "size": 316
+    },
+    "md/unofficial/wx-139-WAIC2026启幕倒计时四大亮点一文看懂.md": {
+      "sha256": "e56a6e528a23ae502fcdd4854b09229a109b512cd2c54d1579e0f75aab88797e",
+      "size": 423
+    },
+    "md/unofficial/web-139-创新素养培育论坛---全球少年科创对话厅.md": {
+      "sha256": "a0b481c74fc0b1e25146378ec64927d05ddfdc7ffddb71250271b0e4c2675115",
+      "size": 658
+    },
+    "md/unofficial/web-104-RTE-夜场桌游--Vibe-CodingWAIC-UP-官方合作夜场.md": {
+      "sha256": "4131598743ad54f7a3fa996539d2c6f4dcc7cf9eb0882092895efa20b502fcf1",
+      "size": 556
+    },
+    "md/unofficial/web-048-WAIC-2026-Complete-Guide--Why-Zhangjiang.md": {
+      "sha256": "773b347ce45d59cce2a8ca012d2a5c81e660e36a7d7f721c601e9c2fe92c4345",
+      "size": 455
+    },
+    "md/unofficial/web-094-WAIC-Future-Tech-创投生态175-早期项目展--资本对接.md": {
+      "sha256": "14834deb200bb612777a885f0c86bdc16ee72b82281f544cc905dbe368ebd5f3",
+      "size": 624
+    },
+    "md/unofficial/wx-100-收藏一文看懂WAIC2026世界人工智能大会必备攻略指南.md": {
+      "sha256": "22481f08ad3116bc2e05d948dc58d473c54b7d4ededb02c291b684ea83588474",
+      "size": 462
+    },
+    "md/unofficial/web-049-WAIC-UP-2026-全球年终盛会首度落地香港投资推广署.md": {
+      "sha256": "aa9beaa785b059951a4fd25957b604f5e0d9797ae0b497e7a1999d3342dc799f",
+      "size": 562
+    },
+    "md/unofficial/web-119-WAIC-夜聊局聊聊企业-Agent-落地的关键问题.md": {
+      "sha256": "5bd4044ca5c0090e532321706dc8c917ec15685c98d383a28ce292236c2b99ff",
+      "size": 532
+    },
+    "md/unofficial/web-203-超聚变共建智能体时代论坛.md": {
+      "sha256": "2a9a97937c6e87b59709635a8e57908cb630deb4397b879e9be7958e76b8e6f2",
+      "size": 404
+    },
+    "md/unofficial/wx-078-受邀参加WAIC2026卓越睿新发布AI知识科技赛道创新实践.md": {
+      "sha256": "4584ba601b92a9fa610649250cf2bf0935120aab274be77fcbf9e80396bf4f42",
+      "size": 472
+    },
+    "md/unofficial/web-095-AI-Debug-Night--九合AI奇妙夜之WAIC特别版.md": {
+      "sha256": "053f9f11023ad2e7c69cd5f95fbcd7550d2dc3d47be66f5194f1d28c264e078b",
+      "size": 566
+    },
+    "md/unofficial/wx-027-2026世界人工智能大会低空经济论坛将在长宁举办.md": {
+      "sha256": "4895801bc0b61771c26d30f14b29c182696557c1a063fdec77a631bbea48455c",
+      "size": 454
+    },
+    "md/unofficial/web-207-2026WAIC摩尔线程词元时代-万物智能主题论坛.md": {
+      "sha256": "a4d51a41c2e9483c7be71ea7f9fcf5222da23ce4a372a4a066b35e150e130f50",
+      "size": 554
+    },
+    "md/unofficial/wx-176-大会预告丨WAIC2026最新论坛活动日程安排发布.md": {
+      "sha256": "66d1f4acee231dc1446c041669e3b7c755f033394ee305f65cee0990aa6f65c5",
+      "size": 453
+    },
+    "md/unofficial/web-099-商汤基座大模型论坛SenseNova-U1-Pro.md": {
+      "sha256": "bf0b553792c91828218ba6b6345585fb72225b643fbe17f34afccee7369106f8",
+      "size": 503
+    },
+    "md/unofficial/web-108-WAIC-2026-主论坛下午场.md": {
+      "sha256": "1e938684f276319286410e1cfcf4c9587ff4065e1716758659cabf1506cdcbf6",
+      "size": 605
+    },
+    "md/unofficial/web-060-科学前沿论坛Scientific-Frontier-ForumWAIC-2026.md": {
+      "sha256": "38ec25163f9f1491dae024568813b37157d30ae2c5fdad09d93b8cce01aa2733",
+      "size": 609
+    },
+    "md/unofficial/web-088-RTE--WAIC-UP-官方合作夜场桌游--Vibe-Coding.md": {
+      "sha256": "67b030bbb6d091894fe211a31f0952d6a57554d5afe78be80698feaff9e99caa",
+      "size": 572
+    },
+    "md/unofficial/wx-102-AI科技热点日报--2026年07月12日.md": {
+      "sha256": "17438b09db284678a4de3481cf147e77ec7990ad475210fcb2e5d85c24e2a155",
+      "size": 413
+    },
+    "md/unofficial/web-033-WAIC-2026-takes-AI-beyond-conference-hal.md": {
+      "sha256": "4284d2968bcbf20370c2d3341bc3fce32b523a3feccc59442cc2abdfe5ad5bdc",
+      "size": 582
+    },
+    "md/unofficial/web-134-星轨环岛科创乐园WAIC-YOUNG-展区.md": {
+      "sha256": "8c8d09b52036623c0fd68124b2a4956e40b61e1fc48c99d2aee770a2e1c179b6",
+      "size": 623
+    },
+    "md/unofficial/web-086-WAIC-夜聊局聊聊企业-Agent-落地的关键问题.md": {
+      "sha256": "5bd4044ca5c0090e532321706dc8c917ec15685c98d383a28ce292236c2b99ff",
+      "size": 532
+    },
+    "md/unofficial/web-089-知乎Tech-Club-新知科技大会.md": {
+      "sha256": "8707573b63a7687590a2fd4cab252172dc71e75d3d93b77489d6ac66a1c3c250",
+      "size": 456
+    },
+    "md/unofficial/web-093-科学前沿论坛Scientific-Frontier-ForumWAIC-2026.md": {
+      "sha256": "38ec25163f9f1491dae024568813b37157d30ae2c5fdad09d93b8cce01aa2733",
+      "size": 609
+    },
+    "md/unofficial/wx-190-2026世界人工智能大会7月17日上海开幕10-万大展300款全球首发亮点抢先看.md": {
+      "sha256": "9cae59ca582f0c6c5c87cfc3858a3678c19e56b39c2a46cba2838f6be85a29e4",
+      "size": 483
+    },
+    "md/unofficial/web-139-WAIC-UP--观猹-Good-or-Bad-之夜.md": {
+      "sha256": "c6ded9bbdcf3f1a302138661c1086254fee1f943274995ddaae6060aa35200c0",
+      "size": 548
+    },
+    "md/unofficial/wx-121-收藏一文看懂WAIC2026世界人工智能大会必备攻略指南.md": {
+      "sha256": "03ce273fc4002a056267812a1f9f73920028eabf73d458a6664927c1fc96da1c",
+      "size": 456
+    },
+    "md/unofficial/web-098-AI-Native-Service-Night---我们都是新工种.md": {
+      "sha256": "bd1b882b5a06d62156fe2524f2a5702bf9a32ad9edc68d56312f6ac77b766695",
+      "size": 577
+    },
+    "md/unofficial/web-031-WAIC-2026攻略世博你到底还藏了多少惊喜上观新闻.md": {
+      "sha256": "34ee3382c0fed6acf01ca38d49d0365584990a80e60fc32d5f1862f9368b60a3",
+      "size": 537
+    },
+    "md/unofficial/wx-012-努比亚公布WAIC2026产品阵容全球首款AI智能体手机-AI宠物-直播神器.md": {
+      "sha256": "d870a3c83a1d2ad6fe6fe9972076542d773c7541291ecaeb520c113b82399baa",
+      "size": 474
+    },
+    "md/unofficial/web-121-双姚对话腾讯--谷歌-DeepMind.md": {
+      "sha256": "03edaf323793e368c7280af8a219465559aa20f21480747de59614b262f20baf",
+      "size": 300
+    },
+    "md/unofficial/wx-105-倒计时3天---宏创盛安WAIC2026亮点抢先看附张江会场观众参会指南.md": {
+      "sha256": "4de7ced75033f8366242946db6abace1f5c9b97289ba0065d65e37cfc082d26e",
+      "size": 478
+    },
+    "md/unofficial/web-045-WAIC-期间第-2-届-AI-研究者派对之夏.md": {
+      "sha256": "7032fe6b6ea0636bc16438deda387abcc910bf7c0c0445fbc80ddccf90f5e530",
+      "size": 596
+    },
+    "md/unofficial/wx-174-活动购票2026WAICAI创新者思享汇纵论人机关系下一程.md": {
+      "sha256": "4a5c26d78f0961c2f6df7559ad39ce0f65f181b2ac5890f113b669410554c454",
+      "size": 463
+    },
+    "md/unofficial/web-082-WAIC-2026-Private-Dinner100-AI-Founders-.md": {
+      "sha256": "3011a29bdb9f37b71a9c5a662fcf0128018296db37be25d1ea835cbc4c56f543",
+      "size": 555
+    },
+    "md/unofficial/web-039-2026世界人工智能大会将于7月17日至20日在上海举行央视网产业.md": {
+      "sha256": "aa5c1177ca55a93ee5da092efbafd0099f25b44c338f9c3eeeb4d50d8e4bbb21",
+      "size": 510
+    },
+    "md/unofficial/web-063-AI-创业秘聊局第-6-期WAIC-交流AI-全球化专场.md": {
+      "sha256": "07527e68f446353f1cc0735126bfcff611bf3cb4e8653db90344fac10bff5459",
+      "size": 517
+    },
+    "md/unofficial/wx-070-据央视消息2026世界人工智能大会将于7月17号至20号在上海举行.md": {
+      "sha256": "45b25d7dacf9252d3740a556ace40d04a6b1e67ea27fe00f373389074931d024",
+      "size": 468
+    },
+    "md/unofficial/web-051-AI-TASTE-之赛博酒保--上海-AGI-BarThe-Bubble-Tes.md": {
+      "sha256": "cc9f6ec525317558ea2e8bd87390bf1e62e4ce90b420ec595e6dadb19fcde4c0",
+      "size": 495
+    },
+    "md/unofficial/web-054-2026-WAIC-山西籍-AI-创业者夜话上海.md": {
+      "sha256": "9ec3e4bb40d23ac33b982c8c394265126c7a01232dc010ac9e08184373dbe6b7",
+      "size": 482
+    },
+    "md/unofficial/web-215-WAIC2026论坛智赋生命医创未来AI驱动生命健康产业全链条革新.md": {
+      "sha256": "a55f71d1e2477fc1d950e315da1db1adf6dd562d7b64a110c6698f2185a4b9b3",
+      "size": 479
+    },
+    "md/unofficial/wx-261-智见AI合创未来人工智能投融资论坛.md": {
+      "sha256": "68bd81819fe3dcff6b209a65242b5dece79cbe71d5be6bfbb841828e2618254c",
+      "size": 663
+    },
+    "md/unofficial/wx-166-74-7102026世界人工智能大会将于7月17日至20日举行2025年度上海市.md": {
+      "sha256": "fd7953fc2f969e3899aaaf45b6965dfb3a8ec006738905f9f2d1f2911b271e98",
+      "size": 518
+    },
+    "md/unofficial/wx-157-WAIC2026重磅前瞻AI-生物科技落地乡野解锁乡村零碳循环新路径.md": {
+      "sha256": "61e7fc79550297f43f8e8f63f6eef896bd5c34ab16cfb5c1053a10dc441d19ba",
+      "size": 472
+    },
+    "md/unofficial/wx-209-七月双展联动--长飞诚邀您共赴世界人工智能大会和中国互联网大会.md": {
+      "sha256": "7a01825ac0758a57e3045896df55b34520169d84c6ccc533afb2c6db3741fa5c",
+      "size": 483
+    },
+    "md/unofficial/wx-010-受邀亮相WAIC2026Gcow安全团队分享自研智能Agent攻防实践.md": {
+      "sha256": "1544b54a4764a095bc062f1fbd37752e4dc8944d2ccbe6436517293bb69c55bd",
+      "size": 462
+    },
+    "md/unofficial/wx-317-Datawhale-联合主办-WAIC-2026-线下论坛7月18日下午.md": {
+      "sha256": "4f011dc89d4381df7bae489071abfac79b58ce6b20ccc442425e12a6e263cae6",
+      "size": 807
+    },
+    "md/unofficial/wx-122-WAIC-2026世界人工智能大会逛展指南及最新图纸论坛活动日程安排发布.md": {
+      "sha256": "eed9135edccc9769f578776232bece548b2aaa39dd9a33d81f885a7c568cdcf1",
+      "size": 479
+    },
+    "md/unofficial/web-066-今晚的-APIWAIC-After-Hours.md": {
+      "sha256": "7d010ff86e86b361383fe912448b825462b20548a4a0bc3686a2ab4a7c6f8c2f",
+      "size": 483
+    },
+    "md/unofficial/wx-041-曾一品受邀世界人工智能大会出席圆桌论坛.md": {
+      "sha256": "af48d61837de1456234b416f25d22248454230c495ff9473f817b7ef9a4364d7",
+      "size": 458
+    },
+    "md/unofficial/web-092-WAIC-前站2026-非凡大赏--上海--AI-商业峰会Unique-Bloo.md": {
+      "sha256": "2eb2f03ddeae16741a71b4d3d558ced5a6dfb17e9a0f612a96275503137e69a0",
+      "size": 661
+    },
+    "md/unofficial/web-154-人工智能之旅创造下一代人工智能论坛.md": {
+      "sha256": "b26eecd18b46660a8fd2570130cdc459f4a85200a51ca859b4ed49aca3b19d32",
+      "size": 425
+    },
+    "md/unofficial/web-055-RTE--WAIC-UP-官方合作夜场桌游--Vibe-Coding.md": {
+      "sha256": "67b030bbb6d091894fe211a31f0952d6a57554d5afe78be80698feaff9e99caa",
+      "size": 572
+    },
+    "md/unofficial/wx-032-2026世界人工智能大会WAIC.md": {
+      "sha256": "494ffdf95519369048bae39665b2296644d495358ddc468272c5364e135e3747",
+      "size": 407
+    },
+    "md/unofficial/wx-137-本周AI热点速览0706712.md": {
+      "sha256": "6d089ac22e065210f2eaf8c7bf8df8393a683eade17e9c7a2dc3b9d3c766e311",
+      "size": 413
+    },
+    "md/unofficial/web-221-WAIC2026-Praxis-Side-Event.md": {
+      "sha256": "fdaef9f533651517130f6cbb3f11811a0d4e24d4bf56e60402ac177c7bd13bb5",
+      "size": 477
+    },
+    "md/unofficial/web-101-大晓机器人世界模型驱动物理AI从理解到执行论坛世界模型六小龙巅峰论坛.md": {
+      "sha256": "5d1932caefe715978263dbfa319b3c64c26e0684c69ae4136b6cbfef8b01e3fd",
+      "size": 614
+    },
+    "md/unofficial/web-095-WAIC-2026-世界人工智能大会主会--主论坛--展览.md": {
+      "sha256": "50815204a332eb7002f6275f5420a5307c76d349c00d47be3f308eca2cf814ed",
+      "size": 877
+    },
+    "md/unofficial/web-218-WAIC2026-星工聚将-活动图灵奖-Richard-Sutton-出席.md": {
+      "sha256": "501a83c8621ab5ff2d850471b91e6e6f3d53c9aa6bd11b84ff16ddd0b476989b",
+      "size": 423
+    },
+    "md/unofficial/web-122-知乎Tech-Club-新知科技大会.md": {
+      "sha256": "8707573b63a7687590a2fd4cab252172dc71e75d3d93b77489d6ac66a1c3c250",
+      "size": 456
+    },
+    "md/unofficial/wx-014-WAIC2026攻略世博你到底还藏了多少惊喜.md": {
+      "sha256": "002508654e895c18fd385eea78568f37780ac809fc18c359a9ebd72828a08dab",
+      "size": 438
+    },
+    "md/unofficial/web-237-2026WAIC智能财务论坛.md": {
+      "sha256": "b5a109edcbd8cfbd5d8679d287a7bee6e18a7fdf81581335ed63cb6eac0abe5a",
+      "size": 402
+    },
+    "md/unofficial/web-087-WAIC-UP-AI创作者大会WAIC-UP-DAYNIGHT-系列.md": {
+      "sha256": "3e702a8a01a736b5c39b3b3cb2230cd19cf592036c4650dad26fa3ea72c68947",
+      "size": 627
+    },
+    "md/unofficial/web-084-AI-TASTE-之赛博酒保--上海-AGI-BarThe-Bubble-Tes.md": {
+      "sha256": "cc9f6ec525317558ea2e8bd87390bf1e62e4ce90b420ec595e6dadb19fcde4c0",
+      "size": 495
+    },
+    "md/unofficial/wx-023-2026世界人工智能大会即将启幕.md": {
+      "sha256": "ae9afaea0498e37b33376353427fa827878bcc824657099f915f4e7a6a763874",
+      "size": 429
+    },
+    "md/unofficial/web-064-AI-Agent-时代的一人公司与-Token-经济论坛.md": {
+      "sha256": "c811a1696eaa97d5b0ae0d261efb5ca66da08a44f6d43de52b4d9fbd913f3854",
+      "size": 549
+    },
+    "md/unofficial/wx-204-征集启幕2026WAIC全球创新项目路演全赛道全球招募链接顶级资本登顶世界AI舞.md": {
+      "sha256": "37fa935029f9e2733f2492274917d81925cb66615110400bce1c0c074c9454d7",
+      "size": 516
+    },
+    "md/unofficial/wx-205-第六届长三角青少年人工智能奥林匹克挑战赛网安守护者正式赛报名火热进行中.md": {
+      "sha256": "c76fbb6fcc368d951b749cd56b97d3f08daa63455fe62c90eca18baf4902e65c",
+      "size": 508
+    },
+    "md/unofficial/web-109-WAIC-2026-科学前沿论坛Scientific-Frontier-Foru.md": {
+      "sha256": "a31bd5f6293debbb5f6b45706aa7246ade0bc0b019c843aaffe2cc8886965046",
+      "size": 656
+    },
+    "md/unofficial/web-132-海外高校创业者之夜-Founders-Night.md": {
+      "sha256": "d6012b756d9870c68c6511034c51a983de76b984cdd1b323d7782829e69279de",
+      "size": 465
+    },
+    "md/unofficial/wx-132-2026世界人工智能大会上海世博展览馆H4展馆全域链接馆看创业公司和新项目.md": {
+      "sha256": "224af959468c963499c2274ce6281da9315bcc0b7de9bca7a19bca9f9b7c1bb9",
+      "size": 506
+    },
+    "md/unofficial/web-065-有鹿机器人通用具身智能大脑赋能商用机器人产业化实践暨-AI130S-新品发布会.md": {
+      "sha256": "033624a4364c40aad15921dd5ddbffd49f3cd40039dc6979751aba9f4d1b9ab2",
+      "size": 552
+    },
+    "md/unofficial/web-014-阿里云主题论坛Agentic-Cloud-智能体时代的基础设施.md": {
+      "sha256": "df3c93029af6acade09e07c04141b52820d532e0beeefc7debbaf509cbcd76bb",
+      "size": 702
+    },
+    "md/unofficial/wx-025-倒计时2天-2026世界人工智能大会WAIC参会指南请查收.md": {
+      "sha256": "d70dc027517d0eddda8767f9ca4db830dec03d06815b1a1d1c19ad307c6aad8a",
+      "size": 453
+    },
+    "md/unofficial/web-214-WAIC2026-硅星人-AI青年场分论坛.md": {
+      "sha256": "7eced76d5db33b40e81c655975ae1243e69fd6b5602b6056e3a0205423bc0a78",
+      "size": 408
+    },
+    "md/unofficial/wx-136-WAIC2026攻略张江你怎么这么硬核.md": {
+      "sha256": "8da3ded4ec45e8d88c02748017fad87664a583c9728035615706055f4346b6d6",
+      "size": 429
+    },
+    "md/unofficial/web-126-人工智能全球治理与可持续发展论坛.md": {
+      "sha256": "c69141540196c68cecce3cbc8bae261493da4c4197aa3bb759bd34a52d542f6b",
+      "size": 426
+    },
+    "md/unofficial/wx-131-论坛排片WAIC2026最新论坛活动日程安排发布.md": {
+      "sha256": "1d0fdd71a3b69c00ad1fdf8afbfa610d7a6c62a82b9e530cf15df87a8734cd57",
+      "size": 440
+    },
+    "md/unofficial/web-052-Demo-DayPhysical-AI-Camp16-家-Voice-First.md": {
+      "sha256": "3ad20aac47fdbbecf0e5a47509666e870044f0efc3fddcaf1884d3c514eb97d0",
+      "size": 575
+    },
+    "md/unofficial/wx-144-科创周刊工信部今年人形机器人整机产量有望破十万台一季度人形机器人出口增长2102.md": {
+      "sha256": "1862566ce00c0a0436f50745a5928843cd660ff64db57edd4ef81aaff3608c1e",
+      "size": 551
+    },
+    "md/unofficial/wx-326-WAIC全球伙伴多元视野专场在AI中看见具体的人三无论坛.md": {
+      "sha256": "e1b59427f6047846e7f8503d82e53f4693ba539b9e2ae107e5707566be7bcac5",
+      "size": 706
+    },
+    "md/unofficial/wx-114-AI频道-WAIC2026最高规格国家领导人首次出席.md": {
+      "sha256": "987cfb1e3c8366aa32f4778bb80da24ace6875dd94ca624ffecd0bddf6679484",
+      "size": 450
+    },
+    "md/unofficial/wx-086-行业资讯--一文读懂WAIC2026全议程全球AI盛宴即将启幕.md": {
+      "sha256": "675a24cae108f311bc2941f47c1c092731b4e7d08c96c2635436dbe30d52e0fd",
+      "size": 450
+    },
+    "md/unofficial/wx-004-WAIC2026正式开幕AI行业大变局告别参数内卷进入落地为王时代.md": {
+      "sha256": "29ef7e3de9a95ae19e19de66fcdd2111c7393e478c9bad885addef5bf2982462",
+      "size": 455
+    },
+    "md/unofficial/wx-008-壹沓科技WAIC2026-倒计时3天最新议程出炉全球供应链顶流已集结.md": {
+      "sha256": "7ef12698409b1e45254632d64706291518a6bc5dd7852575803bbe140c415a28",
+      "size": 474
+    },
+    "md/unofficial/wx-109-7月17日-20日-世界人工智能大会WAIC-2026宏创盛安与您不见不散.md": {
+      "sha256": "b9f7f9a189c67793cf3cdaab108ddc56f6fe3fbec4959e45d9527e8f524fa2df",
+      "size": 470
+    },
+    "md/unofficial/web-091-AI-Summer-Night-WAIC-2026-AI创投交流之夜.md": {
+      "sha256": "fe15892772266663477db4da10e61def35809f8bd8994eea96e4b3aedabae4c9",
+      "size": 568
+    },
+    "md/unofficial/wx-250-极致协同-沪筑生态中兴通讯全栈智算生态论坛.md": {
+      "sha256": "a22ad56c1d41311b2dff4d003f8416da94de15ea720d9ddf69b99045c034a367",
+      "size": 907
+    },
+    "md/unofficial/wx-179-2026世界人工智能大会将于7月17日至20日举行.md": {
+      "sha256": "c36491477a728207e5e90a314b4aac434fda8e10e5671415cc14e1707937418f",
+      "size": 468
+    },
+    "md/unofficial/web-233-2026WAIC-全球创新项目路演全赛道全球招募.md": {
+      "sha256": "0db08a9dc9171f92bb7fae32936536fa6da3653d2fe2c4f9a015f0c535ddad46",
+      "size": 449
+    },
+    "md/unofficial/web-040-小红书让-Builders-被看见.md": {
+      "sha256": "93340b4d69809e25e953bb33d44bc2c783df197b9e012fda5c3288303dbb16fb",
+      "size": 505
+    },
+    "md/unofficial/wx-098-五大教育亮点提前看WAIC2026-即将开幕从个性化学习-Agent-到青少年A.md": {
+      "sha256": "f089a9a38a3bbd6d43f35a8e802bc756ae273f0c78afa235ed26f82e1b3e0b3b",
+      "size": 519
+    },
+    "md/unofficial/web-026-坐上AI时代的时光机WAIC期间来潮宿直播间聊聊天.md": {
+      "sha256": "10ce9327a26911e15fc3a04e8fb9f8f001288f08d3504e64c1b14151b69e6ead",
+      "size": 551
+    },
+    "md/unofficial/web-137-AI奇幻皮影战场.md": {
+      "sha256": "48e408f35cf29aadb5b84c0ba21c3c10eb16f9b74cb013b94916fab0acd45437",
+      "size": 575
+    },
+    "md/unofficial/web-019-APEC-Youth-AI-Creators-NightAttraX--WAIC.md": {
+      "sha256": "173306243709ed9407cd2ffc83ee5d063f804ddb9ab700add2736a3f565d3c1f",
+      "size": 623
+    },
+    "md/unofficial/wx-282-OPC独立先锋挑战赛决赛.md": {
+      "sha256": "2fa3621a7ed832f35b8e49d74d8084be75869bfde3602164eb314b0227451f80",
+      "size": 755
+    },
+    "md/unofficial/web-141-2010后-AI-原住民计划青少年AI-IP-短片-文创展示.md": {
+      "sha256": "a9b64f794097b05e61593b66c786bb36eebfa8c1eda669ad3f439afe929c6084",
+      "size": 434
+    },
+    "md/unofficial/web-125-AI-从-DEMO-到生意线下实操沙龙.md": {
+      "sha256": "3421599639da1739b2817849e9845afb4996f6208d9abb39369b3fc1b2b96d0c",
+      "size": 542
+    },
+    "md/unofficial/wx-090-蚂蚁开源-WAIC2026活动汇总论坛展览和多场-Side-Event等你来玩.md": {
+      "sha256": "6abe55e8b74000cb782920a4c152c856947ef00ec85e2955493eda7797ddc7b2",
+      "size": 457
+    },
+    "md/unofficial/web-016-WAIC预告丨人工智能的全球发展与治理共赢与共治之路智源社区.md": {
+      "sha256": "47b2281f7941b76a57e56ded7528888099da0e74616e853d4d3333873ea5f1f9",
+      "size": 494
+    },
+    "md/unofficial/wx-035-主论坛丨2026世界人工智能大会议程重磅揭晓.md": {
+      "sha256": "e5a167a5b8fa9061099320eace0011d75327b52e4f84710576deb0c2d7272df6",
+      "size": 462
+    },
+    "md/unofficial/wx-112-资讯7-月17日世界人工智能大会即将举行.md": {
+      "sha256": "7667dafe2c3c06997fd0d50384b350595dc012e8c2690ea3c086d27c0ad49f6f",
+      "size": 451
+    },
+    "md/unofficial/web-206-2026WAIC-中国信通院智能体论坛从大模型到智能体迈向自主智能新纪元.md": {
+      "sha256": "f5124d5e8e0e98d2138548925b46e5d2f63490044da8f043b325f0cf34277578",
+      "size": 482
+    },
+    "md/unofficial/web-001-世界人工智能大会WAIC-2026-AfterpartyAI-Hero-Asse.md": {
+      "sha256": "8ea509cfa4b4699091c1d487dad60a19a64796db2b7fcd2a1b8e6d301371af79",
+      "size": 887
+    },
+    "md/unofficial/web-017-WAIC-YOUNG-会期活动指南星轨环岛展区-机器狗越障-AIGC音乐-AI皮.md": {
+      "sha256": "7616f8598b06fbea9584e1787f7cd391b28e2849d818c2de0da36e6bf1f7c77b",
+      "size": 852
+    },
+    "md/unofficial/web-135-机器狗越障总决赛AI大模型具身智能自主导航赛.md": {
+      "sha256": "71ab4989fa10c868103674630867ba9fe9f870b89da9928b5950a9fc94bacc9f",
+      "size": 798
+    },
+    "md/unofficial/web-123-世界模型驱动下的AI影视新范式论坛.md": {
+      "sha256": "a92c64b85c378d59f863d672181ff6187f925a06ad50097c692fe506c2e37879",
+      "size": 425
+    },
+    "md/unofficial/wx-171-WAIC2026前瞻AI-赋能乡村人居新范式雨虹修缮蚂蚁乡创联合打造-AI-建筑.md": {
+      "sha256": "3d4532995c94dea4bdbd4a4c6848bc76db3f0126431e77506cb5153b92e7736b",
+      "size": 510
+    },
+    "md/unofficial/wx-119-世界人工智能大会华为超节点大模型最具价值的6家公司附名单.md": {
+      "sha256": "7329721190cf09aeb3361d31ff4d3ada479c5008b3300d9b6d966335058017da",
+      "size": 477
+    },
+    "md/unofficial/web-070-WAIC-UP-2026--青年观察家思享会.md": {
+      "sha256": "150865ac2de85025fce2ffe4bce75aafb619a87c8f5c3f67eb554082d55f33b2",
+      "size": 506
+    },
+    "md/unofficial/wx-003-WAIC2026丨算清三本经济账解码张江AI创新小镇的生长逻辑.md": {
+      "sha256": "5132678a187d465ab72d14e43ff4c9f2a199afa7449fc3d8039de05efc4d4c5a",
+      "size": 461
+    },
+    "md/unofficial/web-085-Context-Infra-交流会Agent-如何构建上下文资产.md": {
+      "sha256": "2fcc239d8291d4b411fa666f8ac9f00db52ab4f2b8a72c6f989761500eabccc7",
+      "size": 526
+    },
+    "md/unofficial/web-024-陆家嘴-716文客松-AI创业者投资人酒会.md": {
+      "sha256": "f40a28c36bd2209402f9aa0a46f5c9eab1ced50c9baef527fee5c8e2c4b2d8c0",
+      "size": 594
+    },
+    "md/unofficial/wx-006-WAIC2026世界人工智能大会逛展攻略张江会场.md": {
+      "sha256": "fa3cdeb053177394a7aa3bae27f7b9b50cc5d82313f822b71ff3f31a653cb503",
+      "size": 463
+    },
+    "md/unofficial/web-030-2026世界人工智能大会怎么预约Hi-WAIC全攻略含重点论坛表.md": {
+      "sha256": "0046f7019f0e7382eb89398595b6e304e78bdcf298bf6573b6aecc90b912f240",
+      "size": 688
+    },
+    "md/unofficial/wx-018-WAIC2026阿里云主题论坛倒计时.md": {
+      "sha256": "2f149607bb85f940f669b5d6c8a64cd167b8e004de6b0a0f241256b618c2f202",
+      "size": 411
+    },
+    "md/unofficial/web-036-AI-闹航海夜--WAIC-2026-特别版.md": {
+      "sha256": "58735db9645b5fb111d5b10f392a01b568dbc0a673322a5c6e3bdb7fc8fc79aa",
+      "size": 475
+    },
+    "md/unofficial/wx-277-国际人工智能教育论坛.md": {
+      "sha256": "e3f2320076c62ee3913aaa5e079bdfcaf4a692e72d55d90e9f2ae9230fa8747b",
+      "size": 629
+    },
+    "md/unofficial/web-007-Booming-NightWAIC-前夜-100-位-AI-创始人无议程畅聊蓝驰.md": {
+      "sha256": "152f58b0efbf6b8a81c96f77aabd102eeb4cb3c64e8fee0738ab3f7c02c52b64",
+      "size": 751
+    },
+    "md/unofficial/web-006-文客松-AI创业者投资人酒会陆家嘴-716.md": {
+      "sha256": "9fce16c38894fc5754d11bd656f1231693bdf287885d5839f16d235803326f8a",
+      "size": 648
+    },
+    "md/unofficial/wx-101-2027WAIC世界人工智能大会超全参观指南可直接收藏预约交通路线避坑.md": {
+      "sha256": "c2b33f1c9fff0882f23491698c2f115772d7fb76ac5252a4024fcda0389146cc",
+      "size": 480
+    },
+    "md/unofficial/wx-185-AI日报Anthropic在Claude脑中挖出意识区DeepSeek自研芯片摆.md": {
+      "sha256": "fb3a8103e36cccddb9b276cecc1f96fbb041d420e3fcf8e29d78218249531b4b",
+      "size": 511
+    },
+    "md/unofficial/web-034-WAIC-2026-Guide--AI-Partnership-for-a-Br.md": {
+      "sha256": "c8a416a2450b4beb30d94130f809c5ee8d2b426dcc21f2c55ca0d2ca801c86eb",
+      "size": 574
+    },
+    "md/unofficial/web-090-WAIC重构算力链接会链动智造场景为先--AI高端制造产业对接专场.md": {
+      "sha256": "84680d2b3e8bb17b230f1697af793e962be0810e41b8f8dbc859bf78be25c776",
+      "size": 550
+    },
+    "md/unofficial/wx-133-2026-WAIC世界人工智能大会超全逛展攻略场馆核心版购票避坑.md": {
+      "sha256": "94517e1c257ee6b3ae6a36f365492b4e7d70363f6a81219c5cf9d4872cbb86e6",
+      "size": 471
+    },
+    "md/unofficial/web-134-第二届-AI-研究者派对之夏连high三晚.md": {
+      "sha256": "3df73d48556e637d1e898b20cfccc437b2e1eca503ce53aaaf907b6bf34347ee",
+      "size": 550
+    },
+    "md/unofficial/wx-251-从大模型到智能体迈向自主智能新纪元论坛.md": {
+      "sha256": "cb8ded1e551433974238786c28ac7addfb4443ef860e27277e68817191662c84",
+      "size": 912
+    },
+    "md/unofficial/web-047-蚂蚁开源--WaytoAGIAgent-创业局.md": {
+      "sha256": "9b74353d362e2db1b007e291df83d5928181bfdbe151da73b1004631a79bb469",
+      "size": 469
+    },
+    "md/unofficial/web-177-百型智能企业本体与系统协同-开启2B-AI应用新范式新品发布.md": {
+      "sha256": "c8b16bd29f9f07fb4a384a7307f925401c2c00ee8ce0569dc47be45111026150",
+      "size": 458
+    },
+    "md/unofficial/web-137-RTE-夜场桌游--Vibe-CodingWAIC-UP-官方合作夜场.md": {
+      "sha256": "4131598743ad54f7a3fa996539d2c6f4dcc7cf9eb0882092895efa20b502fcf1",
+      "size": 556
+    },
+    "md/unofficial/wx-080-2026WAIC四个展馆和论坛速通解析攻略.md": {
+      "sha256": "60e67f1fa7da80575ae70661fbe4ce987e15771e4686a7513963d481c2056548",
+      "size": 425
+    },
+    "md/unofficial/wx-103-关注--2026世界人工智能大会本周开幕提前解锁五大看点.md": {
+      "sha256": "a196532d4f7457b784d1130ae8c300229eb96109652579c75f0f92fecaafff2e",
+      "size": 473
+    },
+    "md/unofficial/web-067-AI穿越者之夜不止穿越周期还想预测未来.md": {
+      "sha256": "6791731e64810af6d87631b40ed03383a7b0cce240bccb63d21c3b26cf9a793f",
+      "size": 518
+    },
+    "md/unofficial/web-078-2026-WAIC-OPC之夜-开放AI共创饭局.md": {
+      "sha256": "b7712fa68fd20ff0562766bcb22258deea122137c962510b6029d9187f7a7922",
+      "size": 545
+    },
+    "md/unofficial/wx-011-智启芯境灵机壹动即将亮相WAIC2026专注灵巧手核心部件支撑工业场景精细操作.md": {
+      "sha256": "ff88320a804310176a08664f555d4246194472a36eb48679fe956de3db1371b9",
+      "size": 487
+    },
+    "md/unofficial/wx-073-WAIC2026世界人工智能大会暨人工智能全球治理高级别会议日程总览门票入场指南.md": {
+      "sha256": "5ab72696626754ee9836841bdafe5515fadc0b9c6b4973a6da131a79e3e71057",
+      "size": 487
+    },
+    "md/unofficial/web-097-AI-Agent-时代的一人公司与-Token-经济论坛.md": {
+      "sha256": "141c2c884db8af2a88b6c4bac551455ee501b83bb548edd80bc290c3c053f606",
+      "size": 517
+    },
+    "md/unofficial/wx-110-2026世界人工智能大会7月17日于上海启幕.md": {
+      "sha256": "47d2db181db7ea2bad4b83e4627a7d8ec9153ec021f0fd17414cf02cd9471e4b",
+      "size": 444
+    },
+    "md/unofficial/wx-089-上海世界人工智能大会中国如何争夺未来十年产业生态主导权.md": {
+      "sha256": "016572e44d6d8cea973bdebcde19e2b2cbc11a600fa2a715f930f32d92649cfa",
+      "size": 479
+    },
+    "md/unofficial/wx-249-音创宇宙--WAIC-首个青少年-AI-音综.md": {
+      "sha256": "0a0006b32f7a27689bf418d91725e2587c76495070c655904092376dbb09a8f1",
+      "size": 762
+    },
+    "md/unofficial/web-040-2026世界人工智能大会暨人工智能全球治理高级别会议百度百科.md": {
+      "sha256": "a98e420b36921855b54259ee025e04f6386208dd72b77214511daddc9cb61a6d",
+      "size": 746
+    },
+    "md/unofficial/web-011-China-Innovation-Journey--Shanghai-Shenz.md": {
+      "sha256": "a1bc737c7797fab524f851e2727388affe2015c2d0ffe3e5cb847385eefdd93c",
+      "size": 590
+    },
+    "md/unofficial/wx-162-WAIC2026观展攻略三地四馆怎么跑票怎么买哪些展台值得蹲.md": {
+      "sha256": "b0261f250891762d51424c7734147cd949a465f7150377a0cf707ca7d2f73d94",
+      "size": 463
+    },
+    "md/unofficial/web-106-WAIC-UP--观猹-Good-or-Bad-之夜.md": {
+      "sha256": "c6ded9bbdcf3f1a302138661c1086254fee1f943274995ddaae6060aa35200c0",
+      "size": 548
+    },
+    "md/unofficial/web-030-AI-创业秘聊局第-6-期WAIC-交流AI-全球化专场.md": {
+      "sha256": "07527e68f446353f1cc0735126bfcff611bf3cb4e8653db90344fac10bff5459",
+      "size": 517
+    },
+    "md/unofficial/wx-184-展会动态搭建全球AI治理交流平台完善算力语料产业支撑推出全民AI体验2026世界.md": {
+      "sha256": "5f7c2439cc332f371e0ed0b89e40bab79ecf6cfa6018b331735155ffe7ecfeaa",
+      "size": 560
+    },
+    "md/unofficial/wx-172-WAIC2026智启具身论坛议程公布.md": {
+      "sha256": "baafde0816c35f0746dc7dfe091b30b2bd028fc6170f1774fc91d2bfde0c6121",
+      "size": 419
+    },
+    "md/unofficial/web-140-Solo-App-Geek-Camp独立开发者极客营.md": {
+      "sha256": "2b44ccc46f21b2270804424c37716bf238a279ee18c5399680bcd95d865ea18a",
+      "size": 547
+    },
+    "md/unofficial/wx-130-WAIC2026最新论坛活动日程安排发布.md": {
+      "sha256": "810b14aaa3c3c73d32c4a0d7c7d8414a19cfc53a3406796993c6fffe0c57b9e1",
+      "size": 428
+    },
+    "md/unofficial/wx-247-Good-or-Bad之夜徐汇西岸硬核夜聊.md": {
+      "sha256": "5c7f982bd6da97abe719e60fa631d603f0ed7763a6caeada586b83b865e50b62",
+      "size": 694
+    },
+    "md/unofficial/web-004-WAIC-的清华朋友圈之夜-THUWAIC-FT-Networking-Nigh.md": {
+      "sha256": "0cd7ca5129da4ca937fdc526b3545267a248ab71552479a9d218dbc17db936c0",
+      "size": 850
+    },
+    "md/unofficial/web-026-WAIC-Academic-2026首届世界人工智能大会学术.md": {
+      "sha256": "3fe7b1d8a92b872389658cbd225a9b9e83c35f4c236e18d446aa0701e99648af",
+      "size": 573
+    },
+    "md/unofficial/web-109-第三届人工智能与智算发展论坛.md": {
+      "sha256": "3ce9cfda8056ce3a0d76191d87740b94ace35130c58fca15b7322125c130b733",
+      "size": 447
+    },
+    "md/unofficial/web-217-2026WAIC-启明创投创业与投资论坛从算力原点到应用落地的进化征程.md": {
+      "sha256": "dcb7668664d437eb523a52cc63c0e46572dc6ae39c73c4544df4ba0ae907b681",
+      "size": 471
+    },
+    "md/unofficial/wx-318-WAIC-2026企业家论坛.md": {
+      "sha256": "f8b6a3aa1f2cbf698adef8ce0f694a62e89d5ddb47c7c362519661868651adbb",
+      "size": 711
+    },
+    "md/unofficial/web-074-PPIO-AI-Builders-NightWAIC-前夜专属局.md": {
+      "sha256": "10962eb5a9407d2db6dcfd9aa5014171d4410268b084744ab56ff8d63343a557",
+      "size": 503
+    },
+    "md/unofficial/web-074-AI-TASTE-PARTY.md": {
+      "sha256": "dcd1b58334c24ecf9eab088e5da1a18be059f361713e75830f80c79050a3f172",
+      "size": 527
+    },
+    "md/unofficial/web-046-WAIC-2026-观众注册300款AI产品全球首发聚展网.md": {
+      "sha256": "a73965a982241186e1bca0485ea2a34aa67f5fbc8c708ab66d5a53db3feecf7d",
+      "size": 486
+    },
+    "md/unofficial/wx-047-国产原创技术集中亮相世界人工智能大会即将举行.md": {
+      "sha256": "9a2299117cae3c365ca0f4dab08c73d0a3eff54278ce4736494dbdf5f498ac32",
+      "size": 462
+    },
+    "md/unofficial/web-097-AI-盛夏夜2026-创新者微醺-Mixer.md": {
+      "sha256": "b2cab44b1017022124ad1871e054f825d9299afa11d6824600680c5a4f6628ca",
+      "size": 487
+    },
+    "md/unofficial/wx-128-智能伙伴-共创未来2026世界人工智能大会启幕上海全球AI治理中国方案重磅亮相.md": {
+      "sha256": "8dd99cdd21730bd434a3ac878be5017cfcdb5603153d821eac02725ffb2d403e",
+      "size": 489
+    },
+    "md/unofficial/wx-054-最新-WAIC2026交通指引与入场须知.md": {
+      "sha256": "6b25fa0df4d876b5cdab0a724743d298ef603149c45672a46072b52bbaa9ae08",
+      "size": 451
+    },
+    "md/unofficial/web-029-WAIC-2026-前瞻300新品全球首发全解读AI工具宝箱.md": {
+      "sha256": "c3854bf75d1415b43df5c2d5f667e5b5cfa04ede709cd8c77f42bea5ac09a7f8",
+      "size": 521
+    },
+    "md/unofficial/web-087-2026-WAIC-山西籍-AI-创业者夜话上海.md": {
+      "sha256": "9ec3e4bb40d23ac33b982c8c394265126c7a01232dc010ac9e08184373dbe6b7",
+      "size": 482
+    },
+    "md/unofficial/web-028-2026WAIC展品地图大模型国产算力人形机器人8大类全在这.md": {
+      "sha256": "bdedbe6b656cce15d7a27519f726e2eb0df73c665b49e6fc2f1ea356c74ab7e7",
+      "size": 504
+    },
+    "md/unofficial/web-096-WAIC--上海滨江轻松AI夜聚.md": {
+      "sha256": "f7c39709be2d2db69b61a0b96e6482445ec64bc757059fc863dca837656bdf79",
+      "size": 537
+    },
+    "md/unofficial/web-080-蚂蚁开源--WaytoAGIAgent-创业局.md": {
+      "sha256": "9b74353d362e2db1b007e291df83d5928181bfdbe151da73b1004631a79bb469",
+      "size": 469
+    },
+    "md/unofficial/web-107-WAIC-2026-Afterparty--AI小酒馆夜话.md": {
+      "sha256": "e7574a73950c5aec9ecf96a5f578d9a98732b5fe9f6ff854e1c81d72fa50c19e",
+      "size": 433
+    },
+    "md/unofficial/web-136-AIGC音乐造梦基地.md": {
+      "sha256": "7917b4799101651a7226acb07463ae8799c4739405f9b6e3acff35a16037c062",
+      "size": 604
+    },
+    "md/unofficial/wx-069-重磅2026世界人工智能大会7月17日上海启幕点亮全球智能未来.md": {
+      "sha256": "db3425cd62ae069299fadfcb659eb0d71896f2ce9db9ba2319723e1cf0cbf273",
+      "size": 477
+    },
+    "md/unofficial/wx-201-报名开始2026世界人工智能大会智法共生法律大模型推理革新与应用生态论坛邀您参加.md": {
+      "sha256": "0b38364f34f6b31f0e4ff62257627b2735ada603d1d76b764b7c1e9f5d518b32",
+      "size": 523
+    },
+    "md/unofficial/wx-123-2026世界人工智能大会日程上海.md": {
+      "sha256": "98b955494942697f2432603489b0d4ae6e84f1aa01cd270467474e9db171093c",
+      "size": 420
+    },
+    "md/unofficial/wx-052-WAIC-2026世界人工智能大会本周五开幕超全逛展指南请查收.md": {
+      "sha256": "c38b1ffce61fe6b7129871a09764e3fab85a643208a68d8c8ae05014ffd3fb5c",
+      "size": 465
+    },
+    "md/unofficial/wx-206-展商动态国泰海通首度亮相WAIC2026精彩亮点抢先看.md": {
+      "sha256": "797ae23c8b51a5914815686ef6d122dcabdb4cf5879380cd7961de40b8760daa",
+      "size": 460
+    },
+    "md/unofficial/web-224-WAIC2026-智启具身论坛.md": {
+      "sha256": "5178266ec393bdbed9ba4529c77145577c62053424b73e4fd610dac66f30d429",
+      "size": 529
+    },
+    "md/unofficial/wx-178-2026世界人工智能大会7月17日启幕-超300款产品将全球首发.md": {
+      "sha256": "6b16750a10709d1ed30f1f04bdd5e544eb240c88478623b52c49c008fd93a52e",
+      "size": 467
+    },
+    "md/unofficial/wx-175-论坛排片WAIC2026最新论坛活动日程安排发布.md": {
+      "sha256": "5b3402db87e65bfa18bff427ef44e0e33148d00cc58e3a0d3019071a43ed1bdf",
+      "size": 450
+    },
+    "md/unofficial/wx-015-WAIC2026即将启幕央视镜头下的国产算力新面孔蓝芯算力.md": {
+      "sha256": "22f909f7c19fa3fc84c51ab510dee84cfa3c6edfa13bbac7fb3d5ec76d91145e",
+      "size": 460
+    },
+    "md/unofficial/web-125-算力专题论坛量子--太空算力.md": {
+      "sha256": "4a521d5d4dc9ee790cc86d9deaa839ec4e477e3bdb5fd1b5b18b619acdf9cc83",
+      "size": 399
+    },
+    "md/unofficial/web-058-GO-SUMMIT--WAIC-上海AGI-Villa-周年活动.md": {
+      "sha256": "cab732f64fb822262ac0551311f323c9c2392ae531f5a554dc5bf638e4c53497",
+      "size": 485
+    },
+    "md/unofficial/wx-147-生态繁荣-WAIC2026企业决策与AI原生组织解码企业AI转型三问.md": {
+      "sha256": "6dc12b2ed4111d094c255ccde1a5df04732fad95e41213a50ab154c4f5a5ccb0",
+      "size": 482
+    },
+    "md/unofficial/wx-262-共建全球科技金融伙伴新生态投融资论坛.md": {
+      "sha256": "799ce38ff7ced5df19116270779a282d21255f83516ef061bf80bee3922bf508",
+      "size": 652
+    },
+    "md/unofficial/web-111-2026-WAIC-OPC之夜-开放AI共创饭局.md": {
+      "sha256": "b7712fa68fd20ff0562766bcb22258deea122137c962510b6029d9187f7a7922",
+      "size": 545
+    },
+    "md/unofficial/wx-146-生态繁荣WAIC2026人文社科以人文温润智能前路以中国方案应答全球文明之问.md": {
+      "sha256": "5d516c8e6d53271143684b33c460ac7c530b37bc50640b789fda1aaf73a52b6d",
+      "size": 506
+    },
+    "md/unofficial/web-029-Founders-Back-Founders--717-上海.md": {
+      "sha256": "d420141a92d3eb8934482e59a6b4e4f75cfc465686827ff986b1647af6ab0676",
+      "size": 456
+    },
+    "md/unofficial/web-076-第三届人工智能与智算发展论坛.md": {
+      "sha256": "3ce9cfda8056ce3a0d76191d87740b94ace35130c58fca15b7322125c130b733",
+      "size": 447
+    },
+    "md/unofficial/wx-017-WAIC2026具身智能新品提前看.md": {
+      "sha256": "58b2a8242100846a4e1194404aa40218bcca8a068e020b83e23406f17bfe3de8",
+      "size": 418
+    },
+    "md/unofficial/web-105-WAIC-Future-Tech-初创路演物理跃迁-AI4S-全球聚变系列.md": {
+      "sha256": "b723dd104db46fb5dc291b3eb9402d0ceae5f2640b39b3dbc81950b1dc6cd245",
+      "size": 630
+    },
+    "md/unofficial/web-013-ASEANChina-AI-Technology--Industry-Colla.md": {
+      "sha256": "1f9c63dafa1e21775f4ba3cd600cd9d3ba64ab774157b98378c651226f0dfe97",
+      "size": 675
+    },
+    "md/unofficial/web-131-AI-Native-Service-Night---我们都是新工种.md": {
+      "sha256": "bd1b882b5a06d62156fe2524f2a5702bf9a32ad9edc68d56312f6ac77b766695",
+      "size": 577
+    },
+    "md/unofficial/wx-242-AI创作者之夜WAIC-UP-DayNight-夜场.md": {
+      "sha256": "fcc6d4fb718d20c92d89b2a068713dffd412845c96a5268a60b2b6ec90da8452",
+      "size": 702
+    },
+    "md/unofficial/wx-164-与时代-共昇腾昇腾WAIC2026剧透四大亮点抢先看.md": {
+      "sha256": "3e6387ab59ae1f005aaf05cd1acdcd8f24afc982045750832fd13d79cf396f66",
+      "size": 448
+    },
+    "md/unofficial/wx-173-7月17-20日2026WAIC上海人工智能大会同期活动论坛议程已公布一键收藏.md": {
+      "sha256": "b6957822c27aad217d89feb138d42b3641d914e443505668037957066b0fb546",
+      "size": 492
+    },
+    "md/unofficial/wx-183-论坛排片WAIC2026最新论坛活动日程安排发布.md": {
+      "sha256": "7f2fbcf9e5096c98e68d63273952b224f9bd29d8ff8c0ef74e0c061c87bfbc28",
+      "size": 441
+    },
+    "md/unofficial/web-113-WAIC-Afterparty创新王--香港科技大学上海中心.md": {
+      "sha256": "f960e5f537e2cd0060f306b105fce3330588b9a52dc52505d6a0842570636784",
+      "size": 548
+    },
+    "md/unofficial/wx-321-WAIC思想者论坛回到原点拆解AI的第一性原理.md": {
+      "sha256": "f40c1f55c5a9f64c23dd13b47223124b7ac2a46096dc76657ef03c73b0f28e5a",
+      "size": 903
+    },
+    "md/unofficial/web-236-WAIC2026-中国信通院智能体论坛限量席位开放.md": {
+      "sha256": "bac9e5d9b846cf8b25d1a84235325b9f6353ae6ff2252a8d02adee2fbaa5113c",
+      "size": 446
+    },
+    "md/unofficial/web-155-太初元碁智算筑基大规模国产算力系统驱动AI规模化落地论坛.md": {
+      "sha256": "40d919d433ca71ad51d4841632decf58d99ea770d4d728c382d378a6edfb7614",
+      "size": 464
+    },
+    "md/unofficial/wx-029-2026世界人工智能大会-上海见馆报.md": {
+      "sha256": "c3dbdcf8f5554e21f41c9e49c3860c54f14f7411f72ad68b969fb62a667b8c75",
+      "size": 430
+    },
+    "md/unofficial/web-216-2026WAIC-AI赋能生命健康新范式论坛.md": {
+      "sha256": "5915d2403ac497f4701b840dad410bbb7381e8987d35087de8123e6464ec30f0",
+      "size": 409
+    },
+    "md/unofficial/wx-200-亚太橡塑展2026第23届亚太国际塑料橡胶工业展7月8-11日参观指南.md": {
+      "sha256": "665b6a96beeba7f2b2faaf708b6f57be052669fa69029625d7b608c680eb80b3",
+      "size": 469
+    },
+    "md/unofficial/wx-195-2026世界人工智能大会7月17日启幕-超300款产品将全球首发.md": {
+      "sha256": "957d2d859c1e6ce74e005f836a77d86bf312a6bf4e8ed5052e8abe98d1d743ce",
+      "size": 467
+    },
+    "md/unofficial/wx-088-2026世界人工智能大会前瞻300-款首发1100-家企业三地四馆联动这场-AI.md": {
+      "sha256": "d747b95bb29c64f3db3be6d4feb3c5c45c1c4f437ba114eca3af0429125f5d8b",
+      "size": 512
+    },
+    "md/unofficial/wx-323-WAIC全球伙伴行业链接专场产业界如何共画AI的边界与方向.md": {
+      "sha256": "cd86a8ab6b8da4dd295b5cb879a8fc7d755a642054dc81331d5bb53ef677d0c8",
+      "size": 967
+    },
+    "md/unofficial/web-048-AI-创新者思享汇2026-WAIC--AI-与我人机关系下一程.md": {
+      "sha256": "c124c8bc580c98dbf566a2ae9f343016041626561b6c437b8ac121dcc1a47bd8",
+      "size": 594
+    },
+    "md/unofficial/wx-189-湾顶会前沿资讯2026世界人工智能大会7月17日上海开幕AI投资重心迈向实体产业.md": {
+      "sha256": "3b90bcfd3d9b6df86aa397a9fd197f345ef88ac04767c55e7c4a9e3d3da9cffd",
+      "size": 532
+    },
+    "md/unofficial/wx-094-WAIC2026开幕在即具身赛道值得关注什么内含逛展攻略.md": {
+      "sha256": "d8f2f4103cfe4e6ef097966474cd69c8d6d03e40c15995fcb45e6a1b7873b1a9",
+      "size": 463
+    },
+    "md/unofficial/web-081-AI-创新者思享汇2026-WAIC--AI-与我人机关系下一程.md": {
+      "sha256": "c124c8bc580c98dbf566a2ae9f343016041626561b6c437b8ac121dcc1a47bd8",
+      "size": 594
+    },
+    "md/unofficial/web-199-无问芯穹Token涌现-万物生长论坛.md": {
+      "sha256": "8e74cea6f3dbb37d5cfc2f5bb523e75ce2385845b958a4b2e95420e3ac892eaf",
+      "size": 411
+    },
+    "md/unofficial/web-067-智元智启具身论坛.md": {
+      "sha256": "e9bdc67433206db7718473e3610e2beabedf79125e12b69f9d7d031eb1bca4b5",
+      "size": 493
+    },
+    "md/unofficial/wx-180-未来触手可及2026世界人工智能大会普通人也能玩转的科技盛宴.md": {
+      "sha256": "830ecdbed65da135db1a0ae53ad325948fdc899532a4342bf93b0a54a9b8556e",
+      "size": 486
+    },
+    "md/unofficial/wx-068-WAIC2026行业亮点超前预告探索千行万业新图景.md": {
+      "sha256": "4ef5e5ba2731168f1566bf8953dc529d18bf80b6fa16b7024a2013d2069f7e7e",
+      "size": 343
+    },
+    "md/unofficial/web-041-AI-TASTE-PARTY.md": {
+      "sha256": "dcd1b58334c24ecf9eab088e5da1a18be059f361713e75830f80c79050a3f172",
+      "size": 527
+    },
+    "md/unofficial/web-226-WAIC2026-乡村振兴专题专场AI建筑医院发布雨虹修缮蚂蚁乡创.md": {
+      "sha256": "d21f82b9986d7b12ad59d18bb7dfe507fd2c64084c22d3a7d7746a51d7227723",
+      "size": 457
+    },
+    "md/unofficial/wx-099-成绩查询第九届全国青少年人工智能创新挑战赛开源硬件创意智造专项赛选拔赛及入围决赛.md": {
+      "sha256": "7f54fb7eeb23d1d091b05ea28b4c32fbe310819a5a9de1d0eba7e41ee656029e",
+      "size": 544
+    },
+    "md/unofficial/wx-106-WAIC2026重磅看点蓝芯算力解锁-RISCVAI-智通融合新范式.md": {
+      "sha256": "212f5e91a476de4c7b2a38355159279d94904a6277d1a3260cf6a424a141ee62",
+      "size": 453
+    },
+    "md/unofficial/wx-045-WAIC2026前瞻300AI新品全球首发开发者必知的5大技术趋势.md": {
+      "sha256": "1f18e7344a6c6a0742ff1e0c21b01f70c29c9d7b38f86a63830fd1e5cbbeee2b",
+      "size": 459
+    },
+    "md/unofficial/web-127-WAIC-AI-Nightfall-全球智识之夜寻找全球AI游牧者.md": {
+      "sha256": "603445e9f58a15376f1744a7f03a5d49177af790f7e83db8d9b29cfc5f86e51b",
+      "size": 565
+    },
+    "md/unofficial/wx-191-WAIC2026嘉宾阵容公布从模型终端到基础设施重新理解-AI-记忆.md": {
+      "sha256": "a640d72bfd4ab816eaf34f36e7c22f5cda96819d0119a6b350256dc470361901",
+      "size": 443
+    },
+    "md/unofficial/web-079-光启夜叙--Light-Night.md": {
+      "sha256": "f5aa6a8144c411ce3aa0a5e1d993fde78500f89670dc29e26e1d282112824257",
+      "size": 415
+    },
+    "md/unofficial/wx-320-WAIC全球伙伴学术共振专场AI如何改变人类发现真理的方式.md": {
+      "sha256": "7e98e47ca85b32f17b1169e014c44cd33ce55acd73a989e4346a696b205fef6b",
+      "size": 751
+    },
+    "md/unofficial/wx-246-全球智识之夜徐汇西岸硬核夜聊.md": {
+      "sha256": "c8a7c812750c0f2842a5158926b4d6a24257b68d6ff4725ce285051df44fc56c",
+      "size": 692
+    },
+    "md/unofficial/web-002-WAIC-Afterparty--智元元苼生态之夜.md": {
+      "sha256": "013142dff713d0b7a60c140a7a6ac44fff6896cc9ddd86bdee0501d7f975ce26",
+      "size": 740
+    },
+    "md/unofficial/web-081-AI穿越者之夜.md": {
+      "sha256": "6b55fa66016d685c1bcc25fee2aa2f6ccbda6a33ab051e17bcef13813a63ead0",
+      "size": 410
+    },
+    "md/unofficial/web-101-第二届-AI-研究者派对之夏连high三晚.md": {
+      "sha256": "3df73d48556e637d1e898b20cfccc437b2e1eca503ce53aaaf907b6bf34347ee",
+      "size": 550
+    },
+    "md/unofficial/web-128-AI-Debug-Night--九合AI奇妙夜之WAIC特别版.md": {
+      "sha256": "053f9f11023ad2e7c69cd5f95fbcd7550d2dc3d47be66f5194f1d28c264e078b",
+      "size": 566
+    },
+    "md/unofficial/web-157-智领未来资本跃迁WAIC创投生态论坛.md": {
+      "sha256": "d284d5ee2ac9f1a3949d5a6b63a62c3374da043d11125f39ef57b5788afd34e4",
+      "size": 432
+    },
+    "md/unofficial/wx-002-写代码调设备省电费WAIC2026上西门子让AI真干活了.md": {
+      "sha256": "6acdb0bce503fda4506828de2402f5b0dacb03690db1d48746b91e4bad710376",
+      "size": 444
+    },
+    "md/unofficial/wx-196-2026世界人工智能大会7月17日开幕智算具身两大赛道各汇聚超200家企业.md": {
+      "sha256": "5724991c9f4548a87a052055de9486cb3a22bbd5b13137f6bec35e2fa05ea8ce",
+      "size": 494
+    },
+    "md/unofficial/wx-084-2026-WAIC世界人工智能大会攻略投资人篇.md": {
+      "sha256": "0baf7c2cc37c6e2c2fa1aff98212f2b199503c1a2a3d55bb85ce2e12d9764a76",
+      "size": 438
+    },
+    "md/unofficial/web-107-PPIO-AI-Builders-NightWAIC-前夜专属局.md": {
+      "sha256": "10962eb5a9407d2db6dcfd9aa5014171d4410268b084744ab56ff8d63343a557",
+      "size": 503
+    },
+    "md/unofficial/web-028-WAIC握手局带一个朋友来不限物种.md": {
+      "sha256": "516c72e6aaad293741a9ff4c7e88a6fdc8074b4d98e6cce56abcae14e110f9f3",
+      "size": 479
+    },
+    "md/unofficial/web-118-AI-创业秘聊局第六期---WAIC-交流-AI-全球化专场.md": {
+      "sha256": "0fb570656207e9765aaf45da704a6845f46c4a801d7bd7f0f58cc0d353e93a97",
+      "size": 579
+    },
+    "md/unofficial/web-103-WAIC-UP-2026--青年观察家思享会.md": {
+      "sha256": "150865ac2de85025fce2ffe4bce75aafb619a87c8f5c3f67eb554082d55f33b2",
+      "size": 506
+    },
+    "md/unofficial/web-035-Founder-ParkWAIC-上海见企业-Agent-落地的关键问题.md": {
+      "sha256": "a2a771f6caf3cec89e7ed08f8bd7486ec21edf0b9409b945e079c9463707f694",
+      "size": 534
+    },
+    "md/unofficial/web-133-WAIC-2026-PRIVATE-DINNER100-AI-Founders闭.md": {
+      "sha256": "17bc370c3b32d33ac118457fe0d2150eb5b701df0d7632021387da1e61b47b5d",
+      "size": 564
+    },
+    "md/unofficial/wx-013-WAIC2026一图抢先看超聚变展台解锁智企进化路径.md": {
+      "sha256": "4df3b2a769496e972a517035c690951214e3e00f8be4aabbc80b057e4e14cb0b",
+      "size": 449
+    },
+    "md/unofficial/wx-019-WAIC2026倒计时2天携手昇腾燃动未来.md": {
+      "sha256": "6769cd7f9519f7f23c888adf050a54876dbe28917961f796d3d10559dd454647",
+      "size": 338
+    },
+    "md/unofficial/web-100-智元智启具身论坛.md": {
+      "sha256": "e9bdc67433206db7718473e3610e2beabedf79125e12b69f9d7d031eb1bca4b5",
+      "size": 493
+    },
+    "md/unofficial/wx-244-AI三极夜话WAIC-UP-DayNight-夜场.md": {
+      "sha256": "69ff8fc99f1568ee05bd4576a50acd2ba391cc347fef2afb34591c11661a5652",
+      "size": 705
+    },
+    "md/unofficial/web-071-WAIC-2026--清华科创夜当图灵奖遇见独角兽THUWAIC-FT-Netw.md": {
+      "sha256": "27d0f4e4c501ba7314cd4a3f9a47166e9cfb4bec9c13e610621e845f81dbd685",
+      "size": 770
+    },
+    "md/unofficial/wx-289-主论坛人工智能全球治理高级别会议.md": {
+      "sha256": "cee7b4e529b27862e178b4e14a3d928cb18a094b857f45e21451896a90d205ab",
+      "size": 649
+    },
+    "md/unofficial/wx-203-AI在现实中奔跑WAICYOUNG机器狗越障赛半决赛激战突围巅峰对决蓄势待发.md": {
+      "sha256": "306fa507b5be84c92462f10567fa75bb9ad044beb422de17163ce87cc87c8721",
+      "size": 493
+    },
+    "md/unofficial/wx-155-WAIC2026展通关攻略从零部件底座到人形机一键解锁展商核心看点.md": {
+      "sha256": "fe6145df4a2913c3f58a476cb9f96556b9c5a27023dfcea1406ff16e43dc18b5",
+      "size": 484
+    },
+    "md/unofficial/wx-127-议程首发-2026WAIC启明创投创业与投资论坛从算力原点到应用落地的进化征程.md": {
+      "sha256": "5fca01563cea155c42a4e0e9bff4d7d64be509c9beaf5fbcf463d95f18477328",
+      "size": 501
+    },
+    "md/unofficial/web-197-天数智芯算力基座进化与千行百业智能重塑论坛.md": {
+      "sha256": "85057805edae04419840de9c4f64b7776bcc1053cd6d3749b9be9f20729ac983",
+      "size": 440
+    },
+    "md/unofficial/web-182-全球AI开放计算与智能体技术生态论坛.md": {
+      "sha256": "d309cb63e44818a4f461dc48704268767f3fd317a923f70564ddb59b8bf99934",
+      "size": 422
+    },
+    "md/unofficial/wx-082-WAIC-2026上海世界人工智能大会会议日程门票入场指南.md": {
+      "sha256": "e1aca4d10cda70aa66f6427bb9304be63955c4fde6cd94d3e9cc78d8da983e44",
+      "size": 466
+    },
+    "md/unofficial/web-220-WAIC2026-曦智科技光计算光互连双轮驱动的AI基础设施新范式论坛.md": {
+      "sha256": "2d87b67ff941a5865fa1c3129e8cb3545bbf6f8cc1f3b75cc0b72c8fed8ecc0b",
+      "size": 544
+    },
+    "md/unofficial/web-020-模速社群日--WAIC前夜--vLLM-Meetup推理全栈实战从芯片打到应用.md": {
+      "sha256": "9304b47da730844e3eac8a9a48588f5a1e02189853881acf8e44c1315a91c1b4",
+      "size": 559
+    },
+    "md/unofficial/wx-062-具身智能早报20260715WAIC进入倒计时瑞萨押注PhysicalAI个人机.md": {
+      "sha256": "f11b9db97d0a99798e57fe446cf0d49b89ec5d78a9060e3c8b09d529ea2ec001",
+      "size": 486
+    },
+    "md/unofficial/web-121-WAIC-UP-AI创作者之夜.md": {
+      "sha256": "eb066a9c816c2e2999cf9fd56e1806be663100a1ca47b560546a7058b30a39f6",
+      "size": 460
+    },
+    "md/unofficial/wx-076-718截止报名-WAIC2026全球AI数智文创创新应用巅峰路演盛典.md": {
+      "sha256": "f7e1e8d8ca469060450ebee05109bfb1dc4d9f19e246e858d87882d3f2637e42",
+      "size": 495
+    },
+    "md/unofficial/wx-163-上饶市青少年科技普及协会成为-2026世界人工智能大会分论坛协办单位.md": {
+      "sha256": "01e7f36e8df620ef6e35560376c7f21c0395b30f46857dfd2b37a7ad01dada9c",
+      "size": 486
+    },
+    "md/unofficial/wx-125-WAIC2026攻略场馆布置和论坛议程来了.md": {
+      "sha256": "e675999943e752e91ab7c2e77faf7ecbaf3249d2e47ebf378fb90081ed3c725f",
+      "size": 438
+    },
+    "md/unofficial/wx-050-WAIC2026最新论坛活动日程安排发布.md": {
+      "sha256": "794a81040df9516d791da7655b13f77afe30e083ea298cdacf8b3e54bd5c9b36",
+      "size": 255
+    },
+    "md/unofficial/web-114-AI穿越者之夜.md": {
+      "sha256": "6b55fa66016d685c1bcc25fee2aa2f6ccbda6a33ab051e17bcef13813a63ead0",
+      "size": 410
+    },
+    "md/unofficial/web-059-坐上AI时代的时光机WAIC期间来潮宿直播间聊聊天.md": {
+      "sha256": "10ce9327a26911e15fc3a04e8fb9f8f001288f08d3504e64c1b14151b69e6ead",
+      "size": 551
+    },
+    "md/unofficial/wx-150-WAIC2026攻略人在徐汇已经上头10086次.md": {
+      "sha256": "505caafc1404ae2fa621cadf5bfd7d4cf49b648b7c10b6e5216700ae361c3fb8",
+      "size": 441
+    },
+    "md/unofficial/web-085-AI-创业秘聊局第六期---WAIC-交流-AI-全球化专场.md": {
+      "sha256": "0fb570656207e9765aaf45da704a6845f46c4a801d7bd7f0f58cc0d353e93a97",
+      "size": 579
+    },
+    "md/unofficial/wx-093-世界人工智能大会周六展览见.md": {
+      "sha256": "726523f55f6be0b56009fb076cde0a4f3805576f7944af79a54b44eb18c19a75",
+      "size": 371
+    },
+    "md/unofficial/web-111-从共识到行动全球人工智能治理的可能路径分论坛.md": {
+      "sha256": "16af195bc389ec7e20dd9d95bdd37c1b2f7d700d2b1627e8ec904c5fa262ccab",
+      "size": 724
+    },
+    "md/unofficial/web-138-音创宇宙WAIC-YOUNG-青少年AIGC音乐综艺展演.md": {
+      "sha256": "58a49bda14fccb1c408bb7e332d759d4789c234062de556f26dfe6acf082c8f3",
+      "size": 725
+    },
+    "md/unofficial/wx-048-工业人专属2026WAIC期间工业领域论坛及活动一站式汇总.md": {
+      "sha256": "320a14484c3c9ad03de876e8bbfea48f9ca880e178e5aba7ac137ba9755e96fb",
+      "size": 471
+    },
+    "md/unofficial/wx-159-逛WAIC必看-WAIC2026最全议程-逛展攻略全总结.md": {
+      "sha256": "c2ca1f7e2206b26af5b796add61928572a5c6aaff414fc3ba9e4b3d9eabbb2d3",
+      "size": 447
+    },
+    "md/unofficial/web-069-AI-闹航海夜--WAIC-2026-特别版.md": {
+      "sha256": "58735db9645b5fb111d5b10f392a01b568dbc0a673322a5c6e3bdb7fc8fc79aa",
+      "size": 475
+    },
+    "md/unofficial/wx-113-重磅嘉宾阵容聚焦前沿AI与智能体安全WAIC2026安远AI汇聚全球专家共议AI.md": {
+      "sha256": "45031d45a835c82c177874bc185b0f94e35b9fb6c0496693081e6f07db1bab7b",
+      "size": 490
+    },
+    "md/unofficial/web-036-2026-WAIC-set-for-July-17-with-over-300-.md": {
+      "sha256": "cded2ff65c7cb49b4bd6b7d4a360134b280f30bc5c29fa76d5afee1355073aa5",
+      "size": 498
+    },
+    "md/unofficial/wx-005-谁还在卷参数WAIC2026全是能干活的实体AI.md": {
+      "sha256": "3137607f97ee0fcc14315bee1b722abbf6b65211017cc0e71c6675af3ccc88aa",
+      "size": 429
+    },
+    "md/unofficial/wx-120-WAIC2026OpenCSG与您上海见.md": {
+      "sha256": "0478c73d5e7aa18f20bb913159ffb242e1d6429ad6c0af34607a5494b31109b9",
+      "size": 401
+    },
+    "md/unofficial/web-018-WAIC-UP-AI创作者之夜哈佛商业评论中国信睿科技评论.md": {
+      "sha256": "eebe008bd39e381c561f91b0cc2e94bcf26b341e4ae5655fcca617e522fb55a3",
+      "size": 622
+    },
+    "md/unofficial/web-212-超脑-AI-原住民计划---王佳梁-WAIC论坛演讲.md": {
+      "sha256": "35fd1e5e9b5edddb90089b3df1dceac706a23bb89f856ae5d597a94b864569b1",
+      "size": 537
+    },
+    "md/unofficial/web-033-今晚的-APIWAIC-After-Hours.md": {
+      "sha256": "7d010ff86e86b361383fe912448b825462b20548a4a0bc3686a2ab4a7c6f8c2f",
+      "size": 483
+    },
+    "md/unofficial/wx-095-WAIC2026上海世博展览馆完整逛展攻略.md": {
+      "sha256": "c3b3449fa646c5eed932c3b392cc8d2ea8837e059ccf20310886ced31846ca05",
+      "size": 431
+    },
+    "md/unofficial/web-021-SIGNAL-EVE-创见前夜.md": {
+      "sha256": "259363a02a39315cfc7ed2ad1833c3c4447d245bd118519e50cf907c22bf0a47",
+      "size": 462
+    },
+    "md/unofficial/web-148-香港贸易发展局AI驱动经济前沿与全球协同论坛.md": {
+      "sha256": "df5414ef379cb0182936327f95bf3b46483fb5e176694c64793a00d89400024a",
+      "size": 436
+    },
+    "md/unofficial/wx-037-世界人工智能大会即将开展展位图-活动日程安排详情攻略请查收.md": {
+      "sha256": "9a2a3fec72be122cbce72d3691d07b4b8b642a93c7f375c6cff5fcab3968f394",
+      "size": 481
+    },
+    "md/unofficial/web-042-PROBLEM-MARKET--STORYTELLING-HACKATHON-真.md": {
+      "sha256": "0c144b7da152222f06cb1cbf46d1896bbfbcee9882224226776d3e9de27d811c",
+      "size": 528
+    },
+    "md/unofficial/web-082-WAIC-After-Hours-今晚的-API.md": {
+      "sha256": "5939af614c4a786242de5c2f8a084b97c2ae397f3fa668dba9b06c2ffcebc9bd",
+      "size": 440
+    },
+    "md/unofficial/wx-328-WAIC-2026企业家论坛.md": {
+      "sha256": "f8b6a3aa1f2cbf698adef8ce0f694a62e89d5ddb47c7c362519661868651adbb",
+      "size": 711
+    },
+    "md/unofficial/web-130-AI-盛夏夜2026-创新者微醺-Mixer.md": {
+      "sha256": "b2cab44b1017022124ad1871e054f825d9299afa11d6824600680c5a4f6628ca",
+      "size": 487
+    },
+    "md/unofficial/web-066-商汤基座大模型论坛SenseNova-U1-Pro.md": {
+      "sha256": "bf0b553792c91828218ba6b6345585fb72225b643fbe17f34afccee7369106f8",
+      "size": 503
+    },
+    "md/unofficial/web-037-量子位-WAIC-首夜真话局AI-聪明够了行动呢.md": {
+      "sha256": "d97e92d9c5c25a4603095d69dc03c7c06dcd0c82c754dba12d65d0da79731e83",
+      "size": 623
+    },
+    "md/unofficial/wx-243-APEC青年AI创造者之夜WAIC-UP-DayNight-夜场.md": {
+      "sha256": "c81d4473b90effc2997d74dd5c1e1dcd6255280253675dc37ceb23a886ed7665",
+      "size": 673
+    },
+    "md/unofficial/wx-149-WAIC2026最全-Side-events-汇总--Praxis活动在18号晚.md": {
+      "sha256": "e07fda87a94a880968bc9fb7551f01674bb051e5e7cb72a7a7fab1a1df629349",
+      "size": 446
+    },
+    "md/unofficial/wx-020-WAIC2026倒计时2天来百融展台当AI考官.md": {
+      "sha256": "7fede7c4592140ab90f8c05a38a64508c41a857755fd127b48cc9e7531137e6c",
+      "size": 432
+    },
+    "md/unofficial/web-070-量子位-WAIC-首夜真话局AI-聪明够了行动呢.md": {
+      "sha256": "d97e92d9c5c25a4603095d69dc03c7c06dcd0c82c754dba12d65d0da79731e83",
+      "size": 623
+    },
+    "md/unofficial/web-051-WAIC-2026--Artificial-Intelligence-Inter.md": {
+      "sha256": "423ff3256e4c16f016ed668286bf370ebf505b6aeea55d506260f440a46fb664",
+      "size": 420
+    },
+    "md/unofficial/wx-239-全球-AI-创造者生态连接计划发布.md": {
+      "sha256": "2350d3d4a6f967ff6184992f83603818f23b97d17fe025bb5f193ea5d93f9ec8",
+      "size": 687
+    },
+    "md/unofficial/web-009-AI-Summer-Night-WAIC-2026-AI创投交流之夜.md": {
+      "sha256": "8533b862efcd7857e5875d70b28d4203e5adcfcf13cd8a1d53e39ef573b744aa",
+      "size": 564
+    },
+    "md/unofficial/wx-141-先睹为快一站解锁思特奇WAIC2026全亮点.md": {
+      "sha256": "409a4264c1f43c53167ba3c38f019474b45abcaeeff25825cba4983fa07ff716",
+      "size": 267
+    },
+    "md/unofficial/web-147-物理AI重塑智能制造论坛.md": {
+      "sha256": "93893515b3af2e8ebb6b627e3253b620dd508100d8faa116eaa69733f9028030",
+      "size": 416
+    },
+    "md/unofficial/web-055-Booming-Night--世界之外.md": {
+      "sha256": "ed710208bc9625b46ebae5451fa08964f68fe497b6e6d14b2044a01ccef77953",
+      "size": 579
+    },
+    "md/unofficial/web-062-Founders-Back-Founders--717-上海.md": {
+      "sha256": "d420141a92d3eb8934482e59a6b4e4f75cfc465686827ff986b1647af6ab0676",
+      "size": 456
+    },
+    "md/unofficial/wx-059-WAIC2026开发者攻略去之前花-5-分钟看完哪些活动不能错过.md": {
+      "sha256": "2aa37d8cb1e3251250f1823373e7213bcd4f9819636089947fd272ae7357dedc",
+      "size": 456
+    },
+    "md/unofficial/web-231-WAIC2026AI开放计算与智能体技术生态论坛FlagOS.md": {
+      "sha256": "175c916bf0a9bbd7d39d7ae9f364b52cb1993d9cbebe4bae856cf24794b5745d",
+      "size": 552
+    },
+    "md/unofficial/wx-046-WAIC2026倒计时2天当国家主席走进AI会场中国向世界传递了什么信号.md": {
+      "sha256": "9fd36f29616c088e36b71cfda55a99284095ba6a39120b8ab5dd24a1e62bed0b",
+      "size": 488
+    },
+    "md/unofficial/web-054-SIGNAL-EVE-创见前夜.md": {
+      "sha256": "259363a02a39315cfc7ed2ad1833c3c4447d245bd118519e50cf907c22bf0a47",
+      "size": 462
+    },
+    "md/unofficial/wx-111-规格拉满主席讲话--多部委及地方政府联合主办--2026世界人工智能大会7月17.md": {
+      "sha256": "e1cf08358333f2a8fcd6539c2e758044f96ae6d25c7b9e4122f96806434593fb",
+      "size": 537
+    },
+    "md/unofficial/wx-055-WAIC2026逛展最全攻略一篇文章说清这场AI盛会八大亮点.md": {
+      "sha256": "9c01fece1b3f627a39c4dcc3f002c77dd37f76ba74b263cd3927583c68014523",
+      "size": 457
+    },
+    "md/unofficial/web-210-WAIC2026-全球AI数智文创创新应用巅峰路演盛典.md": {
+      "sha256": "2486b7266a5a768655f80fcfde1a9e3e0d1b2da25126891c4e8fd2a1848dc4f6",
+      "size": 461
+    },
+    "md/unofficial/web-090-WAIC-泡汤夜谈--限席小聚.md": {
+      "sha256": "291c81dfb83c4d66658f3d894c9d0c71494a13d896c893a8b0a0128fead6de8c",
+      "size": 485
+    },
+    "md/unofficial/wx-193-关于举办中国上海第九届青少年人工智能创新大赛的通知.md": {
+      "sha256": "71114317bf23d8f8eef1493850e99aca250d53b87f71c1cd0f746707c8728d49",
+      "size": 472
+    },
+    "md/unofficial/web-230-中国上海第九届青少年人工智能创新大赛含WAIC青少年创新探究营AI科技嘉年华.md": {
+      "sha256": "f35e565689e78a24d622b27dd833e63062e0359d8529d20669eacc1f127ca4a6",
+      "size": 487
+    },
+    "md/unofficial/web-126-AI-Summer-Night-WAIC-2026-AI创投交流之夜.md": {
+      "sha256": "c2d748922f23959cd9e7522d71ab981662a28b29e0b37223d3da233b34d35908",
+      "size": 439
+    },
+    "md/unofficial/wx-126-WAIC2026完整议程Datawhale亮相世界人工智能大会.md": {
+      "sha256": "9ef1e1c468506d85b7ef66351e8fc598fa588e323d691e2364d32ad64631e960",
+      "size": 433
+    },
+    "md/unofficial/web-099-海外高校创业者之夜-Founders-Night.md": {
+      "sha256": "d6012b756d9870c68c6511034c51a983de76b984cdd1b323d7782829e69279de",
+      "size": 465
+    },
+    "md/unofficial/web-196-欧莱雅集团美一程-有你有AI论坛.md": {
+      "sha256": "6e05b58e7ccdcd5b533642f69212067d103912933a3144c25315ba285be8f640",
+      "size": 422
+    },
+    "md/unofficial/wx-071-2026世界人工智能大会本周五7月17-20日开幕附现场展位图展商名录停车指南.md": {
+      "sha256": "30fb512e732eac78128503b906c34cd8de387065e30c0b48f2e7c4a293fdb8d8",
+      "size": 485
+    },
+    "md/unofficial/web-044-倒计时30天2026世界人工智能大会将于7月17日至20日在上海举行上观-文汇.md": {
+      "sha256": "bc4439b5aecc0c3e72163acf26a261cd49f28ec21865c5d83ce553ba184cca32",
+      "size": 561
+    },
+    "md/unofficial/wx-092-WAIC2026上海世界人工智能大会会议日程总览附门票入场指南.md": {
+      "sha256": "b6346d25fd864d723eddb9994f98bdfddb47a3075244fd48a528d0656dd4e9c1",
+      "size": 459
+    },
+    "md/unofficial/web-016-香港生产力促进局AI智能工厂展区亮相-WAIC-2026.md": {
+      "sha256": "d9e1f21070240d6e9ba7f4f1ff8fa0d78adc0e4a95f14e6d62155046ff79960f",
+      "size": 536
+    },
+    "md/unofficial/wx-148-世界人工智能大会WAIC-2026下周开幕机器人从后空翻到进工厂.md": {
+      "sha256": "877c4f99c02748f939e35a1440b8fef9dfbdf798dda4e5b12d770304dbf61f84",
+      "size": 468
+    },
+    "md/unofficial/web-052-Context-Infra-交流会Agent-如何构建上下文资产.md": {
+      "sha256": "2fcc239d8291d4b411fa666f8ac9f00db52ab4f2b8a72c6f989761500eabccc7",
+      "size": 526
+    },
+    "md/unofficial/wx-271-数学与人工智能论坛.md": {
+      "sha256": "0ad1d6bdd34d958b1987ad99e1612390b87a6014ae47878d40873913e96026ed",
+      "size": 616
+    },
+    "md/unofficial/wx-124-议程首发2026WAICAI-赋能生命健康新范式论坛海每康创始人许磊受邀做主题分.md": {
+      "sha256": "195632fe1de85045937f25396ce96ee8c3e97e846bed6693c35d37beb81adc83",
+      "size": 485
+    },
+    "md/unofficial/wx-275-人工智能青年先锋对话论坛.md": {
+      "sha256": "2715f1e3f25d62101385e3783507cbc1fb2a70265e9c764d8425f99b2652443a",
+      "size": 635
+    },
+    "md/unofficial/web-053-手工川年度见面会--WAIC-Afterparty.md": {
+      "sha256": "d931fb4e290a0d878c9b7ed598f6ee0666757f2535789260daebe2041244435c",
+      "size": 481
+    },
+    "md/unofficial/web-115-WAIC-After-Hours-今晚的-API.md": {
+      "sha256": "5939af614c4a786242de5c2f8a084b97c2ae397f3fa668dba9b06c2ffcebc9bd",
+      "size": 440
+    },
+    "md/unofficial/web-142-AI创造者之夜Datawhale--AGI-Villa--硅星人.md": {
+      "sha256": "464db8d70335da6d36767e495b3dcd9b3ad32d2fd4699d708a933c771ba4d172",
+      "size": 619
+    },
+    "md/unofficial/wx-240-Datawhale-参与主办的-WAIC-2026-线下论坛7-月-18-日下午.md": {
+      "sha256": "feb4e966646e89881b33b575e88f50668f2f15253acd0788c0ec181af84f2615",
+      "size": 823
+    },
+    "md/unofficial/web-043-2026-世界人工智能大会--AI-创作者大会WAIC-UP-AI-创作者之夜.md": {
+      "sha256": "163a904254c9af201a37b3bab1dfad976257fe98b69351f465695d62012f0bb5",
+      "size": 642
+    },
+    "md/unofficial/web-209-超脑-AI-原住民计划参展四天三大板块六大主题展区.md": {
+      "sha256": "c37038d4d22fb261129a6559fd7146c1a57dba65c81fd8e5eb0816262d1a08f3",
+      "size": 539
+    },
+    "md/unofficial/wx-177-2026世界人工智能大会-四大展馆全面开放超千家参展商名单公布.md": {
+      "sha256": "f199daaf5403de73b5a77465cf21a9f093823676a2b1f0e0f499cf3407117008",
+      "size": 500
+    },
+    "md/unofficial/web-015-WAIC-2026-科学前沿论坛Scientific-Frontier-Foru.md": {
+      "sha256": "385152e2ca22762d5d8eb9ed0da507339fdde9ad0b6c255a0ec65bd9ef598c6b",
+      "size": 618
+    },
+    "md/unofficial/wx-158-探秘2026世界人工智能大会的智能终端产品.md": {
+      "sha256": "b18eee1aa95a911387cb282d6962be7c1c062641a5fda03bdf85259a5e860fe5",
+      "size": 468
+    },
+    "md/unofficial/web-003-WAIC-2026-PRIVATE-DINNER100-AI-Founders-.md": {
+      "sha256": "f39597bfb053cc5381a5ad0b1a95e3a7a4770dd4c3fb2c73ff035def9a0e5d36",
+      "size": 719
+    },
+    "md/unofficial/wx-168-7月17日努比亚AI智能体手机即将亮相世界人工智能大会.md": {
+      "sha256": "c5e5e58057bbf7ee985807853e53c169c5c00a7dfc8efaebe47e4b0202feac4c",
+      "size": 458
+    },
+    "md/unofficial/web-096-WAIC-Academic-2026WAICA-首届世界人工智能大会学术.md": {
+      "sha256": "2959d1713d2154c88546921e6e6af6d9b875c98306192443e6a44c5377e180b2",
+      "size": 823
+    },
+    "md/unofficial/web-034-AI穿越者之夜不止穿越周期还想预测未来.md": {
+      "sha256": "6791731e64810af6d87631b40ed03383a7b0cce240bccb63d21c3b26cf9a793f",
+      "size": 518
+    },
+    "md/unofficial/wx-324-AI-GRAVITYAI跨境合作对话出海圆桌.md": {
+      "sha256": "e3264031ba0ba00e125b04e60bd15a8cc0636b99fd6376ee8df2db8b53971bfe",
+      "size": 855
+    },
+    "md/unofficial/web-020-Future-Tech谁会成为下一个AI巨头175个早期项目站上WAIC-202.md": {
+      "sha256": "c11c8a673440e57315dcc945cd18d49b266824098b0bd19a581d057a403191f2",
+      "size": 645
+    },
+    "md/unofficial/web-032-WAIC-2026-What-to-expect-in-Shanghai-thi.md": {
+      "sha256": "a598f1eec098088317ae6aaa6db411535d3990340bdc2b0220a213d523c157b3",
+      "size": 589
+    },
+    "md/unofficial/wx-085-WAIC2026完整议程2026世界人工智能大会将在上海举行.md": {
+      "sha256": "36c0e80a50c3d258651283eb74bb52e36d69d3b25094ab5dbaba787db8c02db0",
+      "size": 448
+    },
+    "md/unofficial/web-017-WAIC-UP-2026-全球年终盛会首度落地香港投资推广署.md": {
+      "sha256": "aa9beaa785b059951a4fd25957b604f5e0d9797ae0b497e7a1999d3342dc799f",
+      "size": 562
+    },
+    "md/unofficial/wx-140-WAIC2026亮点前瞻昇腾950超节点首次真机亮相.md": {
+      "sha256": "dd1145362617cac070440495bf6a3c7803d1aacc2809108a66e8d331f067898a",
+      "size": 342
+    },
+    "md/unofficial/web-083-XR-Vision-After-Party.md": {
+      "sha256": "3cc0ba3cf8ca82f5cc35df8d9cf1928bbcee1b3fc9fb5fa01280052b15859450",
+      "size": 408
+    },
+    "md/unofficial/web-123-WAIC重构算力链接会链动智造场景为先--AI高端制造产业对接专场.md": {
+      "sha256": "84680d2b3e8bb17b230f1697af793e962be0810e41b8f8dbc859bf78be25c776",
+      "size": 550
+    },
+    "md/unofficial/web-235-国泰海通人工智能论坛国泰海通首度亮相WAIC2026.md": {
+      "sha256": "933ecf446ee8dacc3db4b0f3061ab1f66db58ccb64448a491b0a14320a776750",
+      "size": 524
+    },
+    "md/unofficial/wx-056-WAIC世界人工智能大会开展倒计时2天三大会场参会购票攻略速存.md": {
+      "sha256": "14d58e2a5b73e5e165252838fc27053e9923a144616df17052fa79f6972faa2c",
+      "size": 480
+    },
+    "md/unofficial/wx-208-WAIC2026倒计时世界人工智能大会上的教育新信号.md": {
+      "sha256": "f20602a0903a98890b8a7e8ad465334c6131391d613a4655f0b2aa250a7047a1",
+      "size": 457
+    },
+    "md/unofficial/web-103-WAIC-上海-FDE-线下交流活动.md": {
+      "sha256": "06ef45d7bcb1d52ab79e10cf940d721ee12cfcc79beade2b3517d4d744b1da97",
+      "size": 498
+    },
+    "md/unofficial/web-078-WAIC-期间第-2-届-AI-研究者派对之夏.md": {
+      "sha256": "7032fe6b6ea0636bc16438deda387abcc910bf7c0c0445fbc80ddccf90f5e530",
+      "size": 596
+    },
+    "md/unofficial/web-222-静安场景涌现-WAIC2026-静安一小时专场活动.md": {
+      "sha256": "48bca4a5c548887e96f75939f208137fbd7718bc24b6d2cbfc9e0edaaa733115",
+      "size": 554
+    },
+    "md/unofficial/web-077-源来有饭WAIC-专场.md": {
+      "sha256": "fd6c6a2e77786de4ba9c8b82f05ce342f8cdfb25c24111290cb67c22318d76a3",
+      "size": 424
+    },
+    "md/unofficial/web-060-WAIC-Afterparty出海增长到底怎么搞暨-创新壬--港科大上海中心-N.md": {
+      "sha256": "5d1ae078933683e749ea21df896f9526a5c3d108cb706332244d76948f2b2dd2",
+      "size": 667
+    },
+    "md/unofficial/wx-097-最新-WAIC2026交通指引与入场须知.md": {
+      "sha256": "081d065e1f04bbaec3452f06dd6acf26aa976bdf7f037de6ef153819a8bce8ec",
+      "size": 441
+    },
+    "md/unofficial/wx-115-WAIC2026火热态可信才是真正的智能伙伴.md": {
+      "sha256": "0c521ce9741adaf0b30366db819fac66ac64b91443539dd1e1c6c1d862f71ab1",
+      "size": 437
+    },
+    "md/unofficial/wx-181-蓝鲸新闻WAIC2026视频探馆现场直播间专场活动私享局邀您共赴盛会.md": {
+      "sha256": "899623c577c175a3fdbef68596188c14bf3661fa7d2da1a8f0c15e94662ef6b6",
+      "size": 485
+    },
+    "md/unofficial/web-050-第六届长三角青少年人工智能奥林匹克挑战赛机器狗越障赛决赛登陆WAIC.md": {
+      "sha256": "c9cc4347e3e3967e5d532e0f99c5a4a3e682a6fdaa3cf91f94254c09d5c85551",
+      "size": 568
+    },
+    "md/unofficial/wx-194-20260706AI行业晚间复盘联合国AI治理对话开幕WAIC进入倒计时.md": {
+      "sha256": "16bfa2636a2ad6e0fb4124c84f0654185f4c826af3d8c282db0cdfaadad6308b",
+      "size": 465
+    },
+    "md/unofficial/wx-182-活动通知论坛排片WAIC2026最新论坛活动日程安排发布.md": {
+      "sha256": "0447193d9639b1189a3e1f6b3fb69bd94abb4896ae569144c99c968bb34b8707",
+      "size": 465
+    },
+    "md/unofficial/wx-057-超全攻略WAIC2026怎么逛一篇讲清楚.md": {
+      "sha256": "4dadaf48720a4079ed9010b76524de11410ec25227df89d8c33b6f999a05c7a1",
+      "size": 428
+    },
+    "md/unofficial/wx-009-WAIC2026怎么逛FlagOS-保姆级参会指南听论坛打比赛领周边.md": {
+      "sha256": "524c55d0ed03e045ed59b349486572dba99e7d92fa30419b10a2ba29abccc1d2",
+      "size": 460
+    },
+    "md/unofficial/web-038-World-Artificial-Intelligence-Conference.md": {
+      "sha256": "6f021447e5e733685009497f75d0c627401a296874421a02f6aaeeb9efb48638",
+      "size": 478
+    },
+    "md/unofficial/wx-033-2026世界人工智能大会即将启幕-上海迎来全球AI-盛会.md": {
+      "sha256": "d465d6c4683cdf7e5bbb75a54616aea596cf6f387e9ab7fd8fa2dcf757d6c83c",
+      "size": 458
+    },
+    "md/unofficial/web-112-清华科创夜-THUWAIC-FT-Networking-NightWAIC-的清.md": {
+      "sha256": "e5e8c211dbe19009934248ec94187c2900d5ab5e50ca25fee04695909a80ebf8",
+      "size": 798
+    },
+    "md/unofficial/web-208-超脑-AI-原住民体验计划WAIC论坛演讲在AI中看见具体的人.md": {
+      "sha256": "50c69d9aa2bddc990b9883235075cb63805c30c1d6c7fc01cf11250d64a9b50f",
+      "size": 533
+    },
+    "md/unofficial/web-042-智能伙伴-共创未来WAIC-2026即将举行并首发主题片量子位.md": {
+      "sha256": "2aebd3fc16b756bf8b77a29a5df617ad23dd1fb7a851c641ab8c26b37d4adb5d",
+      "size": 494
+    },
+    "md/unofficial/web-213-WAIC2026-前沿AI与智能体安全论坛.md": {
+      "sha256": "d7b764412c474d30a6d83abff5cd875ece957079625f4e0ac1e64ffadc02116a",
+      "size": 405
+    },
+    "md/unofficial/web-145-WAIC-CONNECT-张江专场大规模采购对接.md": {
+      "sha256": "efbb325b273fc15bedae5bda0b53a0af8079307908f7cc24705310c1d580fe33",
+      "size": 523
+    },
+    "md/unofficial/wx-188-MACHINA-Summit-巴黎首日成果AI支付与数据日报-78.md": {
+      "sha256": "d8da621702807f81e89708a3a31c2cfb4a1d26f4f9533e6840f05cdff00085d7",
+      "size": 456
+    },
+    "md/unofficial/web-228-2026WAICAI创新者思享汇纵论人机关系下一程.md": {
+      "sha256": "734be593166aed39d6d4f97067e89f96d5aa18c3b9ac2f07cf3eca1afddcd6bc",
+      "size": 515
+    },
+    "md/unofficial/web-079-清华科创夜-THUWAIC-FT-Networking-NightWAIC-的清.md": {
+      "sha256": "e5e8c211dbe19009934248ec94187c2900d5ab5e50ca25fee04695909a80ebf8",
+      "size": 798
+    },
+    "md/unofficial/web-135-GENESIS-Builders-DayAI--Web3-创造者大会.md": {
+      "sha256": "86335f1770988228af7d11b53410e71c08fcd61578e752a27c44c0fb82708dea",
+      "size": 460
+    },
+    "md/unofficial/web-008-GO-SUMMIT--WAIC-Shanghai--AGI-Villa-Anni.md": {
+      "sha256": "e5bb0ccab4f765225f555da346aab574def9b9870634ee099600b81de477818f",
+      "size": 770
+    },
+    "md/unofficial/wx-186-每日AI新闻速览-20260708.md": {
+      "sha256": "73296b14101d7fad2a1cad70bab69301fd1855e8b5e00ce60e1bafef0a72c676",
+      "size": 416
+    },
+    "md/unofficial/wx-065-WAIC2026前瞻5大看点速览.md": {
+      "sha256": "3270de4b4de9df262f9023967ef27cdb9b9ba1ce4c45541c6e8101ea39f55123",
+      "size": 421
+    },
+    "md/unofficial/wx-107-杨浦亮相WAIC2026精彩亮点抢先看.md": {
+      "sha256": "f5d9068ca91fc3c3cba09504167b3ddb9bfb5835e6d1d38ec1f122188e85a379",
+      "size": 428
+    },
+    "md/unofficial/web-047-Xi-Jinping-to-attend-World-AI-Conference.md": {
+      "sha256": "511b93e31e06faad9fdb71a5c204282c3fe594d1c0d190ca5ec52e05c2977853",
+      "size": 514
+    },
+    "md/unofficial/wx-284-WAIC-City-Walk-2026伴游记.md": {
+      "sha256": "4b9173c8b333f46277f31c650e9481d66fbcfe282739c5228c87cb1134c6022c",
+      "size": 1093
+    },
+    "md/unofficial/web-102-GENESIS-Builders-DayAI--Web3-创造者大会.md": {
+      "sha256": "86335f1770988228af7d11b53410e71c08fcd61578e752a27c44c0fb82708dea",
+      "size": 460
+    },
+    "md/unofficial/wx-198-全议程发布WAIC2026-AI开放计算与智能体技术生态论坛以FlagOS筑算力.md": {
+      "sha256": "d89e7ed1c34bcc68f1361037d63f6e85b84225bbcb943b6f17059cd42a19754e",
+      "size": 512
+    },
+    "md/unofficial/wx-108-WAIC2026-一图解锁昇腾参会攻略.md": {
+      "sha256": "bf658a3534670cc361b3cfdad00b5176035f21bdb6625a8a5b3de0231c715a95",
+      "size": 340
+    },
+    "md/unofficial/wx-021-2026世界人工智能大会十大镇馆之宝公布亮点速览.md": {
+      "sha256": "22317eaa76ebfbca240401826270bb6e22c5f2707be4516f89697438ea3ab399",
+      "size": 447
+    },
+    "md/unofficial/web-068-大晓机器人世界模型驱动物理AI从理解到执行论坛世界模型六小龙巅峰论坛.md": {
+      "sha256": "5d1932caefe715978263dbfa319b3c64c26e0684c69ae4136b6cbfef8b01e3fd",
+      "size": 614
+    },
+    "md/unofficial/web-098-有鹿机器人通用具身智能大脑赋能商用机器人产业化实践暨-AI130S-新品发布会.md": {
+      "sha256": "033624a4364c40aad15921dd5ddbffd49f3cd40039dc6979751aba9f4d1b9ab2",
+      "size": 552
+    },
+    "md/unofficial/web-118-WAIC-2026-科学智能论坛AI4S-从辅助计算到自主发现.md": {
+      "sha256": "be9eeaa4426dec613228466e8aaf5133fe2d81dd7dc0f1efc9eb3b3d62c65926",
+      "size": 460
+    },
+    "md/unofficial/wx-213-要闻持续推进人工智能产业生态建设静安区举办WAIC2026预热专场活动.md": {
+      "sha256": "65d22283314917fe26ad939eba5d55ef6290d15e4797549b1f937756b48b14ca",
+      "size": 484
+    },
+    "md/unofficial/wx-066-转载WAIC2026亮点前瞻昇腾950超节点首次真机亮相.md": {
+      "sha256": "588efbb1b284d379699c199fff3a6a0dfe7758aa958ed13cd1542eb625fa7839",
+      "size": 472
+    },
+    "md/unofficial/wx-049-活动预告2026WAIC摩尔线程词元时代-万物智能主题论坛.md": {
+      "sha256": "48b381f0312447212214582ba5796dcfc718faa4e02d9a682fcd08c9760889f6",
+      "size": 461
+    },
+    "md/unofficial/web-229-WAIC2026-记忆张量-MemTensor-专题论坛重新理解AI记忆.md": {
+      "sha256": "d4af9d86f15ef901276fc358818eb17211d1515bfffe0c1960c22c510591992f",
+      "size": 526
+    },
+    "md/unofficial/wx-016-WAIC2026倒计时2天这款从1200个项目中杀出重围的法律AI到底藏着什么黑.md": {
+      "sha256": "c39a48cb633cfb93e6275bdef13bdbb4d481af11826651744013f2b1444546a2",
+      "size": 489
+    },
+    "md/unofficial/wx-212-2026WAIC智能财务论坛报名开启丨高端对话直面智能财务真问题.md": {
+      "sha256": "9a05576efdaedca79081cf2bcf900e53cd25442116458b81dcdfa7152a1b9ab1",
+      "size": 474
+    },
+    "md/unofficial/wx-075-2026WAIC论坛攻略你绝不能错过.md": {
+      "sha256": "1c4e67694a30727a2ed7e263c8c604b72d3faade12522667935fc838621090c4",
+      "size": 425
+    },
+    "md/unofficial/web-211-蚂蚁开源WAIC2026AGI基础设施与普惠实践论坛及多场Side-Event.md": {
+      "sha256": "cdd27a9ffdc90d9b10f91c4a6fe841b88e228c47517c6f77cf584950ba929a07",
+      "size": 556
+    },
+    "md/unofficial/wx-211-对法律人而言7月来沪的世界人工智能大会有哪些环节值得围观附观展与购票指南.md": {
+      "sha256": "2af4c9a8e2c25ca72ee923a7572adb1d90f3463b291fab243997273e723cb827",
+      "size": 504
+    },
+    "md/unofficial/wx-283-青少年AI音综音创宇宙.md": {
+      "sha256": "b3898a733a1587ef35d08a715c74da6f9b42a4b70a0c7868b70538fd47061b98",
+      "size": 692
+    },
+    "md/unofficial/wx-091-要闻速递-WAIC2026最新论坛活动日程安排发布.md": {
+      "sha256": "76f21ab21823afe81c371aa2e8d9aa5e5db4eeeb6619745aeac7e8c923117036",
+      "size": 442
+    },
+    "md/unofficial/wx-135-2026WAIC详细观展攻略.md": {
+      "sha256": "4704aa3dcce5b3e2b5cac4d777602155294f08b1a9b16013187ae4a961ddfdd3",
+      "size": 401
+    },
+    "md/unofficial/web-084-WAIC特别场蓝白水手俱乐部AI闹航海夜.md": {
+      "sha256": "493d1563997b7a9f5a4823fbbbf2487161a517a1683c3a60906f4334d0a51e55",
+      "size": 473
+    },
+    "md/unofficial/wx-026-2026世界人工智能大会暨人工智能全球治理高级别会议期间本市景观照明核心区域交通.md": {
+      "sha256": "1e5916efe00d1d38be376d1cd7570c01a9debe390be8743b1777222f00698b3a",
+      "size": 532
+    },
+    "md/unofficial/wx-028-区领导带队检查2026世界人工智能大会服务保障工作.md": {
+      "sha256": "d8e55599edb7d6ac6166c83b316be5f47ccc09dcea92921b2ef78a36221fedd3",
+      "size": 457
+    },
+    "md/unofficial/web-005-AI聪明够了行动呢717-WAIC-一线真话局AI-Mixer量子位AI沙龙.md": {
+      "sha256": "bbe618cf7d9c6ed984360c08244ecc88fec42af7dad9c920d59f26ca7269a656",
+      "size": 775
+    },
+    "md/unofficial/wx-160-议程公布WAIC2026智启具身论坛来了.md": {
+      "sha256": "7cf00496a9f5212c503d70418e4b538214760a5374105ab06ab27712e9892dcd",
+      "size": 443
+    },
+    "md/unofficial/wx-042-WAIC2026大会议程AI-上半场拼大模型下半场拼-GPU-算力.md": {
+      "sha256": "418ae39b8e011e1d3424695a3fbf1e5dadbceaaed1cd2d849c1e60840359c316",
+      "size": 456
+    },
+    "md/unofficial/web-023-108款芯片261款大模型亮相9位图灵奖得主开讲丨WAIC26全剧透.md": {
+      "sha256": "cdd3910779d109f17ecb400e917f3751e997297d06c9c4e9f7ea3c5ef71eaa96",
+      "size": 539
+    },
+    "md/unofficial/web-219-超脑-AI-原住民计划我们问了47位10后你想用AI帮谁.md": {
+      "sha256": "8fd95574cf22732d1abb572a54b4f58873717cc278b1ab4646943eaea0a4e15f",
+      "size": 549
+    },
+    "md/unofficial/wx-096-收藏一文看懂WAIC2026世界人工智能大会必备攻略指南.md": {
+      "sha256": "9cfea88e06e4bc8d06fdf5736464c83046874e2ef8c5cdeec6942a51f2857b39",
+      "size": 447
+    },
+    "md/unofficial/wx-245-AI生产力先锋之夜徐汇西岸硬核夜聊.md": {
+      "sha256": "11fdadbf49ee2f8e49161fe28d8390fff8fea1b866739e46ed6d3d8ab43054f4",
+      "size": 760
+    },
+    "md/unofficial/wx-134-2026世界人工智能大会上海世博展览馆H2展馆技术与创新馆看算力和硬科技.md": {
+      "sha256": "cb67e054a8fb2f25bdd0caaebb7d6961e86d5763fc6b4097aa8f2f01a191745b",
+      "size": 507
+    },
+    "md/unofficial/web-041-通知智能伙伴共创未来2026世界人工智能大会将于7月17日至20日举行复旦FDD.md": {
+      "sha256": "7323fe8303f873efdac2b2aae6d95c9c301b1dbbeb7230e3feef2d4f3f8a5531",
+      "size": 538
+    },
+    "md/unofficial/web-063-WAIC-Academic-2026WAICA-首届世界人工智能大会学术.md": {
+      "sha256": "394afdc8654911bccbbc5625070f4783a95789e48bc5e6ba9ccaf5f6542f9b30",
+      "size": 866
+    },
+    "md/unofficial/wx-083-AI学习圈丨-2026世界人工智能大会议程展商名单.md": {
+      "sha256": "4082487fe56b30c416dd3b162f0bec500e9539c74418cd17c968d446c14cf1f4",
+      "size": 458
+    },
+    "md/unofficial/wx-116-WAIC2026青年场Agent具身AI应用来见真正在打仗的人.md": {
+      "sha256": "2f8427472bec50528441e6ba6eea17ccb316d2bd6111fded37c415dbffd7a471",
+      "size": 468
+    },
+    "md/unofficial/wx-187-AI日报-2026-07-08.md": {
+      "sha256": "07ca56a9148afbfe78767447eff0175ea4f371291fb206ce2c603aabe5c0538f",
+      "size": 408
+    },
+    "md/unofficial/web-106-网易智企用可信AI构建企业新智生产力论坛.md": {
+      "sha256": "d5c390cbe3c03e0646c3b4398d1191cfd1e4969481acb0743c05b85949c387a2",
+      "size": 491
+    },
+    "md/unofficial/web-057-陆家嘴-716文客松-AI创业者投资人酒会.md": {
+      "sha256": "f40a28c36bd2209402f9aa0a46f5c9eab1ced50c9baef527fee5c8e2c4b2d8c0",
+      "size": 594
+    },
+    "md/unofficial/wx-038-WAIC世界人工智能大会最新活动日程公布参会必看.md": {
+      "sha256": "025bbfaf3f2635e72acddb1ddb9db0dc2d66cb0777b2dc19e3ed82e8ed448f78",
+      "size": 470
+    },
+    "md/unofficial/wx-060-逛展指南WAIC2026世界人工智能大会7月17日开幕上海将再度成为全球AI领域.md": {
+      "sha256": "b7e67643ce10775013ba7f538c78b23b89b372fb626fb5e5efc0f39315767476",
+      "size": 493
+    },
+    "md/unofficial/web-075-PROBLEM-MARKET--STORYTELLING-HACKATHON-真.md": {
+      "sha256": "0c144b7da152222f06cb1cbf46d1896bbfbcee9882224226776d3e9de27d811c",
+      "size": 528
+    },
+    "md/unofficial/wx-034-2026年中国上海世界人工智能大会WAIC参展商名单.md": {
+      "sha256": "f861f4df51b7e5655d83bd248146294bae1e31651bf0cdff28834d7e656400aa",
+      "size": 445
+    },
+    "md/agenda/off-b67223719d-实体世界智能科学论坛.md": {
+      "sha256": "09a66d1ad3607fd43982cbb4096b32bf5ac4cd9d7f48c1e36402ae4e83d028d1",
+      "size": 3248
+    },
+    "md/agenda/off-a67e03ac0f-WAIC思想者论坛-朱松纯专场.md": {
+      "sha256": "eea123176380cfe63fa2eba3ec6444d7df78c0735682643c0f01f58fc3c5f6b6",
+      "size": 2019
+    },
+    "md/agenda/off-355a4c6ee8-科华数据算力基础设施与AI芯片协同发展论坛.md": {
+      "sha256": "1e593467cbec7484df6f89dfebc87d8c41f15843d36b0133b8827730f38a7ef9",
+      "size": 3139
+    },
+    "md/agenda/off-01eb32f86d-中国电子云人工智能创新发展论坛.md": {
+      "sha256": "25293d8948feee657cc3aba062328b66b730e3d1a6a82dd949db225eb813dcf0",
+      "size": 2930
+    },
+    "md/agenda/off-33232d03fd-西部数据面向AI时代的数据存储架构创新论坛.md": {
+      "sha256": "cd9814fba101b780058e25325ff47055f8d2a338d63a23695297a8629b1c542a",
+      "size": 2092
+    },
+    "md/agenda/off-b3a99e7bc6-中兴通讯全栈智算生态论坛.md": {
+      "sha256": "2fc2029615965b719032b8c39a747505ff3ba10980061d7e38cb2331990d917b",
+      "size": 3154
+    },
+    "md/agenda/off-2184c78c3e-谷歌Google全链路生态初创出海增长论坛.md": {
+      "sha256": "35bc8dbdf79bd1f47505468dba958b5d1fed7954f9066427a7f9e45a28c44099",
+      "size": 1571
+    },
+    "md/agenda/off-4332a2662e-百型智能新品发布企业本体与系统协同开启2B-AI应用新范式.md": {
+      "sha256": "202a78721137dac5a097457c54d7bda52658746fecd6d54195cebe73dc3758dc",
+      "size": 1636
+    },
+    "md/agenda/off-8740e011fa-乐聚机器人具身智能前沿趋势与产业生态论坛.md": {
+      "sha256": "3c4cca5615eaff33726f3f1f9fc3c6eb628a7b5cfef6d7bd6c1aa2e252a0b2ad",
+      "size": 2055
+    },
+    "md/agenda/off-223027b4bd-模力社区黑科技秀.md": {
+      "sha256": "0afaa4a90a09ede05680ddb8314eec5bdd992de5f5b97b84add5e0b9fcd581b1",
+      "size": 1371
+    },
+    "md/agenda/off-c4b334027b-小红书让Builders被看见.md": {
+      "sha256": "a12084136a154e833b97a44a0ac3bc9c8d239a1c8daa23eee2c3b311bf63703e",
+      "size": 1253
+    },
+    "md/agenda/off-1a607b7a5e-人工智能标准国际化论坛.md": {
+      "sha256": "494726e4a1d4d7cc83c4b1b4ab74591f34ab76e9a8a6b091e905316264279185",
+      "size": 8501
+    },
+    "md/agenda/zone-世博中心.md": {
+      "sha256": "8b1e4a8e5baef6af45b3bd5f4452f8d7b7e34f36e29117487f8b6164d16dc087",
+      "size": 353
+    },
+    "md/agenda/off-548e1357f1-毕马威AI企业的商业化突围与资本进阶论坛.md": {
+      "sha256": "610a3ede4d83bf39be4cb558be3125c0ea9168638e586156812f4c734cdad414",
+      "size": 2388
+    },
+    "md/agenda/off-449b0b13fe-新一代智算云产业技术创新论坛.md": {
+      "sha256": "f75d7fbdaf5caf8f1b8dba302b84ce880cf623aef76160b09f9836064e27015a",
+      "size": 3254
+    },
+    "md/agenda/off-2e49b90d99-大数据国家工程研究中心AI驱动东西部协同发展论坛.md": {
+      "sha256": "ed919928257c76455c01c3a3202dfadfabcfaf5bf4880e05e5ed0435794ce18e",
+      "size": 3985
+    },
+    "md/agenda/off-37010a9a73-WAICAMain-Track-Session-2.md": {
+      "sha256": "5995c85b33f2b935c405a6311bfc95990868bd3dccb6d3d25fdab0b95266f60a",
+      "size": 923
+    },
+    "md/agenda/off-fccfbca1a9-猿编程让孩子未来驾驭AI-青少年人工智能教育论坛.md": {
+      "sha256": "abf1681f9c35b3dac07bad2738f782974fce6abdce7dd016299befa9246525e7",
+      "size": 2563
+    },
+    "md/agenda/off-3c2652b099-奇异摩尔AI网络前沿生态论坛.md": {
+      "sha256": "faf30e3e8609d1f61b3dab44bc5483a8f89db60beb672c449a0d0d90195ffec1",
+      "size": 3014
+    },
+    "md/agenda/off-6b998c4f06-WAICA青年菁英交流会.md": {
+      "sha256": "30fa0ad45fe4c04c2f8ee76f31da32bae4d6837b9ed4991229474dafca044915",
+      "size": 1005
+    },
+    "md/agenda/off-d5d103db46-中科曙光人工智能时代的开放计算与产业生态论坛.md": {
+      "sha256": "621ed8b694aa45436a555c0870f4fc12b05baa4b30420c1efffe87649d694a64",
+      "size": 6050
+    },
+    "md/agenda/off-666407c6ed-人工智能赋能材料科学论坛.md": {
+      "sha256": "0d9b40c1f50a38642fe37985956cfde0619d056e86171cdc88605f66fecba452",
+      "size": 10321
+    },
+    "md/agenda/off-c20155952a-人工智能赋能物流网高质量发展论坛.md": {
+      "sha256": "62840f6cce3a8f791de4d59e95763bfed5d68553e2f3e7a24673dda8a52a688e",
+      "size": 5114
+    },
+    "md/agenda/off-8872138a6a-AI创新者思享汇.md": {
+      "sha256": "f7977e507257f5ffd44d9c1211b16127db74c4e6b164026f383c8e0245ddd40c",
+      "size": 5067
+    },
+    "md/agenda/off-834905292e-腾讯AI-in-Action-应用创新论坛.md": {
+      "sha256": "aea8a0c62ab9e3ab34837d86b66b55d0a4ebcc096b09e0d8039897b8f67c0bbf",
+      "size": 6932
+    },
+    "md/agenda/off-07e68e21c5-WAICA世界人工智能大会学术2026启动会.md": {
+      "sha256": "201a4c08777e115a740f102121cabf05404e858402060eb907a42a9e6ab83477",
+      "size": 1021
+    },
+    "md/agenda/off-3767f9b85d-WAIC企业家论坛.md": {
+      "sha256": "7f74363eb5a2f60198c47e8e2e074e1f59944970ea12310d78e5af28bc868a98",
+      "size": 3206
+    },
+    "md/agenda/off-bce74094cf-荣耀从数字屏幕到具身智能-物理世界新范式论坛.md": {
+      "sha256": "0ae53fd7ba4200da7a63d8223092019c7721567c0ba6b0c0134d1edc6e534449",
+      "size": 3635
+    },
+    "md/agenda/off-fbb051ca73-库帕思-语料创新发展论坛.md": {
+      "sha256": "e266fb31b0bf0001f461464190581d9aa8ddfeb07f6181c8ed305b7483fce9b4",
+      "size": 2000
+    },
+    "md/agenda/off-edbe961830-蚂蚁密算产业数据智能-跃迁与普惠论坛.md": {
+      "sha256": "e0d46b7a7a8be2094587ace94506de6cae38530799a30c3c1733e0d8462691d5",
+      "size": 3375
+    },
+    "md/agenda/off-3650609627-长三角投资公司长三角人工智能产业集群发展协同论坛.md": {
+      "sha256": "4907b9676d3c86915ee388167530f7e9eb0866858b468ea1182627ec8b770fa1",
+      "size": 8442
+    },
+    "md/agenda/off-779803a6a0-上港集团AI赋能智慧港口全球航运生态体系论坛.md": {
+      "sha256": "270966ccea5469be39b8cd4cc7cb234770ae1a8f3c6d87cbb07bd8dc6a0cf102",
+      "size": 4536
+    },
+    "md/agenda/off-7f8908683e-星环科技认知涌现数据新生人工智能论坛.md": {
+      "sha256": "a7d30f9bdfe23f3c5047717b24f34825d3d2b801db9aa563b65325eaafb50e54",
+      "size": 3357
+    },
+    "md/agenda/off-863014011b-WAICAMain-Track-Session-5.md": {
+      "sha256": "fdf282a0d92a698c0e5d560b35626a81e4850f42d175bfc54bf64842e4e8a96e",
+      "size": 923
+    },
+    "md/agenda/off-a78740bc58-中国电信星辰共生人工智能生态论坛.md": {
+      "sha256": "d155da915762d719ae7eba724de1aea324bdcb1dd39e9e5504ba207ef13e8e3e",
+      "size": 2688
+    },
+    "md/agenda/off-7bdf0d5c25-科学前沿论坛.md": {
+      "sha256": "481b68284199075b2c6eecc5fbadecb9d5cbeaf858f9a25512997566de96fc69",
+      "size": 2387
+    },
+    "md/agenda/off-bacd8d69d1-WAIC-Future-TechAI-Agent-时代的一人公司与-Token-.md": {
+      "sha256": "c8334364aa99f2bb07a618c9b8bc9c33626305058d50366f052f3aa32403d9f4",
+      "size": 7378
+    },
+    "md/agenda/off-8a3d5edd27-人工智能赋能无线电创新论坛.md": {
+      "sha256": "b8cb5cc04e72f0d38f89141d9d9ec082415abcbdebb9e45b701820c1f73b9ecf",
+      "size": 2334
+    },
+    "md/agenda/off-624400d5ae-WAICA研讨会多模态智能体驱动的科学计算.md": {
+      "sha256": "2fb6ed00b3a1ada5bb7f2ffe1edcbb15f291198404c4bc0e7b2a197aab1fef2f",
+      "size": 1569
+    },
+    "md/agenda/off-499c7363ac-量坤科技量超智融合论坛.md": {
+      "sha256": "f390d2e62c0e46d67b88b650950cc520663166dea542d673af302fa6d04918f1",
+      "size": 1458
+    },
+    "md/agenda/off-a9ad5ef6b4-机器人在线具身人形机器人落地与核心零部件发展论坛.md": {
+      "sha256": "6941961c195c749500fe6389067fb5f3f2ffad93c63b3933d73ca46e38da1807",
+      "size": 5518
+    },
+    "md/agenda/off-7a804ab262-大晓机器人世界模型驱动物理-AI-从理解到执行论坛.md": {
+      "sha256": "fb490dc23d182fbfb79b003364df31d4808b3d2405ae3861948687d4019422b6",
+      "size": 3946
+    },
+    "md/agenda/off-87f1750404-中船集团-智领深蓝-AI船海产业实景应用论坛.md": {
+      "sha256": "3b5534feaca0f0deb41eb95c6a66360d15f1b954a6688cdcc59bc830ffb1c1e4",
+      "size": 3968
+    },
+    "md/agenda/off-46719bf2a6-国泰海通智见AI-合创未来人工智能投融资论坛.md": {
+      "sha256": "5309aa6fa3057348410224252da3a73aaab757f673ef3afe95e5b595efc65266",
+      "size": 3349
+    },
+    "md/agenda/off-77d7f37b45-SCDI国际AI城市生态论坛.md": {
+      "sha256": "04a87265d9b5b1be5d2c0325f0e2ef8b877841f4636698738dd3ba25d7fd2f27",
+      "size": 3068
+    },
+    "md/agenda/off-18aa42b035-引力场无界共生AI时代的基础设施升维.md": {
+      "sha256": "206c7e6682cfcc6fb21d1223962630fe92189713752ea3663683cdcbfc40130c",
+      "size": 1506
+    },
+    "md/agenda/off-55b3a3dc40-索辰科技世界物理模型重塑工业AI新范式论坛.md": {
+      "sha256": "f8562990762fadd4f8b856ee90f21309f5fad49d1028e9b13ba1c75bbaf98ad8",
+      "size": 2764
+    },
+    "md/agenda/off-dcbbbc9806-WAICA研讨会数学建模与科学计算中的人工智能.md": {
+      "sha256": "6af1e5564157f492d3b1ab0e123bf61901c04b5382387385ec3af67f2fc7f096",
+      "size": 1531
+    },
+    "md/agenda/off-552c596ec2-燧原科技构建协同创新的Token经济芯生态论坛.md": {
+      "sha256": "4ff862f427fee540754c4cfeb0ca417d7b9e0d53f22f2753c5acfec06d12e279",
+      "size": 3378
+    },
+    "md/agenda/off-bde4ea4951-欧莱雅集团--AI向美论坛.md": {
+      "sha256": "800a5b7fb0357b83b9ab83cec6b92814f909fee974ffb19c6ce27ea64225f17a",
+      "size": 1619
+    },
+    "md/agenda/off-32092e1587-量子城市空间智能论坛.md": {
+      "sha256": "8d0386091fe7418548c43e04660c2cb371a06db0712ce76a8084c5b4361527e3",
+      "size": 4272
+    },
+    "md/agenda/off-820750c52d-容联云-企业级-Agent-的进化与商业落地论坛.md": {
+      "sha256": "82c3c27ffdbfac38380e819d9b2b3172c5b871a25ea0e9166bd3e21d1f8ce207",
+      "size": 3738
+    },
+    "md/agenda/off-85e36aaec9-WAIC思想者论坛-郭毅可专场.md": {
+      "sha256": "2b235f873618443d65dc82cd2f87c946c6ee2a2122f743791585dc4bb6ecd9d2",
+      "size": 1756
+    },
+    "md/agenda/off-c43ecf99c2-AI女性论坛.md": {
+      "sha256": "b46b211ade04fe56050e196e75f0c9b360d9b1aa3a567684207c4e158c36d761",
+      "size": 9975
+    },
+    "md/agenda/off-108a9f6c07-WAIC涌现无限未来科技产业生态论坛.md": {
+      "sha256": "81453d091cc4fbfddf13b03072132342afacdaa56452490a25b90c3696f71221",
+      "size": 6586
+    },
+    "md/agenda/off-3b7e3e4cad-智能汽车创新发展平台自动驾驶论坛.md": {
+      "sha256": "ca557bf6937374fc213111ebeae45fb78909f4fdb0e7421b5d2eb19592da7693",
+      "size": 4346
+    },
+    "md/agenda/off-402c4a3d71-迈向自主化工业AI落地的真实挑战与解法论坛.md": {
+      "sha256": "4750f570ccfdb4e9c76dbc9909fef97adb5ce37f6679043fc184ac0174eec6d8",
+      "size": 3834
+    },
+    "md/agenda/off-f331725f05-联影智能智能伙伴共建未来元医院论坛.md": {
+      "sha256": "e479897a2901bfcfc030820505fd9027fbf07fc5aeb9b001e9aa7d63eb3d39b1",
+      "size": 3713
+    },
+    "md/agenda/off-a705884951-西门子工业AI迈进现实---工业AI创新论坛暨Eigen工程智能体发布会.md": {
+      "sha256": "2c8ad7b71da16317a84225787c742982fd740000309bbd36ddd05f7b8814391a",
+      "size": 3913
+    },
+    "md/agenda/off-8aac0e0026-上海马桥人工智能创新试验区具身智能产业生态论坛.md": {
+      "sha256": "49b013c1fc27d88bd072a73aca2a528a68d51aefda6702fbc3d53a587804c184",
+      "size": 4961
+    },
+    "md/agenda/off-46e834b4e8-WAIC京东论坛AI进入物理世界模型数据终端与场景.md": {
+      "sha256": "99b2e07751b72ddc42594cb77a489c3daf6b723568891e77e0a7bca92706c7bf",
+      "size": 2421
+    },
+    "md/agenda/off-acf47c7ce9-AI-开放计算与智能体技术生态论坛.md": {
+      "sha256": "c0038ec0b4cdfae4d71cc7a382ab92ed9ba13a225f9e94108232a7ec5527e34c",
+      "size": 5014
+    },
+    "md/agenda/off-33f91fe32d-万兴科技生数科技世界模型驱动下的AI影视生产力新范式论坛.md": {
+      "sha256": "49fbf12b8a86f49c2af11f19bd2c217374ccee09ed13d4605f1414863ec4ac9e",
+      "size": 2665
+    },
+    "md/agenda/off-2a788af2ca-实体世界智能科学论坛.md": {
+      "sha256": "018a3303bf5ed186a0694ab1e9b966c4e66ead88c822ad4781153f65edce0fd9",
+      "size": 3808
+    },
+    "md/agenda/off-3850e082a7-WAIC思想者论坛-李开复专场.md": {
+      "sha256": "d63dda65a6fe8ab3bf08e1fc324ff1e615d87d14762294bc86079028290c1150",
+      "size": 1662
+    },
+    "md/agenda/off-f46d709de4-超擎数智面向-10-亿瓦级-AI-工厂的网络创新论坛.md": {
+      "sha256": "27cb90f428f5c8ddbedfbc15bd762ada922a71b5c83537752949fe5fff7080d6",
+      "size": 4791
+    },
+    "md/agenda/off-7c12b22184-中国中小企业协会AI-for-SME人工智能赋能中小企业高质量发展论坛.md": {
+      "sha256": "6e920951700e1711c20e555163029463f0e475575156204398177fef0030d89f",
+      "size": 2548
+    },
+    "md/agenda/off-20572a7316-心智与智能青年生态论坛.md": {
+      "sha256": "a39bdfac7dd3577cf0618811c03a5873981f42f8cf3f690b68ab9ebb802d9763",
+      "size": 3182
+    },
+    "md/agenda/off-f1373c92e1-芯鑫租赁芯智相融-AI启未来产融生态合作论坛.md": {
+      "sha256": "8ad29ab6529e57aa29eff0add7c8da3c7ea5fa75e5e5eef7e3bc7858ef7369e3",
+      "size": 5133
+    },
+    "md/agenda/off-976bc32e1d-润建股份算电协同Token工厂-东盟绿色智算与AI创新生态论坛.md": {
+      "sha256": "5965467e31ee32a9dcfaa725776703624421eab5c0bb3a882660d51c29aec68a",
+      "size": 3238
+    },
+    "md/agenda/off-a137c89131-人工智能与能源双向赋能论坛.md": {
+      "sha256": "82a81de0083d386ba0c01358fe08ad7e8885afff672915ebc7050d8d030ccdbd",
+      "size": 2431
+    },
+    "md/agenda/off-46ad4b8f86-先进计算网络与算电协同论坛.md": {
+      "sha256": "c87767dfac826fbc1a0ea557b3304625eabc588ef01ca4a67df5482bacac9129",
+      "size": 3516
+    },
+    "md/agenda/zone-张江科学会堂.md": {
+      "sha256": "3b03322d5a6b2a7ac600477df875b7c52c0f9221c49e5d0562a31ea072add2c6",
+      "size": 365
+    },
+    "md/agenda/off-50261841a9-WAIC-Future-TechAI原生与硬科技投资生态论坛.md": {
+      "sha256": "af4839dbbd68bddbd00ca99325e9e9570e82a7308005effc3f90c53e3f263723",
+      "size": 1648
+    },
+    "md/agenda/off-df57cf6e2d-芯展速AI90--FaaS-for-AI-释放消费级显卡的AI潜能发布会.md": {
+      "sha256": "87474ca512e6bb12e87754909834645ce0af083386efda83e63d69551a5a6cf3",
+      "size": 1798
+    },
+    "md/agenda/off-e652f0052c-WAIC-Future-TechAI4S前沿极境与产业落地初创路演.md": {
+      "sha256": "8b9315487169efd502b58ab4c1a85677330b8d87223d74b962e8a932da76de21",
+      "size": 9405
+    },
+    "md/agenda/off-d83395b23a-上财智能经济发展生态论坛.md": {
+      "sha256": "2f8bdeb22994ef36eae23a90cb43b2c67e37732c8db2bea656a63ed7f967a106",
+      "size": 4069
+    },
+    "md/agenda/off-4207b012df-昆仑万维世界模型与多模态范式跃迁论坛.md": {
+      "sha256": "dd5d1dd9ec67bf6e24cfb4b350cab5162a88e425c7e2ea4e14f55f229c78d3ad",
+      "size": 6009
+    },
+    "md/agenda/off-5c594a3edf-全球人工智能创新治理中心人工智能全球治理与可持续发展挑战与应对论坛.md": {
+      "sha256": "5b59b403af6345dfb228747aad31f9c4cc097d3681cf8b27eb3339cfe950976d",
+      "size": 4090
+    },
+    "md/agenda/off-4527d28288-2026中国AI盛典.md": {
+      "sha256": "a7264d99c4843a17d2629ab314db99db9b7c213d8ec8eea69ba2c4171d686d94",
+      "size": 1850
+    },
+    "md/agenda/off-e904c150ae-Airwallex-空中云汇领航-AI-驱动的全球金融变革打造适配-AI-的现代.md": {
+      "sha256": "97136509ed5d62a8d0aac610ebf8cf89979dc0793ade01e59ee59cf44bfa5b1e",
+      "size": 1710
+    },
+    "md/agenda/off-c19467c7ea-中国联通模数同频-智造共振AI赋能新型工业化发展论坛.md": {
+      "sha256": "22492dcc93c87654cf5d850ea77dff427e3979ac8e7c6532d1a6b22e2585cc77",
+      "size": 3640
+    },
+    "md/agenda/off-e1146f7e61-GMI-CloudAI出海基础设施行业洞察发布.md": {
+      "sha256": "e14ba1675ce845a88cdc2d8a657f50e4e9028719c65f0747fc3326a5ce17b2d5",
+      "size": 1610
+    },
+    "md/agenda/off-2070aa321a-前沿AI与智能体安全论坛.md": {
+      "sha256": "4a8a6416dfb33a8d99036b7da6de76b25dcc885177de182a7660481f4f83a3ec",
+      "size": 3824
+    },
+    "md/agenda/off-5ec8374fca-智法共生法律大模型推理革新与应用生态论坛.md": {
+      "sha256": "32f6cdb3e090090971f2cad48cac01060fbeb58bbebaafeea69cd1ed07a8d98b",
+      "size": 4770
+    },
+    "md/agenda/off-cbc9a5b82c-WAICAmplified-Individual-在AI中看见具体的人青春与锋芒.md": {
+      "sha256": "c80f98c7d818deee7efe91fa727a3075a93aa8fea4c64af11899fbf5390ce3ad",
+      "size": 3510
+    },
+    "md/agenda/off-79a6bb5780-人工智能法治论坛.md": {
+      "sha256": "1a7e4b0fb3591e22835504b0b7216dd10469e317bb8768d948753c142d585ab4",
+      "size": 4347
+    },
+    "md/agenda/off-36964c9402-中金公司-共建全球科技金融伙伴新生态投融资论坛.md": {
+      "sha256": "a6387c81a3b91416b2a0bc7684e8f645d0d52ff9c7da7dee2805f603edf7bba0",
+      "size": 4060
+    },
+    "md/agenda/off-be8b6b216f-WAICAmplified-Individual-在AI中看见具体的人深耕与守望.md": {
+      "sha256": "354f695d8547edbb106a573a3794cecaa20b8ed1b57515b51aad12ffbdf661e3",
+      "size": 3892
+    },
+    "md/agenda/off-5955d91706-WAIC-UP-2026-青年观察家思享会.md": {
+      "sha256": "ebe33b4a30c5ae281696fefe63fd951dc900f82a6f181f49b75d5897d844ba9f",
+      "size": 5180
+    },
+    "md/agenda/off-46f25d8ec0-华院计算-认知智能论坛.md": {
+      "sha256": "a3258f6fede28dc90e8c31da62f830a6a64964bbc8a3a290431ce447bf7bcf4e",
+      "size": 2637
+    },
+    "md/agenda/off-80ea782965-中国年度AI人物巅峰对话.md": {
+      "sha256": "842339db9a9ddca61b41737349a43720479b3014c6a8fef719b7942adda9a807",
+      "size": 1444
+    },
+    "md/agenda/off-b1c65a2e88-青少年人工智能创新发展论坛.md": {
+      "sha256": "aae7ca5cb18d50381ea811794ce6a727fc1bb676e65c62fe66ec314b4abd7bfe",
+      "size": 2681
+    },
+    "md/agenda/off-f0984a656b-院士看洋山.md": {
+      "sha256": "d77cacbe38a2b011101723ff844ebc8a3c8f14cbebc4c323b08a352b88d2b67a",
+      "size": 1203
+    },
+    "md/agenda/off-89ae29389e-普元高质量数据集与AI编程实践创新论坛.md": {
+      "sha256": "a3062aea10dbeb25a19b765338ebe45478efaf50f538f4d48364d20865783177",
+      "size": 4079
+    },
+    "md/agenda/off-ef1e1631a1-两岸人工智能融合发展创新论坛.md": {
+      "sha256": "1140a3105bd920d24de448886b6b7fcd1dce5703162612e270fcfb443b7eac33",
+      "size": 5440
+    },
+    "md/agenda/off-20aca76553-AI-TIME-AGI前夜智能如何突破自己的上限.md": {
+      "sha256": "9601ad47ad492f3b632e9c77c5b869a1c2cb6465d5d9ac3358bfb83729bd756b",
+      "size": 3429
+    },
+    "md/agenda/off-14657a09a7-WAICA研讨会人工智能驱动的量子计算.md": {
+      "sha256": "02bd17e9c874f89dc844b5405e2f1df282bba00b7187f5ac2f79474f15939102",
+      "size": 1285
+    },
+    "md/agenda/off-868d10c73d-WAIC-UP-2026青年观察家夜场活动.md": {
+      "sha256": "04f42fab7cbad75cc501dc863629a6af4ddb1a48c987cf745235757bd0fe3301",
+      "size": 1378
+    },
+    "md/agenda/off-a94d15b3b9-奇富科技AI-Native-重构普惠信贷的安全增长范式论坛.md": {
+      "sha256": "5890d8e68397544ae4f43b9e445cb545572fb5921ba90fc75c8269e1bc72b791",
+      "size": 1567
+    },
+    "md/agenda/off-afcd28d34c-开放处理器中心RISC-V和物理智能论坛.md": {
+      "sha256": "43898a584883c042937d2128a3dcfee30d64215b7452c78e31c76efdc042de5a",
+      "size": 2461
+    },
+    "md/agenda/off-924b7bef37-思朗科技超智融合驱动AI4S发展论坛.md": {
+      "sha256": "2e70625dceac28bda41d2647c81b960c4975378ab308905f63421a182045b464",
+      "size": 4439
+    },
+    "md/agenda/off-62e87c0c1e-安永AI规模化落地与增长新蓝图生态论坛.md": {
+      "sha256": "e1048b7329c61bbab02a5751d8336bde8a2d72e2befed8d3e71ebd2f1811eaf4",
+      "size": 3734
+    },
+    "md/agenda/off-ffa0604cd9-硅星人AI青年创变者创新论坛.md": {
+      "sha256": "ad713e720b054936b7c4e85765600805b2112bf90e101879e50d3de9dab2ae17",
+      "size": 3239
+    },
+    "md/agenda/off-08bba252d1-斗象科技AI产业技术安全生态论坛.md": {
+      "sha256": "d5732875fc40cb5ad985a272eae2ca070a25727ea531dfc095625f7daacd2d22",
+      "size": 3931
+    },
+    "md/agenda/off-3971f18d6c-智算超节点与算电协同论坛.md": {
+      "sha256": "bc7f2e3999140eb39a9b9a5187b22bda1b00c2b6ca1eb7b7fd92ba51ea72f8e5",
+      "size": 2393
+    },
+    "md/agenda/off-8e602b56ae-面壁智能智在终端-惠及千行-On-device-AI-for-All-端侧AI创.md": {
+      "sha256": "b410be00a1ce485600237528e3036cd5467957fb01783d389c5f28ed1f197452",
+      "size": 4234
+    },
+    "md/agenda/off-cf0d412893-斯梅尔数学与计算研究院数学与人工智能论坛.md": {
+      "sha256": "b77d5f4eec493fb6760a4c2fb41d8ba24fc70d92a014baf5b06ff4ec1dda4ef3",
+      "size": 6286
+    },
+    "md/agenda/off-f834cb7785-蚂蚁数科向深处去Enterprise-AGI-价值落地与产业实证论坛.md": {
+      "sha256": "cd72bf9ca928e10eb4dae0450d2f4f2303016a188ef19d74d95c143c450c6260",
+      "size": 10283
+    },
+    "md/agenda/zone-世博展览馆.md": {
+      "sha256": "f473383bb2b6bd7102fb4d6dfad0415bd88ef3e947c9ec4a66f46747c55aea26",
+      "size": 359
+    },
+    "md/agenda/off-ebca2bddba-全球视野破局智能财务新范式论坛.md": {
+      "sha256": "3b4f760fd2995a31ac91a71d0c9a9cd9a97848ecec5e57c7745416f84340226a",
+      "size": 4794
+    },
+    "md/agenda/off-b08f9be948-商汤科技基座大模型架构创新与生态合作论坛.md": {
+      "sha256": "37ec3324b46d18782c4306eb3657c837979c19cf806b38529bf1bbf9a3738d44",
+      "size": 3269
+    },
+    "md/agenda/off-523c4496e1-未来计算与未来算力论坛.md": {
+      "sha256": "9850fe22962c253c599cf089a8ceac424b2247e167bac1c377ec1cf492e36531",
+      "size": 3972
+    },
+    "md/agenda/off-7398a27ef4-摩尔线程词元时代-万物智能论坛.md": {
+      "sha256": "7fb1c4fe0e71d5b82a3b69520a83edd333d02198a427d62cd150872133fe120f",
+      "size": 2723
+    },
+    "md/agenda/off-73ee3eb890-同济大学智能社会论坛迈向人机共生的智能社会.md": {
+      "sha256": "8e0384f87f3fa7c0fe4cbde5160c7e5177f6a21a36871164f5498f33e2dfb46a",
+      "size": 3371
+    },
+    "md/agenda/off-a5447423a0-WAIC-Future-Tech物理跃迁与硬核基座初创路演.md": {
+      "sha256": "c686926fc617a9f7798a5b9418741ade355f2e22f1509ac0c9a8b103058867e7",
+      "size": 13539
+    },
+    "md/agenda/off-3a8e855b07-IPI东盟中国人工智能技术与产业合作生态论坛.md": {
+      "sha256": "52baf17a2545c949103c4d7a58a8cb67788a5ff446ab386267fdcdb12f22572e",
+      "size": 2803
+    },
+    "md/agenda/off-cc5f755c28-WAIC-After-HoursAI企业全球成长对话.md": {
+      "sha256": "f490862aa63c7c82624380eded3b3530bcc2c2bf4c3c9849080bb982d5d77e67",
+      "size": 1741
+    },
+    "md/agenda/off-f07a010dbe-中国信通院从大模型到智能体-迈向自主智能新纪元论坛.md": {
+      "sha256": "4d2b6b7adc2a72d5ddb7ff9fe25843c5056ae1449c8941e5e22c868da5d5468b",
+      "size": 7304
+    },
+    "md/agenda/off-5626d3d7ad-记忆张量从一次性-Agent-到记忆原生智能时代论坛.md": {
+      "sha256": "8a3f16f6b4283f0a975fc708700fa45d36b63fcf82db9571984a1576993b014a",
+      "size": 4584
+    },
+    "md/agenda/off-4aea8f23af-网易智企用可信AI构建企业新智生产力论坛.md": {
+      "sha256": "a437cac1e28ae60c2366950915c6af767afb0f8532f91dca4e6d5076fc4aa46d",
+      "size": 4967
+    },
+    "md/agenda/off-57ad17b121-算丰信息AI-在全球医疗领域的应用实践与监督机制论坛.md": {
+      "sha256": "abab4ebdab0bb08b9a65cfd26792215038b0ad440bc48aec7fdcc4f7460ee76f",
+      "size": 4445
+    },
+    "md/agenda/off-c07f083ac1-智赋新质--全域焕新企业人工智能高质量发展论坛.md": {
+      "sha256": "abb68b485111235a8a6cb9cd60a084bb99de6e49fa9f206d4c75ef800b7b83bd",
+      "size": 1884
+    },
+    "md/agenda/off-bd9d7a6efe-高鹄资本AI-Frontier-talks引领智能新高度创新智能新形态AI论坛.md": {
+      "sha256": "1bce0cdd331650a07ceed4c51bca9b4566775444b3632658f86d1f3f16e0d8d3",
+      "size": 1770
+    },
+    "md/agenda/off-35ce1b4de2-人工智能赋能防震减灾高质量发展论坛.md": {
+      "sha256": "843d1cd6a7e0eab406af2c49cb1eb2f52beeadfa877e39fb08ee7ea91f5ae112",
+      "size": 6859
+    },
+    "md/agenda/off-ad28e4cf08-WAIC思想者论坛-Richard-S-Sutton-专场.md": {
+      "sha256": "caf12c4a85cce8eee8d363f96e85859d281257c1538cc797c8766e07bed709f4",
+      "size": 2206
+    },
+    "md/agenda/off-8f37ada03e-北电数智全栈AI赋能民生福祉论坛.md": {
+      "sha256": "d4e641b8708c4bc80bd1530f3ce49736b377afe22de0ed64968eb45911c45425",
+      "size": 2193
+    },
+    "md/agenda/off-b27f342349-人工智能引领产业变革思客会.md": {
+      "sha256": "9cc3dfc02347788c184aefad62c32ecf4c55806d89666f9786507fb7cb282290",
+      "size": 2789
+    },
+    "md/agenda/off-3071023231-阿里云Agentic-Cloud-智能体时代的基础设施论坛.md": {
+      "sha256": "c5ea886baf50f323d8318623ee655c3b2555e1b30e3b8dc7d87ddfb8d0948daf",
+      "size": 2635
+    },
+    "md/agenda/off-1bf63c007b-中国政法大学联合国教科文组织人工智能规则全球对话与协同发展论坛.md": {
+      "sha256": "87ec5c8377c938aa74d65996b2af6ea9dacc37386625b968fc55da3d69df91c8",
+      "size": 3619
+    },
+    "md/agenda/off-bd3f2a1705-WAICAMain-Track-Session-3.md": {
+      "sha256": "9281aa266b79452ca69b7bebdf95dda8caf3d2007ebcc3bed0581e57a23515aa",
+      "size": 923
+    },
+    "md/agenda/off-07e3d72846-科学智能开放论坛.md": {
+      "sha256": "d5695dfb9d1908f5f489a722349ed1b67304132bb2ba93152331bf2612bbc0f2",
+      "size": 3864
+    },
+    "md/agenda/off-9af978bf20-WAIC-Future-Tech全球聚变与资本破局初创路演.md": {
+      "sha256": "92573de067036f245ba39e597f1255570e3dc657912c81b8671f4f2f404986c9",
+      "size": 5230
+    },
+    "md/agenda/off-07b583c37c-联汇科技端侧多模态基座赋能AI硬件论坛.md": {
+      "sha256": "a711de27f8d758af359db245f74fab2144a9857bf240a81a44e14725b9461388",
+      "size": 4170
+    },
+    "md/agenda/off-9eff718936-WAICA研讨会具身智能空间交互.md": {
+      "sha256": "fb4acf8b6510ce0b479ee9abceb079edffcc36f4b66bcfa305a252d14b22acdc",
+      "size": 1457
+    },
+    "md/agenda/off-31ceb5062c-香港科技大学国际AI产业创新生态论坛.md": {
+      "sha256": "8c89a0bd29c5dc4620d9ab7eba5df10f50994140307d2784c45673096e10184b",
+      "size": 7451
+    },
+    "md/agenda/off-0f1bb9c73e-国地中心人形机器人与具身智能创新发展论坛.md": {
+      "sha256": "9b96abf95a04ef7854aa1588c29ef73c657bc8e103b0921e61286feb2951b74b",
+      "size": 3046
+    },
+    "md/agenda/off-86bc319e3f-神州数码AI管理创新论坛.md": {
+      "sha256": "be1eaa0139b6e7b7d24ecd965c7fc29fa36118b226af8a0f6ebcfcc30f4df664",
+      "size": 2099
+    },
+    "md/agenda/off-b78aa50b87-WAICAMain-Track-Session-6.md": {
+      "sha256": "6e1439250faf51c8a70eecc9a556212fd030e7b085fa7fc168b32eedff69d25f",
+      "size": 923
+    },
+    "md/agenda/off-0f8f515715-WAICAMain-Track-Session-4.md": {
+      "sha256": "08386438bef3beb9b807ef3d9a9bb84d4f216e5cfa824515fb365b449adec7bb",
+      "size": 923
+    },
+    "md/agenda/off-dbc3ec4a31-上海市节能中心人工智能与产业绿色低碳转型创新发展论坛.md": {
+      "sha256": "f50685770e7769e0297613757f2be558e874e733a95888234221420145cc27d8",
+      "size": 3461
+    },
+    "md/agenda/off-2a226463c3-WAICA研讨会天基智能计算.md": {
+      "sha256": "2471e7366c06e2578d9d605668c086ea10c10164fa3ad9d54c13bae7445fd7e1",
+      "size": 1316
+    },
+    "md/agenda/off-d6f451fb83-中昊芯英专用算力时代下TPU的创新与共进论坛.md": {
+      "sha256": "64bb2b3dcacfe45e9efc9bdcba760b8d35f859620c51be7bcf8865d0ccc6d407",
+      "size": 4123
+    },
+    "md/agenda/off-662a620d57-共赢金砖论坛.md": {
+      "sha256": "fb891e2d2cf7b106c86b752310843b3fcd73c88c922eb4351832d8fc124dc5bc",
+      "size": 5889
+    },
+    "md/agenda/off-e34b68bfb8-昇腾AI应用创新全球论坛.md": {
+      "sha256": "de95b270530656b73ebdb068eb712335529f4d5459fe572d670c7d6e1b413ba9",
+      "size": 2287
+    },
+    "md/agenda/off-75df92b6a0-AI重构增长从内容博弈到系统性变革-AI广告营销创新论坛.md": {
+      "sha256": "d7c19f34ba2ca86fb98f17c10dc7d2c2d8a996ade9e2d5c6f4beb9362c365d99",
+      "size": 4288
+    },
+    "md/agenda/off-ce4ad28357-太初元碁大规模国产算力系统驱动AI规模化落地论坛.md": {
+      "sha256": "34456e86e892c3c99087fcb49ccbf0b9ecab19542c4d8582bbcd119318546a83",
+      "size": 2907
+    },
+    "md/agenda/off-cfa4a4d204-WAICAMain-Track-Session-1.md": {
+      "sha256": "8cfb61e4781c27c3dfae6c08d59c4f3c6e0efb7c75422cdd8b0125a3e711d029",
+      "size": 927
+    },
+    "md/agenda/off-155fb9ddc6-有鹿机器人通用具身智能大脑赋能商用机器人的产业化实践暨AI130S新品发布会.md": {
+      "sha256": "ac6d0e9cbc86a408e05a91aa9136010d91c164d0b75748770af12788d3844de4",
+      "size": 1462
+    },
+    "md/agenda/off-087f6cf03b-2026世界人工智能大会暨人工智能全球治理高级别会议主论坛.md": {
+      "sha256": "b000c181bc37b1805d4f27bf3a6e6ffd2eef0fe6a7f8a030f3160d543c188f22",
+      "size": 1776
+    },
+    "md/agenda/off-e5d03c19b8-中科闻歌迈向决策智能的技术与应用探索.md": {
+      "sha256": "53661817f1510d0d39513ad11a1a8b7f8292a9efb6b9af179023dae67fd48b61",
+      "size": 3554
+    },
+    "md/agenda/off-93995cf119-WAIC思想者论坛-姚期智专场.md": {
+      "sha256": "4dbcad5691717dd55789fe8e85b49f4e029ef7db3e09fc8912d3566b7e856003",
+      "size": 1730
+    },
+    "md/agenda/off-137cef5914-智序生命AI健未来浦江医学人工智能论坛.md": {
+      "sha256": "a588956a259286991c45535648c784407a7d6179101c929f8f6910f56e687126",
+      "size": 4280
+    },
+    "md/agenda/off-61eaf05d58-近代物理所AI与先进核能共筑可持续智能未来论坛.md": {
+      "sha256": "41d48541046d0317874ecb3197d6247ae7e16a2fff68f2576b654bc5caef66a9",
+      "size": 5493
+    },
+    "md/agenda/off-64f56aef20-曦智科技光计算与光互连双轮驱动的AI基础设施新范式论坛.md": {
+      "sha256": "36b2df1976c75de32179738a41dc1070273a56bc8685153785f3ee58fcd3cfa5",
+      "size": 3429
+    },
+    "md/agenda/off-0178530145-未来青年科技创新论坛.md": {
+      "sha256": "bb73aa3fef52cb111cd1f761a6641b0d4ce7cebf61598ee3961a2bf8538fec8b",
+      "size": 3717
+    },
+    "md/agenda/off-b788691860-上海交通大学AI未来发展论坛.md": {
+      "sha256": "ce5bb30328102274142c84686548cf2ea8d20ac08c4c85ebff451ca69ec866f5",
+      "size": 3522
+    },
+    "md/agenda/off-dc89850fc2-光源资本AIN-进化时刻人工智能产业融合论坛.md": {
+      "sha256": "10c3fe974d67f4e2a8c6b9ccfdd5b86098cb08f2bb9c41eccc0452436312d45e",
+      "size": 1569
+    },
+    "md/agenda/off-c51ab9dfae-埃森哲智能体时代引领企业价值跃迁论坛.md": {
+      "sha256": "52529e5bef0efa22fb541f3c94491004ea1d5b944f53507394339073e0ca2996",
+      "size": 4216
+    },
+    "md/agenda/off-88d7e85791-上海师范大学国际人工智能教育论坛.md": {
+      "sha256": "1436a0d13f6228a0ddb377ee688bbbd2a33dfe8d66f28712c750e807327c7683",
+      "size": 5625
+    },
+    "md/agenda/off-b93e0ed0f2-上海市消防救援局-AI原生智慧消防论坛.md": {
+      "sha256": "38479dbad219c0d4f3ab64c0462a7f7987bba583b3b3614ef3dd114363317122",
+      "size": 3202
+    },
+    "md/agenda/off-6c099605e2-AI时代全球青少年创新素养培育论坛.md": {
+      "sha256": "af0a06604b98b73e1fd86220d3713856afb0d94131892aa74132c597f240a935",
+      "size": 3050
+    },
+    "md/agenda/off-80d68ef5aa-紫琅智谷智能时代智谷作答AI产业生态发布会.md": {
+      "sha256": "9d8d5211d063e50b695a05c7b3b0be6a1f7b9a980053f65fecf7f367215737b0",
+      "size": 1677
+    },
+    "md/agenda/off-bcfe650836-物理智能创新生态论坛.md": {
+      "sha256": "fcd7cd354a9c2793752ef0cc310dc135810ff707882296ef20b0a3df48bdc187",
+      "size": 2494
+    },
+    "md/agenda/off-bb76d1adf9-人机共育--重塑大学人工智能教育论坛.md": {
+      "sha256": "bee6f26b20ec342e018e93344d001ea620e98457a4a0da354cc5867b6938d188",
+      "size": 4951
+    },
+    "md/agenda/off-b03ec8340d-交通银行数智金融-协同共创AI金融助力谱写高质量发展新篇章金融科技论坛.md": {
+      "sha256": "4993e15f3ebde4df6debfb4cd4d6ef707486d250774832850f45b590943c8433",
+      "size": 2952
+    },
+    "md/agenda/off-b640a7b4a1-从量产到精品AI赋能影视内容创作新生态论坛.md": {
+      "sha256": "7e4910461f9859759b04ffb01e7d8a77949e591e0c5ab8d1ce2ac0f166ccdae4",
+      "size": 5386
+    },
+    "md/agenda/off-2d12365308-联合利华AI-驱动快消品研发论坛.md": {
+      "sha256": "24b7cec0ee5e72317f55df9091ab9a80fa1da2288a3896781f1e7ff75f439674",
+      "size": 1345
+    },
+    "md/agenda/off-de22216650-骨码智元实验室人工智能高质量语料生态论坛.md": {
+      "sha256": "0b17f1b33a58d82e857bf7b766b489ffdfc800cd364ac60e573d97973d80508b",
+      "size": 2742
+    },
+    "md/agenda/off-0294cd4507-RISC-V与AI融合发展论坛.md": {
+      "sha256": "24f3fe75f0e8815733025d3202af4fa73134531e9678ce163447e571f19b7524",
+      "size": 2765
+    },
+    "md/agenda/off-39e0c590b9-中国信息协会-数据要素赋能行业智能体论坛.md": {
+      "sha256": "305e7f58e98c91909c21213e343b8347ebecc49992af55267983d48dcd185583",
+      "size": 4278
+    },
+    "md/agenda/off-e5babfd7be-智启具身迎接物理AI智能涌现论坛.md": {
+      "sha256": "ee7ff455dc175bf9e9a922abc415aa6f246eaed62097a9129edbc05c1ff56538",
+      "size": 2251
+    },
+    "md/agenda/off-1bdf713b2b-浪潮集团AI-原生驱动工业全域升级应用实践研讨会.md": {
+      "sha256": "886b3e5444c9a7b9fca94a48524311bf7bc61c19ef69b245988d97fc7467c235",
+      "size": 2720
+    },
+    "md/agenda/off-529644c1df-壹沓Agentic-AI进场-重塑全球供应链创新论坛.md": {
+      "sha256": "93caca422ce1849f91bef5bf74061c3c54b25ba35d2e069a90b04611af77921d",
+      "size": 2934
+    },
+    "md/agenda/zone-徐汇西岸国际会展中心.md": {
+      "sha256": "e2baa55b87721bc1cbc19c98b587461afe7067ad41aed9f5486d00e2e7cd399e",
+      "size": 389
+    },
+    "md/agenda/off-14fdcf97ca-WAIC思想者论坛-俞勇专场.md": {
+      "sha256": "9645b9f990b5389ec9bd0b050e06eefbb3528d9a20c5d7a3302d2ab376569964",
+      "size": 1653
+    },
+    "md/agenda/off-308da1e20c-AI驱动经济前沿与全球协同论坛.md": {
+      "sha256": "582cd776c5a085415f78129e429952b8cd780ef181b757ac02c9bd0482adff13",
+      "size": 2339
+    },
+    "md/agenda/off-0528768f81-启明创投创业与投资论坛-从算力原点到应用落地的进化征程.md": {
+      "sha256": "321fb92e7d5b7917275e57e69093055157bdafe32077e989a9b87f626da416a8",
+      "size": 2783
+    }
+  }
+}

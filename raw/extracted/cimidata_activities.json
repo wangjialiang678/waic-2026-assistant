@@ -1,0 +1,2164 @@
+{
+  "activities": [
+    {
+      "title": "WAIC UP! 之夜",
+      "theme": "AI 开发者与创造者社区之夜",
+      "description": "Datawhale 以 WAIC 2026 官方社区合作伙伴身份，于 7 月 17 日参与主办的 WAIC UP! 之夜社区活动。",
+      "participants": [],
+      "organizer": "Datawhale（联合主办）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": null,
+      "target_audience": "AI 开发者、创造者社区成员",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247610588&idx=1&sn=83bf619317f9ed4928df68a458a3a440&chksm=fc5fa50b3aadbbeb3aea7fdd4bfdb73b8f4c25a0712bea0eb940e6b48f2541b366fd6a5fed5a#rd",
+        "article_title": "WAIC 2026观众注册与入场指南"
+      },
+      "original_excerpt": "而今年，Datawhale 将亮相世界人工智能大会，不只是\"到场\"——我们以大会官方社区合作伙伴的身份，接入这场世界级的 AI 主场。7月17日参与主办 WAIC UP! 之夜。"
+    },
+    {
+      "title": "全球 AI 创造者生态连接计划发布",
+      "theme": "AI 创造者生态连接计划发布",
+      "description": "7 月 17 日，Datawhale 在 WAIC 2026 期间发布『全球 AI 创造者生态连接计划』，作为其官方社区合作伙伴系列动作之一。",
+      "participants": [],
+      "organizer": "Datawhale",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": null,
+      "target_audience": "AI 创造者、开发者生态",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247610588&idx=1&sn=83bf619317f9ed4928df68a458a3a440&chksm=fc5fa50b3aadbbeb3aea7fdd4bfdb73b8f4c25a0712bea0eb940e6b48f2541b366fd6a5fed5a#rd",
+        "article_title": "WAIC 2026观众注册与入场指南"
+      },
+      "original_excerpt": "7月17日一个重要发布：全球AI创造者生态连接计划。"
+    },
+    {
+      "title": "Datawhale 参与主办的 WAIC 2026 线下论坛（7 月 18 日下午）",
+      "theme": null,
+      "description": "7 月 18 日下午，Datawhale 作为 WAIC 2026 官方社区合作伙伴参与主办的一场线下论坛，论坛具体名称未在原文披露；联合方包括上海科学智能研究院、复旦大学、阿里云、商汤科技、记忆张量等。",
+      "participants": [
+        "上海科学智能研究院",
+        "复旦大学",
+        "阿里云",
+        "商汤科技",
+        "记忆张量"
+      ],
+      "organizer": "Datawhale（联合主办）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "下午",
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247610588&idx=1&sn=83bf619317f9ed4928df68a458a3a440&chksm=fc5fa50b3aadbbeb3aea7fdd4bfdb73b8f4c25a0712bea0eb940e6b48f2541b366fd6a5fed5a#rd",
+        "article_title": "WAIC 2026观众注册与入场指南"
+      },
+      "original_excerpt": "7月18日下午参与主办 一场线下论坛。同时联合上海科学智能研究院、复旦大学、阿里云、商汤科技、记忆张量等。"
+    },
+    {
+      "title": "商汤科技·基座大模型架构创新与生态合作论坛",
+      "theme": "基座大模型架构创新与生态合作；首发日日新 SenseNova-U1 Pro",
+      "description": "WAIC 主干论坛之一。商汤科技将正式发布下一代旗舰多模态基座模型「商汤日日新 SenseNova-U1 Pro」（对标 GPT-Image-2，原生支持 8K 输出，重点落地设计领域）。以『更国际、更年轻、更落地』为定位，设『首席科学家圆桌』『全球发展圆桌』『青年研究者环节』，并现场发布商汤大装置国产 AI 基础设施『技术-生态-商业』闭环，与 20 家国产化核心伙伴、五大科研机构、星宇航等集中签约。",
+      "participants": [
+        "图灵奖得主 Richard Sutton（强化学习之父，前沿技术分享）",
+        "林达华（商汤科技联合创始人、首席科学家）",
+        "邱锡鹏（复旦大学教授）",
+        "赵德丽（阿里巴巴达摩院首席科学家）",
+        "张祥雨（阶跃星辰首席科学家）",
+        "刘子纬（新加坡南洋理工大学副教授）",
+        "谢祖墀（高风咨询创始人，主持全球发展圆桌）"
+      ],
+      "organizer": "主办：全国工商联人工智能委员会、世界人工智能大会组委会；承办：商汤科技",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "9:00-12:00",
+      "venue": "上海世博中心银厅A",
+      "target_audience": "AI 行业同仁、产业伙伴、观展嘉宾、青年研究者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612310&idx=1&sn=e06e80c09e6c0c96a25a082d093b47d5&chksm=fcc65c15f70a81dda77b55f3e490f93c22cecf57c8363bb9a3e50c17909574718712573a532c#rd",
+        "article_title": "展商动态 | 商汤科技首发新模型日日新U1 Pro，机器人便利店开进WAIC 2026两大场馆"
+      },
+      "original_excerpt": "由全国工商联人工智能委员会及世界人工智能大会组委会主办、商汤科技承办的「基座大模型架构创新与生态合作论坛」于7月18日上午落地世博中心银厅A，图灵奖得主Richard Sutton将带来前沿技术分享。"
+    },
+    {
+      "title": "AI创作者之夜（WAIC UP! Day&Night 夜场）",
+      "theme": "AI 时代的创作与共识交流",
+      "description": "WAIC UP! Day&Night 系列夜场之一，设于张江会场周边，供 AI 行业人士在轻松交流中展开创作与共识对话。",
+      "participants": [],
+      "organizer": "WAIC UP!（WAIC 2026 官方夜场）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": "夜间",
+      "venue": "上海·张江（张江会场周边）",
+      "target_audience": "AI 行业人士、创作者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612915&idx=1&sn=301193de7213e23a0990414fe96067d7&chksm=fcc384244c5b0c131bf928f6e8f8f75ee68a7726da15a7b7384769a699b98b60c890c3e74390#rd",
+        "article_title": "人机伙伴｜硬核看展+趣味体验+全城漫游，WAIC 2026的打开方式不止一种"
+      },
+      "original_excerpt": "入夜后，WAIC UP! Day&Night系列夜场中，'AI创作者之夜''APEC青年AI创造者之夜'以及聚焦三地视角的'AI三极夜话'陆续开场，供行业人士在轻松的交流中展开AI时代的创作与共识。"
+    },
+    {
+      "title": "APEC青年AI创造者之夜（WAIC UP! Day&Night 夜场）",
+      "theme": "青年 AI 创造者交流",
+      "description": "WAIC UP! Day&Night 系列夜场之一，聚焦青年 AI 创造者，设于张江会场周边。",
+      "participants": [],
+      "organizer": "WAIC UP!（WAIC 2026 官方夜场）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": "夜间",
+      "venue": "上海·张江（张江会场周边）",
+      "target_audience": "青年 AI 创造者、行业人士",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612915&idx=1&sn=301193de7213e23a0990414fe96067d7&chksm=fcc384244c5b0c131bf928f6e8f8f75ee68a7726da15a7b7384769a699b98b60c890c3e74390#rd",
+        "article_title": "人机伙伴｜硬核看展+趣味体验+全城漫游，WAIC 2026的打开方式不止一种"
+      },
+      "original_excerpt": "入夜后，WAIC UP! Day&Night系列夜场中，'AI创作者之夜''APEC青年AI创造者之夜'以及聚焦三地视角的'AI三极夜话'陆续开场，供行业人士在轻松的交流中展开AI时代的创作与共识。"
+    },
+    {
+      "title": "AI三极夜话（WAIC UP! Day&Night 夜场）",
+      "theme": "聚焦世博/张江/西岸三地视角的 AI 对话",
+      "description": "WAIC UP! Day&Night 系列夜场之一，围绕三地（世博、张江、西岸）视角展开 AI 时代对话，设于张江会场周边。",
+      "participants": [],
+      "organizer": "WAIC UP!（WAIC 2026 官方夜场）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": "夜间",
+      "venue": "上海·张江（张江会场周边）",
+      "target_audience": "AI 行业人士",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612915&idx=1&sn=301193de7213e23a0990414fe96067d7&chksm=fcc384244c5b0c131bf928f6e8f8f75ee68a7726da15a7b7384769a699b98b60c890c3e74390#rd",
+        "article_title": "人机伙伴｜硬核看展+趣味体验+全城漫游，WAIC 2026的打开方式不止一种"
+      },
+      "original_excerpt": "入夜后，WAIC UP! Day&Night系列夜场中，……以及聚焦三地视角的'AI三极夜话'陆续开场，供行业人士在轻松的交流中展开AI时代的创作与共识。"
+    },
+    {
+      "title": "AI生产力先锋之夜（徐汇西岸硬核夜聊）",
+      "theme": "AI 生产力产品路演与观众打分",
+      "description": "徐汇西岸三场硬核夜聊之一，聚焦 AI 行业真实议题，形式为产品直接上台、观众举牌打分，讨论氛围直接务实。设于模速空间及周边。",
+      "participants": [],
+      "organizer": "WAIC 2026（徐汇西岸夜聊）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": "夜间",
+      "venue": "上海·徐汇西岸（模速空间及周边）",
+      "target_audience": "开发者、创作者、AI 产品团队",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612915&idx=1&sn=301193de7213e23a0990414fe96067d7&chksm=fcc384244c5b0c131bf928f6e8f8f75ee68a7726da15a7b7384769a699b98b60c890c3e74390#rd",
+        "article_title": "人机伙伴｜硬核看展+趣味体验+全城漫游，WAIC 2026的打开方式不止一种"
+      },
+      "original_excerpt": "夜间，这里的三场硬核夜聊聚焦AI行业的真实议题——从开发者与创作者的对谈，到产品直接上台、观众举牌打分的'AI生产力先锋之夜''全球智识之夜''Good or Bad之夜'，讨论氛围直接而务实。"
+    },
+    {
+      "title": "全球智识之夜（徐汇西岸硬核夜聊）",
+      "theme": "全球 AI 智识对谈",
+      "description": "徐汇西岸三场硬核夜聊之一，聚焦全球 AI 智识与行业真实议题，设于模速空间及周边。",
+      "participants": [],
+      "organizer": "WAIC 2026（徐汇西岸夜聊）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": "夜间",
+      "venue": "上海·徐汇西岸（模速空间及周边）",
+      "target_audience": "开发者、创作者、AI 从业者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612915&idx=1&sn=301193de7213e23a0990414fe96067d7&chksm=fcc384244c5b0c131bf928f6e8f8f75ee68a7726da15a7b7384769a699b98b60c890c3e74390#rd",
+        "article_title": "人机伙伴｜硬核看展+趣味体验+全城漫游，WAIC 2026的打开方式不止一种"
+      },
+      "original_excerpt": "夜间，这里的三场硬核夜聊聚焦AI行业的真实议题……'AI生产力先锋之夜''全球智识之夜''Good or Bad之夜'，讨论氛围直接而务实。"
+    },
+    {
+      "title": "Good or Bad之夜（徐汇西岸硬核夜聊）",
+      "theme": "AI 产品/议题的正反辩论",
+      "description": "徐汇西岸三场硬核夜聊之一，围绕 AI 行业真实议题展开务实讨论，设于模速空间及周边。",
+      "participants": [],
+      "organizer": "WAIC 2026（徐汇西岸夜聊）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": "夜间",
+      "venue": "上海·徐汇西岸（模速空间及周边）",
+      "target_audience": "开发者、创作者、AI 从业者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612915&idx=1&sn=301193de7213e23a0990414fe96067d7&chksm=fcc384244c5b0c131bf928f6e8f8f75ee68a7726da15a7b7384769a699b98b60c890c3e74390#rd",
+        "article_title": "人机伙伴｜硬核看展+趣味体验+全城漫游，WAIC 2026的打开方式不止一种"
+      },
+      "original_excerpt": "夜间，这里的三场硬核夜聊……到产品直接上台、观众举牌打分的'AI生产力先锋之夜''全球智识之夜''Good or Bad之夜'，讨论氛围直接而务实。"
+    },
+    {
+      "title": "WAIC UP! 2026 青年观察家·思享会",
+      "theme": "AI 时代的教育、就业、创业、成长命题",
+      "description": "从日间延续至夜晚的青年交流活动。白天围绕教育、就业、创业、成长等 AI 时代命题展开讨论；入夜后由知乎、RTE、WAYTOAGI、CSDN、Ideacafé 五家社区各自设立互动专区（虚拟身份组队、微醺桌游、AI 公益分享、AI Coding Bar、围炉对话等），推动参与者真实连接。设于世博主场馆。",
+      "participants": [
+        "知乎",
+        "RTE",
+        "WAYTOAGI",
+        "CSDN",
+        "Ideacafé"
+      ],
+      "organizer": "WAIC UP!（WAIC 2026 官方）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": "日间至夜晚",
+      "venue": "上海·世博（世博主场馆）",
+      "target_audience": "青年观察家、AI 从业者、社区成员",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612915&idx=1&sn=301193de7213e23a0990414fe96067d7&chksm=fcc384244c5b0c131bf928f6e8f8f75ee68a7726da15a7b7384769a699b98b60c890c3e74390#rd",
+        "article_title": "人机伙伴｜硬核看展+趣味体验+全城漫游，WAIC 2026的打开方式不止一种"
+      },
+      "original_excerpt": "WAIC UP! 2026青年观察家·思享会从日间延续至夜晚。白天围绕教育、就业、创业、成长等AI时代命题展开讨论；入夜后，知乎、RTE、WAYTOAGI、CSDN、Ideacafé五家社区各自设立互动专区。"
+    },
+    {
+      "title": "音创宇宙 · WAIC 首个青少年 AI 音综",
+      "theme": "青少年 AIGC 音乐演出",
+      "description": "WAIC 首个青少年 AI 音综，将 AIGC 音乐大赛优胜作品搬上徐汇西岸舞台，一线明星参与帮唱，盲童学校学生合唱《听见光》，让 AI 成为少年们表达梦想的媒介。",
+      "participants": [
+        "AIGC 音乐大赛优胜作品/选手",
+        "一线明星（帮唱）",
+        "盲童学校学生（合唱《听见光》）"
+      ],
+      "organizer": "WAIC 2026（徐汇西岸）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": null,
+      "venue": "上海·徐汇西岸舞台",
+      "target_audience": "青少年、公众观众",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612915&idx=1&sn=301193de7213e23a0990414fe96067d7&chksm=fcc384244c5b0c131bf928f6e8f8f75ee68a7726da15a7b7384769a699b98b60c890c3e74390#rd",
+        "article_title": "人机伙伴｜硬核看展+趣味体验+全城漫游，WAIC 2026的打开方式不止一种"
+      },
+      "original_excerpt": "音创宇宙：WAIC首个青少年AI音综，将AIGC音乐大赛优胜作品搬上西岸舞台，一线明星参与帮唱，盲童学校学生合唱《听见光》。AI在这里成为少年们表达梦想的媒介。"
+    },
+    {
+      "title": "「极致协同 沪筑生态」中兴通讯全栈智算生态论坛",
+      "theme": "国产化智算生态共建、Token元年全链路降本增效",
+      "description": "圆桌对话「聚力联行，共筑生态」，围绕国产化智算生态发展机遇与挑战、Token元年全链路降本增效核心路径展开研讨，聚焦产业重点攻坚方向、生态协同模式与行业标准化落地方案，凝聚产业合力促国产智算多方共赢。",
+      "participants": [
+        "吕剑飞（奕行智能高级副总裁）"
+      ],
+      "organizer": "中兴通讯",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "09:00-11:50",
+      "venue": "上海世博会议中心 616会议室",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "奕行智能 EVAS",
+        "url": "http://mp.weixin.qq.com/s?__biz=Mzg2NTc0MjQxNA==&mid=2247485836&idx=1&sn=6cb44d133e03ecc2e57e39befc4ee40d&chksm=cfac9f75e88ef5293d49d5e98128456d0f3c1af9c1e30e9cac6975419926d1ad0f606b2799e5#rd",
+        "article_title": "WAIC 2026 观展指南｜四场论坛怎么听？硬核超节点首发看这里"
+      },
+      "original_excerpt": "论坛：“极致协同 沪筑生态”中兴通讯全栈智算生态论坛。时间：7月18日 9:00–11:50。地点：上海世博会议中心 616 会议室。嘉宾：吕剑飞 奕行智能高级副总裁。"
+    },
+    {
+      "title": "从大模型到智能体：迈向自主智能新纪元论坛",
+      "theme": "智能体赋能算力芯片研发全流程",
+      "description": "中国信通院主办。奕行智能分享「智能体赋能算力芯片研发：从算子开发到研发全流程的工程实践」，立足 AI For Engineering 理念，以智能体打造工程师协同搭档，深度融入算力芯片研发各环节，探索 AI-Native 芯片研发新模式。",
+      "participants": [
+        "石贤帅（奕行智能首席AI官）"
+      ],
+      "organizer": "中国信息通信研究院（信通院）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "13:30-18:00",
+      "venue": "上海西岸国际会展中心 4楼 2号厅B",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "奕行智能 EVAS",
+        "url": "http://mp.weixin.qq.com/s?__biz=Mzg2NTc0MjQxNA==&mid=2247485836&idx=1&sn=6cb44d133e03ecc2e57e39befc4ee40d&chksm=cfac9f75e88ef5293d49d5e98128456d0f3c1af9c1e30e9cac6975419926d1ad0f606b2799e5#rd",
+        "article_title": "WAIC 2026 观展指南｜四场论坛怎么听？硬核超节点首发看这里"
+      },
+      "original_excerpt": "论坛：从大模型到智能体：迈向自主智能新纪元论坛（中国信通院）。时间：7月18日 13:30–18:00。地点：上海西岸国际会展中心4楼 2号厅B。嘉宾：石贤帅 奕行智能首席 AI 官。"
+    },
+    {
+      "title": "算电冷协同 助力AI芯片释放极致算力——科华数据算力基础设施与AI芯片协同发展论坛",
+      "theme": "RISC-V AI算力、超节点、算电冷协同",
+      "description": "科华数据主办。奕行智能分享「RISC-V AI 算力筑基，以超节点赋能 Token 纪元」，面向 Token 时代极致算力性价比需求，分享基于 RISC-V 架构的超节点算力解决方案，解析 AI 芯片与算力基础设施协同落地逻辑。",
+      "participants": [
+        "赵杨（奕行智能OEM产品部总经理）"
+      ],
+      "organizer": "科华数据",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "14:00-17:00",
+      "venue": "上海世博桐森酒店 3F 桐森厅3",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "奕行智能 EVAS",
+        "url": "http://mp.weixin.qq.com/s?__biz=Mzg2NTc0MjQxNA==&mid=2247485836&idx=1&sn=6cb44d133e03ecc2e57e39befc4ee40d&chksm=cfac9f75e88ef5293d49d5e98128456d0f3c1af9c1e30e9cac6975419926d1ad0f606b2799e5#rd",
+        "article_title": "WAIC 2026 观展指南｜四场论坛怎么听？硬核超节点首发看这里"
+      },
+      "original_excerpt": "论坛：算电冷协同 助力 AI 芯片释放极致算力——科华数据算力基础设施与 AI 芯片协同发展论坛。时间：7月18日 14:00–17:00。地点：上海世博桐森酒店3F 桐森厅 3。嘉宾：赵杨 奕行智能 OEM 产品部总经理。"
+    },
+    {
+      "title": "AI开放计算与智能体技术生态论坛",
+      "theme": "FlagOS开放算力、智能体赋能芯片研发",
+      "description": "中国互联网协会、智源研究院主办。奕行智能围绕 FlagOS 开放算力与 AI 智能体技术方向，分享智能体在芯片研发中的落地应用，聚焦算子自动化优化、研发全流程提效实战经验，赋能开放算力生态建设。",
+      "participants": [
+        "石贤帅（奕行智能首席AI官）"
+      ],
+      "organizer": "中国互联网协会、智源研究院",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": "09:00-12:00",
+      "venue": "上海世博中心 618会议室",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "奕行智能 EVAS",
+        "url": "http://mp.weixin.qq.com/s?__biz=Mzg2NTc0MjQxNA==&mid=2247485836&idx=1&sn=6cb44d133e03ecc2e57e39befc4ee40d&chksm=cfac9f75e88ef5293d49d5e98128456d0f3c1af9c1e30e9cac6975419926d1ad0f606b2799e5#rd",
+        "article_title": "WAIC 2026 观展指南｜四场论坛怎么听？硬核超节点首发看这里"
+      },
+      "original_excerpt": "论坛：AI 开放计算与智能体技术生态论坛（中国互联网协会、智源研究院）。时间：7月19日 09:00–12:00。地点：上海世博中心 618 会议室。嘉宾：石贤帅 奕行智能首席 AI 官。"
+    },
+    {
+      "title": "WAIC UP! 之夜",
+      "theme": "AI 创造者/开发者社区之夜",
+      "description": "Datawhale 作为 WAIC 2026 官方社区合作伙伴，于 7 月 17 日参与主办的 WAIC UP! 之夜活动。Datawhale 本届还联合上海科学智能研究院、复旦大学、阿里云、商汤科技、记忆张量等机构参与多项 WAIC 活动。",
+      "participants": [
+        "Datawhale"
+      ],
+      "organizer": "Datawhale（参与主办）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": null,
+      "target_audience": "AI 创造者、开发者、科技爱好者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "Datawhale",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247724198&idx=1&sn=c26bc828b9f07c3095b1ce5999e3773b&chksm=e9cca51b667fb7a62f5ff0c6a5f16bee01278e8fa82a24d9980a7b92526db573e547481f55ba#rd",
+        "article_title": "WAIC 2026 完整议程！Datawhale亮相世界人工智能大会！"
+      },
+      "original_excerpt": "—— 7月17日参与主办 WAIC UP! 之夜。我们以大会官方社区合作伙伴的身份，接入这场世界级的 AI 主场。"
+    },
+    {
+      "title": "全球 AI 创造者生态连接计划发布",
+      "theme": "AI 创造者生态连接计划发布",
+      "description": "Datawhale 于 WAIC 2026 期间（7 月 17 日）发布'全球 AI 创造者生态连接计划'，作为其大会官方社区合作伙伴身份下的一项重要发布。",
+      "participants": [
+        "Datawhale"
+      ],
+      "organizer": "Datawhale",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "Datawhale",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247724198&idx=1&sn=c26bc828b9f07c3095b1ce5999e3773b&chksm=e9cca51b667fb7a62f5ff0c6a5f16bee01278e8fa82a24d9980a7b92526db573e547481f55ba#rd",
+        "article_title": "WAIC 2026 完整议程！Datawhale亮相世界人工智能大会！"
+      },
+      "original_excerpt": "—— 7月17日一个重要发布：全球AI创造者生态连接计划。"
+    },
+    {
+      "title": "Datawhale 参与主办的 WAIC 2026 线下论坛",
+      "theme": "Datawhale 联合主办的线下论坛",
+      "description": "Datawhale 作为 WAIC 2026 官方社区合作伙伴，于 7 月 18 日下午参与主办的一场线下论坛（具体论坛名称未在文中公布），联合上海科学智能研究院、复旦大学、阿里云、商汤科技、记忆张量等机构；当日 Datawhale 还伴随一项战略签约。",
+      "participants": [
+        "Datawhale",
+        "上海科学智能研究院",
+        "复旦大学",
+        "阿里云",
+        "商汤科技",
+        "记忆张量"
+      ],
+      "organizer": "Datawhale（参与主办）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "下午",
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "Datawhale",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247724198&idx=1&sn=c26bc828b9f07c3095b1ce5999e3773b&chksm=e9cca51b667fb7a62f5ff0c6a5f16bee01278e8fa82a24d9980a7b92526db573e547481f55ba#rd",
+        "article_title": "WAIC 2026 完整议程！Datawhale亮相世界人工智能大会！"
+      },
+      "original_excerpt": "—— 7月18日下午参与主办一场线下论坛 —— 7月18日一个战略签约。同时联合上海科学智能研究院、复旦大学、阿里云、商汤科技、记忆张量等"
+    },
+    {
+      "title": "京东 WAIC 2026 展区（AI 进入物理世界）",
+      "theme": "AI 进入物理世界 / 具身智能与产业应用",
+      "description": "京东在 WAIC 2026 现场设展，围绕'AI 进入物理世界'展示从模型能力、具身数据到产业与生活的具体应用；据文章预告含 30+ AI 互动、20+ 行业嘉宾。",
+      "participants": [
+        "京东",
+        "20+ 行业嘉宾（未具名）"
+      ],
+      "organizer": "京东",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": "世博展览馆 H1-C117 展位",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247613705&idx=1&sn=97ee547c2c9d82949b328d1f281aaf27&chksm=fc8221ada3b2355887acc288cd49819ca4b79eda163b499575daa7a3f7de6ce228f58a7eb824#rd",
+        "article_title": "展商动态｜30+AI互动，20+行业嘉宾，京东将在WAIC 2026带来哪些硬核看点？"
+      },
+      "original_excerpt": "展览时间：7月17日-20日，展览地点：世博展览馆，展位号：H1-C117。7月17日-20日，在WAIC2026现场，和京东一起，走进AI进入物理世界的新阶段。"
+    },
+    {
+      "title": "WAIC企业家论坛",
+      "theme": "AI转型·企业战略",
+      "description": "专为企业一把手打造的跨界论坛，围绕企业AI转型三问展开，嘉宾含曾鸣、欧莱雅AI官、海尔CIO等。WAIC官方论坛，需经Hi WAIC App购票/预约。",
+      "participants": [
+        "曾鸣",
+        "欧莱雅AI官",
+        "海尔CIO"
+      ],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "13:00-17:00",
+      "venue": "世博桐森酒店",
+      "target_audience": "企业高管/战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "WAIC企业家论坛 7月18日 13:00-17:00 世博桐森酒店 专为企业一把手打造，曾鸣、欧莱雅AI官、海尔CIO等跨界阵容，解决“AI转型三问”"
+    },
+    {
+      "title": "人工智能全球治理高级别会议（WAIC主论坛）",
+      "theme": "AI全球治理",
+      "description": "开幕日最高规格主论坛，为全年AI发展方向定调。WAIC官方主论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": "14:00-17:00",
+      "venue": "世博中心金厅A+B",
+      "target_audience": "企业高管/战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "主论坛（人工智能全球治理高级别会议）7月17日 14:00-17:00 世博中心金厅A+B 开幕日最高规格，定调全年AI发展方向"
+    },
+    {
+      "title": "AI规模化落地与增长新蓝图生态论坛",
+      "theme": "AI规模化落地",
+      "description": "聚焦AI从试点到全域协同的落地路径。WAIC官方生态论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": "09:00-12:00",
+      "venue": "世博中心619会议室",
+      "target_audience": "企业高管/战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "AI规模化落地与增长新蓝图生态论坛 7月19日 09:00-12:00 世博中心619会议室 聚焦AI从试点到全域协同的落地路径"
+    },
+    {
+      "title": "智见AI合创未来——人工智能投融资论坛",
+      "theme": "AI投融资",
+      "description": "了解资本对AI赛道的判断与布局的投融资论坛。WAIC官方论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "13:30-18:00",
+      "venue": "世博中心银厅A",
+      "target_audience": "企业高管/战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "智见AI合创未来——人工智能投融资论坛 7月18日 13:30-18:00 世博中心银厅A 了解资本对AI赛道的判断与布局"
+    },
+    {
+      "title": "共建全球科技金融伙伴新生态投融资论坛",
+      "theme": "科技金融·投融资",
+      "description": "产业资本与AI项目的对接平台。WAIC官方投融资论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": "14:00-18:00",
+      "venue": "世博中心金厅C",
+      "target_audience": "企业高管/战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "共建全球科技金融伙伴新生态投融资论坛 7月19日 14:00-18:00 世博中心金厅C 产业资本与AI项目的对接平台"
+    },
+    {
+      "title": "WAIC·思想者论坛（姚期智/李开复等专场）",
+      "theme": "AI底层逻辑·思想",
+      "description": "顶咖论道，把握AI底层逻辑，含姚期智、李开复等专场。7月19-20日两天举办。WAIC官方论坛。",
+      "participants": [
+        "姚期智",
+        "李开复"
+      ],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": null,
+      "venue": "世博中心红厅",
+      "target_audience": "企业高管/战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "WAIC·思想者论坛（姚期智/李开复等专场）7月19日-20日 世博中心红厅 顶咖论道，把握AI底层逻辑"
+    },
+    {
+      "title": "基座大模型架构创新与生态合作论坛",
+      "theme": "大模型架构",
+      "description": "商汤主办，聚焦模型架构前沿。WAIC官方论坛。",
+      "participants": [],
+      "organizer": "商汤科技",
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "09:00-12:00",
+      "venue": "世博中心银厅A",
+      "target_audience": "技术人员/研发工程师/算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "基座大模型架构创新与生态合作论坛 7月18日 09:00-12:00 世博中心银厅A 商汤主办，聚焦模型架构前沿"
+    },
+    {
+      "title": "从大模型到智能体：迈向自主智能新纪元论坛",
+      "theme": "智能体/Agent",
+      "description": "信通院主办，Agent技术深度解读。WAIC官方论坛。",
+      "participants": [],
+      "organizer": "中国信通院",
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "13:30-17:30",
+      "venue": "西岸2号厅B",
+      "target_audience": "技术人员/研发工程师/算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "从大模型到智能体迈向自主智能新纪元论坛 7月18日 13:30-17:30 西岸2号厅B 信通院主办，Agent技术深度解读"
+    },
+    {
+      "title": "RISC-V与AI融合发展论坛",
+      "theme": "开源芯片/RISC-V",
+      "description": "开源芯片架构与AI的结合。WAIC官方论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": "14:00-17:00",
+      "venue": "世博中心617会议室",
+      "target_audience": "技术人员/研发工程师/算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "RISC-V与AI融合发展论坛 7月17日 14:00-17:00 世博中心617会议室 开源芯片架构与AI的结合"
+    },
+    {
+      "title": "未来计算与未来算力论坛",
+      "theme": "未来算力",
+      "description": "面向未来的计算范式。WAIC官方论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "13:30-17:30",
+      "venue": "世博中心红厅",
+      "target_audience": "技术人员/研发工程师/算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "未来计算与未来算力论坛 7月18日 13:30-17:30 世博中心红厅 面向未来的计算范式"
+    },
+    {
+      "title": "Token经济协同芯片生态论坛",
+      "theme": "Token经济·芯片",
+      "description": "Token经济与芯片的交叉前沿。WAIC官方论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "14:00-17:00",
+      "venue": "世博中心银厅B",
+      "target_audience": "技术人员/研发工程师/算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "Token经济协同芯片生态论坛 7月18日 14:00-17:00 世博中心银厅B Token经济与芯片的交叉前沿"
+    },
+    {
+      "title": "WAICA·世界人工智能大会学术2026启动会",
+      "theme": "学术·AI4S",
+      "description": "WAICA学术板块开幕启动会，了解学术前沿方向。WAIC今年首创的国际学术会议板块。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "09:00-11:30",
+      "venue": "世博展览馆2号会议室",
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "WAICA·世界人工智能大会学术2026启动会 7月18日 09:00-11:30 世博展览馆2号会议室 学术板块开幕，了解学术前沿方向"
+    },
+    {
+      "title": "科学前沿论坛",
+      "theme": "AI for Science",
+      "description": "顶尖科研机构主办，学术含金量高。WAIC官方论坛，在上海AI实验室新园区举办。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": "15:00-18:45",
+      "venue": "上海AI实验室新园区",
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "科学前沿论坛 7月17日 15:00-18:45 上海AI实验室新园区 顶尖科研机构主办，学术含金量高"
+    },
+    {
+      "title": "数学与人工智能论坛",
+      "theme": "AI×数学",
+      "description": "AI与数学的交叉，理论深度大。WAIC官方论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": "13:25-18:00",
+      "venue": "世博中心银厅A",
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "数学与人工智能论坛 7月17日 13:25-18:00 世博中心银厅A AI与数学的交叉，理论深度大"
+    },
+    {
+      "title": "人工智能赋能材料科学论坛",
+      "theme": "AI4S·材料科学",
+      "description": "AI4S典型代表论坛。WAIC官方论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": "14:00-18:00",
+      "venue": "西岸2号厅C",
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "人工智能赋能材料科学论坛 7月17日 14:00-18:00 西岸2号厅C AI4S典型代表"
+    },
+    {
+      "title": "WAICA研讨会·多模态智能体驱动的科学计算",
+      "theme": "多模态Agent for Science",
+      "description": "学术前沿：多模态Agent for Science。WAICA学术研讨会。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": "09:00-12:00",
+      "venue": "西岸上海厅",
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "WAICA研讨会·多模态智能体驱动的科学计算 7月19日 09:00-12:00 西岸上海厅 学术前沿：多模态Agent for Science"
+    },
+    {
+      "title": "WAICA·青年菁英交流会",
+      "theme": "青年学者交流",
+      "description": "直接与青年学者交流的交流会。WAICA学术板块。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-20",
+      "event_time": "09:00-12:00",
+      "venue": "世博中心616会议室",
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "WAICA·青年菁英交流会 7月20日 09:00-12:00 世博中心616会议室 直接与青年学者交流"
+    },
+    {
+      "title": "人工智能青年先锋对话论坛",
+      "theme": "青年AI人才",
+      "description": "1030位35岁以下AI青年人才齐聚的对话论坛。WAIC官方论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "09:30-11:30",
+      "venue": "西岸2号厅C",
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "人工智能青年先锋对话论坛 7月18日 09:30-11:30 西岸2号厅C 1030位35岁以下AI青年人才齐聚"
+    },
+    {
+      "title": "WAIC UP! 2026——青年观察家·思享会",
+      "theme": "青年观察·思享",
+      "description": "青年视角、深度互动的思享会。WAIC官方活动。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": "13:30-21:30",
+      "venue": "世博展览馆1A会议室",
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "WAIC UP! 2026——青年观察家·思享会 7月19日 13:30-21:30 世博展览馆1A会议室 青年视角、深度互动"
+    },
+    {
+      "title": "国际人工智能教育论坛",
+      "theme": "AI教育",
+      "description": "了解AI教育发展趋势的国际论坛。WAIC官方论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": "09:00-12:10",
+      "venue": "世博展览馆1A会议室",
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "国际人工智能教育论坛 7月19日 09:00-12:10 世博展览馆1A会议室 了解AI教育发展趋势"
+    },
+    {
+      "title": "2026中国·AI盛典",
+      "theme": "AI×文化艺术·视听盛典",
+      "description": "视听盛宴，感受AI与文化艺术的碰撞的AI盛典。WAIC同期文娱活动。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "19:30-21:30",
+      "venue": "西岸穹顶艺术中心",
+      "target_audience": "普通市民/AI爱好者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "2026中国·AI盛典 7月18日 19:30-21:30 西岸穹顶艺术中心 视听盛宴，感受AI与文化艺术的碰撞"
+    },
+    {
+      "title": "人形机器人与具身智能创新发展论坛（开放场次）",
+      "theme": "具身智能/人形机器人",
+      "description": "面向公众的开放场次，看最前沿的机器人技术演讲。WAIC官方论坛。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": "09:00-12:30",
+      "venue": "世博中心银厅A",
+      "target_audience": "普通市民/AI爱好者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "首席AI顾问",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzY5NTM4MTU1MQ==&mid=2247483672&idx=1&sn=96dc609a22db62819b106edfc8beab84&chksm=f5ffafb98d1dbe6c5c238bcd663a1cc1582342d4919484b85e5c29a96320be5bab99299861fb#rd",
+        "article_title": "WAIC 2026 世界人工智能大会 · 不同人群参会指南"
+      },
+      "original_excerpt": "人形机器人与具身智能创新发展论坛（开放场次）7月19日 09:00-12:30 世博中心银厅A 看最前沿的机器人技术演讲"
+    },
+    {
+      "title": "2026世界人工智能大会·人工智能国际标准化论坛",
+      "theme": "AI标准化·智能治理",
+      "description": "以“标准引领，智能共治”为主题，邀中外院士与权威专家共话全球标准建设与智能治理，共探全球AI标准协同与开放共治新路径。地点中国·上海。",
+      "participants": [
+        "施毅（中国科学院院士）",
+        "克莱西奥·R·博姆（巴西科学院院士）",
+        "刘贤刚（中国电子技术标准化研究院党委书记、副院长）",
+        "宋海涛（联合国AI独立国际科学小组成员、上海人工智能研究院院长）"
+      ],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": "上海",
+      "target_audience": "企业高管/战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "澎湃新闻",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MzI5NTU3MQ==&mid=2652550437&idx=1&sn=6ff803541a3323b2853a5593e2026bce&chksm=bc0aabc7395f7fd02b498d80c879c2fc611729ec7095f130fa11cd2f4d468d2a5772e97e87a7#rd",
+        "article_title": "五大亮点提前看！世界人工智能大会本周开幕：智慧、硬核、体验、年轻、治理"
+      },
+      "original_excerpt": "“标准引领，智能共治”，2026世界人工智能大会人工智能国际标准化论坛重磅力邀中外院士与权威专家，共话全球标准建设与智能治理。7月17日，中国·上海"
+    },
+    {
+      "title": "2026世界人工智能大会·量子城市空间智能论坛",
+      "theme": "空间智能·未来城市",
+      "description": "以“量子城市：空间智能+未来城市”为主题，设“1个主论坛+4个平行论坛”。7月17日主论坛5位专家学者研讨；7月18日举办4个平行论坛：型域·空间营造、太格·时光生成、数资·资源增益、具身·双基共生。并发布上海量子城市空间智能建设核心攻关成果。",
+      "participants": [],
+      "organizer": "上海市规划和自然资源局/上海杨浦",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": "7月17日主论坛，7月18日4个平行论坛",
+      "venue": null,
+      "target_audience": "高校师生/研究者/专业学生",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "界面新闻",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650961333&idx=2&sn=9a6b51d04ad39d4a5d5c1f0822306d1a&chksm=bc87d1a5a854438312c3fb3547ed0657ce7500116a506d1da881f4b19c5e26e782db14f1881e#rd",
+        "article_title": "WAIC 2026启幕倒计时：四大亮点一文看懂"
+      },
+      "original_excerpt": "2026世界人工智能大会·量子城市空间智能论坛……本次论坛共设置“1个主论坛+4个平行论坛”，7月17日举办主论坛……7月18日举办4个平行论坛"
+    },
+    {
+      "title": "OPC独立先锋挑战赛（决赛）",
+      "theme": "一人公司·原创开源个体",
+      "description": "WAIC大会首次设立的挑战赛，核心词为“原创、开源、个体”（Original, Open, One）。8支团队从全国8大赛区、600多个项目中脱颖而出登上决赛舞台，项目分布在游戏、睡眠、教育、金融、办公、医疗等领域（如常楠的Lumoverse数字生命游戏世界）。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": null,
+      "venue": null,
+      "target_audience": "AI创业者/OPC团队/一人公司",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "界面新闻",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650961333&idx=2&sn=9a6b51d04ad39d4a5d5c1f0822306d1a&chksm=bc87d1a5a854438312c3fb3547ed0657ce7500116a506d1da881f4b19c5e26e782db14f1881e#rd",
+        "article_title": "WAIC 2026启幕倒计时：四大亮点一文看懂"
+      },
+      "original_excerpt": "大会首次设立的“OPC独立先锋挑战赛”核心词为“原创、开源、个体”（Original, Open, One），8支团队从全国8大赛区、600多个项目中脱颖而出，站上决赛舞台"
+    },
+    {
+      "title": "青少年AI音综《音创宇宙》",
+      "theme": "青少年AI创作·文娱夜场",
+      "description": "WAIC首个青少年AI音综，属大会升级的夜场生态活动，让青少年用AI创作的原创作品从比赛走向舞台。明星嘉宾与参赛者同台演唱，盲童学校学生合唱《听见光》，数字主理人“WAVE”用AI串联全场。",
+      "participants": [
+        "数字主理人WAVE"
+      ],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": "夜场",
+      "venue": null,
+      "target_audience": "普通市民/AI爱好者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "界面新闻",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650961333&idx=2&sn=9a6b51d04ad39d4a5d5c1f0822306d1a&chksm=bc87d1a5a854438312c3fb3547ed0657ce7500116a506d1da881f4b19c5e26e782db14f1881e#rd",
+        "article_title": "WAIC 2026启幕倒计时：四大亮点一文看懂"
+      },
+      "original_excerpt": "最受关注的是大会首个青少年AI音综《音创宇宙》，让青少年用AI创作的原创作品从比赛走向舞台。明星嘉宾与参赛者同台演唱，盲童学校学生合唱《听见光》"
+    },
+    {
+      "title": "WAIC City Walk 2026伴游记",
+      "theme": "AI City Walk·城市漫游",
+      "description": "WAIC把触角从展馆延伸至城市街道，7月15-20日正式向公众开放，串联上海6个区、24个AI特色场景，推出6条主题漫步路线（AI创新模力生态线、玩转AI文娱线、数智产业消费线、长三角科创新干线等），每条线嵌入剧情化任务；8个自由开放打卡点集齐可兑换WAIC限定周边。凭WAIC票根去世博源可享餐饮折扣。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": false,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-15",
+      "event_time": "7月15日-20日",
+      "venue": "上海6个区24个AI特色场景（模力社区、模速空间、百年张园、西门子智能制造创新中心、华为青浦练秋湖科创中心等）",
+      "target_audience": "普通市民/AI爱好者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "界面新闻",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5NTE0ODc2Nw==&mid=2650961333&idx=2&sn=9a6b51d04ad39d4a5d5c1f0822306d1a&chksm=bc87d1a5a854438312c3fb3547ed0657ce7500116a506d1da881f4b19c5e26e782db14f1881e#rd",
+        "article_title": "WAIC 2026启幕倒计时：四大亮点一文看懂"
+      },
+      "original_excerpt": "7月15日至20日，“WAIC City Walk 2026伴游记”正式向公众开放，串联上海6个区、24个AI特色场景，推出6条主题漫步路线"
+    },
+    {
+      "title": "WAIC City Walk 2026伴游记",
+      "theme": "AI城市漫步 / City Walk",
+      "description": "WAIC官方城市漫步活动，7月15日至20日向公众开放，串联上海6个区、24个AI特色场景，推出6条主题漫步路线，每条线路嵌入剧情化任务机制，把沿途点位转化为剧情节点，在商场、园区、历史街区体验AI应用场景。",
+      "participants": [],
+      "organizer": "世界人工智能大会（WAIC）官方",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-15",
+      "event_time": "7月15日-20日",
+      "venue": "上海6个区、24个AI特色场景（全市多处）",
+      "target_audience": "普通市民 / AI爱好者 / 公众",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "VR陀螺",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzAxMDc4NjI0NA==&mid=2649632583&idx=2&sn=cbaf80aff4f5c8b35065d2bfa7001fa2&chksm=8257b7e8bd665545a7fb0b396674aa78c09e22d230db9a9a4c9152adfbc8b1ecb2a5be3e4259#rd",
+        "article_title": "WAIC 2026 前瞻｜大会一票难求，超25款AI眼镜即将展出"
+      },
+      "original_excerpt": "7月15日至20日，“WAIC City Walk 2026伴游记”正式向公众开放，串联上海6个区、24个AI特色场景，推出6条主题漫步路线，每条线路嵌入剧情化任务机制。"
+    },
+    {
+      "title": "2026世界人工智能大会·人工智能国际标准化论坛",
+      "theme": "标准引领，智能共治",
+      "description": "重磅力邀中外院士与权威专家，共话全球标准建设与智能治理，共探全球人工智能标准协同与开放共治新路径，共建全球人工智能协同共治新生态。",
+      "participants": [
+        "施毅（中国科学院院士）",
+        "克莱西奥·R·博姆（巴西科学院院士）",
+        "刘贤刚（中国电子技术标准化研究院党委书记、副院长）",
+        "宋海涛（联合国人工智能独立国际科学小组成员、上海人工智能研究院院长）"
+      ],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": "上海（具体场馆待公布）",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海人工智能研究院",
+        "url": "http://mp.weixin.qq.com/s?__biz=Mzg2NDE0NDc3MQ==&mid=2247529901&idx=1&sn=e498664cbbc9a4a328e94733fe184ad0&chksm=cf562f836aceb230b8ff997babc88de58f2af74bf612700515b2771c7d890d3263dabfbda749#rd",
+        "article_title": "【WAIC 2026】人工智能国际标准化论坛首批重磅嘉宾官宣！"
+      },
+      "original_excerpt": "“标准引领，智能共治”，2026世界人工智能大会人工智能国际标准化论坛重磅力邀中外院士与权威专家，共话全球标准建设与智能治理。7月17日，中国·上海。"
+    },
+    {
+      "title": "2026世界人工智能大会·量子城市空间智能论坛",
+      "theme": "量子城市：空间智能+未来城市",
+      "description": "邀请国内外专家探讨国际空间智能的新理念、新技术和新趋势，并发布上海量子城市空间智能建设的核心攻关成果。设“1个主论坛+4个平行论坛”：7月17日主论坛（5位业界权威专家与学界顶尖学者），7月18日4个平行论坛——“型域·空间营造”“太格·时光生成”“数资·资源增益”“具身·双基共生”。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": "7月17日主论坛；7月18日4个平行论坛",
+      "venue": "上海·杨浦（具体场馆待公布）",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海杨浦",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzA4NTA0NjUxNQ==&mid=2657949100&idx=1&sn=cb6d5d231a91fbf074f90a178b0ec5a2&chksm=85d06c4a6c68eaa3692b6257a6961de3d3b40a1f29bddb20efc2deb49a9b3008a7b1003280fe#rd",
+        "article_title": "2026世界人工智能大会·量子城市空间智能论坛活动日程安排发布"
+      },
+      "original_excerpt": "本次论坛以“量子城市：空间智能+未来城市”为主题，共设置“1个主论坛+4个平行论坛”，7月17日举办主论坛，7月18日举办4个平行论坛。"
+    },
+    {
+      "title": "WAIC企业家论坛",
+      "theme": null,
+      "description": "面向企业一把手的高端论坛，曾鸣、欧莱雅AI官、海尔CIO等跨界阵容，解决“AI转型三问”。",
+      "participants": [
+        "曾鸣",
+        "欧莱雅AI官",
+        "海尔CIO"
+      ],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "13:00-17:00",
+      "venue": "世博桐森酒店",
+      "target_audience": "企业高管 / 战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "WAIC企业家论坛 7月18日13:00-17:00 世博桐森酒店 专为企业一把手打造，曾鸣、欧莱雅AI官、海尔CIO等跨界阵容，解决“AI转型三问”。"
+    },
+    {
+      "title": "主论坛（人工智能全球治理高级别会议）",
+      "theme": null,
+      "description": "WAIC开幕日最高规格会议，定调全年AI发展方向。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-17",
+      "event_time": "14:00-17:00",
+      "venue": "世博中心金厅A+B",
+      "target_audience": "企业高管 / 战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "主论坛（人工智能全球治理高级别会议）7月17日14:00-17:00 世博中心金厅A+B 开幕日最高规格，定调全年AI发展方向。"
+    },
+    {
+      "title": "AI规模化落地与增长新蓝图生态论坛",
+      "theme": null,
+      "description": "聚焦AI从试点到全域协同的落地路径。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-19",
+      "event_time": "09:00-12:00",
+      "venue": "世博中心619会议室",
+      "target_audience": "企业高管 / 战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "AI规模化落地与增长新蓝图生态论坛 7月19日09:00-12:00 世博中心619会议室 聚焦AI从试点到全域协同的落地路径。"
+    },
+    {
+      "title": "智见AI合创未来——人工智能投融资论坛",
+      "theme": null,
+      "description": "了解资本对AI赛道的判断与布局。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-18",
+      "event_time": "13:30-18:00",
+      "venue": "世博中心银厅A",
+      "target_audience": "企业高管 / 战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "智见AI合创未来——人工智能投融资论坛 7月18日13:30-18:00 世博中心银厅A 了解资本对AI赛道的判断与布局。"
+    },
+    {
+      "title": "共建全球科技金融伙伴新生态投融资论坛",
+      "theme": null,
+      "description": "产业资本与AI项目的对接平台。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-19",
+      "event_time": "14:00-18:00",
+      "venue": "世博中心金厅C",
+      "target_audience": "企业高管 / 战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "共建全球科技金融伙伴新生态投融资论坛 7月19日14:00-18:00 世博中心金厅C 产业资本与AI项目的对接平台。"
+    },
+    {
+      "title": "WAIC·思想者论坛（姚期智、李开复等专场）",
+      "theme": null,
+      "description": "顶咖论道，把握AI底层逻辑。姚期智、李开复等专场。",
+      "participants": [
+        "姚期智",
+        "李开复"
+      ],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": "7月19日-20日",
+      "venue": "世博中心红厅",
+      "target_audience": "企业高管 / 战略决策者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "WAIC·思想者论坛（姚期智/李开复等专场）7月19日-20日 世博中心红厅 顶咖论道，把握AI底层逻辑。"
+    },
+    {
+      "title": "基座大模型架构创新与生态合作论坛",
+      "theme": null,
+      "description": "商汤主办，聚焦模型架构前沿。",
+      "participants": [],
+      "organizer": "商汤",
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-18",
+      "event_time": "09:00-12:00",
+      "venue": "世博中心银厅A",
+      "target_audience": "技术人员 / 研发工程师 / 算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "基座大模型架构创新与生态合作论坛 7月18日09:00-12:00 世博中心银厅A 商汤主办，聚焦模型架构前沿。"
+    },
+    {
+      "title": "从大模型到智能体迈向自主智能新纪元论坛",
+      "theme": null,
+      "description": "信通院主办，Agent技术深度解读。",
+      "participants": [],
+      "organizer": "中国信息通信研究院（信通院）",
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-18",
+      "event_time": "13:30-17:30",
+      "venue": "西岸2号厅B",
+      "target_audience": "技术人员 / 研发工程师 / 算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "从大模型到智能体迈向自主智能新纪元论坛 7月18日13:30-17:30 西岸2号厅B 信通院主办，Agent技术深度解读。"
+    },
+    {
+      "title": "RISC-V与AI融合发展论坛",
+      "theme": null,
+      "description": "开源芯片架构与AI的结合。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-17",
+      "event_time": "14:00-17:00",
+      "venue": "世博中心617会议室",
+      "target_audience": "技术人员 / 研发工程师 / 算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "RISC-V与AI融合发展论坛 7月17日14:00-17:00 世博中心617会议室 开源芯片架构与AI的结合。"
+    },
+    {
+      "title": "未来计算与未来算力论坛",
+      "theme": null,
+      "description": "面向未来的计算范式。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-18",
+      "event_time": "13:30-17:30",
+      "venue": "世博中心红厅",
+      "target_audience": "技术人员 / 研发工程师 / 算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "未来计算与未来算力论坛 7月18日13:30-17:30 世博中心红厅 面向未来的计算范式。"
+    },
+    {
+      "title": "Token经济协同芯片生态论坛",
+      "theme": null,
+      "description": "Token经济与芯片的交叉前沿。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-18",
+      "event_time": "14:00-17:00",
+      "venue": "世博中心银厅B",
+      "target_audience": "技术人员 / 研发工程师 / 算法专家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "Token经济协同芯片生态论坛 7月18日14:00-17:00 世博中心银厅B Token经济与芯片的交叉前沿。"
+    },
+    {
+      "title": "WAICA·世界人工智能大会学术2026启动会",
+      "theme": null,
+      "description": "WAIC学术板块开幕，了解学术前沿方向。WAICA是今年首次创办的高水平国际学术会议。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-18",
+      "event_time": "09:00-11:30",
+      "venue": "世博展览馆2号会议室",
+      "target_audience": "高校师生 / 研究者 / 青年学者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "WAICA·世界人工智能大会学术2026启动会 7月18日09:00-11:30 世博展览馆2号会议室 学术板块开幕，了解学术前沿方向。"
+    },
+    {
+      "title": "科学前沿论坛",
+      "theme": null,
+      "description": "顶尖科研机构主办，学术含金量高。",
+      "participants": [],
+      "organizer": "上海人工智能实验室",
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-17",
+      "event_time": "15:00-18:45",
+      "venue": "上海AI实验室新园区",
+      "target_audience": "高校师生 / 研究者 / 青年学者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "科学前沿论坛 7月17日15:00-18:45 上海AI实验室新园区 顶尖科研机构主办，学术含金量高。"
+    },
+    {
+      "title": "数学与人工智能论坛",
+      "theme": null,
+      "description": "AI与数学的交叉，理论深度大。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-17",
+      "event_time": "13:25-18:00",
+      "venue": "世博中心银厅A",
+      "target_audience": "高校师生 / 研究者 / 青年学者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "数学与人工智能论坛 7月17日13:25-18:00 世博中心银厅A AI与数学的交叉，理论深度大。"
+    },
+    {
+      "title": "人工智能赋能材料科学论坛",
+      "theme": null,
+      "description": "AI4S典型代表。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-17",
+      "event_time": "14:00-18:00",
+      "venue": "西岸2号厅C",
+      "target_audience": "高校师生 / 研究者 / 青年学者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "人工智能赋能材料科学论坛 7月17日14:00-18:00 西岸2号厅C AI4S典型代表。"
+    },
+    {
+      "title": "WAICA研讨会·多模态智能体驱动的科学计算",
+      "theme": null,
+      "description": "学术前沿：多模态Agent for Science。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-19",
+      "event_time": "09:00-12:00",
+      "venue": "西岸上海厅",
+      "target_audience": "高校师生 / 研究者 / 青年学者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "WAICA研讨会·多模态智能体驱动的科学计算 7月19日09:00-12:00 西岸上海厅 学术前沿：多模态Agent for Science。"
+    },
+    {
+      "title": "WAICA·青年菁英交流会",
+      "theme": null,
+      "description": "直接与青年学者交流。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-20",
+      "event_time": "09:00-12:00",
+      "venue": "世博中心616会议室",
+      "target_audience": "高校师生 / 研究者 / 青年学者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "WAICA·青年菁英交流会 7月20日09:00-12:00 世博中心616会议室 直接与青年学者交流。"
+    },
+    {
+      "title": "人工智能青年先锋对话论坛",
+      "theme": null,
+      "description": "1030位35岁以下AI青年人才齐聚。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-18",
+      "event_time": "09:30-11:30",
+      "venue": "西岸2号厅C",
+      "target_audience": "高校师生 / 研究者 / 青年学者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "人工智能青年先锋对话论坛 7月18日09:30-11:30 西岸2号厅C 1030位35岁以下AI青年人才齐聚。"
+    },
+    {
+      "title": "WAIC UP! 2026——青年观察家·思享会",
+      "theme": null,
+      "description": "青年视角、深度互动。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-19",
+      "event_time": "13:30-21:30",
+      "venue": "世博展览馆1A会议室",
+      "target_audience": "高校师生 / 研究者 / 青年学者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "WAIC UP! 2026——青年观察家·思享会 7月19日13:30-21:30 世博展览馆1A会议室 青年视角、深度互动。"
+    },
+    {
+      "title": "国际人工智能教育论坛",
+      "theme": null,
+      "description": "了解AI教育发展趋势。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-19",
+      "event_time": "09:00-12:10",
+      "venue": "世博展览馆1A会议室",
+      "target_audience": "高校师生 / 研究者 / 青年学者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "国际人工智能教育论坛 7月19日09:00-12:10 世博展览馆1A会议室 了解AI教育发展趋势。"
+    },
+    {
+      "title": "2026中国·AI盛典",
+      "theme": null,
+      "description": "视听盛宴，感受AI与文化艺术的碰撞。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "19:30-21:30",
+      "venue": "西岸穹顶艺术中心",
+      "target_audience": "普通市民 / AI爱好者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "2026中国·AI盛典 7月18日19:30-21:30 西岸穹顶艺术中心 视听盛宴，感受AI与文化艺术的碰撞。"
+    },
+    {
+      "title": "人形机器人与具身智能创新发展论坛（开放场次）",
+      "theme": null,
+      "description": "看最前沿的机器人技术演讲，面向公众的开放场次。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": "论坛票298元起（官方唯一购票渠道为“Hi WAIC”App）",
+      "event_date": "2026-07-19",
+      "event_time": "09:00-12:30",
+      "venue": "世博中心银厅A",
+      "target_audience": "普通市民 / AI爱好者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海经信委",
+        "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd",
+        "article_title": "2026世界人工智能大会前瞻：厚积八载，未来已来"
+      },
+      "original_excerpt": "人形机器人与具身智能创新发展论坛（开放场次）7月19日09:00-12:30 世博中心银厅A 看最前沿的机器人技术演讲。"
+    },
+    {
+      "title": "2026世界人工智能大会 人工智能国际标准化论坛",
+      "theme": "标准引领，智能共治——全球标准建设与智能治理",
+      "description": "2026世界人工智能大会人工智能国际标准化论坛，以“标准引领，智能共治”为主题，力邀中外院士与权威专家共话全球标准建设与智能治理，立足技术本源、联通南北创新、分享中国方案，共探全球人工智能标准协同与开放共治新路径。",
+      "participants": [
+        "中国科学院院士施毅",
+        "巴西科学院院士克莱西奥·R·博姆",
+        "中国电子技术标准化研究院党委书记、副院长刘贤刚",
+        "联合国人工智能独立国际科学小组成员、上海人工智能研究院院长宋海涛"
+      ],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": "中国·上海",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614442&idx=5&sn=fcedb99e160ed62623fa628f7d9e8fcd&chksm=fce4260410ecbbced4a6b64e2f743dd230c31f0fdea8d4031805fbb8915ba6a3119c09d81f0b#rd",
+        "article_title": "论坛排片｜WAIC 2026论坛活动日程安排"
+      },
+      "original_excerpt": "「标准引领，智能共治」，2026世界人工智能大会人工智能国际标准化论坛重磅力邀中外院士与权威专家，共话全球标准建设与智能治理。7月17日，中国·上海。"
+    },
+    {
+      "title": "2026世界人工智能大会·量子城市空间智能论坛",
+      "theme": "量子城市：空间智能+未来城市",
+      "description": "2026世界人工智能大会·量子城市空间智能论坛，以“量子城市：空间智能+未来城市”为主题，设“1个主论坛+4个平行论坛”。7月17日举办主论坛，5位业界权威专家、学界顶尖学者围绕空间智能赋能城市治理系统性深度研讨，并发布上海量子城市空间智能建设的核心攻关成果；7月18日举办“型域·空间营造”“太格·时光生成”“数资·资源增益”“具身·双基共生”4个平行论坛，聚焦四大细分前沿赛道。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614442&idx=1&sn=16dd4c131a370c9962800068b514f777&chksm=fcd5bb3e653d859dd21c780d64d892eb49e942b60857a7b1bb2ca3932aff1a7f5d944470a17f#rd",
+        "article_title": "主论坛丨WAIC 2026主论坛（下午场）重磅揭晓！"
+      },
+      "original_excerpt": "2026世界人工智能大会·量子城市空间智能论坛即将启幕，以“量子城市：空间智能+未来城市”为主题。7月17日举办主论坛发布核心攻关成果，7月18日举办4个平行论坛。"
+    },
+    {
+      "title": "WAIC 2026 主论坛（下午场）",
+      "theme": "智能伙伴 共创未来（伙伴基石—伙伴征程—伙伴边界三大篇章）",
+      "description": "2026世界人工智能大会暨人工智能全球治理高级别会议主论坛下午场。紧扣“智能伙伴 共创未来”大会主题，以“伙伴基石—伙伴征程—伙伴边界”三大篇章为主线，汇聚国际顶尖科学家、企业家及青年创新力量，深度探讨从夯实智能伙伴发展的技术根基，到探索人工智能赋能千行百业的实践路径，再到凝聚全球治理共识等人工智能发展的关键命题。",
+      "participants": [],
+      "organizer": "2026世界人工智能大会组委会",
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": "下午",
+      "venue": "上海世博中心",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614442&idx=1&sn=16dd4c131a370c9962800068b514f777&chksm=fcd5bb3e653d859dd21c780d64d892eb49e942b60857a7b1bb2ca3932aff1a7f5d944470a17f#rd",
+        "article_title": "主论坛丨WAIC 2026主论坛（下午场）重磅揭晓！"
+      },
+      "original_excerpt": "2026世界人工智能大会暨人工智能全球治理高级别会议主论坛下午场将于7月17日在上海世博中心举行。主论坛以“伙伴基石—伙伴征程—伙伴边界”三大篇章为主线，汇聚国际顶尖科学家、企业家及青年创新力量。"
+    },
+    {
+      "title": "具身人形机器人落地与核心零部件发展论坛",
+      "theme": "具身智能与人形机器人产业落地及核心零部件发展",
+      "description": "WAIC 2026期间举办的“具身人形机器人落地与核心零部件发展论坛”。云蝶科技联合创始人、联席总裁余澜博士作为特邀嘉宾出席并发表主题演讲，探讨如何通过环境增强世界模型，实现面向真实场景的通用具身智能的创新路径，欢迎产业链伙伴、投资机构及行业同仁莅临。",
+      "participants": [
+        "云蝶科技联合创始人、联席总裁余澜博士"
+      ],
+      "organizer": null,
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": null,
+      "venue": null,
+      "target_audience": "产业链伙伴、投资机构及行业同仁",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "云蝶AI服务",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzIxNzg3OTk1OQ==&mid=2247500492&idx=1&sn=12d4c6479a17ed207b3d82de497da1a8&chksm=96e217f436ec2fb735bb79c014d62e6778c0905b3b3a64522545a414aecf106fca7173b90aab#rd",
+        "article_title": "【活动预告】云蝶科技受邀出席世界人工智能大会（WAIC 2026），上海见！"
+      },
+      "original_excerpt": "WAIC 2026期间，云蝶科技联合创始人、联席总裁余澜博士将作为特邀嘉宾出席「具身人形机器人落地与核心零部件发展论坛」，并发表主题演讲，探讨面向真实场景的通用具身智能创新路径。"
+    },
+    {
+      "title": "WAIC City Walk",
+      "theme": "AI 场景城市漫步 / 产业深度探访",
+      "description": "2026 世界人工智能大会官方推出的 City Walk 活动，串联上海 6 个区 24 个 AI 特色场景，推出 6 条产业深度探访路线，供公众在大会期间实地走访体验 AI 应用场景。",
+      "participants": [],
+      "organizer": "2026 世界人工智能大会（WAIC）组委会",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": null,
+      "venue": "上海 6 个区 24 个 AI 特色场景（6 条探访路线）",
+      "target_audience": "上海本地公众 / AI 爱好者",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "智点AGI",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzAxNTY5NzUwMQ==&mid=2647585950&idx=1&sn=f8beed30455ef760a1203232d8b15a44&chksm=8204dcbfb4453c0013522ac8b9de2926d8d9e3fb67b30c28b85e5f255f5a71b054db7ef91f58#rd",
+        "article_title": "WAIC 2026倒计时3天：今年最值得关注的5个看点"
+      },
+      "original_excerpt": "同时，大会还推出了WAIC City Walk活动，串联上海6个区24个AI特色场景，推出6条产业深度探访路线。对上海本地的读者来说，这是个不错的周末去处。"
+    },
+    {
+      "title": "WAIC UP! 之夜",
+      "theme": "AI 创造者社区之夜",
+      "description": "WAIC 2026 官方社区合作伙伴 Datawhale 参与主办的 WAIC UP! 之夜，面向 AI 创造者与开发者社区的晚间聚会活动。",
+      "participants": [
+        "Datawhale"
+      ],
+      "organizer": "Datawhale（大会官方社区合作伙伴，参与主办）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": null,
+      "target_audience": "AI 创造者、开发者、Datawhale 社区成员",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "36氪",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzI2NDk5NzA0Mw==&mid=2248895686&idx=2&sn=f642c96f4273e30490ec5dd0fbd3a71d&chksm=e8dad64f6b73c71d1f96561b38bceb416af1805fc29bc79fe41535788cc0ce290b4351966b56#rd",
+        "article_title": "谁还在卷参数？WAIC2026全是能干活的实体AI！"
+      },
+      "original_excerpt": "我们以大会官方社区合作伙伴的身份，接入这场世界级的 AI 主场。—— 7月17日参与主办 WAIC UP! 之夜"
+    },
+    {
+      "title": "全球AI创造者生态连接计划 发布",
+      "theme": "AI 创造者生态 / 重要发布",
+      "description": "Datawhale 于 WAIC 2026 期间发布「全球AI创造者生态连接计划」，联合上海科学智能研究院、复旦大学、阿里云、商汤科技、记忆张量等机构共同推进。",
+      "participants": [
+        "Datawhale",
+        "上海科学智能研究院",
+        "复旦大学",
+        "阿里云",
+        "商汤科技",
+        "记忆张量"
+      ],
+      "organizer": "Datawhale",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": null,
+      "target_audience": "AI 创造者、开发者、生态合作方",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "36氪",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzI2NDk5NzA0Mw==&mid=2248895686&idx=2&sn=f642c96f4273e30490ec5dd0fbd3a71d&chksm=e8dad64f6b73c71d1f96561b38bceb416af1805fc29bc79fe41535788cc0ce290b4351966b56#rd",
+        "article_title": "谁还在卷参数？WAIC2026全是能干活的实体AI！"
+      },
+      "original_excerpt": "7月17日一个重要发布：全球AI创造者生态连接计划。同时联合上海科学智能研究院、复旦大学、阿里云、商汤科技、记忆张量等"
+    },
+    {
+      "title": "Datawhale 联合主办 WAIC 2026 线下论坛（7月18日下午）",
+      "theme": "AI 生态 / 线下论坛",
+      "description": "WAIC 2026 期间，Datawhale 作为大会官方社区合作伙伴于 7 月 18 日下午参与主办的一场线下论坛，联合上海科学智能研究院、复旦大学、阿里云、商汤科技、记忆张量等机构。文章未披露具体论坛名称。",
+      "participants": [
+        "Datawhale",
+        "上海科学智能研究院",
+        "复旦大学",
+        "阿里云",
+        "商汤科技",
+        "记忆张量"
+      ],
+      "organizer": "Datawhale（参与主办）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "下午",
+      "venue": null,
+      "target_audience": "AI 从业者、开发者、Datawhale 社区成员",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "36氪",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzI2NDk5NzA0Mw==&mid=2248895686&idx=2&sn=f642c96f4273e30490ec5dd0fbd3a71d&chksm=e8dad64f6b73c71d1f96561b38bceb416af1805fc29bc79fe41535788cc0ce290b4351966b56#rd",
+        "article_title": "谁还在卷参数？WAIC2026全是能干活的实体AI！"
+      },
+      "original_excerpt": "7月18日下午参与主办 一场线下论坛 —— 7月18日一个战略签约。同时联合上海科学智能研究院、复旦大学、阿里云、商汤科技、记忆张量等"
+    },
+    {
+      "title": "全球工业人工智能国际合作论坛",
+      "theme": "从全球共识到产业落地：以可信治理构建工业AI长效合作机制",
+      "description": "2026世界人工智能大会(WAIC)期间举办的工业AI国际合作专题论坛。设主旨演讲、圆桌对话与签约仪式，聚焦多边贸易规则下的工业AI国际合作路径、新能源AI落地中的风险与治理、共建可信AI出海生态、全球工业AI创新生态与人才合作等议题。",
+      "participants": [
+        "阿曼迪普·辛格·吉尔 Amandeep Singh Gill（联合国副秘书长兼数字和新兴技术特使）",
+        "Esther Dweck（巴西公共服务管理与创新部部长）",
+        "柳芳（第十四届全国政协委员、国际民航组织前任秘书长）",
+        "邹刺勇（联合国工业发展组织副总干事兼技术合作与可持续工业发展司执行干事）",
+        "杰森·斯莱特 Jason Slater（联合国工业发展组织数字化转型和人工智能司司长）",
+        "Quintin Chou-Lambert（联合国数字和新兴技术办公室主任）",
+        "Mehdi Snene（联合国秘书长数字与新兴技术特使高级顾问）",
+        "丁奎岭（中国科学院院士、上海交通大学校长）",
+        "郭毅（安永中国研究院院长）",
+        "何佳讯（华东师范大学上海国际首席技术官学院执行院长）"
+      ],
+      "organizer": "主办：上海人工智能研究院、全球工业人工智能联盟卓越中心；指导：联合国工业发展组织、上海市闵行区人民政府；协办：上海大零号湾投资发展（集团）有限公司",
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "14:00-17:30",
+      "venue": "上海市闵行区剑川路940号大零号湾科创大厦会议中心（Grand NeoBay Sci-Tech Innovation Plaza Convention Center）",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海人工智能研究院",
+        "url": "http://mp.weixin.qq.com/s?__biz=Mzg2NDE0NDc3MQ==&mid=2247529926&idx=1&sn=9fc2451f8231919213b9baea9f0f475c&chksm=cfdb0b7b2b19dd948f25c4dbfae45329117f9d53086afaf821dda05107ab27465a36c2928e5d#rd",
+        "article_title": "【WAIC 2026】倒计时3天!全球工业人工智能国际合作论坛嘉宾阵容 完整议程官宣!"
+      },
+      "original_excerpt": "在2026世界人工智能大会(WAIC)期间，将举办全球工业人工智能国际合作论坛。指导单位：联合国工业发展组织、上海市闵行区人民政府；主办单位：上海人工智能研究院、全球工业人工智能联盟卓越中心。会议信息：2026/7/18周六14:00，上海市闵行区剑川路940号大零号湾科创大厦会议中心。"
+    },
+    {
+      "title": "2026世界人工智能大会智能社会论坛",
+      "theme": "迈向人机共生的智能社会",
+      "description": "WAIC 2026智能社会论坛，聚焦人机共生主题。设海内外院士与专家主旨演讲、'技术+治理'跨界高端对话，并发布/揭牌一批研究与应用成果：同济大学'人工智能科技伦理审查与服务基地'揭牌，发布'智能社会治理'系列丛书、《中国数字法院建设年度报告(2025)》、人工智能就业影响监测系统、透明物业指数指标体系与数智化平台、上海市杨浦区人工智能应用典型案例及'人工智能+'行动方案等。",
+      "participants": [
+        "来自国际组织、中国、美国等的5名院士与专家"
+      ],
+      "organizer": "主办：同济大学、上海市杨浦区人民政府；承办：国家智能社会治理实验综合基地（上海杨浦）、上海市人工智能社会治理协同创新中心、上海自主智能无人系统科学中心、中国（上海）数字城市研究院",
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "09:00-12:00（08:30入场）",
+      "venue": "上海世博桐森酒店3楼桐森厅3号（世博大道1399号）",
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "上海杨浦",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzA4NTA0NjUxNQ==&mid=2657949738&idx=1&sn=f991ff46bc97f3824887c317b1cf2931&chksm=85b2f0db54e862a8d314e9372bbc680690a73f93584bd33762069648f8d851b11d4acfe37893#rd",
+        "article_title": "迈向人机共生的智能社会！2026世界人工智能大会智能社会论坛议程来了→"
+      },
+      "original_excerpt": "WAIC2026智能社会论坛，由同济大学、上海市杨浦区人民政府主办。论坛主题：迈向人机共生的智能社会。论坛时间：7月18日 9:00-12:00。论坛地点：上海世博桐森酒店3楼桐森厅3号（世博大道1399号）。"
+    },
+    {
+      "title": "WAIC全球伙伴·学术共振专场：AI如何改变人类发现真理的方式",
+      "theme": "AI如何改变人类发现真理的方式",
+      "description": "WAIC 2026'全球伙伴'学术共振专场，图灵奖对话诺贝尔奖，几位站在科学荣誉顶端的学者同台，追问AI正在如何改变人类发现真理的方式。",
+      "participants": [
+        "Richard S. Sutton（2024年图灵奖得主、强化学习之父）",
+        "Gilles Brassard（2025年图灵奖得主、蒙特利尔大学计算机科学教授）",
+        "Omar Yaghi（2025年诺贝尔化学奖得主、加州大学伯克利分校教授）",
+        "鄂维南（中国科学院院士、数学家）",
+        "邱锡鹏（复旦大学教授、上海创智学院导师）",
+        "印奇（阶跃星辰董事长）"
+      ],
+      "organizer": "世界人工智能大会（WAIC）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=2&sn=499e60744af169f9a128b45df9087a58&chksm=fc8c270d73ddf967905c894d170457e784984edf2ae34490bbda314fd8d39a7a9bd9744859d1#rd",
+        "article_title": "全球伙伴｜来WAIC 2026，遇见你的同频人！"
+      },
+      "original_excerpt": "7月17日，几位站在科学荣誉顶端的人登台，把同一个问题拆开来讲：AI到底在如何改变人类发现真理的方式？图灵奖对话诺贝尔奖，他们追问的不是谁家模型更强，而是AI正在如何改变人类发现真理的方式。"
+    },
+    {
+      "title": "WAIC思想者论坛：回到原点·拆解AI的第一性原理",
+      "theme": "AI的第一性原理",
+      "description": "WAIC 2026思想者论坛（7月19日至20日），七位学者围绕AI第一性原理的七个维度（数学之光、进化之光、认知之光、传承之光、选择之光、数据之光、传播之光）逐一登台演讲，蒋昌建全程主持；姚期智、朱松纯、俞勇——中国AI拔尖人才培养的三位奠基人首次同台。",
+      "participants": [
+        "姚期智（数学之光）",
+        "Richard S. Sutton（进化之光）",
+        "朱松纯（认知之光）",
+        "俞勇（传承之光）",
+        "李开复（选择之光）",
+        "郭毅可（数据之光）",
+        "蒋昌建（传播之光、全程主持）"
+      ],
+      "organizer": "世界人工智能大会（WAIC）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": null,
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=2&sn=499e60744af169f9a128b45df9087a58&chksm=fc8c270d73ddf967905c894d170457e784984edf2ae34490bbda314fd8d39a7a9bd9744859d1#rd",
+        "article_title": "全球伙伴｜来WAIC 2026，遇见你的同频人！"
+      },
+      "original_excerpt": "7月19日至20日，七位大咖轮流上台，每人只做一件事：回到原点。……蒋昌建全程主持。7个人，七个第一性，拼成一张AI底层认知图谱。姚期智、朱松纯、俞勇，中国AI拔尖人才培养的三位奠基人首次同台论道。"
+    },
+    {
+      "title": "首届世界人工智能大会·学术会议（WAICA）",
+      "theme": "薪火同辉，重塑全球AI学术评判标尺",
+      "description": "WAIC 2026首次举办的国际化标杆学术盛会WAICA（7月18日-20日，为期三日）。学术体系由姚期智、郑庆华、鄂维南三位院士领衔搭建，设六大主会场与数学建模、天基智能、科学智能体、量子计算、具身智能五大前沿细分论坛；面向全球开放论文征集，覆盖12国及港澳台顶尖院校；现场特设全球海归青年学者交流专场与青年菁英会。",
+      "participants": [
+        "姚期智（大会主席）",
+        "郑庆华（程序委员会主席）",
+        "鄂维南（程序委员会主席）",
+        "孙凝晖",
+        "何友",
+        "王建宇"
+      ],
+      "organizer": "世界人工智能大会（WAIC）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": null,
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=2&sn=499e60744af169f9a128b45df9087a58&chksm=fc8c270d73ddf967905c894d170457e784984edf2ae34490bbda314fd8d39a7a9bd9744859d1#rd",
+        "article_title": "全球伙伴｜来WAIC 2026，遇见你的同频人！"
+      },
+      "original_excerpt": "本届会议学术体系由姚期智、郑庆华、鄂维南三位院士领衔搭建……7月18日-20日，WAICA将开启为期三日学术盛宴，设置六大主会场与数学建模、天基智能、科学智能体、量子计算、具身智能五大前沿细分论坛。现场特设全球海归青年学者交流专场；专属青年菁英会为青年研究者打造高光展示平台。"
+    },
+    {
+      "title": "WAIC全球伙伴·行业链接专场：产业界如何共画AI的边界与方向",
+      "theme": "AI的行为边界与理论锚点",
+      "description": "WAIC 2026'全球伙伴'行业链接专场（7月17日），顶级理论家、先锋创业者、生态推动者与行业实干家同台，分'领航伙伴''锐见通向未来''思想启迪路线''共创伙伴'四组坐论，覆盖AI行为边界、AI自进化与下一代构想、长期治理框架与Token经济、算智架构与硅光芯片、生命密码与具身智能场景落地等议题。",
+      "participants": [
+        "John Edward Hopcroft",
+        "杜宁凯（Nicholas B. Dirks）",
+        "薛澜",
+        "马克·尼兹伯格（Mark Nitzberg）",
+        "王坚",
+        "苏昊",
+        "约书亚·本吉奥（Yoshua Bengio）",
+        "周伯文",
+        "姜育刚",
+        "徐立",
+        "沈亦晨",
+        "亚历克斯·扎沃隆科夫（Alex Zhavoronkov）"
+      ],
+      "organizer": "世界人工智能大会（WAIC）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-17",
+      "event_time": null,
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=2&sn=499e60744af169f9a128b45df9087a58&chksm=fc8c270d73ddf967905c894d170457e784984edf2ae34490bbda314fd8d39a7a9bd9744859d1#rd",
+        "article_title": "全球伙伴｜来WAIC 2026，遇见你的同频人！"
+      },
+      "original_excerpt": "7月17日，顶级理论家、先锋创业者、生态推动者与行业实干家聚在了一起。领航伙伴John Edward Hopcroft、杜宁凯、薛澜、马克·尼兹伯格、王坚、苏昊，六人坐论：AI的行为边界与理论锚点。"
+    },
+    {
+      "title": "AI GRAVITY·AI跨境合作对话（出海圆桌）",
+      "theme": "AI跨境合作的真实战况与落地路径",
+      "description": "WAIC 2026 AI GRAVITY打造的AI跨境合作对话（7月20日），一场出海圆桌。全球化先锋用一线实战经验，呈现中国AI出海可复制、可扩展的落地方法论，把搜索、支付、市场、渠道链路从0走到1，链接IPI、MP集团、Alibaba.com、科大讯飞等关键玩家。",
+      "participants": [],
+      "organizer": "AI GRAVITY（世界人工智能大会 WAIC）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-20",
+      "event_time": null,
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=2&sn=499e60744af169f9a128b45df9087a58&chksm=fc8c270d73ddf967905c894d170457e784984edf2ae34490bbda314fd8d39a7a9bd9744859d1#rd",
+        "article_title": "全球伙伴｜来WAIC 2026，遇见你的同频人！"
+      },
+      "original_excerpt": "7月20日，AI GRAVITY精心打造AI跨境合作对话，全球化先锋用一线实战经验揭穿空洞的国际化想象，现场呈现AI跨境合作的真实战况和落地路径。链接IPI、MP集团、Alibaba.com、科大讯飞等关键玩家。"
+    },
+    {
+      "title": "WAIC UP! 2026 青年观察家·思享会",
+      "theme": "AI越强大，年轻人越迷茫，怎么办？",
+      "description": "WAIC UP! 2026青年观察家思享会，跨越纽约、硅谷、中东、欧洲、香港，五位不同文化背景的国际青年观察家登台，围绕AI时代青年的教育、就业、创业、心理困惑展开对话。",
+      "participants": [
+        "Bill Reichert（Pegasus Tech Ventures合伙人，谈教育）",
+        "修大成（芝加哥大学布斯商学院讲席教授，谈就业）",
+        "胡润（《胡润百富》创刊人，谈创业）",
+        "董慧琦（斯坦福大学咨询中心，谈心理）"
+      ],
+      "organizer": "世界人工智能大会（WAIC）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": null,
+      "venue": null,
+      "target_audience": "青年",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=2&sn=499e60744af169f9a128b45df9087a58&chksm=fc8c270d73ddf967905c894d170457e784984edf2ae34490bbda314fd8d39a7a9bd9744859d1#rd",
+        "article_title": "全球伙伴｜来WAIC 2026，遇见你的同频人！"
+      },
+      "original_excerpt": "WAIC UP! 2026 青年观察家·思享会跨越纽约、硅谷、中东、欧洲、香港，一直在追问同一个问题：AI越强大，年轻人越迷茫，怎么办？五位不同文化背景的国际青年观察家站上舞台。"
+    },
+    {
+      "title": "WAIC全球伙伴·多元视野专场：'在AI中看见具体的人'（三无论坛）",
+      "theme": "在AI浪潮中看见真实众生",
+      "description": "WAIC 2026'全球伙伴'多元视野专场，一场'无院士、无顶奖、无宏大叙事'的'三无论坛'，把话筒递给不站在聚光灯下的人，讲述个体在AI时代的选择、困惑与光芒。",
+      "participants": [
+        "Vincent Koc（无偿服务开源社区）",
+        "李昊轩（24岁，北大讲台，'研究的其实还是人'）",
+        "刘云阶（95后投资人，'投资投的是审美'）",
+        "李瑞花（十五年从MIT出发教机器人拿捏）",
+        "张娅（AI系统每天为罕见病患者筛检）",
+        "邓子翔（14岁，带队参加黑客松）"
+      ],
+      "organizer": "世界人工智能大会（WAIC）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": null,
+      "event_time": null,
+      "venue": null,
+      "target_audience": null,
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=2&sn=499e60744af169f9a128b45df9087a58&chksm=fc8c270d73ddf967905c894d170457e784984edf2ae34490bbda314fd8d39a7a9bd9744859d1#rd",
+        "article_title": "全球伙伴｜来WAIC 2026，遇见你的同频人！"
+      },
+      "original_excerpt": "'在AI中看见具体的人'是一场'三无论坛'——无院士、无顶奖、无宏大叙事，只看人。每个人都是一个人在AI时代的选择、困惑与光芒。星光值得仰望，但暗处发光的人，同样值得被看见。"
+    },
+    {
+      "title": "AI时代全球青少年创新素养培育论坛",
+      "theme": "全球青少年创新素养培育",
+      "description": "WAIC 2026青少年专场（7月19日），汇聚中、美、墨、泰的一线教育者与五位国际学生，展示真实科研项目。同期设机器狗越障赛、AI非遗展区，以及WAIC首个青少年音综'音创宇宙'（依托AIGC把思绪谱写为专属乐曲）等青少年AI互动体验。",
+      "participants": [
+        "中、美、墨、泰一线教育者",
+        "五位国际学生"
+      ],
+      "organizer": "世界人工智能大会（WAIC）",
+      "registration_required": null,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-19",
+      "event_time": null,
+      "venue": null,
+      "target_audience": "青少年",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=2&sn=499e60744af169f9a128b45df9087a58&chksm=fc8c270d73ddf967905c894d170457e784984edf2ae34490bbda314fd8d39a7a9bd9744859d1#rd",
+        "article_title": "全球伙伴｜来WAIC 2026，遇见你的同频人！"
+      },
+      "original_excerpt": "7月19日，AI时代全球青少年创新素养培育论坛汇聚中、美、墨、泰的一线教育者与五位国际学生，展示真实科研项目。奔赴机器狗越障赛……走进AI非遗展区……置身WAIC首个青少年音综'音创宇宙'。"
+    },
+    {
+      "title": "WAIC 2026企业家论坛",
+      "theme": "专为“企业一把手”打造的闭门盛会",
+      "description": "WAIC 2026 期间举办的企业家闭门论坛，面向企业一把手/核心决策者，聚焦人工智能时代的企业战略与决策。",
+      "participants": [],
+      "organizer": null,
+      "registration_required": true,
+      "registration_url": null,
+      "price": null,
+      "event_date": "2026-07-18",
+      "event_time": "13:00-17:00",
+      "venue": "上海桐森酒店桐森厅",
+      "target_audience": "企业一把手/企业家",
+      "waic_relation": "affiliated",
+      "kind": "side_event",
+      "source": {
+        "publisher": "世界人工智能大会",
+        "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=3&sn=d97b4b2e92e8507c27ea42aed1b8591a&chksm=fcf6579289868b0d1809fa87d2d69ae24d8218ce95e93e8ff0a614987a290e0821ccfbb0779d#rd",
+        "article_title": "论坛预告 | WAIC 2026企业家论坛，专为“企业一把手”打造的闭门盛会"
+      },
+      "original_excerpt": "论坛名称：WAIC 企业家论坛；论坛时间：7月18日13:00-17:00；论坛地点：上海桐森酒店桐森厅。点击阅读原文即刻报名WAIC 2026！"
+    }
+  ]
+}

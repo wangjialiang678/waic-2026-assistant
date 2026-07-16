@@ -1,0 +1,15 @@
+{
+  "_comment": "WAIC 2026 参展助手默认配置。server 为数据/网站服务器；部署后填实际域名。",
+  "server": "https://waic.sg.superbrain-ai.com",
+  "urls": {
+    "version": "https://waic.sg.superbrain-ai.com/VERSION",
+    "bundle": "https://waic.sg.superbrain-ai.com/bundle.tar.gz",
+    "activities": "https://waic.sg.superbrain-ai.com/data/activities.json",
+    "website": "https://waic.sg.superbrain-ai.com/"
+  },
+  "official_source": {
+    "site": "https://www.worldaic.com.cn",
+    "api_base": "https://api2025.worldaic.com.cn/official/website/",
+    "forum_detail_url": "https://www.worldaic.com.cn/events/forum/{uuid}"
+  }
+}

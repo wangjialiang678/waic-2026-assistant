@@ -1,0 +1,17 @@
+# APEC青年AI创造者之夜（WAIC UP! Day&Night 夜场）
+
+> **来源**：微信公众号 · `source_type: unofficial`
+> 发布方：世界人工智能大会
+> 原文：<http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247612915&idx=1&sn=301193de7213e23a0990414fe96067d7&chksm=fcc384244c5b0c131bf928f6e8f8f75ee68a7726da15a7b7384769a699b98b60c890c3e74390#rd>
+
+## 活动信息（从报道中提取，供参考）
+
+- **地点**：上海·张江（张江会场周边）
+
+## 摘要
+
+WAIC UP! Day&Night 系列夜场之一，聚焦青年 AI 创造者，设于张江会场周边。
+
+---
+
+*非官方来源，信息以官方发布为准 · 本文件由 build.py 自动生成*

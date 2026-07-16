@@ -1,0 +1,29 @@
+[Unit]
+Description=WAIC 日程助手 API (FastAPI + uvicorn)
+After=network.target
+
+[Service]
+Type=simple
+# 按服务器实际路径修改
+WorkingDirectory=/opt/waic/日程助手/server
+# key 通过 systemd 注入，不进 git、不进代码。二选一：
+#   1) 直接写在这里（EnvironmentFile 更安全）：
+# Environment=TOKENHUB_API_KEY=REPLACE_ME
+#   2) 从受保护文件读取（推荐，chmod 600, root:root）：
+EnvironmentFile=/etc/waic/api.env
+# 可选覆盖：
+# Environment=HOST=127.0.0.1
+# Environment=PORT=8790
+# Environment=TOKENHUB_MODEL=qwen3.5-flash
+ExecStart=/opt/waic/日程助手/server/.venv/bin/uvicorn app:app --host 127.0.0.1 --port 8790 --workers 1
+Restart=on-failure
+RestartSec=3
+# 轻度加固
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+
+# /etc/waic/api.env 内容示例（chmod 600）：
+#   TOKENHUB_API_KEY=sk-xxxxxxxx

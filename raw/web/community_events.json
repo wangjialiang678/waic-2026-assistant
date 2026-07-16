@@ -1,0 +1,862 @@
+[
+  {
+    "title": "Demo Day@Physical AI Camp：16 家 Voice First AI 硬件团队面对面",
+    "community": "RTE 开发者社区 / 超音速计划 2026 · Physical AI Camp",
+    "co_brand": "WAIC 周边 Side Event（非官方，WAIC 期间）",
+    "date": "2026-07-16",
+    "start_time": "13:30",
+    "end_time": "17:30",
+    "venue": "上海世博天地写字楼",
+    "registration_required": true,
+    "registration_url": "https://www.rtecommunity.dev/auth/login?returnTo=%2Ft%2Ft_SmZTTDkbYlhxSm",
+    "price": "免费（需审核）",
+    "target_audience": "语音AI/具身智能硬件 Builder、开发者、投资人",
+    "description": "16 家 Voice First AI 硬件团队 Demo Day，见证 Conversational AGI 与 Real-Time AI 的落地。",
+    "source": {
+      "publisher": "WaytoAGI Side Events / SegmentFault(RTE开发者社区)",
+      "url": "https://segmentfault.com/a/1190000048007796"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": "2026 年 7 月 16 日下午，上海世博天地，欢迎来到「超音速计划 2026 · Physical AI Camp」Demo Day。和 16 个项目的 Builder 一起，见证 Conversational AGI 和 Real-Time AI 的当下和未来。"
+  },
+  {
+    "title": "模速社群日 | WAIC前夜 · vLLM Meetup——推理全栈实战，从芯片打到应用",
+    "community": "模速空间 / vLLM 社区",
+    "co_brand": "WAIC 周边 Side Event（WAIC 前夜）",
+    "date": "2026-07-16",
+    "start_time": "13:30",
+    "end_time": "17:40",
+    "venue": "上海徐汇区龙台路199号 模速空间B区三楼",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（推测）",
+    "target_audience": "大模型推理/算力/AI 工程化开发者",
+    "description": "围绕 vLLM 大模型推理全栈实战，从芯片到应用的开源算力优化 Meetup。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "SIGNAL EVE 创见前夜",
+    "community": "Impa Ventures、SEE FUND 无限基金、Airwallex 空中云汇、TTC、RTE 开发者社区、世博天地、亚马逊云科技",
+    "co_brand": "WAIC 周边 Side Event（WAIC 前夜联合主办）",
+    "date": "2026-07-16",
+    "start_time": "18:30",
+    "end_time": "21:30",
+    "venue": "上海 世博天地",
+    "registration_required": true,
+    "registration_url": "https://www.feishu.cn/share/base/form/shrcnbOBEfEraNyL6JxH5xi8I6b?share_link_type=qrcode&ccm_open_type=form_qrcode",
+    "price": "免费（需审核）",
+    "target_audience": "AI/具身智能创业者与投资人",
+    "description": "多家投资机构与开发者社区联合的 WAIC 前夜创投社交夜。",
+    "source": {
+      "publisher": "WaytoAGI Side Events / RTE开发者社区",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "Booming Night · 世界之外",
+    "community": "蓝驰创投、不鸣 Booming（Booming Camp 社区）",
+    "co_brand": "WAIC 前夜专场（非官方）",
+    "date": "2026-07-16",
+    "start_time": "19:00",
+    "end_time": "23:00",
+    "venue": "上海黄浦江畔（具体地点报名成功后通知）",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（仅面向创始人，限 100 张“船票”，审核制）",
+    "target_audience": "AI 创始人、独立开发者（99% AI 创业者 + 1% 蓝驰）",
+    "description": "蓝驰创投主办的无议程创始人畅聊夜，仅 100 名额，戴面具、放下 title、只为找到同频的 AI 创造者。",
+    "source": {
+      "publisher": "ITBear / 科技区角 / WaytoAGI",
+      "url": "https://www.itbear.com.cn/html/2026-07/1427921.html"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": "今年的Booming Night只留给founder，99%是AI创业者，1%是蓝驰。7月16日，WAIC前夜，一起去「世界之外」。我们取消了所有议程，只留下了100张船票。"
+  },
+  {
+    "title": "Julie&friends · WAIC AI 创业线下交流会",
+    "community": "Julie&friends",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-16",
+    "start_time": "19:30",
+    "end_time": null,
+    "venue": "上海（7月16日、17日两场，具体地点报名成功后通知）",
+    "registration_required": true,
+    "registration_url": "https://ycnlw8azhiz2.feishu.cn/share/base/form/shrcnVmSHX248lBK7vPdcXTwhLf",
+    "price": "免费（推测，需审核）",
+    "target_audience": "AI 创业者",
+    "description": "Julie&friends 组织的 WAIC 期间 AI 创业线下交流会（7/16、7/17 各一场）。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "【陆家嘴 7.16】文客松™ AI创业者&投资人酒会",
+    "community": "文客松™",
+    "co_brand": "WAIC 周边（陆家嘴，WAIC 前夜）",
+    "date": "2026-07-16",
+    "start_time": "19:30",
+    "end_time": "22:00",
+    "venue": "中国上海浦东新区世纪大道210号 丽晶酒店（陆家嘴）",
+    "registration_required": true,
+    "registration_url": "https://party.hudongba.com/party/gw357.html",
+    "price": "早鸟票 198元/人（7.10-7.13）；普通票 298元/人（7.14-7.17）",
+    "target_audience": "AI 创业者、AI 技术从业者、海内外高校高学历人才、VC/PE/企业战投",
+    "description": "陆家嘴 AI 创业者与投资人酒会，聚焦具身智能/AI Agent/工业智能，资源对接、项目交流。含饮品一杯。",
+    "source": {
+      "publisher": "互动吧",
+      "url": "https://party.hudongba.com/party/gw357.html"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "GO SUMMIT × WAIC 上海｜AGI Villa 周年活动",
+    "community": "AGI Villa（GO SUMMIT）",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-17",
+    "start_time": "11:00",
+    "end_time": "17:00",
+    "venue": "上海（报名后可查看详细地址）",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（需审核）",
+    "target_audience": "AI 创业者、开发者、社区成员",
+    "description": "AGI Villa 社区周年活动 × WAIC 上海，白天场社区聚会。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "坐上AI时代的时光机！WAIC期间，来潮宿直播间聊聊天",
+    "community": "潮宿直播间",
+    "co_brand": "WAIC 周边（直播/线下）",
+    "date": "2026-07-17",
+    "start_time": "13:30",
+    "end_time": null,
+    "venue": "上海黄浦龙华东路868号海外滩办公楼A座1602室（限 5 人）",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（限 5 人）",
+    "target_audience": "AI 创业者、AI 产品人",
+    "description": "WAIC 期间潮宿直播间的小型 AI 产品对谈直播，仅 5 个线下名额。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "WAIC Afterparty：出海增长到底怎么搞？暨 创新壬 × 港科大上海中心 Networking",
+    "community": "创新壬（联合 RTE 开发者社区到场）",
+    "co_brand": "WAIC Afterparty（创新壬 × 香港科技大学上海中心）",
+    "date": "2026-07-17",
+    "start_time": "18:30",
+    "end_time": null,
+    "venue": "香港科技大学上海中心（西岸基地）· 上海市徐汇区云锦路701号 西岸人工智能塔东塔楼37层",
+    "registration_required": true,
+    "registration_url": "https://zcnbim6bjz0m.feishu.cn/share/base/form/shrcnbTgKjEjFIC8k1L7QUiCfgh",
+    "price": "免费（需审核）",
+    "target_audience": "AI 出海/增长从业者、创业者",
+    "description": "聚焦 AI 出海与增长的 WAIC Afterparty；港科大上海中心西岸基地举办，RTE 社区亦到场。",
+    "source": {
+      "publisher": "WaytoAGI Side Events / SegmentFault",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "WAIC「握手局」：带一个朋友来，不限物种",
+    "community": "甲子Builders（甲子光年）× 达晨财智",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-17",
+    "start_time": "18:30",
+    "end_time": "23:00",
+    "venue": "上海·西岸",
+    "registration_required": true,
+    "registration_url": "https://www.feishu.cn/share/base/form/shrcnU9kyKyKM0aAMREva9dS5Se",
+    "price": "免费（需审核）",
+    "target_audience": "AI 从业者、具身智能/数字人方向创业者、投资人",
+    "description": "甲子光年旗下 Builders 社区与达晨财智联合的 AI 社交「握手局」。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "Founders Back Founders @ 7.17 上海",
+    "community": "锦秋基金（Founders Back Founders 社区）",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-17",
+    "start_time": "18:30",
+    "end_time": null,
+    "venue": "上海世博中心附近",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（需审核，限 100 人）",
+    "target_audience": "AI 创始人",
+    "description": "创始人互助社交夜（锦秋基金相关），世博中心附近。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "AI 创业秘聊局第 6 期｜WAIC 交流·AI 全球化专场",
+    "community": "赤道象限 EquatorQ、模速空间",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-17",
+    "start_time": "18:30",
+    "end_time": "21:30",
+    "venue": "上海徐汇（报名后可查看详细地址）",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（需审核，限 35 人）",
+    "target_audience": "AI 全球化/出海创业者",
+    "description": "赤道象限 × 模速空间的 AI 创业秘聊局第 6 期，主题 AI 全球化。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "WAIC UP! AI 三极夜话｜全球 AI 创新者夜间思享会",
+    "community": "WAIC UP!（官方 Side Events 品牌）、钛媒体 TMTPOST",
+    "co_brand": "WAIC 官方 Side Events「WAIC UP! DAY&NIGHT」系列",
+    "date": "2026-07-17",
+    "start_time": "18:30",
+    "end_time": "22:00",
+    "venue": "上海市浦东新区 张江会场 光空间",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "需报名（详见 Hi WAIC / 报名页）",
+    "target_audience": "全球 AI 创新者、创业者、投资人",
+    "description": "WAIC 官方 Side Event 品牌 WAIC UP! 联合钛媒体举办的夜间思享会。",
+    "source": {
+      "publisher": "WaytoAGI Side Events / WAIC UP!",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "XR Vision AI After Party｜WAIC 专场",
+    "community": "XR Vision 工作室",
+    "co_brand": "WAIC Afterparty（非官方）",
+    "date": "2026-07-17",
+    "start_time": "19:00",
+    "end_time": "23:00",
+    "venue": "上海某酒吧（通过审核后一对一通知）",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "需报名（审核制，限 50 人）",
+    "target_audience": "XR/AI 从业者、创业者",
+    "description": "XR Vision 工作室的 WAIC 专场 After Party。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "今晚的 API｜WAIC After Hours",
+    "community": "源码资本、TTC、亚马逊云科技、硅星人、Motphys",
+    "co_brand": "WAIC After Hours（非官方）",
+    "date": "2026-07-17",
+    "start_time": "19:30",
+    "end_time": "22:00",
+    "venue": "上海市徐汇区华泾镇老沪闵路1226",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "需报名（审核制）",
+    "target_audience": "AI 创业者、开发者、投资人",
+    "description": "源码资本联合硅星人、亚马逊云科技等的 WAIC After Hours 社交夜。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "AI穿越者之夜：不止穿越周期，还想预测未来",
+    "community": "AI 异类弗兰克、蚂上加速器",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-17",
+    "start_time": "19:00",
+    "end_time": "22:00",
+    "venue": "上海·浦东新区·如意摩登滋味小馆（距 WAIC 场馆约 600 米）",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "需报名（审核制）",
+    "target_audience": "AI 创业者、内容创作者",
+    "description": "AI 异类弗兰克与蚂上加速器的 WAIC 夜谈局。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "Founder Park｜WAIC 上海见：企业 Agent 落地的关键问题",
+    "community": "Founder Park（极客公园）、百道数据、科锐国际",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-17",
+    "start_time": "19:00",
+    "end_time": "21:10",
+    "venue": "上海世博中心附近（具体地点待通知）",
+    "registration_required": true,
+    "registration_url": "https://qxqgqfqvqu.moment.dingdoc.cn/H6/form_preview?form_id=101682725",
+    "price": "免费（需审核）",
+    "target_audience": "企业 AI/Agent 落地从业者、创业者",
+    "description": "极客公园 Founder Park 的 WAIC 上海线下场，聚焦企业 Agent 落地关键问题。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "AI 闹航海夜 · WAIC 2026 特别版",
+    "community": "AI闹",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-17",
+    "start_time": "20:00",
+    "end_time": null,
+    "venue": "上海梧桐路一家露台酒吧（报名成功后通知）",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "需报名（审核制，限 60 人）",
+    "target_audience": "AI 出海/航海圈创业者",
+    "description": "AI闹社区的 WAIC 特别版露台酒吧社交夜。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "量子位 WAIC 首夜「真话局」：AI 聪明够了，行动呢？",
+    "community": "量子位",
+    "co_brand": "WAIC 首夜（非官方）",
+    "date": "2026-07-17",
+    "start_time": "19:30",
+    "end_time": "21:30",
+    "venue": "上海浦东·咖啡馆",
+    "registration_required": true,
+    "registration_url": "https://hdxu.cn/1KEE3",
+    "price": "需报名（审核制）",
+    "target_audience": "Builder、Researcher、Investor",
+    "description": "量子位主办的 WAIC 首夜圆桌，主题从『会回答』到『能完成』；嘉宾含 Evomap 创始人张昊然、记忆张量 CTO 李志宇、VAST CTO 梁鼎、脸谱心智创始人陆弘远。",
+    "source": {
+      "publisher": "量子位",
+      "url": "https://www.qbitai.com/2026/07/447682.html"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": "7月17日19:30，上海浦东。让我们一起关掉PPT、跳出展台，来与Builder、Researcher、Investor一起，提前理解AI的下一步。报名链接：https://hdxu.cn/1KEE3"
+  },
+  {
+    "title": "WAIC 2026 | 清华科创夜：当图灵奖遇见独角兽（THU@WAIC FT Networking Night / WAIC 的清华朋友圈之夜）",
+    "community": "清华大学 iCenter（指导）、清华大学学生创客空间协会、WAIC Future Tech（联合主办）",
+    "co_brand": "WAIC Future Tech 官方联合主办",
+    "date": "2026-07-17",
+    "start_time": "晚间",
+    "end_time": null,
+    "venue": "上海（WAIC 会场附近；展位 H4-FT0070~0071）",
+    "registration_required": true,
+    "registration_url": "https://mp.weixin.qq.com/s/62ywuO_c8bDpiYMXnJYN3A",
+    "price": "免费含冷餐，不含 WAIC 门票（审核制，名额有限）",
+    "target_audience": "清华及高校背景科创青年、创业者、研究者、开发者、投资人",
+    "description": "清华科创圈层夜宴，图灵奖得主 Richard Sutton 亲临分享；曦望Sunrise/商汤联创徐冰、群核、强脑等企业掌舵人出席；含前沿分享、产业圆桌、新锐项目展示、自由社交。",
+    "source": {
+      "publisher": "投资界(pedaily) / 清华创客空间协会公众号",
+      "url": "https://news.pedaily.cn/202607/566280.shtml"
+    },
+    "needs_wechat_download": true,
+    "original_excerpt": "WAIC 的清华朋友圈之夜 THU@WAIC FT Networking Night，将于7月17日晚正式开启……由清华大学iCenter指导，清华大学学生创客空间协会联合 WAIC Future Tech主办。"
+  },
+  {
+    "title": "光源资本·「AI+N 进化时刻」人工智能产业融合论坛",
+    "community": "光源资本",
+    "co_brand": "WAIC 2026 论坛（7/17 议程）",
+    "date": "2026-07-17",
+    "start_time": null,
+    "end_time": null,
+    "venue": "上海（WAIC 会场，7/17 议程）",
+    "registration_required": true,
+    "registration_url": null,
+    "price": null,
+    "target_audience": "AI 产业/投融资从业者",
+    "description": "光源资本主办的『AI+N 进化时刻』产业融合论坛，列入 WAIC 7/17 议程。",
+    "source": {
+      "publisher": "新浪财经 WAIC 专题",
+      "url": "https://finance.sina.com.cn/zt_d/subject-1782718283/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "小红书·让 Builders 被看见",
+    "community": "小红书",
+    "co_brand": "WAIC 2026 议程（7/17）",
+    "date": "2026-07-17",
+    "start_time": null,
+    "end_time": null,
+    "venue": "上海（WAIC 会场，7/17 议程）",
+    "registration_required": true,
+    "registration_url": null,
+    "price": null,
+    "target_audience": "AI Builder、创作者、开发者",
+    "description": "小红书主办的『让 Builders 被看见』活动，列入 WAIC 7/17 议程。",
+    "source": {
+      "publisher": "新浪财经 WAIC 专题",
+      "url": "https://finance.sina.com.cn/zt_d/subject-1782718283/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "AI TASTE PARTY",
+    "community": "红杉科创平台 × 火山引擎 V-START × AGI Bar 知识蒸馏 × 动察 Beating",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-18",
+    "start_time": "15:00",
+    "end_time": "18:00",
+    "venue": "上海市徐汇区华发路777弄2号1楼 红杉中国创新加速器·上海北杨（AGI Bar 知识蒸馏）",
+    "registration_required": true,
+    "registration_url": "https://www.larkoffice.com/share/base/form/shrcnjqCefjZ1rYqnCxiHZNiDUg?share_link_type=qrcode&ccm_open_type=form_qrcode",
+    "price": "免费（需审核）",
+    "target_audience": "AI 创业者、科研人员、开发者、产品人",
+    "description": "红杉科创平台、火山引擎 V-START、AGI Bar 联合的 AI 社交派对。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "PROBLEM MARKET × STORYTELLING HACKATHON 真实问题市场 × AI想象力黑客松",
+    "community": "Creekstone Ventures × 火山引擎 × V-START",
+    "co_brand": "WAIC 周边 黑客松（Creekstone Founders Party）",
+    "date": "2026-07-18",
+    "start_time": "19:00",
+    "end_time": "22:30",
+    "venue": "上海 Creekstone Founders Party",
+    "registration_required": true,
+    "registration_url": "https://www.feishu.cn/share/base/form/shrcnIMmFzIdpcsoPJBwCHFYJXb",
+    "price": "免费（需审核，限 60 人）",
+    "target_audience": "AI 创业者、产品经理、开发者",
+    "description": "真实问题市场 + AI 想象力黑客松，Creekstone Ventures 与火山引擎联合。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "2026 世界人工智能大会 · AI 创作者大会（WAIC UP! AI 创作者之夜）",
+    "community": "WAIC（官方）、哈佛商业评论中国、信睿科技评论",
+    "co_brand": "WAIC 官方 Side Events「WAIC UP! DAY&NIGHT」系列",
+    "date": "2026-07-18",
+    "start_time": "晚间",
+    "end_time": null,
+    "venue": "上海 张江科学会堂",
+    "registration_required": true,
+    "registration_url": "https://mp.weixin.qq.com/s/mTYqdBQFBOHEm1cublFDKQ",
+    "price": "需购票/报名（详见活动页与 Hi WAIC）",
+    "target_audience": "AI 内容创作者、导演、科幻作家、AI 技术专家",
+    "description": "WAIC 与哈佛商业评论中国、信睿科技评论共同发起的 AI 创作者大会/之夜，聚焦 AI 创作、数字人、版权治理、科幻写作。",
+    "source": {
+      "publisher": "新浪微博(哈佛商业评论) / WaytoAGI",
+      "url": "https://www.sina.cn/weibo/detail/5316564430621437.html"
+    },
+    "needs_wechat_download": true,
+    "original_excerpt": "7月18日，WAIC、哈佛商业评论中国与信睿科技评论将共同发起“WAIC UP! AI创作者大会”。"
+  },
+  {
+    "title": "源来有饭·WAIC 专场",
+    "community": "源来有饭（开源社区聚会）",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-18",
+    "start_time": "16:30",
+    "end_time": "18:30",
+    "venue": "上海世博展览馆附近",
+    "registration_required": true,
+    "registration_url": "https://pcnxoc1eq8s3.feishu.cn/share/base/form/shrcn4baAfFaWHdPkZFA0icZTKt",
+    "price": "免费（需审核，限 10 人）",
+    "target_audience": "开源 / AI Infra 开发者",
+    "description": "小型开源 & AI Infra 开发者线下沙龙。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "WAIC 期间第 2 届 AI 研究者派对之夏",
+    "community": "Research AI+ 社区（牵头）、小红书、绿洲资本、上海未来启点社区、Monolith、模速空间",
+    "co_brand": "WAIC 周边 Side Event（连办三晚）",
+    "date": "2026-07-18",
+    "start_time": "晚间",
+    "end_time": null,
+    "venue": "上海（具体地点报名通过后告知）；7/18、7/19、7/20 连续三晚",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（需审核，每场限 ~80 人）",
+    "target_audience": "AI 研究者、开发者（AI for Science / LLM·Agent / 具身智能）",
+    "description": "第二届 AI 研究者派对之夏，7/18-20 连办三晚，分别聚焦 AI for Science、LLM/Agent、Embodied AI。",
+    "source": {
+      "publisher": "WaytoAGI Side Events / SegmentFault",
+      "url": "https://segmentfault.com/a/1190000048007796"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": "Research AI+社区牵头，携手小红书、绿洲资本、上海未来启点社区、Monolith、模速空间……7 月 18、19、20 日连 high 三个晚上。"
+  },
+  {
+    "title": "光启夜叙 · Light Night",
+    "community": "光源资本",
+    "co_brand": "WAIC 周边（投融资酒会）",
+    "date": "2026-07-18",
+    "start_time": "18:30",
+    "end_time": "21:30",
+    "venue": "上海",
+    "registration_required": true,
+    "registration_url": "https://www.bagevent.com/event/registerTicket/9237656",
+    "price": "需报名（审核制）",
+    "target_audience": "AI 行业、投融资从业者",
+    "description": "光源资本的 WAIC 期间行业社交/投融资酒会。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "蚂蚁开源 × WaytoAGI：Agent 创业局",
+    "community": "蚂蚁开源 Ant Open Source、WaytoAGI（通往AGI之路）",
+    "co_brand": "WAIC 周边 Side Event（厂商开源社区 × AI 社区）",
+    "date": "2026-07-18",
+    "start_time": "17:30",
+    "end_time": "20:00",
+    "venue": "上海浦东新区 世博天地 AOKKA Coffee",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（需审核）",
+    "target_audience": "Agent 方向创业者、开发者",
+    "description": "蚂蚁开源与 WaytoAGI 联合的 Agent 创业交流局。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "AI 创新者思享汇（2026 WAIC · AI 与『我』：人机关系下一程）",
+    "community": "SMG 第一财经",
+    "co_brand": "WAIC 2026 期间活动（世博展览馆）",
+    "date": "2026-07-18",
+    "start_time": null,
+    "end_time": null,
+    "venue": "上海世博展览馆",
+    "registration_required": true,
+    "registration_url": "https://www.163.com/dy/article/L1DCD2620519DDQ2.html",
+    "price": "购票制（7/10 23:59 前早鸟特惠）",
+    "target_audience": "上市公司高管、AI 专家、投资机构、创新者",
+    "description": "第一财经主办的 AI 创新者思享汇，6+ 场主题演讲与圆桌（共生/融合/协同三单元），结束后可参观 WAIC 展区。",
+    "source": {
+      "publisher": "网易(第一财经)",
+      "url": "https://www.163.com/dy/article/L1DCD2620519DDQ2.html"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "WAIC 2026 Private Dinner（100 AI Founders 私享晚宴）",
+    "community": "100 AI Founders interview series（发起方，Luma）",
+    "co_brand": "WAIC 2026 Sidelines（invitation-only）",
+    "date": "2026-07-18",
+    "start_time": "晚间",
+    "end_time": null,
+    "venue": "上海静安区（Jing'an，延安东路立交桥附近）",
+    "registration_required": true,
+    "registration_url": "https://luma.com/WAICprivatedinner",
+    "price": "邀请制，< 30 人",
+    "target_audience": "全球 VC 背景 AI 创始人",
+    "description": "WAIC 期间邀请制私享晚宴，30 位 VC-backed AI 创始人闭门交流；亦为 100 AI Founders 访谈系列入口。",
+    "source": {
+      "publisher": "Luma",
+      "url": "https://luma.com/WAICprivatedinner"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "干杯吧，具身！（第二期）",
+    "community": "自变量（robotics）@ AGI Bar 知识蒸馏",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-18",
+    "start_time": "20:00",
+    "end_time": "22:00",
+    "venue": "上海 AGI Bar 知识蒸馏",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（需审核）",
+    "target_audience": "具身智能/世界模型/AI Infra 开发者、机器人从业者",
+    "description": "具身智能主题社区夜『干杯吧，具身！』第二期。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "AI TASTE 之赛博酒保 · 上海 AGI Bar：The Bubble Test",
+    "community": "AGI Bar 知识蒸馏",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-19",
+    "start_time": "15:00",
+    "end_time": "18:00",
+    "venue": "上海徐汇 · 北杨 AI 小镇，AGI Bar 知识蒸馏",
+    "registration_required": true,
+    "registration_url": "https://my.feishu.cn/share/base/form/shrcnBmFcigWTeHmIqYE8hWkFxd",
+    "price": "免费（需审核）",
+    "target_audience": "AI 创业者、投资人",
+    "description": "AGI Bar 知识蒸馏『赛博酒保』主题社交局。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "Context Infra 交流会：Agent 如何构建上下文资产？",
+    "community": "Yantao & Jomy @ AGI Bar 知识蒸馏",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07-19",
+    "start_time": "19:00",
+    "end_time": "22:00",
+    "venue": "上海徐汇 · 北杨 AI 小镇，AGI Bar 知识蒸馏",
+    "registration_required": true,
+    "registration_url": "https://agibarbar.feishu.cn/share/base/form/shrcnZe2emxzOlNTJeYdcaaUeRb",
+    "price": "免费（需审核）",
+    "target_audience": "Agent / RAG / 上下文工程 / 企业 AI 开发者",
+    "description": "围绕 Agent 上下文资产、RAG、知识库、AI 基础设施的技术交流会。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "手工川年度见面会 · WAIC Afterparty",
+    "community": "Lovstudio.AI（手工川社区）",
+    "co_brand": "WAIC Afterparty（非官方）",
+    "date": "2026-07-19",
+    "start_time": "20:00",
+    "end_time": "Late Night",
+    "venue": "上海浦东",
+    "registration_required": true,
+    "registration_url": "https://www.huodongxing.com/event/3869019148900",
+    "price": "需报名（详见活动行页）",
+    "target_audience": "AI Agent/创作者社区成员",
+    "description": "Lovstudio.AI『手工川』社区年度见面会 + WAIC Afterparty。",
+    "source": {
+      "publisher": "WaytoAGI Side Events / 活动行",
+      "url": "https://www.huodongxing.com/event/3869019148900"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "2026 WAIC 山西籍 AI 创业者夜话（上海）",
+    "community": "山西籍 AI 创业者社群",
+    "co_brand": "WAIC 周边 Side Event（地域社群）",
+    "date": "2026-07-19",
+    "start_time": "晚间",
+    "end_time": null,
+    "venue": "上海（WAIC 会场附近）",
+    "registration_required": true,
+    "registration_url": "https://waic.waytoagi.com/",
+    "price": "免费（需审核，限 19 人）",
+    "target_audience": "山西籍 AI 创业者",
+    "description": "WAIC 期间山西籍 AI 创业者线下夜话（地域校友/老乡社群）。",
+    "source": {
+      "publisher": "WaytoAGI Side Events",
+      "url": "https://waic.waytoagi.com/"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "RTE × WAIC UP! 官方合作夜场：桌游 + Vibe Coding",
+    "community": "RTE 开发者社区 × WAIC UP!（官方）",
+    "co_brand": "WAIC UP! 官方合作夜场",
+    "date": "2026-07-19",
+    "start_time": "19:00",
+    "end_time": null,
+    "venue": "上海 WAIC 大会场地",
+    "registration_required": true,
+    "registration_url": "https://segmentfault.com/a/1190000048007796",
+    "price": "需报名（详见 RTE 社区推送）",
+    "target_audience": "开发者、AI 从业者",
+    "description": "RTE 开发者社区与 WAIC UP! 官方合作的夜场『桌游+Vibe Coding』，现场发布全球首款 AI 主题桌游《Talk With》。",
+    "source": {
+      "publisher": "SegmentFault(RTE开发者社区)",
+      "url": "https://segmentfault.com/a/1190000048007796"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": "7 月 19 日晚上 19:00，在大会场地，我们将与 WAIC UP！官方合作夜场「桌游+Vibe Coding」活动。"
+  },
+  {
+    "title": "世界人工智能大会 WAIC 2026 Afterparty｜AI Hero Assemble",
+    "community": "EpicConnector",
+    "co_brand": "WAIC Afterparty（明确声明与大会票务不互通/非官方）",
+    "date": "2026-07-19",
+    "start_time": "晚间",
+    "end_time": null,
+    "venue": "上海（详见活动行页）",
+    "registration_required": true,
+    "registration_url": "https://www.huodongxing.com/event/3866680770200",
+    "price": "售票制（门票独立于 WAIC 通用票务，不互通）；咨询 incubator@epicconnector.ai / 13167144846",
+    "target_audience": "AI 创业者、开发者、投资人",
+    "description": "EpicConnector 主办的 WAIC Afterparty（推测 7/19 夜场）；报名页明确提示门票与 WAIC 大会票务不互通。",
+    "source": {
+      "publisher": "活动行(EpicConnector)",
+      "url": "https://www.huodongxing.com/event/3866680770200"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "WAIC 泡汤夜谈 · 限席小聚",
+    "community": "（Luma 主办方，待确认）",
+    "co_brand": "WAIC 周边 Side Event",
+    "date": "2026-07（WAIC 期间，具体日期待确认）",
+    "start_time": null,
+    "end_time": null,
+    "venue": "上海（详见 Luma）",
+    "registration_required": true,
+    "registration_url": "https://luma.com/n2tzlqom",
+    "price": "限席（审核制）",
+    "target_audience": "AI 从业者小圈层",
+    "description": "WAIC 期间限席小聚『泡汤夜谈』（Luma 报名）。",
+    "source": {
+      "publisher": "WaytoAGI Side Events / Luma",
+      "url": "https://luma.com/n2tzlqom"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "AI Summer Night: WAIC 2026 AI创投交流之夜",
+    "community": "LynX Global",
+    "co_brand": "WAIC 2026 周边（AI 创投交流）",
+    "date": "2026-07（WAIC 期间，具体日期以活动行为准）",
+    "start_time": null,
+    "end_time": null,
+    "venue": "上海（详见活动行）",
+    "registration_required": true,
+    "registration_url": "https://2865768681556.huodongxing.com/event/4868239195000",
+    "price": "需报名（约 170 人报名，审核制）",
+    "target_audience": "AI 创业者与投资人（创投圈）",
+    "description": "LynX Global 主办的 WAIC 2026 AI 创投交流之夜（活动行报名，浏览 1w+）。",
+    "source": {
+      "publisher": "活动行(LynX Global)",
+      "url": "https://2865768681556.huodongxing.com/event/4868239195000"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "WAIC 前站｜2026 非凡大赏 · 上海 · AI 商业峰会（Unique Bloom · Enterprise AI Summit）",
+    "community": "UniqueResearch｜非凡产研",
+    "co_brand": "WAIC 前站（会前前置交流场）",
+    "date": "2026-07-15",
+    "start_time": "08:00",
+    "end_time": "21:00",
+    "venue": "上海漕河泾万丽酒店（Renaissance Shanghai Caohejing Hotel）；7/15-16 两天",
+    "registration_required": true,
+    "registration_url": "https://luma.com/sh2026",
+    "price": "免费报名，需审核，名额有限",
+    "target_audience": "企业 AI 落地/Agent Economy/产业大模型从业者",
+    "description": "WAIC 前站的企业级 AI 峰会：两天峰会 + 非凡奖 + 先进展示 + Unique Night + AI 影像未来分会场。7/16 为『智能体经济峰会』。",
+    "source": {
+      "publisher": "Luma",
+      "url": "https://luma.com/sh2026?locale=zh"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "科学前沿论坛（Scientific Frontier Forum）｜WAIC 2026",
+    "community": "上海人工智能实验室（承办）",
+    "co_brand": "WAIC 2026 官方论坛（世界人工智能大会组委会主办）",
+    "date": "2026-07-17",
+    "start_time": "下午",
+    "end_time": null,
+    "venue": "上海人工智能实验室新园区（徐汇区龙文路129号 国际传媒港L1楼）",
+    "registration_required": true,
+    "registration_url": "https://www.shlab.org.cn/news/5444274",
+    "price": "免费（观众报名/审核；亦有视频号直播）",
+    "target_audience": "AI 领域学者、研究者、业界",
+    "description": "以『智启新篇，共赴前沿』为主题，汇聚全球 AI 顶尖学者，7/17 下午在上海AI实验室启幕。",
+    "source": {
+      "publisher": "上海人工智能实验室",
+      "url": "https://www.shlab.org.cn/news/5444274"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  },
+  {
+    "title": "WAIC Future Tech 创投生态（175+ 早期项目展 + 资本对接）",
+    "community": "WAIC Future Tech（官方创投生态）",
+    "co_brand": "WAIC 2026 官方生态（H4 全域链接馆）",
+    "date": "2026-07-17",
+    "start_time": null,
+    "end_time": "2026-07-20",
+    "venue": "上海世博展览馆 H4 全域链接馆 Future Tech 展区",
+    "registration_required": true,
+    "registration_url": "https://www.36kr.com/p/3867027606213636",
+    "price": "报名审核（项目/投资人），观展需 WAIC 门票",
+    "target_audience": "早期 AI 初创、投资机构（定向邀请 200+ 投资人）",
+    "description": "WAIC 官方创投生态，从全球 1200+ 早期项目筛选近 175-180 个登台，设资本对接专区；蓝驰、Monolith、软银中国、经纬、深创投等到场。",
+    "source": {
+      "publisher": "36氪",
+      "url": "https://www.36kr.com/p/3867027606213636"
+    },
+    "needs_wechat_download": false,
+    "original_excerpt": null
+  }
+]
