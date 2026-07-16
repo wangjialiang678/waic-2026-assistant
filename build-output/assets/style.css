@@ -997,6 +997,10 @@ body.wc-open-lock { overflow: hidden; }
 .card.sb-hit .card-title a { color: var(--side-deep); }
 .sb-chip { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; background: var(--side-deep); padding: 0.12rem 0.5rem; border-radius: 3px; }
 
+/* 场馆活动标记 + 待核实标记 */
+.vb-chip { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600; color: var(--side-deep); background: var(--side-tint); padding: 0.1rem 0.45rem; border-radius: 3px; }
+.unverified-chip { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600; color: #8a6a1e; background: #f6efdb; border: 1px solid #e6d9b0; padding: 0.08rem 0.45rem; border-radius: 3px; }
+
 /* 官方渠道 Hi WAIC 导流条 */
 .foot-official { display:flex; flex-wrap:wrap; align-items:baseline; gap:0.4rem 0.9rem; margin-top:1.6rem; padding-top:1.1rem; border-top:1px solid var(--rule); font-size:0.82rem; color:var(--ink-mute); font-family:var(--font-sans); }
 .foot-official .fo-label { font-weight:600; color:var(--ink-soft); letter-spacing:0.04em; }
@@ -1047,3 +1051,8 @@ ul.zhi li { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
 .zhall-n { display: block; font-family: var(--font-mono); font-weight: 700; color: var(--exh-deep); font-size: 0.9rem; }
 .zhall-t { display: block; font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.15rem; line-height: 1.45; }
 .zmapimg { width: 100%; border-radius: 8px; border: 1px solid var(--rule); margin-top: 0.4rem; }
+
+/* 相关报道 / 其他来源（官方详情，来自并入的边会来源） */
+.addsrc { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+.addsrc li { font-size: 0.9rem; color: var(--ink-soft); }
+.addsrc a { color: var(--official); display: inline-flex; align-items: center; gap: 0.3rem; }

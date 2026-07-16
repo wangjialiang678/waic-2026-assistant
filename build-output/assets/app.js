@@ -183,16 +183,25 @@ function renderOfficialControls() {
   const f = F.official;
   const th = DATA.themes;
   const districts = (th.districts || []).filter(d => d.name);
-  const venues = (th.venues || []).slice(0, 12);
-  const cats = (th.categories || []).filter(c => ['分论坛', '主题论坛', '同期活动', '全体会议'].includes(c.name));
-  const tracks = (th.tracks || []);
+  const opAll = DATA.activities.filter(a => a.kind === 'official_program');
+  const nForum = opAll.filter(a => !a.venue_based).length;   // 官网 API 论坛
+  const nVenue = opAll.filter(a => a.venue_based).length;     // 官方场馆内活动
+  const nZone = DATA.activities.filter(a => a.kind === 'exhibition_zone').length;
+  // 场馆下拉只用官方板块自己的场馆（避免混入边会场馆串导致选了 0 结果）
+  const vc = {};
+  opAll.forEach(a => { if (a.venue) vc[a.venue] = (vc[a.venue] || 0) + 1; });
+  const venues = Object.entries(vc).sort((x, y) => y[1] - x[1]).slice(0, 12).map(([name, count]) => ({ name, count }));
+  // 类别按官方板块实际数据算（含新增「场馆活动」）
+  const catCounts = {};
+  opAll.forEach(a => { if (a.category) catCounts[a.category] = (catCounts[a.category] || 0) + 1; });
+  const cats = ['全体会议', '主题论坛', '分论坛', '同期活动', '场馆活动'].filter(n => catCounts[n]).map(n => ({ name: n, count: catCounts[n] }));
   // clean single tags
   const tagCounts = {};
   DATA.activities.filter(a => a.kind === 'official_program').forEach(a => flatTags(a).forEach(t => tagCounts[t] = (tagCounts[t] || 0) + 1));
   const tags = Object.entries(tagCounts).sort((x, y) => y[1] - x[1]).slice(0, 20);
 
   document.getElementById('controls').innerHTML = `
-    <div class="controls-note" style="--vc:var(--official)">官方日程 = 大会官网发布的 <strong>174 场论坛</strong> + <strong>4 大展区</strong>。下方先看展区导览，再按天浏览论坛。</div>
+    <div class="controls-note" style="--vc:var(--official)">官方板块 = 官网发布的 <strong>${nForum} 场论坛</strong> + <strong>${nVenue} 场馆内活动</strong> + <strong>${nZone} 大展区</strong>。「场馆活动」= 在官方展馆内、但不在官网论坛 API 里的活动。</div>
     <div class="day-tabs" id="day-tabs">
       ${['', '1', '2', '3', '4'].map(d => `<button class="day-tab${f.day === d ? ' active' : ''}" data-day="${d}">${d === '' ? '全部' : 'Day ' + d + ' <span class="dw">' + (DAY_META[d].label) + '</span>'}</button>`).join('')}
     </div>
@@ -201,14 +210,14 @@ function renderOfficialControls() {
       <select id="f-district">${opt('', '全部片区', !f.district)}${districts.map(d => opt(d.name, `${d.name} (${d.count})`, f.district === d.name)).join('')}</select>
       <select id="f-venue">${opt('', '全部场馆', !f.venue)}${venues.map(v => opt(v.name, `${v.name} (${v.count})`, f.venue === v.name)).join('')}</select>
       <select id="f-category">${opt('', '全部类别', !f.category)}${cats.map(c => opt(c.name, `${c.name} (${c.count})`, f.category === c.name)).join('')}</select>
-      <select id="f-track">${opt('', '全部板块', !f.track)}${tracks.map(t => opt(t.name, `${t.name} (${t.count})`, f.track === t.name)).join('')}</select>
       <select id="f-tag">${opt('', '全部标签', !f.tag)}${tags.map(([t, c]) => opt(t, `${t} (${c})`, f.tag === t)).join('')}</select>
       <span id="count"></span>
     </div>`;
 
   bindDayTabs('official');
   bindSearch('official');
-  [['f-district', 'district'], ['f-venue', 'venue'], ['f-category', 'category'], ['f-track', 'track'], ['f-tag', 'tag']]
+  F.official.track = '';   // 官方板块不做 track 筛选（官方仅 4 场带 track，track 在「边会」板块才有意义）
+  [['f-district', 'district'], ['f-venue', 'venue'], ['f-category', 'category'], ['f-tag', 'tag']]
     .forEach(([id, key]) => document.getElementById(id).addEventListener('change', e => { F.official[key] = e.target.value; renderOfficial(); }));
 }
 
@@ -336,7 +345,7 @@ function renderSide() {
   const cnt = document.getElementById('count');
   if (cnt) cnt.textContent = `显示 ${list.length} / ${total} 场`;
 
-  list = sortSchedule(list);
+  list = sortSide(list);
   const content = document.getElementById('view-content');
   content.innerHTML = list.length ? list.map(renderSideCard).join('') : '<p class="list-note">没有匹配的边会，试试放宽筛选。</p>';
 }
@@ -354,6 +363,7 @@ function renderSideCard(a) {
   if (t) metaBits.push(`<span class="time">${esc(t)}</span>`);
   if (a.waic_relation && a.waic_relation !== 'official') metaBits.push(`<span class="rel-badge ${a.waic_relation}">${relationLabel(a.waic_relation)}</span>`);
   if (a.track) metaBits.push(`<span class="track-badge">${esc(a.track)}</span>`);
+  if (a.unverified) metaBits.push('<span class="unverified-chip" title="暂无可点开核验的来源链接，信息仅供参考">⚠ 待核实</span>');
 
   // registration row
   const regBits = [];
@@ -553,6 +563,7 @@ function renderActivityCard(a) {
   if (venueBits) metaBits.push(`<span class="venue">${esc(venueBits)}</span>`);
   if (a.district) metaBits.push(`<span>${esc(a.district)}</span>`);
   if (a.category) metaBits.push(`<span class="kind-chip">${esc(a.category)}</span>`);
+  if (a.venue_based) metaBits.push('<span class="vb-chip" title="在官方展馆内，但不在 WAIC 官网论坛 API 里，权威性以主办方为准">场馆内 · 非官网议程</span>');
   if (a.track) metaBits.push(`<span class="track-badge">${esc(a.track)}</span>`);
 
   const tags = [...flatTags(a)].slice(0, 3).map(t => `<span class="tag">${esc(t)}</span>`).join('');
@@ -595,6 +606,15 @@ function zoneBlurb(z) {
   s = s.replace(/^[^｜|]{2,12}[｜|][^。]{2,24}[。\s]*/, '');
   const m = s.match(/^[^。]{6,70}。/);
   return m ? m[0] : s.slice(0, 60);
+}
+
+// 边会排序：① 有确定日期的在前（按 day/time）② 无日期但有来源 ③ 待核实(unverified)排最后
+function sortSide(list) {
+  const rank = a => a.date ? 0 : (a.unverified ? 2 : 1);
+  return list.slice().sort((x, y) =>
+    rank(x) - rank(y)
+    || (x.day || 99) - (y.day || 99)
+    || (x.start_time || '99:99').localeCompare(y.start_time || '99:99'));
 }
 
 function bindDayTabs(view) {

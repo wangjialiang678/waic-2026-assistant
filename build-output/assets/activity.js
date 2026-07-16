@@ -13,7 +13,7 @@ function channelLabel(ch) { return ({ 'waic-official-api': '官方来源', 'wech
 function relationLabel(r) { return ({ official: '官方', affiliated: '联名 / 合作', 'co-located': '同城同期' })[r] || ''; }
 function kindClass(a) { return a.kind === 'side_event' || a.kind === 'community' ? 'k-side' : (a.kind === 'exhibition_zone' ? 'k-zone' : 'k-official'); }
 function kindFlag(a) {
-  if (a.kind === 'official_program') return '官方论坛';
+  if (a.kind === 'official_program') return a.venue_based ? '场馆活动' : '官方论坛';
   if (a.kind === 'exhibition_zone') return '官方展区';
   if (a.kind === 'side_event' || a.kind === 'community') return '边会 · 周边';
   return '活动';
@@ -132,6 +132,10 @@ function renderDetail(a) {
   }
 
   body += renderSourcePanel(a, src, url, kc);
+
+  if ((a.additional_sources || []).length) {
+    body += `<div class="panel"><div class="panel-label">相关报道 / 其他来源</div><ul class="addsrc">${a.additional_sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.publisher || shortHost(s.url))} ${ICON_EXT}</a></li>`).join('')}</ul></div>`;
+  }
 
   const descLabel = a.source_type === 'official' ? '简介' : '内容摘要';
   if (a.description && !isZone) body += `<div class="panel"><div class="panel-label">${descLabel}</div><div class="prose-block">${nl2p(a.description)}</div>${a.description_en ? `<div class="prose-block" style="margin-top:1rem;color:var(--ink-mute);font-size:0.9rem">${nl2p(a.description_en)}</div>` : ''}</div>`;
