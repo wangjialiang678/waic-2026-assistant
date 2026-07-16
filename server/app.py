@@ -27,6 +27,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 
 import data
+import store_state
 import tools
 from llm import run_chat
 
@@ -126,6 +127,8 @@ class TokenBucket:
 
 # 20 chat/分钟 → 容量 20，每 3 秒回 1 个令牌
 CHAT_LIMITER = TokenBucket(capacity=20, refill_per_sec=20 / 60.0)
+# 状态同步：读写较轻，每 IP 60/分钟（防刷/防扫）
+STATE_LIMITER = TokenBucket(capacity=60, refill_per_sec=60 / 60.0)
 
 
 def _client_ip(request: Request) -> str:
@@ -306,3 +309,59 @@ def digest(
 
     return {"day": day, "date": date, "interests": interest_list,
             "summary": summary, "items": items}
+
+
+# ================= 用户状态同步（无登录，匿名同步码为键） =================
+# GET  /api/state?device=<code>   拉取该同步码下的 日程/兴趣/推断兴趣/联系方式
+# POST /api/state                 保存（LWW）；body: {device,schedule,interests,inferred,contact,updated_at}
+# 用途：多端 + AI agent skill 间同步日程/兴趣；并为社交速配提供服务端兴趣数据。
+
+_EMPTY_STATE = {"schedule": [], "interests": [], "inferred": {}, "contact": None, "updated_at": ""}
+
+
+@app.get("/api/state")
+def state_get(device: str = Query("", description="匿名同步码")):
+    if not store_state.valid_device(device):
+        return JSONResponse({"error": "bad_device"}, status_code=400)
+    st = store_state.get_state(device)
+    return st or {"device": device, **_EMPTY_STATE}
+
+
+@app.post("/api/state")
+async def state_put(request: Request):
+    ip = _client_ip(request)
+    if not STATE_LIMITER.allow(ip):
+        return JSONResponse({"error": "rate_limited"}, status_code=429)
+    try:
+        body = await request.json()
+    except Exception:  # noqa: BLE001
+        body = {}
+    device = (body.get("device") or "").strip()
+    if not store_state.valid_device(device):
+        return JSONResponse({"error": "bad_device"}, status_code=400)
+
+    # 尺寸/类型收敛，防滥用
+    schedule = [str(x)[:64] for x in (body.get("schedule") or []) if x][:500]
+    interests = [str(x)[:32] for x in (body.get("interests") or []) if x][:60]
+    inferred_in = body.get("inferred") or {}
+    inferred = {}
+    if isinstance(inferred_in, dict):
+        for k, v in list(inferred_in.items())[:120]:
+            try:
+                inferred[str(k)[:32]] = round(float(v), 3)
+            except (TypeError, ValueError):
+                continue
+    contact = body.get("contact")
+    if isinstance(contact, dict):
+        contact = {
+            "type": str(contact.get("type", ""))[:16],
+            "value": str(contact.get("value", ""))[:80],
+            "optin": bool(contact.get("optin")),
+        }
+    else:
+        contact = None
+    updated_at = str(body.get("updated_at") or "")[:32]
+
+    st = store_state.put_state(device, schedule, interests, inferred, contact, updated_at)
+    _log_event("state", ip8=_ip8(ip), dev=device[:6], n_sch=len(schedule), n_int=len(interests))
+    return st

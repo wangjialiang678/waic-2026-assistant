@@ -93,7 +93,14 @@
 @media (max-width: 760px) { .sb-museum { grid-template-columns: 1fr; } }
 .sb-museum .mu-tag { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; color: var(--intel-deep); background: var(--intel-tint); display: inline-block; padding: 0.16rem 0.6rem; border-radius: 4px; }
 .sb-museum .mu-title { font-family: var(--font-serif); font-weight: 700; font-size: clamp(1.3rem, 3vw, 1.7rem); color: var(--ink); margin: 0.7rem 0 0.5rem; }
+.sb-museum .mu-lead { font-family: var(--font-serif); font-weight: 600; font-size: clamp(1rem, 2.4vw, 1.15rem); color: var(--intel-deep); margin: 0.6rem 0 0.2rem; }
 .sb-museum .mu-desc { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.7; }
+.sb-museum .mu-desc p { margin: 0 0 0.6rem; }
+.sb-museum .mu-desc p:last-child { margin-bottom: 0; }
+.sb-museum .mu-poster { position: relative; display: block; margin-bottom: 0.9rem; cursor: zoom-in; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card); }
+.sb-museum .mu-poster img { display: block; width: 100%; height: auto; transition: transform 0.25s; }
+.sb-museum .mu-poster:hover img { transform: scale(1.03); }
+.sb-museum .mu-poster-zoom { position: absolute; right: 0.5rem; bottom: 0.5rem; font-family: var(--font-sans); font-size: 0.68rem; color: #fff; background: rgba(18,21,27,0.55); padding: 0.14rem 0.5rem; border-radius: 4px; }
 .sb-museum .mu-cta { text-align: center; }
 .sb-museum .mu-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.85rem 1.4rem; background: var(--intel); color: #fff !important; border-radius: 8px; font-family: var(--font-sans); font-weight: 600; font-size: 0.98rem; transition: background 0.16s, transform 0.16s; }
 .sb-museum .mu-btn:hover { background: var(--intel-deep); transform: translateY(-1px); }
@@ -333,11 +340,20 @@
   </div>
   <div class="sb-museum">
     <div>
-      <span class="mu-tag">AI 十天搭建 · 人文策展</span>
-      <div class="mu-title">把学员的作品与故事，搬进一座会呼吸的线上博物馆</div>
-      <div class="mu-desc">「生命力博物馆」由超脑成员月亮（张婵媛）在没有技术背景的情况下，用 AI 十天搭建而成，呈现超脑青少年学员的 AI 作品与创作故事。它是这次 WAIC 现场展的线上延伸，随时随地可逛。</div>
+      <span class="mu-tag">WAIC 现场展 · 线上延伸</span>
+      <div class="mu-lead">当一群青少年开始用 AI 回应真实世界，会发生什么？</div>
+      <div class="mu-title">生命力博物馆：一份属于 AI 原住民的成长档案</div>
+      <div class="mu-desc">
+        <p>月亮是超脑的早期参与者。过去几年，她见证并记录着这群青少年从第一次接触 AI，到逐渐找到自己真正想解决的问题。</p>
+        <p>历时近一个月，没有技术背景的她，与 AI 一起搭建了这座「生命力博物馆」，收录青少年的 AI 作品，也留下作品背后那些真实的好奇、关切与成长。</p>
+        <p>它不仅是一次作品展，更是一份属于 AI 原住民的成长档案；也是本次 WAIC 现场展览的线上延伸——展览会结束，但这些故事可以一直被看见、持续追踪与沉淀。</p>
+      </div>
     </div>
     <div class="mu-cta">
+      <div class="mu-poster" data-zoom="assets/media/vitality-museum-poster.jpg" data-cap="生命力博物馆 · WAIC 特别展 · 由月亮（张婵媛）与 AI 共创">
+        <img src="assets/media/vitality-museum-poster.jpg" alt="生命力博物馆海报 · 超脑青少年 AI 作品线上特别展" width="1200" height="1603" loading="lazy">
+        <span class="mu-poster-zoom">点击放大</span>
+      </div>
       <a href="https://vitality-museum.wexiyi.com/waic" target="_blank" rel="noopener" class="mu-btn">进入线上特别展 →</a>
       <span class="mu-url">vitality-museum.wexiyi.com/waic</span>
     </div>

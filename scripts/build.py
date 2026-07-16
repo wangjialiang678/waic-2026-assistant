@@ -358,6 +358,15 @@ def load_json(path: Path, default):
 
 # ---------- 展区（4 片区场馆）----------
 
+# 各场馆代表照（本地自托管，四张不同建筑外观；编辑用途，来源见 docs）
+ZONE_COVER = {
+    "世博中心": "assets/media/zone-expo-center.jpg",
+    "世博展览馆": "assets/media/zone-sweecc.jpg",
+    "徐汇西岸国际会展中心": "assets/media/zone-westbund.jpg",
+    "张江科学会堂": "assets/media/zone-zhangjiang.jpg",
+}
+
+
 def exhibition_zone_to_activity(area: dict, enrich: dict | None = None) -> dict:
     detail = area.get("detail") or {}
     enrich = enrich or {}
@@ -379,7 +388,7 @@ def exhibition_zone_to_activity(area: dict, enrich: dict | None = None) -> dict:
         "venue": title, "district": district_of(title), "room": "",
         "category": "展区", "track": "", "tags": [],
         "registration_required": None, "registration_url": "", "price": "",
-        "cover_img": detail.get("coverUrl") or "",
+        "cover_img": ZONE_COVER.get(title) or detail.get("coverUrl") or "",
         # —— 展区增强字段 ——
         "address": enrich.get("address") or "",
         "transit": enrich.get("transit") or "",
@@ -635,6 +644,29 @@ def _dedup_key(title: str) -> str:
     return _sig(title)
 
 
+# 官方核心展馆关键词。用户政策：物理位置在官方展馆内的活动即归官方板块（venue_based 标记，与官网 API 论坛区分）。
+OFFICIAL_HALL_KEYWORDS = ["世博中心", "世博展览馆", "西岸国际会展中心", "西岸穹顶",
+                         "徐汇西岸国际会展", "张江科学会堂"]
+
+def reclassify_venue_based(activities: list) -> int:
+    """把地点在官方展馆内的边会移入官方板块（kind→official_program，标 venue_based、类别→场馆活动）。
+    保留 source_type=unofficial + source，卡片仍显示公众号/网络来源出处，不冒充官网议程。
+    排除：'附近'、跨多馆的整会概览（venue 含顿号）。"""
+    n = 0
+    for a in activities:
+        if a.get("kind") not in ("side_event", "community"):
+            continue
+        v = a.get("venue") or ""
+        if "附近" in v or "、" in v:
+            continue
+        if any(h in v for h in OFFICIAL_HALL_KEYWORDS):
+            a["kind"] = "official_program"
+            a["venue_based"] = True
+            a["category"] = "场馆活动"
+            n += 1
+    return n
+
+
 def dedup_side_events(acts: list) -> list:
     """按标题签名去重，重复项把来源合并进 additional_sources、并补空字段。"""
     kept, index = [], {}
@@ -836,6 +868,10 @@ def main():
         "articles": intel,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[3] 情报库 intel.json：{len(intel)} 篇资讯素材")
+
+    # 在官方展馆内的活动 → 归入官方板块（用户政策：物理位置在官方会场即算官方）
+    n_venue = reclassify_venue_based(activities)
+    print(f"     场馆归类：{n_venue} 条在官方展馆内的活动移入官方板块（标 venue_based / 类别=场馆活动）")
 
     # 排序 + 落 activities.json
     activities.sort(key=lambda a: a["_sort_key"])

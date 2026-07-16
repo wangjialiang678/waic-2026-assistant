@@ -52,7 +52,7 @@
     try { const p = JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}'); return { interests: Array.isArray(p.interests) ? p.interests : [] }; }
     catch (e) { return { interests: [] }; }
   }
-  function writeProfile(p) { try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) {} }
+  function writeProfile(p) { try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) {} if (window.WAICSync) window.WAICSync.touch(); }
   function fetchTimeout(url, ms, opts) {
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), ms);

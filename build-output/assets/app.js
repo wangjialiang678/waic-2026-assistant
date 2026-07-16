@@ -12,7 +12,7 @@ const MYSCHED_KEY = 'waic2026.myschedule.v1';
 const SITE_URL = 'waic.sg.superbrain-ai.com';
 function readMine() { try { return JSON.parse(localStorage.getItem(MYSCHED_KEY) || '[]'); } catch (e) { return []; } }
 let MINE = new Set(readMine().map(String));
-function persistMine() { try { localStorage.setItem(MYSCHED_KEY, JSON.stringify([...MINE])); } catch (e) {} updateMineBadge(); }
+function persistMine() { try { localStorage.setItem(MYSCHED_KEY, JSON.stringify([...MINE])); } catch (e) {} updateMineBadge(); if (window.WAICSync) window.WAICSync.touch(); }
 function isMine(id) { return MINE.has(String(id)); }
 function toggleMine(id) { id = String(id); if (MINE.has(id)) MINE.delete(id); else MINE.add(id); persistMine(); return MINE.has(id); }
 function mineActivities() {
@@ -105,6 +105,12 @@ async function loadData() {
     setView('official');
     routeFromHash();
     window.addEventListener('hashchange', routeFromHash);
+    // 服务端同步拉到新数据 → 刷新内存态 + 重渲染当前视图
+    window.addEventListener('waic-sync', () => {
+      MINE = new Set(readMine().map(String));
+      updateMineBadge();
+      if (CURRENT_VIEW) setView(CURRENT_VIEW);
+    });
   } catch (e) {
     document.getElementById('view-content').innerHTML =
       `<p class="loading">加载失败：${esc(e.message)}<br>请确认在 build-output/ 目录下启动了本地服务。</p>`;
@@ -659,8 +665,14 @@ function renderMineControls() {
   const list = mineActivities();
   const dayCounts = {};
   list.forEach(a => { const d = a.day || 0; dayCounts[d] = (dayCounts[d] || 0) + 1; });
+  const syncCode = window.WAICSync ? window.WAICSync.code() : '';
   document.getElementById('controls').innerHTML = `
     <div class="controls-note" style="--vc:var(--official)">我的日程存在<strong>你自己的浏览器</strong>里，无需登录。同一天时间重叠会 <strong style="color:var(--live)">红色高亮撞车</strong>。可一键导出到日历，或生成分享长图。</div>
+    ${syncCode ? `<div class="sync-bar">
+      <span class="sync-ic">🔗</span>
+      <div class="sync-main"><span class="sync-txt">跨设备 / AI 助手 同步码</span><code class="sync-code" id="sync-code">${esc(syncCode)}</code><button class="sync-copy" id="sync-copy" type="button">复制</button></div>
+      <span class="sync-hint">在你的另一台设备、或装了 WAIC skill 的 AI 助手里填入它，日程和兴趣就会自动同步（无需登录）。</span>
+    </div>` : ''}
     ${list.length ? `<div class="mine-actions">
       <button class="mine-act primary" id="mine-share" type="button">📸 生成分享长图</button>
       <button class="mine-act" id="mine-ics" type="button">📅 导出到日历 (.ics)</button>
@@ -672,6 +684,13 @@ function renderMineControls() {
         return `<button class="day-tab${f.day === d ? ' active' : ''}" data-day="${d}">${d === '' ? '全部' : 'Day ' + d}<span class="dw">${d === '' ? '' : DAY_META[d].label}${c ? ' · ' + c : ''}</span></button>`;
       }).join('')}
     </div>` : ''}`;
+  const copyBtn = document.getElementById('sync-copy');
+  if (copyBtn) copyBtn.addEventListener('click', () => {
+    const code = (document.getElementById('sync-code') || {}).textContent || '';
+    const done = () => { copyBtn.textContent = '已复制 ✓'; setTimeout(() => { copyBtn.textContent = '复制'; }, 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(done).catch(done);
+    else done();
+  });
   if (list.length) {
     bindDayTabs('mine');
     document.getElementById('mine-share').addEventListener('click', generateShareImage);

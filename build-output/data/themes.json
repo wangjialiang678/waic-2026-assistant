@@ -28,11 +28,11 @@
   "kinds": [
     {
       "name": "official_program",
-      "count": 174
+      "count": 210
     },
     {
       "name": "side_event",
-      "count": 174
+      "count": 138
     },
     {
       "name": "exhibition_zone",
@@ -42,11 +42,15 @@
   "categories": [
     {
       "name": "边会·周边活动",
-      "count": 174
+      "count": 138
     },
     {
       "name": "分论坛",
       "count": 125
+    },
+    {
+      "name": "场馆活动",
+      "count": 36
     },
     {
       "name": "主题论坛",

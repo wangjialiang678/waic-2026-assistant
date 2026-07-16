@@ -973,6 +973,16 @@ body.wc-open-lock { overflow: hidden; }
 .nav-links .nav-mine .nav-mine-n.has { display: inline-block; }
 @media (max-width: 520px){ .nav-links .nav-mine{ font-size: 0.82rem; } }
 
+/* 同步码条 */
+.sync-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; margin: 0.7rem 0 0; padding: 0.7rem 0.95rem; background: var(--official-tint); border: 1px solid var(--official-line); border-radius: 8px; }
+.sync-bar .sync-ic { font-size: 1.1rem; }
+.sync-bar .sync-main { display: inline-flex; align-items: center; gap: 0.55rem; flex-wrap: wrap; }
+.sync-bar .sync-txt { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 600; color: var(--official-deep); }
+.sync-bar .sync-code { font-family: var(--font-mono); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.08em; color: var(--official-deep); background: var(--surface); border: 1px solid var(--official-line); border-radius: 5px; padding: 0.15rem 0.55rem; }
+.sync-bar .sync-copy { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600; cursor: pointer; color: #fff; background: var(--official); border: none; border-radius: 5px; padding: 0.28rem 0.7rem; transition: background 0.14s; }
+.sync-bar .sync-copy:hover { background: var(--official-deep); }
+.sync-bar .sync-hint { width: 100%; font-size: 0.76rem; color: var(--ink-mute); line-height: 1.5; }
+
 /* 全局搜索提示条 */
 .search-note { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-soft); background: var(--official-tint); border-radius: 7px; padding: 0.55rem 0.9rem; margin-bottom: 0.8rem; }
 

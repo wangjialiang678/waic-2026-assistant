@@ -28,7 +28,7 @@ function sourceUrl(a) {
 const MYSCHED_KEY = 'waic2026.myschedule.v1';
 function readMine() { try { return JSON.parse(localStorage.getItem(MYSCHED_KEY) || '[]').map(String); } catch (e) { return []; } }
 function isMine(id) { return readMine().includes(String(id)); }
-function toggleMine(id) { id = String(id); const s = readMine(); const i = s.indexOf(id); if (i >= 0) s.splice(i, 1); else s.push(id); localStorage.setItem(MYSCHED_KEY, JSON.stringify(s)); return i < 0; }
+function toggleMine(id) { id = String(id); const s = readMine(); const i = s.indexOf(id); if (i >= 0) s.splice(i, 1); else s.push(id); localStorage.setItem(MYSCHED_KEY, JSON.stringify(s)); if (window.WAICSync) window.WAICSync.touch(); return i < 0; }
 const ICON_EXT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="width:14px;height:14px"><path d="M7 17 17 7M9 7h8v8"/></svg>';
 const DAY_LABEL = { 1: '7/17 周五', 2: '7/18 周六', 3: '7/19 周日', 4: '7/20 周一' };
 const ZONE_DESC = {

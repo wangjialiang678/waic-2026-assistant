@@ -1,5 +1,5 @@
 {
-  "version": "20260716-1222",
+  "version": "20260716-1251",
   "total": 352,
   "official_count": 178,
   "unofficial_count": 174,
@@ -32,7 +32,7 @@
       "registration_required": null,
       "registration_url": "",
       "price": "",
-      "cover_img": "https://static.worldaic.com.cn/media/20260624/964c0f978e564009863c4213df058587.jpg",
+      "cover_img": "assets/media/zone-expo-center.jpg",
       "address": "上海市浦东新区世博大道1500号（2号门）",
       "transit": "地铁 8 号线中华艺术宫站 3 号口 / 13 号线世博大道站 1 号口",
       "highlights": [
@@ -86,7 +86,7 @@
       "registration_required": null,
       "registration_url": "",
       "price": "",
-      "cover_img": "https://static.worldaic.com.cn/media/20260624/d2a5229eaf474b19ac067347db7ad78e.jpg",
+      "cover_img": "assets/media/zone-sweecc.jpg",
       "address": "上海市浦东新区国展路1099号（南门）／博成路850号（北门）",
       "transit": "地铁 13 号线世博大道站 1 号口 / 8 号线中华艺术宫站 3 号口 / 7 号线耀华路站 1 号口",
       "highlights": [
@@ -158,7 +158,7 @@
       "registration_required": null,
       "registration_url": "",
       "price": "",
-      "cover_img": "https://static.worldaic.com.cn/media/20260624/efdaaad3202b45bc9ae091e168e65a71.jpg",
+      "cover_img": "assets/media/zone-westbund.jpg",
       "address": "上海市徐汇区龙腾大道2555号一带（徐汇滨江 · 西岸）",
       "transit": "地铁 11 号线龙耀路站 1 号口",
       "highlights": [
@@ -212,7 +212,7 @@
       "registration_required": null,
       "registration_url": "",
       "price": "",
-      "cover_img": "https://static.worldaic.com.cn/media/20260624/3c8373dde436467fb267eb528b6bea9d.jpg",
+      "cover_img": "assets/media/zone-zhangjiang.jpg",
       "address": "上海市浦东新区海科路1393号",
       "transit": "地铁 13 号线学林路站 1 号口",
       "highlights": [
@@ -681,7 +681,7 @@
     {
       "id": "wx-271",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -704,7 +704,7 @@
       "venue": "世博中心银厅A",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -726,7 +726,8 @@
           "publisher": "上海经信委",
           "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd"
         }
-      ]
+      ],
+      "venue_based": true
     },
     {
       "id": "off-c43ecf99c2",
@@ -5564,7 +5565,7 @@
     {
       "id": "web-147",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -5587,7 +5588,7 @@
       "venue": "西岸国际会展中心 401会议室",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -5609,7 +5610,8 @@
       "original_excerpt": "14:00 物理AI重塑智能制造论坛 西岸国际会展中心 401会议室",
       "detail_md": "md/unofficial/web-147-物理AI重塑智能制造论坛.md",
       "search_text": "物理ai重塑智能制造论坛 西岸国际会展中心 401会议室",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "off-308da1e20c",
@@ -7414,7 +7416,7 @@
     {
       "id": "web-126",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -7437,7 +7439,7 @@
       "venue": "世博中心",
       "district": "世博片区",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -7453,12 +7455,13 @@
       "original_excerpt": "人工智能全球治理与可持续发展论坛 7月17日下午·世博中心 名额充足，但需提前注册",
       "detail_md": "md/unofficial/web-126-人工智能全球治理与可持续发展论坛.md",
       "search_text": "人工智能全球治理与可持续发展论坛 世博中心",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-134",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -7481,7 +7484,7 @@
       "venue": "西岸国际会展中心 X1C301",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "WAIC Young",
       "tags": [],
       "registration_required": true,
@@ -7508,12 +7511,13 @@
       "original_excerpt": "活动地点：西岸国际会展中心X1C301，活动时间：2026年7月17日-20日",
       "detail_md": "md/unofficial/web-134-星轨环岛科创乐园WAIC-YOUNG-展区.md",
       "search_text": "星轨环岛科创乐园（waic young 展区） 星轨环岛创意设计的青少年科创展区，含多个互动体验区域，全天开放；凭展览票入场，需hi waic app预约。 西岸国际会展中心 x1c301 waic young（世界人工智能大会组委会） 青少年、初接触ai者 waic young",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-136",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -7536,7 +7540,7 @@
       "venue": "西岸国际会展中心 X1C301（星轨环岛展区）",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "WAIC Young",
       "tags": [],
       "registration_required": false,
@@ -7563,12 +7567,13 @@
       "original_excerpt": "活动地点：西岸国际会展中心X1C301，活动时间：2026年7月17日-20日",
       "detail_md": "md/unofficial/web-136-AIGC音乐造梦基地.md",
       "search_text": "aigc音乐造梦基地 未音aigc平台（文字生成音乐）+东华大学无弦琵琶交互设备，普通人无需乐理即可创作音乐。 西岸国际会展中心 x1c301（星轨环岛展区） waic young（世界人工智能大会组委会） 音乐爱好者、创意创作人 waic young",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-137",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -7591,7 +7596,7 @@
       "venue": "西岸国际会展中心 X1C301（星轨环岛展区）",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "WAIC Young",
       "tags": [],
       "registration_required": false,
@@ -7618,12 +7623,13 @@
       "original_excerpt": "活动地点：西岸国际会展中心X1C301，活动时间：2026年7月17日-20日",
       "detail_md": "md/unofficial/web-137-AI奇幻皮影战场.md",
       "search_text": "ai奇幻皮影战场 三种国风对战剧情，玩家用全身动作操控皮影角色，实时计分可现场pk。 西岸国际会展中心 x1c301（星轨环岛展区） waic young（世界人工智能大会组委会） 青少年 waic young",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-222",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": true,
@@ -7646,7 +7652,7 @@
       "venue": "世博展览馆H4馆 WAIC Connect专区舞台A",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -7668,12 +7674,13 @@
       "original_excerpt": "静安·场景涌现WAIC2026静安一小时专场活动时间:7月17日14:00—15:30活动地点:世博展览馆H4馆WAICConnect 专区舞台A看...",
       "detail_md": "md/unofficial/web-222-静安场景涌现-WAIC2026-静安一小时专场活动.md",
       "search_text": "静安·场景涌现 waic2026 静安一小时专场活动 静安·场景涌现waic2026静安一小时专场活动时间:7月17日14:00—15:30活动地点:世博展览馆h4馆waicconnect 专区舞台a看... 世博展览馆h4馆 waic connect专区舞台a 市北高新 / 静安区",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-229",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": true,
@@ -7696,7 +7703,7 @@
       "venue": "上海世博展览馆",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -7718,7 +7725,8 @@
       "original_excerpt": "记忆张量MemTensorWAIC2026专题论坛嘉宾阵容正式公布.7 月 17 日,记忆张量MemTensor 将在WAIC2026现场,上海世博展...",
       "detail_md": "md/unofficial/web-229-WAIC2026-记忆张量-MemTensor-专题论坛重新理解AI记忆.md",
       "search_text": "waic2026 记忆张量 memtensor 专题论坛(重新理解ai记忆) 记忆张量memtensorwaic2026专题论坛嘉宾阵容正式公布.7 月 17 日,记忆张量memtensor 将在waic2026现场,上海世博展... 上海世博展览馆 记忆张量 memtensor",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "wx-238",
@@ -7852,7 +7860,7 @@
     {
       "id": "wx-257",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -7875,7 +7883,7 @@
       "venue": "世博展览馆 H1-C117 展位",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -7900,7 +7908,8 @@
       "original_excerpt": "展览时间：7月17日-20日，展览地点：世博展览馆，展位号：H1-C117。7月17日-20日，在WAIC2026现场，和京东一起，走进AI进入物理世界的新阶段。",
       "detail_md": "md/unofficial/wx-257-京东-WAIC-2026-展区AI-进入物理世界.md",
       "search_text": "京东 waic 2026 展区（ai 进入物理世界） 京东在 waic 2026 现场设展，围绕'ai 进入物理世界'展示从模型能力、具身数据到产业与生活的具体应用；据文章预告含 30+ ai 互动、20+ 行业嘉宾。 世博展览馆 h1-c117 展位 京东 京东 20+ 行业嘉宾（未具名）",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "wx-310",
@@ -12256,7 +12265,7 @@
     {
       "id": "web-154",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -12279,7 +12288,7 @@
       "venue": "世博中心 518会议室",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -12306,12 +12315,13 @@
       "original_excerpt": "09:00 人工智能之旅·创造下一代人工智能论坛 世博中心 518会议室",
       "detail_md": "md/unofficial/web-154-人工智能之旅创造下一代人工智能论坛.md",
       "search_text": "人工智能之旅·创造下一代人工智能论坛 世博中心 518会议室 人工智能之旅",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-157",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -12334,7 +12344,7 @@
       "venue": "世博展览馆 H4 领航舞台",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -12361,7 +12371,8 @@
       "original_excerpt": "09:00 智领未来·资本跃迁——WAIC创投生态论坛 世博展览馆 H4 领航舞台",
       "detail_md": "md/unofficial/web-157-智领未来资本跃迁WAIC创投生态论坛.md",
       "search_text": "智领未来·资本跃迁——waic创投生态论坛 世博展览馆 h4 领航舞台 智领未来",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "wx-319",
@@ -14341,7 +14352,7 @@
     {
       "id": "web-161",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -14364,7 +14375,7 @@
       "venue": "世博展览馆 H4 领航舞台",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -14391,7 +14402,8 @@
       "original_excerpt": "12:00 Airwallex 空中云汇·领航AI驱动的全球金融变革论坛 世博展览馆 H4 领航舞台",
       "detail_md": "md/unofficial/web-161-Airwallex-空中云汇领航AI驱动的全球金融变革论坛.md",
       "search_text": "airwallex 空中云汇·领航ai驱动的全球金融变革论坛 世博展览馆 h4 领航舞台 airwallex 空中云汇",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "off-e1146f7e61",
@@ -24023,7 +24035,7 @@
     {
       "id": "web-170",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -24046,7 +24058,7 @@
       "venue": "世博中心 618会议室",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -24073,12 +24085,13 @@
       "original_excerpt": "14:00 思朗科技·超智融合驱动AI4S算力论坛 世博中心 618会议室",
       "detail_md": "md/unofficial/web-170-思朗科技超智融合驱动AI4S算力论坛.md",
       "search_text": "思朗科技·超智融合驱动ai4s算力论坛 世博中心 618会议室 思朗科技",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "wx-268",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -24101,7 +24114,7 @@
       "venue": "世博中心银厅B",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -24123,7 +24136,8 @@
           "publisher": "上海经信委",
           "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd"
         }
-      ]
+      ],
+      "venue_based": true
     },
     {
       "id": "off-07e3d72846",
@@ -24666,7 +24680,7 @@
     {
       "id": "web-177",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -24689,7 +24703,7 @@
       "venue": "世博展览馆 H4 领航舞台",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -24716,7 +24730,8 @@
       "original_excerpt": "16:30 百型智能·企业本体与系统协同 开启2B AI应用新范式新品发布 世博展览馆 H4 领航舞台",
       "detail_md": "md/unofficial/web-177-百型智能企业本体与系统协同-开启2B-AI应用新范式新品发布.md",
       "search_text": "百型智能·企业本体与系统协同 开启2b ai应用新范式新品发布 世博展览馆 h4 领航舞台 百型智能",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "off-4527d28288",
@@ -24807,7 +24822,7 @@
     {
       "id": "wx-278",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -24830,7 +24845,7 @@
       "venue": "西岸穹顶艺术中心",
       "district": "西岸片区",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -24852,7 +24867,8 @@
           "publisher": "上海经信委",
           "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDU2MTc4NQ==&mid=2650706938&idx=1&sn=c50a1124e2ff7ebed6a8303c3835c59e&chksm=bf84a947a189f07eca7c6c3cc8e35dccddb300fc9867e9ae3cdbe41114613083eba95461bbc9#rd"
         }
-      ]
+      ],
+      "venue_based": true
     },
     {
       "id": "web-002",
@@ -25052,7 +25068,7 @@
     {
       "id": "web-135",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -25075,7 +25091,7 @@
       "venue": "西岸国际会展中心 X1C301（星轨环岛赛场）",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "WAIC Young",
       "tags": [],
       "registration_required": false,
@@ -25102,12 +25118,13 @@
       "original_excerpt": "活动地点：西岸国际会展中心X1C301 活动时间：2026年7月18日全天",
       "detail_md": "md/unofficial/web-135-机器狗越障总决赛AI大模型具身智能自主导航赛.md",
       "search_text": "机器狗越障总决赛（ai大模型+具身智能自主导航赛） 国内首个“ai大模型+具身智能”自主导航赛，参赛队伍全自主导航操控四足机器狗穿越阶梯、沟壑、障碍物、斜坡分组对抗；观众可现场观看。相关成果亦为长三角青少年ai奥林匹克挑战赛决赛展演项目。 西岸国际会展中心 x1c301（星轨环岛赛场） waic young（世界人工智能大会组委会）；承办含上海市科技艺术教育中心 机器人爱好者、青少年观众 waic young",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-202",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": true,
@@ -25130,7 +25147,7 @@
       "venue": "上海世博中心518会议室",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -25152,12 +25169,13 @@
       "original_excerpt": "7月18日,上海市世博中心518会议室,世界人工智能大会壹沓科技“Agentic AI进场·重塑全球供应链”主题论坛即将重磅启幕!上海...",
       "detail_md": "md/unofficial/web-202-壹沓科技Agentic-AI进场重塑全球供应链主题论坛.md",
       "search_text": "壹沓科技「agentic ai进场·重塑全球供应链」主题论坛 7月18日,上海市世博中心518会议室,世界人工智能大会壹沓科技“agentic ai进场·重塑全球供应链”主题论坛即将重磅启幕!上海... 上海世博中心518会议室 壹沓科技",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-207",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": true,
@@ -25180,7 +25198,7 @@
       "venue": "世博展览馆1B会议室",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -25202,7 +25220,8 @@
       "original_excerpt": "yu摩尔线程·词元时代 万物智能论坛 论坛时间:7月18日 09:30-11:30 论坛地点:世博展览馆1B会议室WAIC2026将于7月17日在上海...",
       "detail_md": "md/unofficial/web-207-2026WAIC摩尔线程词元时代-万物智能主题论坛.md",
       "search_text": "2026waic「摩尔线程·词元时代 万物智能」主题论坛 yu摩尔线程·词元时代 万物智能论坛 论坛时间:7月18日 09:30-11:30 论坛地点:世博展览馆1b会议室waic2026将于7月17日在上海... 世博展览馆1b会议室 摩尔线程",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-220",
@@ -32633,7 +32652,7 @@
     {
       "id": "web-183",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -32656,7 +32675,7 @@
       "venue": "世博展览馆 2号会议室",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -32683,7 +32702,8 @@
       "original_excerpt": "09:00 上财·智能经济生态发展论坛 世博展览馆 2号会议室",
       "detail_md": "md/unofficial/web-183-上财智能经济生态发展论坛.md",
       "search_text": "上财·智能经济生态发展论坛 世博展览馆 2号会议室 上海财经大学",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "off-6c099605e2",
@@ -34028,7 +34048,7 @@
     {
       "id": "web-139",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -34051,7 +34071,7 @@
       "venue": "西岸国际会展中心 2号厅C",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "WAIC Young",
       "tags": [],
       "registration_required": true,
@@ -34083,12 +34103,13 @@
       "original_excerpt": "活动地点：西岸国际会展中心2号厅C，活动时间：2026年7月19日9：30-12：00",
       "detail_md": "md/unofficial/web-139-创新素养培育论坛---全球少年科创对话厅.md",
       "search_text": "创新素养培育论坛 / 全球少年科创对话厅 中国、美国、新加坡三地青少年分享科创实践，多国教育者圆桌讨论并设颁奖仪式；名额有限，需hi waic app预约论坛席位。 西岸国际会展中心 2号厅c 世界人工智能大会组委会主办，上海市科技艺术教育中心联合waic young承办 渴望拓宽眼界的青少年 waic young 郭毅可（香港科技大学首席副校长、英国皇家工程院院士） 郑泉水（中国科学院院士） 朱新远（上海市教育委员会主任） 伯涵峥",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-187",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -34111,7 +34132,7 @@
       "venue": "世博展览馆 H4 领航舞台",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -34138,7 +34159,8 @@
       "original_excerpt": "09:30 高鹄资本·AI Frontier talks 论坛 世博展览馆 H4 领航舞台",
       "detail_md": "md/unofficial/web-187-高鹄资本AI-Frontier-talks-论坛.md",
       "search_text": "高鹄资本·ai frontier talks 论坛 世博展览馆 h4 领航舞台 高鹄资本",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "off-c4b334027b",
@@ -40377,7 +40399,7 @@
     {
       "id": "web-196",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -40400,7 +40422,7 @@
       "venue": "世博展览馆 H4 领航舞台",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -40427,7 +40449,8 @@
       "original_excerpt": "14:15 欧莱雅集团·美一程 有你有AI论坛 世博展览馆 H4 领航舞台",
       "detail_md": "md/unofficial/web-196-欧莱雅集团美一程-有你有AI论坛.md",
       "search_text": "欧莱雅集团·美一程 有你有ai论坛 世博展览馆 h4 领航舞台 欧莱雅集团",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-197",
@@ -40845,7 +40868,7 @@
     {
       "id": "web-211",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": true,
@@ -40868,7 +40891,7 @@
       "venue": "上海世博中心518厅",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -40890,7 +40913,8 @@
       "original_excerpt": "WAIC2026分论坛:AGI 基础设施与普惠实践论坛时间:7 月 19 日 14:00-17:00地点:上海世博中心 518 厅蚂蚁集团 inclusionAI 与 ...",
       "detail_md": "md/unofficial/web-211-蚂蚁开源WAIC2026AGI基础设施与普惠实践论坛及多场Side-Event.md",
       "search_text": "蚂蚁开源@waic2026(agi基础设施与普惠实践论坛及多场side event) waic2026分论坛:agi 基础设施与普惠实践论坛时间:7 月 19 日 14:00-17:00地点:上海世博中心 518 厅蚂蚁集团 inclusionai 与 ... 上海世博中心518厅 蚂蚁集团 inclusionai / 蚂蚁开源",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-212",
@@ -43471,7 +43495,7 @@
     {
       "id": "web-199",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -43494,7 +43518,7 @@
       "venue": "世博中心 金厅C",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": null,
@@ -43521,7 +43545,8 @@
       "original_excerpt": "09:00 无问芯穹·Token涌现 万物生长论坛 世博中心 金厅C",
       "detail_md": "md/unofficial/web-199-无问芯穹Token涌现-万物生长论坛.md",
       "search_text": "无问芯穹·token涌现 万物生长论坛 世博中心 金厅c 无问芯穹",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "off-9af978bf20",
@@ -45078,7 +45103,7 @@
     {
       "id": "web-069",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -45101,7 +45126,7 @@
       "venue": "世博中心 红厅",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -45151,7 +45176,8 @@
           "publisher": "世界人工智能大会",
           "url": "http://mp.weixin.qq.com/s?__biz=MzU4MjgzNTk2OQ==&mid=2247614711&idx=2&sn=499e60744af169f9a128b45df9087a58&chksm=fc8c270d73ddf967905c894d170457e784984edf2ae34490bbda314fd8d39a7a9bd9744859d1#rd"
         }
-      ]
+      ],
+      "venue_based": true
     },
     {
       "id": "web-091",
@@ -45206,7 +45232,7 @@
     {
       "id": "web-072",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -45229,7 +45255,7 @@
       "venue": "世博展览馆 H4 创新舞台",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -45251,7 +45277,8 @@
       "original_excerpt": "09:30-17:00 WAIC Future Tech·物理跃迁与硬核基座初创路演 世博展览馆 H4 创新舞台",
       "detail_md": "md/unofficial/web-072-WAIC-Future-Tech-初创路演物理跃迁-AI4S-全球聚变系列.md",
       "search_text": "waic future tech 初创路演（物理跃迁/ai4s/全球聚变系列） waic创投生态旗舰路演：7/18 物理跃迁与硬核基座、7/19 ai4s前沿极境、7/20 全球聚变与资本破局。从千余项目筛出约160个初创。 世博展览馆 h4 创新舞台 waic future tech（创投生态） 初创团队、投资人、opc",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-103",
@@ -45356,7 +45383,7 @@
     {
       "id": "web-065",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -45379,7 +45406,7 @@
       "venue": "世博展览馆 H4 创新舞台",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -45401,12 +45428,13 @@
       "original_excerpt": "11:30-12:00 有鹿机器人·...AI130S新品发布会 世博展览馆 H4 创新舞台",
       "detail_md": "md/unofficial/web-065-有鹿机器人通用具身智能大脑赋能商用机器人产业化实践暨-AI130S-新品发布会.md",
       "search_text": "有鹿机器人·通用具身智能大脑赋能商用机器人产业化实践暨 ai130s 新品发布会 waic官方展台发布会，发布ai130s新品。 世博展览馆 h4 创新舞台 有鹿机器人 具身智能/机器人行业、媒体",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-090",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -45429,7 +45457,7 @@
       "venue": "张江科学会堂",
       "district": "张江片区",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -45451,7 +45479,8 @@
       "original_excerpt": "【WAIC「重构算力」链接会】+【「链动智造，场景为先」…】 上海浦东张江科学会堂 2026/07/18 13:00 - 07/19 18:00 Organizer：观察者网",
       "detail_md": "md/unofficial/web-090-WAIC重构算力链接会链动智造场景为先--AI高端制造产业对接专场.md",
       "search_text": "【waic「重构算力」链接会】+【链动智造，场景为先 — ai+高端制造产业对接专场】 waic周边产业对接，重构算力链接会 + ai+高端制造产业对接专场。 张江科学会堂 观察者网 算力/高端制造产业方、投资人",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-092",
@@ -45806,7 +45835,7 @@
     {
       "id": "web-088",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -45829,7 +45858,7 @@
       "venue": "张江科学会堂 五楼光空间",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "WAIC Up",
       "tags": [],
       "registration_required": true,
@@ -45851,7 +45880,8 @@
       "original_excerpt": "WAIC UP! AI创作者之夜 上海张江科学会堂五楼光空间 … 2026/07/19 14:00-18:00 Organizer：织码开门",
       "detail_md": "md/unofficial/web-088-WAIC-UP-AI创作者之夜.md",
       "search_text": "waic up! ai创作者之夜 waic up! 系列ai创作者之夜（承办含织码开门）。 张江科学会堂 五楼光空间 waic up!（智识生态） ai创作者、青年 waic up",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-041",
@@ -48427,7 +48457,7 @@
     {
       "id": "web-048",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -48450,7 +48480,7 @@
       "venue": "上海世博展览馆",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -48472,7 +48502,8 @@
       "original_excerpt": "",
       "detail_md": "md/unofficial/web-048-AI-创新者思享汇2026-WAIC--AI-与我人机关系下一程.md",
       "search_text": "ai 创新者思享汇（2026 waic · ai 与『我』：人机关系下一程） 第一财经主办的 ai 创新者思享汇，6+ 场主题演讲与圆桌（共生/融合/协同三单元），结束后可参观 waic 展区。 上海世博展览馆 上市公司高管、ai 专家、投资机构、创新者",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-057",
@@ -48527,7 +48558,7 @@
     {
       "id": "web-061",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -48550,7 +48581,7 @@
       "venue": "上海世博展览馆 H4 全域链接馆 Future Tech 展区",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -48572,7 +48603,8 @@
       "original_excerpt": "",
       "detail_md": "md/unofficial/web-061-WAIC-Future-Tech-创投生态175-早期项目展--资本对接.md",
       "search_text": "waic future tech 创投生态（175+ 早期项目展 + 资本对接） waic 官方创投生态，从全球 1200+ 早期项目筛选近 175-180 个登台，设资本对接专区；蓝驰、monolith、软银中国、经纬、深创投等到场。 上海世博展览馆 h4 全域链接馆 future tech 展区 早期 ai 初创、投资机构（定向邀请 200+ 投资人）",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-087",
@@ -48878,7 +48910,7 @@
     {
       "id": "web-125",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -48901,7 +48933,7 @@
       "venue": "世博展览馆",
       "district": "世博片区",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -48917,7 +48949,8 @@
       "original_excerpt": "算力专题论坛（量子+太空算力） 7月某日·世博展览馆 技术干货多，建议预约",
       "detail_md": "md/unofficial/web-125-算力专题论坛量子--太空算力.md",
       "search_text": "算力专题论坛（量子 + 太空算力） 世博展览馆",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-140",
@@ -50448,7 +50481,7 @@
     {
       "id": "web-066",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -50471,7 +50504,7 @@
       "venue": "世博中心 银厅",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -50493,12 +50526,13 @@
       "original_excerpt": "7/18 上午 商汤基座大模型论坛（SenseNova-U1 Pro） 世博中心银厅",
       "detail_md": "md/unofficial/web-066-商汤基座大模型论坛SenseNova-U1-Pro.md",
       "search_text": "商汤基座大模型论坛（sensenova-u1 pro） waic官方论坛，商汤发布/解读基座大模型sensenova-u1 pro与世界模型方向。 世博中心 银厅 商汤科技 大模型从业者、开发者、媒体",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-067",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -50521,7 +50555,7 @@
       "venue": "世博中心 金厅",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "",
       "tags": [],
       "registration_required": true,
@@ -50543,7 +50577,8 @@
       "original_excerpt": "7/19 上午 智元「智启具身论坛」 世博中心金厅",
       "detail_md": "md/unofficial/web-067-智元智启具身论坛.md",
       "search_text": "智元「智启具身论坛」 waic官方论坛，智元发布远征a3 ultra、精灵g2 max等具身智能新品并探讨产业化。 世博中心 金厅 智元机器人 具身智能/机器人行业",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-075",
@@ -51044,7 +51079,7 @@
     {
       "id": "web-043",
       "source_type": "unofficial",
-      "kind": "side_event",
+      "kind": "official_program",
       "waic_relation": "affiliated",
       "download_status": "n/a",
       "unverified": false,
@@ -51067,7 +51102,7 @@
       "venue": "上海 张江科学会堂",
       "district": "",
       "room": "",
-      "category": "边会·周边活动",
+      "category": "场馆活动",
       "track": "WAIC Up",
       "tags": [],
       "registration_required": true,
@@ -51089,7 +51124,8 @@
       "original_excerpt": "7月18日，WAIC、哈佛商业评论中国与信睿科技评论将共同发起“WAIC UP! AI创作者大会”。",
       "detail_md": "md/unofficial/web-043-2026-世界人工智能大会--AI-创作者大会WAIC-UP-AI-创作者之夜.md",
       "search_text": "2026 世界人工智能大会 · ai 创作者大会（waic up! ai 创作者之夜） waic 与哈佛商业评论中国、信睿科技评论共同发起的 ai 创作者大会/之夜，聚焦 ai 创作、数字人、版权治理、科幻写作。 上海 张江科学会堂 ai 内容创作者、导演、科幻作家、ai 技术专家 waic up",
-      "weight": 35
+      "weight": 35,
+      "venue_based": true
     },
     {
       "id": "web-045",
