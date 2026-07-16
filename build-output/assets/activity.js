@@ -90,6 +90,16 @@ async function loadActivity() {
       mb.textContent = on ? '✓ 已在我的日程' : '＋ 加入我的日程';
       mb.classList.toggle('primary', !on);
     });
+    const rl = document.getElementById('report-link');
+    if (rl) rl.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const msg = prompt('这条信息哪里有误 / 需要补充？（会转给我们核对，可留联系方式）');
+      if (msg && msg.trim()) {
+        fetch('/api/report', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ device: (window.WAICSync ? WAICSync.code() : ''), kind: 'activity', id: rl.dataset.rid, message: msg.trim() }) })
+          .then(() => { rl.textContent = '✓ 已收到，谢谢你的反馈！'; }).catch(() => {});
+      }
+    });
   } catch (e) {
     root.innerHTML = shell(`<p class="loading">加载失败：${esc(e.message)}</p>`);
   }
@@ -183,6 +193,8 @@ function renderDetail(a) {
   body += renderGuests(a.guests);
 
   body += `<div class="ai-hint">用 AI 助手？装好 <a href="install.html">WAIC 日程 Skill</a> 后，可以直接问：「${esc((a.title || '').slice(0, 20))}… 是几点、在哪、${isSide ? '要不要报名、多少钱' : '有哪些嘉宾'}？」或「帮我把这场加进日历」。</div>`;
+
+  body += `<div class="report-line"><a href="#" id="report-link" data-rid="${esc(a.id)}">🚩 信息有误？点此报错 / 纠正</a></div>`;
 
   return hero + `<section class="detail-body"><div class="container">${body}</div></section>`;
 }

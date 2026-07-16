@@ -547,3 +547,32 @@ async def cms_review(request: Request):
     device = (body.get("device") or "").strip()
     action = "approve" if body.get("action") == "approve" else "reject"
     return store_cms.review(eid, device, action, str(body.get("note") or ""))
+
+
+# ================= 纠错入口（用户报错/纠正） =================
+REPORT_LIMITER = TokenBucket(capacity=20, refill_per_sec=20 / 60.0)
+
+
+@app.post("/api/report")
+async def report(request: Request):
+    ip = _client_ip(request)
+    if not REPORT_LIMITER.allow(ip):
+        return JSONResponse({"error": "rate_limited"}, status_code=429)
+    try:
+        body = await request.json()
+    except Exception:  # noqa: BLE001
+        body = {}
+    msg = str(body.get("message") or "").strip()
+    if not msg:
+        return JSONResponse({"error": "empty"}, status_code=400)
+    store_state.add_report((body.get("device") or "")[:40], str(body.get("kind") or "activity"),
+                           str(body.get("id") or ""), msg)
+    _log_event("report", kind_=str(body.get("kind") or "")[:12], tid=str(body.get("id") or "")[:12])
+    return {"ok": True}
+
+
+@app.get("/api/report/pending")
+def report_pending(token: str = Query("")):
+    if not store_cms.admin_ok(token):
+        return JSONResponse({"error": "forbidden"}, status_code=403)
+    return {"items": store_state.list_reports()}

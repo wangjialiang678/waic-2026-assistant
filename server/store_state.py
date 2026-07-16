@@ -101,3 +101,22 @@ def stats() -> dict:
         cur = _c().execute("SELECT COUNT(*), SUM(CASE WHEN contact IS NOT NULL AND contact!='null' THEN 1 ELSE 0 END) FROM user_state")
         n, with_contact = cur.fetchone()
     return {"devices": n or 0, "with_contact": with_contact or 0}
+
+
+# ---- 纠错入口：用户报错/纠正信息 ----
+def add_report(device: str, kind: str, target_id: str, message: str) -> None:
+    with _lock:
+        c = _c()
+        c.execute("CREATE TABLE IF NOT EXISTS reports(device TEXT, kind TEXT, target_id TEXT, message TEXT, ts TEXT)")
+        c.execute("INSERT INTO reports(device,kind,target_id,message,ts) VALUES(?,?,?,?,?)",
+                  (device[:40], (kind or "")[:20], (target_id or "")[:40], (message or "")[:400],
+                   time.strftime("%Y-%m-%dT%H:%M:%S")))
+        c.commit()
+
+
+def list_reports(limit: int = 200) -> list:
+    with _lock:
+        c = _c()
+        c.execute("CREATE TABLE IF NOT EXISTS reports(device TEXT, kind TEXT, target_id TEXT, message TEXT, ts TEXT)")
+        rows = c.execute("SELECT kind,target_id,message,ts FROM reports ORDER BY ts DESC LIMIT ?", (limit,)).fetchall()
+    return [{"kind": r[0], "target_id": r[1], "message": r[2], "ts": r[3]} for r in rows]
