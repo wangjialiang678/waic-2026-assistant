@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>参展入口 · WAIC 2026 参展指南 · 超脑 AI 孵化器</title>
+<meta name="description" content="WAIC 2026 官方展区与参展入口：场馆、展区、官方资料聚合。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  .exhibitors-hero { padding: clamp(3rem, 8vw, 5rem) 0 2rem; text-align: center; background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%); }
+  .exhibitors-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; margin-bottom: 0.6rem; }
+  .exhibitors-hero p { color: var(--text-soft); max-width: 50ch; margin: 0 auto; }
+  .exhibitors-toolbar { max-width: var(--max-w); margin: 0 auto; padding: 1.5rem var(--gutter); display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .exhibitors-toolbar input { flex: 1; min-width: 220px; padding: 0.65rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-pill, 999px); background: var(--surface-elevated); color: var(--text); font-family: var(--font-sans); }
+  .exhibitors-toolbar select { padding: 0.65rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-pill, 999px); background: var(--surface-elevated); color: var(--text); font-family: var(--font-sans); }
+  .exhibitors-grid { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter) clamp(3rem, 8vw, 5rem); display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .exhibitor-card { background: var(--surface-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; transition: transform 0.2s, box-shadow 0.2s; }
+  .exhibitor-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+  .exhibitor-booth { font-size: 0.78rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 0.4rem; }
+  .exhibitor-name { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .exhibitor-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+  .exhibitor-tag { font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 999px; background: rgba(78,107,255,0.1); color: var(--accent-blue); }
+  .exhibitor-profile { font-size: 0.92rem; color: var(--text-soft); line-height: 1.6; margin-bottom: 1rem; }
+  .exhibitor-link { font-size: 0.85rem; color: var(--accent-blue); text-decoration: none; }
+  .exhibitor-empty { grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text-mute); }
+  .exhibitor-stats { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter) 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
+  .exhibitor-stat { background: var(--surface-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; }
+  .exhibitor-stat .n { font-size: 1.6rem; font-weight: 700; color: var(--accent-blue); }
+  .exhibitor-stat .l { font-size: 0.85rem; color: var(--text-mute); margin-top: 0.3rem; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand"><img src="/assets/logo.jpg" alt="超脑 AI 孵化器" class="nav-logo">WAIC 2026 参展指南</a>
+    <div class="nav-links">
+      <a href="/index.html#list">论坛</a>
+      <a href="/ai-native.html">AI 原住民计划</a>
+      <a href="/project-wall.html">项目墙</a>
+      <a href="/intel.html">情报站</a>
+      <a href="/exhibitors.html">参展入口</a>
+      <a href="/side-events.html">边会</a>
+      <a href="/index.html#about">关于</a>
+      <a href="/install.html" class="nav-kb">接入 AI Agent</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="exhibitors-hero">
+  <div class="container">
+    <h1>参展入口</h1>
+    <p>接入 WAIC 官网 exhibitors 数据源，先展示官方展区与场馆入口；公司级名录可继续补充到同一页面。</p>
+  </div>
+</section>
+
+<section class="exhibitor-stats" id="exhibitor-stats"></section>
+
+<section class="exhibitors-toolbar">
+  <input type="search" id="exhibitor-search" placeholder="搜索展区、场馆、关键词…">
+  <select id="exhibitor-hall"><option value="">全部展馆</option></select>
+  <select id="exhibitor-industry"><option value="">全部类型</option></select>
+</section>
+
+<section class="exhibitors-grid" id="exhibitors-grid">
+  <div class="exhibitor-empty">正在加载官方展区数据…</div>
+</section>
+</main>
+
+<footer class="site-footer" id="about">
+  <div class="container">
+    <div>
+      <div class="col-title">WAIC 2026 参展指南</div>
+      <p>本平台由 <a href="https://www.superbrain-ai.com" target="_blank" rel="noopener">超脑 AI 孵化器</a> 搭建维护</p>
+      <p>活动来源 <a href="https://www.worldaic.com.cn/" target="_blank" rel="noopener">WAIC 官方</a></p>
+    </div>
+    <div>
+      <div class="col-title">超脑 AI 孵化器</div>
+      <p><a href="https://www.superbrain-ai.com" target="_blank" rel="noopener"><strong>超脑链官网 · www.superbrain-ai.com</strong></a></p>
+    </div>
+    <div>
+      <div class="col-title">技术接入</div>
+      <p><a href="/install.html">AI Agent Skill</a></p>
+      <p><a href="/data/exhibitors.json" target="_blank">参展入口 API</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  let DATA = { exhibitors: [], halls: [], industries: [] };
+
+  function esc(s) {
+    const d = document.createElement('div');
+    d.textContent = s || '';
+    return d.innerHTML;
+  }
+
+  function renderStats() {
+    const container = document.getElementById('exhibitor-stats');
+    if (!container) return;
+    const total = DATA.exhibitors.length;
+    const hallCounts = {};
+    DATA.exhibitors.forEach(e => { hallCounts[e.hall] = (hallCounts[e.hall] || 0) + 1; });
+    const topHall = Object.entries(hallCounts).sort((a, b) => b[1] - a[1])[0];
+
+    container.innerHTML = `
+      <div class="exhibitor-stat"><div class="n">${total}</div><div class="l">入口</div></div>
+      <div class="exhibitor-stat"><div class="n">${DATA.halls.length}</div><div class="l">展馆</div></div>
+      <div class="exhibitor-stat"><div class="n">${DATA.industries.length}</div><div class="l">行业</div></div>
+      ${topHall ? `<div class="exhibitor-stat"><div class="n">${topHall[1]}</div><div class="l">${esc(topHall[0])}</div></div>` : ''}
+    `;
+  }
+
+  function populateFilters() {
+    const hallEl = document.getElementById('exhibitor-hall');
+    const indEl = document.getElementById('exhibitor-industry');
+    if (hallEl) hallEl.innerHTML = '<option value="">全部展馆</option>' + (DATA.halls || []).map(h => `<option value="${esc(h)}">${esc(h)}</option>`).join('');
+    if (indEl) indEl.innerHTML = '<option value="">全部类型</option>' + (DATA.industries || []).map(i => `<option value="${esc(i)}">${esc(i)}</option>`).join('');
+  }
+
+  function renderItems() {
+    const grid = document.getElementById('exhibitors-grid');
+    const q = document.getElementById('exhibitor-search')?.value.toLowerCase().trim() || '';
+    const hall = document.getElementById('exhibitor-hall')?.value || '';
+    const industry = document.getElementById('exhibitor-industry')?.value || '';
+
+    const filtered = (DATA.exhibitors || []).filter(e => {
+      const matchQ = !q || (e.name || '').toLowerCase().includes(q) || (e.booth || '').toLowerCase().includes(q) || (e.profile || '').toLowerCase().includes(q);
+      const matchHall = !hall || e.hall === hall;
+      const matchInd = !industry || (e.industry || '') === industry;
+      return matchQ && matchHall && matchInd;
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '<div class="exhibitor-empty">暂无匹配的展区或参展入口。公司级名录正在补充中，可先查看 <a href="https://www.worldaic.com.cn/" target="_blank">WAIC 官网</a>。</div>';
+      return;
+    }
+
+    grid.innerHTML = filtered.map(e => `
+      <div class="exhibitor-card">
+        <div class="exhibitor-booth">${esc(e.booth || '展台待定')}</div>
+        <div class="exhibitor-name">${esc(e.name)}</div>
+        <div class="exhibitor-tags">
+          ${e.industry ? `<span class="exhibitor-tag">${esc(e.industry)}</span>` : ''}
+          ${e.hall ? `<span class="exhibitor-tag">${esc(e.hall)}</span>` : ''}
+        </div>
+        <div class="exhibitor-profile">${esc(e.profile || '')}</div>
+        ${e.url ? `<a class="exhibitor-link" href="${esc(e.url)}" target="_blank" rel="noopener">访问官网 →</a>` : ''}
+      </div>
+    `).join('');
+  }
+
+  async function load() {
+    try {
+      const res = await fetch('/data/exhibitors.json');
+      if (!res.ok) throw new Error('status ' + res.status);
+      DATA = await res.json();
+      renderStats();
+      populateFilters();
+      renderItems();
+    } catch (e) {
+      document.getElementById('exhibitors-grid').innerHTML = '<div class="exhibitor-empty">加载失败，请刷新重试。</div>';
+    }
+  }
+
+  document.getElementById('exhibitor-search')?.addEventListener('input', renderItems);
+  document.getElementById('exhibitor-hall')?.addEventListener('change', renderItems);
+  document.getElementById('exhibitor-industry')?.addEventListener('change', renderItems);
+
+  load();
+})();
+</script>
+
+
+<button type="button" class="ai-assistant-fab" id="ai-assistant-fab" aria-label="AI 助手">
+  <span class="sparkle" aria-hidden="true">✨</span>
+  <span>AI 助手</span>
+</button>
+
+<div class="ai-assistant-modal" id="ai-assistant-modal" aria-hidden="true">
+  <div class="ai-assistant-backdrop"></div>
+  <div class="ai-assistant-card">
+    <button type="button" class="ai-assistant-close" id="ai-assistant-close" aria-label="关闭">×</button>
+    <h4>AI 助手</h4>
+    <div class="ai-assistant-questions">
+      <button type="button" class="ai-assistant-question" data-question="Michael 什么时候演讲？">Michael 什么时候演讲？</button>
+      <button type="button" class="ai-assistant-question" data-question="AI 原住民计划在哪？">AI 原住民计划在哪？</button>
+      <button type="button" class="ai-assistant-question" data-question="如何查看我的日程？">如何查看我的日程？</button>
+    </div>
+    <form class="ai-assistant-form" id="ai-assistant-form">
+      <input type="text" id="ai-assistant-input" placeholder="输入你的问题…" autocomplete="off">
+      <button type="submit">发送</button>
+    </form>
+    <div class="ai-assistant-answer" id="ai-assistant-answer">
+      <p>有什么可以帮你的？</p>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/ai-assistant.js"></script>
+
+</body>
+</html>

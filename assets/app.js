@@ -421,6 +421,11 @@ function renderBigCard(a, terms) {
           <span class="meta-venue">${escape(a.venue || '场地待定')}</span>
           <span class="meta-time">${start} - ${end}</span>
         </div>
+        <button type="button" class="schedule-btn ${isFav ? 'active' : ''}"
+                data-id="${escape(a.id)}"
+                data-action="favorite">
+          ${isFav ? '已加入' : '加入我的日程'}
+        </button>
       </div>
     </article>
   `;
@@ -511,6 +516,13 @@ function updateFavoriteButtons() {
       ? '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>'
       : '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
   });
+
+  document.querySelectorAll('.schedule-btn[data-id]').forEach(btn => {
+    const id = String(btn.dataset.id);
+    const active = favoriteIds.has(id);
+    btn.classList.toggle('active', active);
+    btn.textContent = active ? '已加入' : '加入我的日程';
+  });
 }
 
 function openScheduleDrawer() {
@@ -537,11 +549,13 @@ function renderScheduleDrawer() {
   if (favoriteIds.size === 0) {
     listEl.innerHTML = `
       <div class="schedule-empty">
-        <p>你还没有收藏任何论坛。</p>
-        <p>推荐去看看超脑 AI 孵化器的<b>AI 原住民计划</b>，或收藏 Michael 出席的论坛。</p>
-        <a href="/ai-native.html" class="btn btn-primary">了解 AI 原住民计划</a>
+        <p>还没有加入任何活动。</p>
+        <p>在论坛列表里点「加入我的日程」，即可生成个人行程、导出日历或分享长图。</p>
+        <a href="#list" class="btn btn-primary schedule-empty-cta">去挑选论坛 →</a>
       </div>
     `;
+    const cta = listEl.querySelector('.schedule-empty-cta');
+    if (cta) cta.addEventListener('click', closeScheduleDrawer);
     return;
   }
 
@@ -558,7 +572,7 @@ function renderScheduleDrawer() {
       const conflict = conflicts.has(String(a.id));
       return `
         <div class="schedule-item ${conflict ? 'conflict' : ''}" data-id="${escape(a.id)}">
-          <div class="schedule-time">${escape(a.date_label || `Day ${a.day || '?'}`)} ${start} - ${end}</div>
+          <div class="schedule-time ${conflict ? 'conflict-time' : ''}">${escape(a.date_label || `Day ${a.day || '?'}`)} ${start} - ${end}</div>
           <a class="schedule-title" href="./activity.html?id=${encodeURIComponent(a.id)}">${escape(a.title)}</a>
           <div class="schedule-venue">${escape(a.venue || '场地待定')} · ${escape(a.honeycomb?.name || '')}</div>
           ${conflict ? '<div class="conflict-warning">⚠️ 时间冲突</div>' : ''}
@@ -588,6 +602,173 @@ function detectConflicts(list) {
     }
   }
   return conflicts;
+}
+
+function formatICSDate(iso) {
+  if (!iso) return '20260717T000000';
+  const m = String(iso).match(/(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/);
+  if (m) return `${m[1]}${m[2]}${m[3]}T${m[4]}${m[5]}${m[6]}`;
+  const d = new Date(iso);
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
+}
+
+function escapeICS(s) {
+  if (s == null) return '';
+  return String(s)
+    .replace(/\\/g, '\\\\')
+    .replace(/;/g, '\\;')
+    .replace(/,/g, '\\,')
+    .replace(/\n/g, '\\n');
+}
+
+function exportScheduleICS() {
+  const favs = ACTIVITIES
+    .filter(a => favoriteIds.has(String(a.id)))
+    .sort(byStartTime);
+  if (favs.length === 0) {
+    alert('日程为空，请先加入活动。');
+    return;
+  }
+
+  const lines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//WAIC 2026//超脑 AI 孵化器//ZH',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+  ];
+
+  favs.forEach(a => {
+    const uid = `waic2026-${String(a.id).replace(/[^a-zA-Z0-9-]/g, '')}@superbrain-ai.com`;
+    const dtstart = formatICSDate(a.start_time);
+    const dtend = formatICSDate(a.end_time);
+    const summary = escapeICS(a.title || 'WAIC 2026 论坛');
+    const location = escapeICS([a.honeycomb?.name, a.venue].filter(Boolean).join(' · '));
+    const description = escapeICS(a.description || '');
+
+    lines.push('BEGIN:VEVENT');
+    lines.push(`UID:${uid}`);
+    lines.push(`DTSTART:${dtstart}`);
+    lines.push(`DTEND:${dtend}`);
+    lines.push(`SUMMARY:${summary}`);
+    lines.push(`LOCATION:${location}`);
+    lines.push(`DESCRIPTION:${description}`);
+    lines.push('END:VEVENT');
+  });
+
+  lines.push('END:VCALENDAR');
+
+  const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'waic2026-my-schedule.ics';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function clearSchedule() {
+  if (favoriteIds.size === 0) return;
+  if (!confirm('确定要清空我的日程吗？')) return;
+  favoriteIds.clear();
+  saveFavorites();
+  updateFavoriteButtons();
+  renderScheduleDrawer();
+}
+
+function openSharePanel() {
+  const favs = ACTIVITIES
+    .filter(a => favoriteIds.has(String(a.id)))
+    .sort(byStartTime);
+  if (favs.length === 0) {
+    alert('日程为空，请先加入活动。');
+    return;
+  }
+
+  const target = document.getElementById('share-render-target');
+  const preview = document.getElementById('share-preview');
+  const modal = document.getElementById('share-modal');
+  if (!target || !preview || !modal) return;
+
+  const itemsHtml = favs.map(a => {
+    const start = a.start_time ? a.start_time.slice(11, 16) : '?';
+    const end = a.end_time ? a.end_time.slice(11, 16) : '?';
+    return `
+      <div class="share-card-item">
+        <div class="share-card-time">
+          <div class="day">${escape(a.date_label || `Day ${a.day || '?'}`)}</div>
+          <div>${escape(start)} - ${escape(end)}</div>
+        </div>
+        <div class="share-card-body">
+          <div class="share-card-title">${escape(a.title || '')}</div>
+          <div class="share-card-venue">${escape(a.venue || '场地待定')} · ${escape(a.honeycomb?.name || '')}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  target.innerHTML = `
+    <div class="share-card">
+      <div class="share-card-header">
+        <h2>我的 WAIC 2026 日程</h2>
+        <p>7.17 - 7.20 · 上海 · 共 ${favs.length} 场活动</p>
+      </div>
+      ${itemsHtml}
+      <div class="share-card-footer">
+        <span class="share-card-brand">WAIC 2026 参展指南 · 超脑 AI 孵化器</span>
+        <span>waic.sg.superbrain-ai.com</span>
+      </div>
+    </div>
+  `;
+
+  if (typeof html2canvas !== 'function') {
+    target.style.visibility = 'hidden';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(location.href).catch(() => {});
+    }
+    alert('分享图组件暂不可用，已为你保留当前页面链接。');
+    return;
+  }
+
+  target.style.visibility = 'visible';
+  html2canvas(target.firstElementChild, { scale: 2, backgroundColor: null }).then(canvas => {
+    target.style.visibility = 'hidden';
+    const img = document.createElement('img');
+    img.src = canvas.toDataURL('image/png');
+    img.alt = '我的 WAIC 2026 日程';
+    preview.innerHTML = '';
+    preview.appendChild(img);
+
+    const downloadBtn = document.getElementById('share-download');
+    if (downloadBtn) {
+      downloadBtn.onclick = () => {
+        const a = document.createElement('a');
+        a.href = canvas.toDataURL('image/png');
+        a.download = 'waic2026-my-schedule.png';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      };
+    }
+
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  }).catch(err => {
+    target.style.visibility = 'hidden';
+    console.error('html2canvas failed', err);
+    alert('生成图片失败，请重试。');
+  });
+}
+
+function closeShareModal() {
+  const modal = document.getElementById('share-modal');
+  if (modal) {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
 }
 
 /* ============================================================
@@ -719,6 +900,17 @@ function bindEvents() {
 
   const closeBtn = document.getElementById('schedule-drawer-close');
   if (closeBtn) closeBtn.addEventListener('click', closeScheduleDrawer);
+
+  document.getElementById('schedule-export-ics')?.addEventListener('click', exportScheduleICS);
+  document.getElementById('schedule-share')?.addEventListener('click', openSharePanel);
+  document.getElementById('schedule-clear')?.addEventListener('click', clearSchedule);
+
+  
+  document.getElementById('share-modal-close')?.addEventListener('click', closeShareModal);
+  document.getElementById('share-modal-backdrop')?.addEventListener('click', closeShareModal);
+  document.getElementById('share-copy-link')?.addEventListener('click', () => {
+    navigator.clipboard.writeText(location.href).then(() => alert('链接已复制')).catch(() => alert('复制失败'));
+  });
 
   window.addEventListener('popstate', () => {
     restoreStateFromURL();

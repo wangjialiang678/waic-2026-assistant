@@ -1,38 +1,57 @@
 {
-  "version": "2026-07-17",
+  "version": "2026-07-16",
+  "source": "https://www.worldaic.com.cn/exhibitors",
+  "note": "WAIC 官网当前页面暴露的是官方展区/场馆元数据；公司级参展商名录可后续接入同一数据结构。",
   "total": 4,
-  "venues": [
+  "halls": [
+    "世博中心",
+    "世博展览馆",
+    "徐汇西岸国际会展中心",
+    "张江科学会堂"
+  ],
+  "industries": [
+    "官方展区 / 参展入口"
+  ],
+  "exhibitors": [
     {
-      "uuid": "2572b91885224449a06dd45ce911184c",
+      "id": "2572b91885224449a06dd45ce911184c",
       "name": "世博中心",
-      "name_en": "Expo Center",
-      "cover": "https://static.worldaic.com.cn/media/20260624/4cbc033ffe8148ddb20b369cde949c6b.jpg",
-      "introduction": "<p><strong>世博中心｜前沿思想策源地</strong><br /><br />世博中心将作为2026 WAIC前沿思想的核心策源地，汇聚百场论坛、顶级对话与全球趋势研判。这里聚焦人工智能发展的战略方向与产业风向，连接全球领军企业、专家学者与创新力量，成为观察AI未来走向的重要窗口。</p>",
-      "introduction_en": "<p><strong>Expo Center | Source of Frontier Ideas</strong></p>\n<p>The Expo Center will serve as the core source of frontier thinking at WAIC 2026, bringing together hundreds of forums, high-level dialogues, and global trend insights. Focusing on the strategic direction and industrial momentum of AI development, it will connect leading enterprises, experts, scholars, and innovators worldwide, becoming a key window into the future of AI.</p>"
+      "booth": "官方展区",
+      "hall": "世博中心",
+      "industry": "官方展区 / 参展入口",
+      "profile": "世博中心｜前沿思想策源地\n世博中心将作为2026 WAIC前沿思想的核心策源地，汇聚百场论坛、顶级对话与全球趋势研判。这里聚焦人工智能发展的战略方向与产业风向，连接全球领军企业、专家学者与创新力量，成为观察AI未来走向的重要窗口。",
+      "url": "https://www.worldaic.com.cn/exhibitors",
+      "cover": "https://static.worldaic.com.cn/media/20260624/4cbc033ffe8148ddb20b369cde949c6b.jpg"
     },
     {
-      "uuid": "5704a0800b5441d6a01b9261ef8dac36",
+      "id": "5704a0800b5441d6a01b9261ef8dac36",
       "name": "世博展览馆",
-      "name_en": "SWEECC",
-      "cover": "https://static.worldaic.com.cn/media/20260624/e459aaa4cc7c4e95ad6e4860b7c1ba46.jpg",
-      "introduction": "<p><strong>世博展览馆｜全景应用展示窗<br /></strong><br />世博展览馆将打造AI全景应用展示窗口，集中呈现行业应用、核心技术、具身智能与创投孵化等板块内容。从产业落地到前沿探索，从技术突破到场景体验，观众可在这里系统感受人工智能赋能千行百业的现实图景。</p>",
-      "introduction_en": "<div id=\"root\">\n<div tabindex=\"0\">\n<div data-virtual-list-item-key=\"8\">\n<div id=\"root\">\n<div tabindex=\"0\">\n<div data-virtual-list-item-key=\"8\">\n<p><strong>SWEECC | Window to Panoramic AI Applications</strong></p>\n<p>The Expo Exhibition Center will serve as a panoramic showcase for AI applications, spotlighting industry use cases, core technologies, embodied intelligence, venture capital, and incubation. From industrial deployment to frontier exploration, from technological breakthroughs to immersive scenario-based experiences, visitors will gain a comprehensive view of how AI is empowering industries across the board.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>"
+      "booth": "官方展区",
+      "hall": "世博展览馆",
+      "industry": "官方展区 / 参展入口",
+      "profile": "世博展览馆｜全景应用展示窗\n世博展览馆将打造AI全景应用展示窗口，集中呈现行业应用、核心技术、具身智能与创投孵化等板块内容。从产业落地到前沿探索，从技术突破到场景体验，观众可在这里系统感受人工智能赋能千行百业的现实图景。",
+      "url": "https://www.worldaic.com.cn/exhibitors",
+      "cover": "https://static.worldaic.com.cn/media/20260624/e459aaa4cc7c4e95ad6e4860b7c1ba46.jpg"
     },
     {
-      "uuid": "2a8e0955add844d3880e00bbab3b89aa",
+      "id": "2a8e0955add844d3880e00bbab3b89aa",
       "name": "徐汇西岸国际会展中心",
-      "name_en": "WEST BUND ICEC",
-      "cover": "https://static.worldaic.com.cn/media/20260624/9368a8f9d8f3463fa623a718d747ce45.jpg",
-      "introduction": "<p><strong>徐汇西岸国际会展中心｜未来科技体验场<br /></strong><br />徐汇西岸国际会展中心将突出&ldquo;可感知、可体验&rdquo;的未来科技氛围，重点展示智能终端、尖端科技与沉浸式互动体验。依托西岸开放、多元、创新的城市气质，这里将让AI从概念走向现场，成为公众近距离触摸未来生活的体验场。</p>",
-      "introduction_en": "<p><strong>West Bund ICEC | Future Tech Experience Hub</strong></p>\n<p>The Xuhui West Bund International Convention Center will create a future-tech atmosphere that can be seen, felt, and experienced, with a focus on smart devices, cutting-edge technologies, and immersive interactive experiences. Drawing on the West Bund&rsquo;s open, diverse, and innovative urban character, the venue will bring AI out of the realm of concepts and into real-life settings, giving the public a hands-on glimpse of future living.</p>"
+      "booth": "官方展区",
+      "hall": "徐汇西岸国际会展中心",
+      "industry": "官方展区 / 参展入口",
+      "profile": "徐汇西岸国际会展中心｜未来科技体验场\n徐汇西岸国际会展中心将突出“可感知、可体验”的未来科技氛围，重点展示智能终端、尖端科技与沉浸式互动体验。依托西岸开放、多元、创新的城市气质，这里将让AI从概念走向现场，成为公众近距离触摸未来生活的体验场。",
+      "url": "https://www.worldaic.com.cn/exhibitors",
+      "cover": "https://static.worldaic.com.cn/media/20260624/9368a8f9d8f3463fa623a718d747ce45.jpg"
     },
     {
-      "uuid": "60c82192d918421cb1d56b60fefd4610",
+      "id": "60c82192d918421cb1d56b60fefd4610",
       "name": "张江科学会堂",
-      "name_en": "ZHANGJIANG SCIENCE HALL",
-      "cover": "https://static.worldaic.com.cn/media/20260624/7bcd5efedb814d778b087aeaae579dab.jpg",
-      "introduction": "<p><strong>张江科学会堂｜智能算力芯引擎<br /></strong><br />张江科学会堂将围绕智能算力与硬科技创新，展现算力底座、自主可控、软硬协同和全栈整合能力。依托张江雄厚的科创生态与产业基础，这里将呈现人工智能背后的核心驱动力，凸显上海在AI基础能力建设中的关键支撑。</p>",
-      "introduction_en": "<p><strong>ZHANGJIANG SCIENCE HALL | Core Engine for Intelligent Computing</strong></p>\n<p>Zhangjiang Science Hall will center on intelligent computing power and hard-tech innovation, showcasing computing infrastructure, self-reliant technologies, software-hardware synergy, and full-stack integration capabilities. Backed by Zhangjiang&rsquo;s strong innovation ecosystem and industrial foundation, the venue will spotlight the core forces powering AI and underscore Shanghai&rsquo;s key role in building foundational AI capabilities.</p>"
+      "booth": "官方展区",
+      "hall": "张江科学会堂",
+      "industry": "官方展区 / 参展入口",
+      "profile": "张江科学会堂｜智能算力芯引擎\n张江科学会堂将围绕智能算力与硬科技创新，展现算力底座、自主可控、软硬协同和全栈整合能力。依托张江雄厚的科创生态与产业基础，这里将呈现人工智能背后的核心驱动力，凸显上海在AI基础能力建设中的关键支撑。",
+      "url": "https://www.worldaic.com.cn/exhibitors",
+      "cover": "https://static.worldaic.com.cn/media/20260624/7bcd5efedb814d778b087aeaae579dab.jpg"
     }
   ]
 }
