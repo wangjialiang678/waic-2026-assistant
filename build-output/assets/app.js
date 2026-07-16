@@ -642,8 +642,23 @@ document.getElementById('view-content').addEventListener('keydown', e => {
 });
 
 /* ============================ 我的日程 (My Schedule) ============================ */
+// 自动兴趣：把行为信号（加入日程的活动 tags/track）累积到 profile.inferred（带权重），随同步上行
+function bumpInferred(terms, w) {
+  if (!terms || !terms.length) return;
+  const pk = 'waic2026.profile.v1';
+  let p; try { p = JSON.parse(localStorage.getItem(pk) || '{}'); } catch (e) { p = {}; }
+  if (!p.inferred || typeof p.inferred !== 'object') p.inferred = {};
+  terms.forEach(t => { t = String(t).trim(); if (t && t.length <= 20) p.inferred[t] = Math.round(((p.inferred[t] || 0) + w) * 1000) / 1000; });
+  try { localStorage.setItem(pk, JSON.stringify(p)); } catch (e) {}
+  if (window.WAICSync) window.WAICSync.touch();
+}
+
 function handleMineToggle(id) {
   const on = toggleMine(id);
+  if (on) {
+    const a = DATA.activities.find(x => String(x.id) === String(id));
+    if (a) { const terms = [...flatTags(a)]; if (a.track) terms.push(a.track); bumpInferred(terms, 1); }
+  }
   document.querySelectorAll('[data-mine]').forEach(b => {
     if (b.dataset.mine !== String(id)) return;
     b.classList.toggle('on', on);

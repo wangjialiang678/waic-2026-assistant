@@ -795,6 +795,11 @@ body.wc-open-lock { overflow: hidden; }
 .wc-int-chip.custom { background: var(--side); border-color: var(--side); color: #fff; }
 .wc-int-chip.custom .x { opacity: 0.75; margin-left: 0.1rem; font-size: 0.72rem; }
 .wc-int-custom-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+.wc-int-suggest { margin-top: 0.6rem; }
+.wc-int-suggest-h { display: block; font-family: var(--font-sans); font-size: 0.74rem; color: var(--ink-mute); margin-bottom: 0.35rem; }
+.wc-int-suggest-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.wc-int-chip.suggest { border-style: dashed; border-color: var(--official); color: var(--official); background: var(--surface); }
+.wc-int-chip.suggest:hover { background: var(--official-tint); }
 .wc-int-add { display: flex; gap: 0.4rem; margin-top: 0.7rem; }
 .wc-int-input {
   flex: 1; min-width: 0; font-family: var(--font-sans); font-size: 0.82rem; padding: 0.4rem 0.7rem;

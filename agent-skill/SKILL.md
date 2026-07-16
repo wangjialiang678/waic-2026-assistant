@@ -147,6 +147,33 @@ jq -r '.activities[] | select(.source_type=="official" and .day==2 and .venue=="
 - 设了兴趣的用户 → 每天开场自然带一条针对性今日看点（拉取式；在持久 Agent/OpenClaw 里可定时主动推）。
 - **会后延续**：会期结束后，digest 切"WAIC 后续报道"，skill 常驻继续帮用户追大会后续。
 
+## 跨端同步（与网站互通，无登录）
+
+网站和 skill 用同一个「匿名同步码」把**日程 + 兴趣**打通。用户在网站「我的日程」里能看到一个同步码（形如 `QP2S-PX33`）。
+
+**首次配对**：问用户拿这个同步码（或用户主动给你），存到 `WAIC2026/my/sync.json`：
+```json
+{ "code": "QP2S-PX33" }
+```
+没有同步码也能正常用（纯本地），只是不跨端同步。
+
+**拉取（会话开始、若有 code）**：
+```bash
+CODE=$(jq -r .code WAIC2026/my/sync.json 2>/dev/null)
+[ -n "$CODE" ] && curl -fsSL "https://waic.sg.superbrain-ai.com/api/state?device=$CODE"
+# → {schedule:[id...], interests:[...], inferred:{...}, updated_at:"..."}
+```
+比对返回的 `updated_at` 与本地 `my/my-schedule.json` 的 `last_updated`：**服务端更新就采用**（schedule→写进 my-schedule.json 的 `added`，interests/inferred→写进 profile.json）；本地更新就推上去。
+
+**推送（每次帮用户改了日程/兴趣后）**：
+```bash
+curl -fsS -X POST "https://waic.sg.superbrain-ai.com/api/state" -H 'Content-Type: application/json' \
+  -d "{\"device\":\"$CODE\",\"schedule\":[...ids],\"interests\":[...],\"inferred\":{...},\"updated_at\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}"
+```
+字段映射：网站 `schedule` ↔ skill `my-schedule.json.added`；`interests`/`inferred` ↔ `profile.json`；`updated_at` ↔ `last_updated`。合并 = 整体 last-write-wins（按 updated_at）。
+
+**隐私**：同步码是匿名随机串、不含身份；只同步用户自己的日程/兴趣；用户要停就删掉 `sync.json`。
+
 ## 你不要做的事
 
 - ❌ 不要把非官方信息当官方口径 —— 永远标来源、标"以官方为准"

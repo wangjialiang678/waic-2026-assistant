@@ -170,10 +170,19 @@
     const custom = [...chosen].filter(t => !INTEREST_OPTIONS.includes(t));
     const customChips = custom.map(t =>
       `<button class="wc-int-chip on custom" data-interest="${esc(t)}" type="button">${esc(t)} <span class="x">✕</span></button>`).join('');
+    // 猜你关注：从行为自动推断（profile.inferred）里挑还没选的高权重项
+    let inferred = {};
+    try { inferred = (JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}').inferred) || {}; } catch (e) {}
+    const suggested = Object.keys(inferred)
+      .filter(t => !chosen.has(t) && !INTEREST_OPTIONS.includes(t))
+      .sort((a, b) => inferred[b] - inferred[a]).slice(0, 6);
+    const suggestChips = suggested.map(t =>
+      `<button class="wc-int-chip suggest" data-interest="${esc(t)}" type="button">+ ${esc(t)}</button>`).join('');
     root.querySelector('#wc-drawer').innerHTML = `
       <div class="wc-drawer-h">我关注的方向 <small>（可多选，帮助 AI 更懂你；仅存在你的浏览器）</small></div>
       <div class="wc-int-chips">${chips}</div>
       ${custom.length ? `<div class="wc-int-custom-list">${customChips}</div>` : ''}
+      ${suggested.length ? `<div class="wc-int-suggest"><span class="wc-int-suggest-h">💡 猜你关注（据你加入的日程）</span><div class="wc-int-suggest-chips">${suggestChips}</div></div>` : ''}
       <div class="wc-int-add">
         <input type="text" id="wc-int-input" class="wc-int-input" placeholder="自定义方向，如 AI 教育、AI OPC…" maxlength="16" autocomplete="off">
         <button class="wc-int-addbtn" id="wc-int-add" type="button">添加</button>
