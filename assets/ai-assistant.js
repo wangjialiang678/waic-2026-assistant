@@ -1,4 +1,4 @@
-// WAIC 2026 参展指南 · 悬浮 AI 助手入口（前端 mock）
+// WAIC 2026 参展指南 · 悬浮 AI 助手入口（真实 API + 本地降级）
 (function () {
   const fab = document.getElementById('ai-assistant-fab');
   const modal = document.getElementById('ai-assistant-modal');
@@ -18,8 +18,16 @@
 
   function esc(s) {
     const d = document.createElement('div');
-    d.textContent = s;
+    d.textContent = s == null ? '' : String(s);
     return d.innerHTML;
+  }
+
+  function formatAnswer(text) {
+    return esc(text)
+      .replace(/\n{3,}/g, '\n\n')
+      .split(/\n\n+/)
+      .map(block => '<p>' + block.replace(/\n/g, '<br>') + '</p>')
+      .join('');
   }
 
   function openModal() {
@@ -39,16 +47,43 @@
 
   function showAnswer(text) {
     if (!answerEl) return;
-    answerEl.innerHTML = '<p>' + esc(text) + '</p>';
+    answerEl.innerHTML = formatAnswer(text);
   }
 
-  function ask(question) {
+  function showLoading(question) {
+    if (!answerEl) return;
+    answerEl.innerHTML = '<p>正在查询 WAIC 资料并生成回答…</p><p class="assistant-muted">' + esc(question) + '</p>';
+  }
+
+  function fallbackAnswer(question) {
+    return PRESETS[question] || '我现在还没有连上后端 AI 服务，但可以先回答固定问题：Michael 什么时候演讲、AI 原住民计划在哪、如何查看我的日程、参展商在哪里。';
+  }
+
+  async function ask(question) {
     question = String(question || '').trim();
     if (!question) return;
-    if (PRESETS[question]) {
-      showAnswer(PRESETS[question]);
-    } else {
-      showAnswer('请通过接入 AI 助手获取更智能的问答。');
+
+    showLoading(question);
+
+    try {
+      const res = await fetch('/api/assistant', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          question,
+          page: location.pathname,
+          title: document.title,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error('assistant api unavailable');
+      }
+
+      const data = await res.json();
+      showAnswer(data.answer || fallbackAnswer(question));
+    } catch (error) {
+      showAnswer(fallbackAnswer(question));
     }
   }
 

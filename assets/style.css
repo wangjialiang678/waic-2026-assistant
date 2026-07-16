@@ -2437,6 +2437,15 @@ img, svg {
   margin: 0;
 }
 
+.ai-assistant-answer p + p {
+  margin-top: 0.65rem;
+}
+
+.ai-assistant-answer .assistant-muted {
+  color: rgba(241, 245, 249, 0.66);
+  font-size: 0.84rem;
+}
+
 /* ============================================================
    Share panel & image generation
    ============================================================ */
