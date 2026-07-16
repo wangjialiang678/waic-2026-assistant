@@ -281,15 +281,13 @@ p:last-child {
   white-space: nowrap;
 }
 
-.nav-brand::before {
-  content: "WAIC";
-  background: var(--accent);
-  color: #fff;
-  font-size: 0.55rem;
-  font-weight: 700;
-  padding: 0.25rem 0.5rem;
-  border-radius: 5px;
-  letter-spacing: 0.08em;
+.nav-logo {
+  height: 32px;
+  width: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px var(--rule);
 }
 
 .nav-brand:hover {
