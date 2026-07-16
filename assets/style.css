@@ -180,15 +180,13 @@ a:hover { color: var(--accent-blue); }
   border: none;
 }
 
-.nav-brand::before {
-  content: "WAIC";
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-  color: white;
-  font-size: 0.6rem;
-  font-weight: 800;
-  padding: 0.24rem 0.55rem;
+.nav-logo {
+  height: 32px;
+  width: 32px;
+  object-fit: cover;
   border-radius: 6px;
-  letter-spacing: 0.07em;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
 }
 
 .nav-links {
