@@ -1,9 +1,9 @@
 {
-  "version": "20260716-1205",
-  "last_updated": "2026-07-16T12:05:25+08:00",
+  "version": "20260716-1222",
+  "last_updated": "2026-07-16T12:22:37+08:00",
   "files": {
     "VERSION": {
-      "sha256": "8e12690cd388b7636239a4cfcef8ade8869e7245f03bddc12e7ae4d296bc4363",
+      "sha256": "625342c067442a1df0faa6cd44c5da05ca41d91c628b2ab99492a0a55bf1647f",
       "size": 14
     },
     "data/venues.json": {
@@ -11,7 +11,7 @@
       "size": 1381
     },
     "data/intel.json": {
-      "sha256": "e656456805ba6e5d135c08ebac1c2e18f8b1adec6d51835a8cf0e5051e84a226",
+      "sha256": "b5704f9ef76298a7a08cb7a68383dfcf3026bd02c7bd63eb313a69e2053e6d49",
       "size": 195132
     },
     "data/exhibitors.json": {
@@ -19,12 +19,12 @@
       "size": 2545250
     },
     "data/themes.json": {
-      "sha256": "0717692b3ff4673a89342eba42ad77624525ea394310c9ceadae457a8b8bbecd",
-      "size": 23076
+      "sha256": "40f28e135a7058f7d7ca8c2db2561f82b639c9950adff727d461eed44577cbe9",
+      "size": 22941
     },
     "data/activities.json": {
-      "sha256": "236efc007321ca13415189330ea90663a7054937298354d56bf70d3f106a66fe",
-      "size": 2238837
+      "sha256": "325abc2b3d9efb527c2ecc3bf902dfaffcf3e96f6ea7c543c86bb7e4d73c2285",
+      "size": 2240932
     },
     "md/unofficial/web-046-光启夜叙--Light-Night.md": {
       "sha256": "f5aa6a8144c411ce3aa0a5e1d993fde78500f89670dc29e26e1d282112824257",

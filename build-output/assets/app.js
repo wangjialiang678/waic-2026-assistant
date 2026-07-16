@@ -208,11 +208,14 @@ function renderOfficialControls() {
 
 function renderOfficial() {
   const f = F.official;
-  // 有搜索/筛选时，把超脑等「官方合作」的活动(side_event+relation=official)也并入官方日程结果，保证搜得到；
-  // 无筛选的默认视图只显官方论坛(超脑由置顶卡代表)，避免与置顶卡重复。
-  const filtering = !!(f.q || f.category || f.track || f.tag || f.venue || f.district);
-  let progs = DATA.activities.filter(a => a.kind === 'official_program'
-    || (filtering && a.kind === 'side_event' && a.waic_relation === 'official'));
+  // 搜索时全局搜（不分板块）：官方论坛 + 边会 / 社群 一起搜，按权重排序，超脑等高权重置顶；
+  // 非搜索的浏览态：只显官方论坛（超脑由置顶卡代表），有筛选时并入超脑等官方合作活动。
+  const searching = !!f.q;
+  const filtering = !!(f.category || f.track || f.tag || f.venue || f.district);
+  let progs = searching
+    ? DATA.activities.filter(a => ['official_program', 'side_event', 'community'].includes(a.kind))
+    : DATA.activities.filter(a => a.kind === 'official_program'
+        || (filtering && a.kind === 'side_event' && a.waic_relation === 'official'));
   if (f.day) progs = progs.filter(a => String(a.day) === f.day);
   if (f.district) progs = progs.filter(a => a.district === f.district);
   if (f.venue) progs = progs.filter(a => a.venue === f.venue);
@@ -222,11 +225,13 @@ function renderOfficial() {
   if (f.q) progs = progs.filter(a => (a.search_text || '').includes(f.q));
 
   const cnt = document.getElementById('count');
-  if (cnt) cnt.textContent = `显示 ${progs.length} / ${kindCount('official_program')} 场论坛`;
+  if (cnt) cnt.textContent = searching
+    ? `搜索到 ${progs.length} 条 · 覆盖官方 + 边会 / 社群`
+    : `显示 ${progs.length} / ${kindCount('official_program')} 场论坛`;
 
-  // zones band —— 用官方介绍 + 官方大图 + 亮点
-  const zones = DATA.activities.filter(a => a.kind === 'exhibition_zone');
+  // zones 导览带 + 超脑置顶：仅浏览态显示；搜索态隐藏以突出结果
   let html = '';
+  const zones = searching ? [] : DATA.activities.filter(a => a.kind === 'exhibition_zone');
   if (zones.length) {
     html += `<div class="zones-block"><div class="zones-label">展区导览 · Exhibition Zones（${zones.length}）<span class="zones-sub">四大片区场馆 · 点开看官方定位 / 亮点 / 地图</span></div><div class="zones-grid">`;
     html += zones.map(z => {
@@ -267,17 +272,27 @@ function renderOfficial() {
   const content = document.getElementById('view-content');
   if (!progs.length) { content.innerHTML = html + '<p class="list-note">没有匹配的论坛，试试放宽筛选或换个关键词。</p>'; return; }
 
-  const sorted = sortOfficial(progs);
-  if (!f.day) {
-    const groups = {};
-    sorted.forEach(a => { const d = a.day || 0; (groups[d] = groups[d] || []).push(a); });
-    Object.keys(groups).sort((x, y) => (+x || 99) - (+y || 99)).forEach(d => {
-      const meta = DAY_META[d];
-      html += `<div class="day-group-head"><span class="dnum">${meta ? 'Day ' + d : '时间待定'}</span><span class="ddate mono">${meta ? meta.date + ' · ' + meta.label : ''}</span><span class="dcount">${groups[d].length} 场</span></div>`;
-      html += groups[d].map(renderActivityCard).join('');
-    });
-  } else {
+  if (searching) {
+    // 全局搜索结果：按权重降序（超脑=100 置顶），再按天 / 时间；超脑高亮
+    const sorted = progs.slice().sort((x, y) =>
+      (y.weight || 0) - (x.weight || 0)
+      || (x.day || 99) - (y.day || 99)
+      || (x.start_time || '99:99').localeCompare(y.start_time || '99:99'));
+    html += `<div class="search-note">🔍 搜索覆盖官方论坛 + 边会 / 社群全部活动，按重要度排序</div>`;
     html += sorted.map(renderActivityCard).join('');
+  } else {
+    const sorted = sortOfficial(progs);
+    if (!f.day) {
+      const groups = {};
+      sorted.forEach(a => { const d = a.day || 0; (groups[d] = groups[d] || []).push(a); });
+      Object.keys(groups).sort((x, y) => (+x || 99) - (+y || 99)).forEach(d => {
+        const meta = DAY_META[d];
+        html += `<div class="day-group-head"><span class="dnum">${meta ? 'Day ' + d : '时间待定'}</span><span class="ddate mono">${meta ? meta.date + ' · ' + meta.label : ''}</span><span class="dcount">${groups[d].length} 场</span></div>`;
+        html += groups[d].map(renderActivityCard).join('');
+      });
+    } else {
+      html += sorted.map(renderActivityCard).join('');
+    }
   }
   content.innerHTML = html;
 }
@@ -521,6 +536,7 @@ function renderActivityCard(a) {
   const url = sourceUrl(a);
   const ch = (a.source || {}).channel;
   const pub = (a.source || {}).publisher || '';
+  const isSb = (a.title || '').includes('超脑');   // 超脑活动：高亮置顶
   const t = timeLabel(a);
   const venueBits = [a.venue, a.room].filter(Boolean).join(' · ');
   const dayTag = a.day ? `Day ${a.day}` : '';
@@ -536,8 +552,8 @@ function renderActivityCard(a) {
   const tags = [...flatTags(a)].slice(0, 3).map(t => `<span class="tag">${esc(t)}</span>`).join('');
   const srcLink = url ? `<a class="src-link" href="${esc(url)}" target="_blank" rel="noopener" data-ext="1">原文 ${ICON_EXT}</a>` : '';
 
-  return `<article class="card k-official" data-id="${esc(a.id)}" tabindex="0">
-    <div class="card-meta">${metaBits.join('')}</div>
+  return `<article class="card k-official${isSb ? ' sb-hit' : ''}" data-id="${esc(a.id)}" tabindex="0">
+    <div class="card-meta">${isSb ? '<span class="sb-chip">超脑</span>' : ''}${metaBits.join('')}</div>
     <div class="card-title"><a href="activity.html?id=${encodeURIComponent(a.id)}">${esc(a.title)}</a></div>
     <div class="card-desc">${esc(a.description || '')}</div>
     ${tags ? `<div class="card-tags">${tags}</div>` : ''}

@@ -973,6 +973,15 @@ body.wc-open-lock { overflow: hidden; }
 .nav-links .nav-mine .nav-mine-n.has { display: inline-block; }
 @media (max-width: 520px){ .nav-links .nav-mine{ font-size: 0.82rem; } }
 
+/* 全局搜索提示条 */
+.search-note { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-soft); background: var(--official-tint); border-radius: 7px; padding: 0.55rem 0.9rem; margin-bottom: 0.8rem; }
+
+/* 超脑活动：高亮卡 + 超脑徽章 */
+.card.sb-hit { border-left-color: var(--side); background: linear-gradient(100deg, var(--side-tint) 0%, var(--surface) 46%); box-shadow: 0 0 0 1px var(--side) inset; }
+.card.sb-hit:hover { border-left-color: var(--side-deep); }
+.card.sb-hit .card-title a { color: var(--side-deep); }
+.sb-chip { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; background: var(--side-deep); padding: 0.12rem 0.5rem; border-radius: 3px; }
+
 /* 官方渠道 Hi WAIC 导流条 */
 .foot-official { display:flex; flex-wrap:wrap; align-items:baseline; gap:0.4rem 0.9rem; margin-top:1.6rem; padding-top:1.1rem; border-top:1px solid var(--rule); font-size:0.82rem; color:var(--ink-mute); font-family:var(--font-sans); }
 .foot-official .fo-label { font-weight:600; color:var(--ink-soft); letter-spacing:0.04em; }

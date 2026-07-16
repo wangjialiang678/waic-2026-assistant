@@ -104,6 +104,27 @@ def detect_track(text: str) -> str:
     return ""
 
 
+# 活动权重：越高越靠前。超脑=我们自己的活动置顶；官方主场>主题>分论坛；官方合作边会>民间边会>资讯。
+# 搜索/排序统一按 weight 降序 → 命中超脑时超脑排最前。
+OFFICIAL_WEIGHT = {"全体会议": 92, "主题论坛": 75, "分论坛": 55, "同期活动": 45}
+
+
+def compute_weight(kind: str, category: str, relation: str, is_superbrain: bool = False) -> int:
+    if is_superbrain:
+        return 100
+    if kind == "exhibition_zone":
+        return 82
+    if kind == "official_program":
+        return OFFICIAL_WEIGHT.get(category, 50)
+    if kind == "side_event":
+        return 60 if relation == "official" else 35
+    if kind == "community":
+        return 30
+    if kind == "coverage":
+        return 12
+    return 20
+
+
 # ---------- 官方来源 ----------
 
 def build_guest_name_map(forums: list, global_guests: list) -> dict:
@@ -223,6 +244,7 @@ def official_to_activity(f: dict, guest_map: dict) -> dict:
         "original_excerpt": "",
         "detail_md": f"md/agenda/{aid}-{to_slug(f.get('name'))}.md",
         "search_text": " ".join(filter(None, search_bits)).lower(),
+        "weight": compute_weight("official_program", f.get("type") or "", "official"),
         "_sort_key": (day_of(date) or 99, f.get("startTime") or "99"),
     }
 
@@ -250,7 +272,9 @@ def unofficial_to_activity(a: dict, channel: str, idx: int) -> dict:
     # 并补「超脑/教育/青少年/AI原住民」等关键词与标签，保证搜索能命中
     _t = a.get("title") or ""
     _is_superbrain = "超脑" in _t
-    sb_keywords = ("超脑 超脑AI孵化器 SuperBrain AI教育 教育 青少年 青少年AI 少儿 K12 中学生 小学生 10后 AI原住民 原住民计划"
+    sb_keywords = ("超脑 超脑AI孵化器 SuperBrain AI教育 教育 教育科技 青少年 青少年AI 青少年人工智能 少儿 少儿编程 "
+                   "亲子 亲子教育 家庭教育 家长 中小学 中学生 小学生 K12 10后 STEM 科创 创新素养 素养教育 "
+                   "AI原住民 原住民计划"
                    if _is_superbrain else "")
     sb_tags = ["教育", "青少年", "AI 原住民"] if _is_superbrain else []
     if _is_superbrain and "原住民" in _t:
@@ -318,6 +342,7 @@ def unofficial_to_activity(a: dict, channel: str, idx: int) -> dict:
         "original_excerpt": a.get("original_excerpt") or "",
         "detail_md": f"md/unofficial/{aid}-{to_slug(a.get('title'))}.md",
         "search_text": " ".join(filter(None, [s for s in search_bits if isinstance(s, str)])).lower(),
+        "weight": compute_weight(kind, category, waic_relation, _is_superbrain),
         "_sort_key": (day_of(date) or 99, a.get("event_time") or a.get("start_time") or "99"),
     }
 
@@ -367,6 +392,7 @@ def exhibition_zone_to_activity(area: dict, enrich: dict | None = None) -> dict:
         "detail_md": f"md/agenda/zone-{to_slug(title)}.md",
         "search_text": (title + " " + desc + " 展区 " + district_of(title) + " "
                         + " ".join(highlights) + " " + hall_txt).lower(),
+        "weight": compute_weight("exhibition_zone", "展区", "official"),
         "_sort_key": (0, "00"),  # 展区排最前
     }
 
@@ -595,6 +621,8 @@ SIDE_DUP_GROUPS = [
 # （边会标题需全部包含左侧关键词）→ 归入右侧官方论坛（核心名匹配）。
 CURATED_SIDE_TO_OFFICIAL = [
     (("Datawhale", "线下论坛"), "心智与智能青年生态论坛"),  # 三条“具体名称未披露”占位，实为该官方论坛
+    (("全球治理高级别会议",), "2026世界人工智能大会暨人工智能全球治理高级别会议主论坛"),  # 主论坛重复
+    (("主论坛", "下午场"), "2026世界人工智能大会暨人工智能全球治理高级别会议主论坛"),
 ]
 
 

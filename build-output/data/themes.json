@@ -8,7 +8,7 @@
     {
       "name": "unofficial",
       "label": "周边·民间活动",
-      "count": 177
+      "count": 174
     }
   ],
   "waic_relations": [
@@ -18,7 +18,7 @@
     },
     {
       "name": "affiliated",
-      "count": 170
+      "count": 167
     },
     {
       "name": "co-located",
@@ -27,11 +27,11 @@
   ],
   "kinds": [
     {
-      "name": "side_event",
-      "count": 177
+      "name": "official_program",
+      "count": 174
     },
     {
-      "name": "official_program",
+      "name": "side_event",
       "count": 174
     },
     {
@@ -42,7 +42,7 @@
   "categories": [
     {
       "name": "边会·周边活动",
-      "count": 177
+      "count": 174
     },
     {
       "name": "分论坛",
@@ -167,10 +167,6 @@
       "count": 3
     },
     {
-      "name": "世博中心金厅A+B",
-      "count": 2
-    },
-    {
       "name": "西岸国际会展中心 X1C301（星轨环岛展区）",
       "count": 2
     },
@@ -228,10 +224,6 @@
     },
     {
       "name": "上海（WAIC 会场附近；展位 H4-FT0070~0071）",
-      "count": 1
-    },
-    {
-      "name": "上海世博中心",
       "count": 1
     },
     {
@@ -574,7 +566,7 @@
     },
     {
       "name": "Day 1 · 2026-07-17",
-      "count": 45
+      "count": 42
     },
     {
       "name": "Day 4 · 2026-07-20",
@@ -878,11 +870,11 @@
     },
     {
       "name": "web",
-      "count": 151
+      "count": 150
     },
     {
       "name": "wechat",
-      "count": 26
+      "count": 24
     }
   ],
   "exhibitor_total": 1020,
