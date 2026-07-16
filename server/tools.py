@@ -165,25 +165,37 @@ def _norm_kw(kw: str) -> str:
     return k or (kw or "").lower().strip()
 
 
+def _split_kw(keyword: str) -> list[str]:
+    """把模型常传的多词关键词拆开：支持 / 、 ， | 空格 等分隔（如 '儿童/教育/青少年'）。"""
+    parts = re.split(r"[／/、,，\|\s]+", keyword or "")
+    return [p.strip() for p in parts if p.strip()]
+
+
 def _kw_relevance(a: dict, keyword: str) -> int:
     """相关度：0=不相关；1=仅短描述命中；2=归一词命中标题/标签/track；3=原词命中标题/标签/track。
-    只在高精度字段(标题/tags/track/类别)判强相关，避免命中议程/嘉宾简介里的顺带一提。"""
+    只在高精度字段(标题/tags/track/类别)判强相关。多词关键词按 OR 匹配、取最高相关度——
+    模型常把多个词用 / 拼成一个字符串（'儿童/教育/青少年'），整串子串匹配几乎必 0，必须拆开。"""
     if not keyword:
         return 1
-    kw = keyword.lower().strip()
-    nkw = _norm_kw(keyword)
     primary = " ".join([
         a.get("title", "") or "", " ".join(a.get("tags") or []),
         a.get("track", "") or "", a.get("category", "") or "",
     ]).lower()
-    if kw and kw in primary:
-        return 3
-    if nkw and len(nkw) >= 2 and nkw in primary:
-        return 2
     desc = ((a.get("description") or "")[:160]).lower()
-    if (kw and kw in desc) or (nkw and len(nkw) >= 2 and nkw in desc):
-        return 1
-    return 0
+    tokens = _split_kw(keyword) or [keyword]
+    best = 0
+    for tk in tokens:
+        kw = tk.lower().strip()
+        if not kw:
+            continue
+        nkw = _norm_kw(tk)
+        if kw in primary:
+            return 3   # 原词命中标题/标签，最高，直接返回
+        if nkw and len(nkw) >= 2 and nkw in primary:
+            best = max(best, 2)
+        elif (kw in desc) or (nkw and len(nkw) >= 2 and nkw in desc):
+            best = max(best, 1)
+    return best
 
 
 def search_activities(store, day=None, district=None, category=None, track=None,

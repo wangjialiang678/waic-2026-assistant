@@ -279,6 +279,10 @@ def unofficial_to_activity(a: dict, channel: str, idx: int) -> dict:
     sb_tags = ["教育", "青少年", "AI 原住民"] if _is_superbrain else []
     if _is_superbrain and "原住民" in _t:
         waic_relation = "official"
+    # 超脑现场统一在西岸国际会展中心北门四楼（superbrain.html 权威）；源里没场地则补上，
+    # 让"西岸片区 / 西岸国际会展中心"的筛选与 AI 搜索能命中青少年 AI 特别展。
+    sb_venue = "西岸国际会展中心（北门四楼）" if (_is_superbrain and "原住民" in _t) else ""
+    sb_district = "西岸片区" if sb_venue else ""
     # organizers：既支持 [{name,role}] 也支持字符串 organizer
     orgs = a.get("organizers") or []
     if not orgs and a.get("organizer"):
@@ -323,8 +327,8 @@ def unofficial_to_activity(a: dict, channel: str, idx: int) -> dict:
         "day": day_of(date),
         "start_time": a.get("event_time") or a.get("start_time") or "",
         "end_time": a.get("end_time") or "",
-        "venue": a.get("venue") or a.get("event_venue") or "",
-        "district": district_of(a.get("venue") or a.get("event_venue") or ""),
+        "venue": a.get("venue") or a.get("event_venue") or sb_venue,
+        "district": district_of(a.get("venue") or a.get("event_venue") or "") or sb_district,
         "room": a.get("room") or "",
         "category": category,
         "track": track,
@@ -667,6 +671,70 @@ def reclassify_venue_based(activities: list) -> int:
     return n
 
 
+def _wta_key(t: str) -> str:
+    """WaytoAGI 回填用标题键：保留英文（区分 AI TASTE PARTY 等纯英文名），只去 WAIC/年份/标点。"""
+    t = (t or "").lower()
+    t = re.sub(r"waic\s*2026|2026\s*waic|waic2026|waic", "", t)
+    return re.sub(r"[\s\W_]+", "", t)
+
+
+def enrich_from_waytoagi(activities: list, wta_events: list) -> int:
+    """用 WaytoAGI 的结构化数据回填我们已有活动缺失的 日期/时间/地点/报名链接（只填空，不覆盖）。
+    WaytoAGI 覆盖 WAIC 社群边会（之夜/酒会/黑客松），日期/报名链接比我们抽取的干净。"""
+    idx = {}
+    for a in activities:
+        if a.get("kind") in ("side_event", "community", "official_program"):
+            k = _wta_key(a.get("title"))
+            if len(k) >= 4:
+                idx.setdefault(k, a)
+
+    def find(title):
+        k = _wta_key(title)
+        if len(k) < 4:
+            return None
+        if k in idx:
+            return idx[k]
+        cand = [a for ok, a in idx.items() if len(ok) >= 6 and (k in ok or ok in k)]
+        return cand[0] if len(cand) == 1 else None
+
+    def parse_time(s):
+        ms = re.findall(r"(\d{1,2}):(\d{2})", s or "")
+        st = f"{int(ms[0][0]):02d}:{ms[0][1]}" if ms else ""
+        en = f"{int(ms[1][0]):02d}:{ms[1][1]}" if len(ms) > 1 else ""
+        return st, en
+
+    n = 0
+    for e in wta_events:
+        a = find(e.get("title"))
+        if not a:
+            continue
+        st, en = parse_time(e.get("time"))
+        changed = False
+        if not a.get("date") and e.get("date"):
+            a["date"] = e["date"]; a["day"] = day_of(e["date"]); changed = True
+        if not a.get("start_time") and st:
+            a["start_time"] = st; changed = True
+        if not a.get("end_time") and en:
+            a["end_time"] = en; changed = True
+        if not a.get("venue") and e.get("venue"):
+            a["venue"] = e["venue"]; a["district"] = district_of(e["venue"]); changed = True
+        wurl = f"https://waic.waytoagi.com/e/{e['id']}" if e.get("id") else ""
+        if wurl and not a.get("registration_url"):
+            a["registration_url"] = wurl; changed = True
+        if wurl and a.get("unverified"):   # WaytoAGI 活动页可核验 → 取消待核实、记来源
+            a["unverified"] = False
+            if all(wurl != s.get("url") for s in a.get("additional_sources", [])):
+                a.setdefault("additional_sources", []).append(
+                    {"publisher": "WaytoAGI Side Events", "url": wurl})
+            changed = True
+        if e.get("capacity") and not a.get("capacity"):
+            a["capacity"] = e["capacity"]
+        if changed:
+            a["_sort_key"] = (a.get("day") or 99, a.get("start_time") or "99")
+            n += 1
+    return n
+
+
 def dedup_side_events(acts: list) -> list:
     """按标题签名去重，重复项把来源合并进 additional_sources、并补空字段。"""
     kept, index = [], {}
@@ -868,6 +936,12 @@ def main():
         "articles": intel,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[3] 情报库 intel.json：{len(intel)} 篇资讯素材")
+
+    # WaytoAGI 社群边会回填（日期/时间/地点/报名链接）——只填空，不覆盖
+    wta = load_json(raw / "web" / "waytoagi_events.json", {})
+    wta_events = wta.get("events") if isinstance(wta, dict) else (wta or [])
+    n_wta = enrich_from_waytoagi(activities, wta_events or [])
+    print(f"     WaytoAGI 回填：{n_wta} 条活动补全 日期/时间/地点/报名链接")
 
     # 在官方展馆内的活动 → 归入官方板块（用户政策：物理位置在官方会场即算官方）
     n_venue = reclassify_venue_based(activities)

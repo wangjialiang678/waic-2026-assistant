@@ -78,19 +78,16 @@ def _build_messages(user_messages: list[dict], my_schedule=None, profile=None) -
     return msgs
 
 
-async def _stream_once(client, messages):
+async def _stream_once(client, messages, allow_tools=True):
     """发一次流式请求，返回 (assistant_content, tool_calls_list, text_deltas_generator 已在外部消费)。
-    这里做成 async 生成器：先 yield ('delta', text)，最后 yield ('final', {content, tool_calls, finish})。"""
-    stream = await client.chat.completions.create(
-        model=MODEL,
-        messages=messages,
-        tools=tool_schemas(),
-        tool_choice="auto",
-        stream=True,
-        max_tokens=1200,
-        temperature=0.3,
-        extra_body={"enable_thinking": False},  # 关键：关思考，延迟从 ~14s 降到 <1s
-    )
+    这里做成 async 生成器：先 yield ('delta', text)，最后 yield ('final', {content, tool_calls, finish})。
+    allow_tools=False → 禁用工具、强制模型直接用文字作答（收尾兜底用）。"""
+    kw = dict(model=MODEL, messages=messages, stream=True, max_tokens=1200,
+              temperature=0.3, extra_body={"enable_thinking": False})
+    if allow_tools:
+        kw["tools"] = tool_schemas()
+        kw["tool_choice"] = "auto"
+    stream = await client.chat.completions.create(**kw)
     content_parts: list[str] = []
     tc_acc: dict[int, dict] = {}
     finish = None
@@ -174,7 +171,18 @@ async def run_chat(user_messages: list[dict], my_schedule=None, profile=None) ->
                 })
             # 进入下一轮：模型看到工具结果后继续生成
 
-        # 轮数用尽仍未收敛
+        # 轮数用尽仍未收敛 → 禁用工具强制出一个回答，避免前端"没有收到回复"
+        messages.append({"role": "system", "content":
+            "已多次查询。请立即基于以上工具返回的结果，用简洁中文直接回答用户，不要再调用工具。"
+            "若没有完全匹配的，就给出最接近的推荐、或明确说明没查到并建议换个条件。"})
+        got_final = False
+        async for kind, payload in _stream_once(client, messages, allow_tools=False):
+            if kind == "delta":
+                got_final = True
+                yield {"type": "delta", "text": payload}
+        if not got_final:
+            yield {"type": "delta", "text":
+                   "抱歉，这次没找到完全符合的活动。可以换个说法或放宽条件（比如只说片区或主题）再问我。"}
         yield {"type": "done"}
     except Exception as e:  # noqa: BLE001
         log.exception("run_chat error: %s", e)
