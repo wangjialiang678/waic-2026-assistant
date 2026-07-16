@@ -6,6 +6,14 @@
 (function () {
   'use strict';
   const DAY_LABEL = { '1': '7/17 周五', '2': '7/18 周六', '3': '7/19 周日', '4': '7/20 周一' };
+  const PERSONAS = {
+    '投资人': ['投融资', '找项目', '投资', '大模型', '具身智能'],
+    '创业者': ['创业', '出海', '找合作', '大模型', 'AI应用落地'],
+    '开发者': ['开发者', '开源', '智能体', 'Agent', '大模型'],
+    '学生/家长': ['AI教育', '青少年', 'AI原住民'],
+    'AI 从业': ['大模型', '具身智能', 'AGI', 'AI芯片'],
+    '看热闹': [],
+  };
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
   function interests() { try { return (JSON.parse(localStorage.getItem('waic2026.profile.v1') || '{}').interests) || []; } catch (e) { return []; } }
   function toMin(t) { const m = /(\d{1,2}):(\d{2})/.exec(t || ''); return m ? (+m[1] * 60 + +m[2]) : null; }
@@ -24,11 +32,14 @@
     return s;
   }
 
-  function plan(day, pace) {
-    const ints = interests();
+  function plan(day, pace, personaKey) {
+    const pk = personaKey && PERSONAS[personaKey] && PERSONAS[personaKey].length ? PERSONAS[personaKey] : null;
+    const ints = pk || interests();
     const cands = (DATA.activities || []).filter(a =>
       ['official_program', 'side_event', 'community'].indexOf(a.kind) >= 0 &&
       String(a.day) === String(day) && a.start_time);
+    const buckets = {};
+    cands.forEach(a => { const h = (a.start_time || '').slice(0, 2); if (/\d\d/.test(h)) buckets[h] = (buckets[h] || 0) + 1; });
     cands.forEach(a => {
       a._plscore = relScore(a, ints) + (a.weight || 0) / 25 + ((a.title || '').indexOf('超脑') >= 0 ? 4 : 0);
     });
@@ -42,10 +53,10 @@
       if (!clash) picked.push(a);
     });
     picked.sort((x, y) => toMin(x.start_time) - toMin(y.start_time));
-    return { picked, matched: ints.length ? cands.filter(a => relScore(a, ints) > 0).length : cands.length };
+    return { picked, buckets, matched: ints.length ? cands.filter(a => relScore(a, ints) > 0).length : cands.length };
   }
 
-  let root = null, current = { day: '1', pace: 3, result: null };
+  let root = null, current = { day: '1', pace: 3, persona: null, result: null };
 
   function ensure() {
     if (root) return;
@@ -80,8 +91,10 @@
     let html = `
       <div class="pl-form">
         <div class="pl-fk">选哪天</div><div class="pl-days">${dayTabs}</div>
+        <div class="pl-fk">你是谁（选一个，据此调整推荐；不选则按你的关注方向）</div>
+        <div class="pl-personas">${Object.keys(PERSONAS).map(k => `<button class="pl-persona${current.persona === k ? ' on' : ''}" data-persona="${esc(k)}">${esc(k)}</button>`).join('')}</div>
         <div class="pl-fk">今天想赶几场（节奏）</div><div class="pl-paces">${paceBtns}</div>
-        <div class="pl-fk">按你的关注方向排</div>
+        <div class="pl-fk">${current.persona ? '当前视角：' + esc(current.persona) : '按你的关注方向排'}</div>
         <div class="pl-ints">${ints.length ? ints.slice(0, 8).map(i => `<span>${esc(i)}</span>`).join('') : '<em>还没设关注方向——会按大会重要度排。到「AI 助手」里可设置。</em>'}</div>
         <button class="pl-gen" id="pl-gen">生成推荐动线 →</button>
       </div>
@@ -89,11 +102,12 @@
     body.innerHTML = html;
     body.querySelectorAll('.pl-day').forEach(b => b.addEventListener('click', () => { current.day = b.dataset.day; current.result = null; render(); }));
     body.querySelectorAll('.pl-pace').forEach(b => b.addEventListener('click', () => { current.pace = +b.dataset.pace; render(); }));
+    body.querySelectorAll('.pl-persona').forEach(b => b.addEventListener('click', () => { current.persona = current.persona === b.dataset.persona ? null : b.dataset.persona; current.result = null; render(); }));
     body.querySelector('#pl-gen').addEventListener('click', generate);
     if (current.result) renderResult();
   }
 
-  function generate() { current.result = plan(current.day, current.pace); renderResult(); }
+  function generate() { current.result = plan(current.day, current.pace, current.persona); renderResult(); }
 
   function renderResult() {
     const r = current.result; if (!r) return;
@@ -112,7 +126,11 @@
         <a class="pl-detail" href="activity.html?id=${encodeURIComponent(a.id)}" target="_blank" rel="noopener">详情</a>
       </div>`;
     }).join('');
-    box.innerHTML = `<div class="pl-rnote">Day ${current.day} · 从 ${r.matched} 场相关活动里，排出 ${r.picked.length} 场无时间冲突的动线：</div>
+    const hrs = Object.keys(r.buckets || {}).sort();
+    const maxN = Math.max(1, ...Object.values(r.buckets || { x: 1 }));
+    const heat = hrs.length ? `<div class="pl-heat"><div class="pl-heat-k">今日各时段活动密度 · 越高越挤（避开高峰好换馆）</div>
+      <div class="pl-heat-bars">${hrs.map(h => `<div class="pl-heat-col"><div class="pl-heat-bar" style="height:${Math.round(r.buckets[h] / maxN * 100)}%" title="${h}:00 · ${r.buckets[h]} 场"></div><span>${h}</span></div>`).join('')}</div></div>` : '';
+    box.innerHTML = heat + `<div class="pl-rnote">Day ${current.day} · 从 ${r.matched} 场相关活动里，排出 ${r.picked.length} 场无时间冲突的动线：</div>
       <div class="pl-timeline">${rows}</div>
       <div class="pl-acts"><button class="pl-addall" id="pl-addall">全部加入我的日程</button></div>`;
     box.querySelector('#pl-addall').addEventListener('click', () => {

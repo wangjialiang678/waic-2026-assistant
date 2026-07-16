@@ -1191,3 +1191,14 @@ body.soc-lock { overflow: hidden; }
 .cms-btn.primary { background: var(--exh); border-color: var(--exh); color: #fff; }
 .cms-btn.primary:hover { background: var(--exh-deep); }
 .cms-loading { color: var(--ink-mute); text-align: center; padding: 1.5rem; }
+
+/* 规划器：persona 快选 + 时段热力 */
+.pl-personas { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pl-persona { font-family: var(--font-sans); font-size: 0.82rem; padding: 0.35rem 0.7rem; border: 1px solid var(--rule-2); border-radius: 100px; background: var(--surface); color: var(--ink-soft); cursor: pointer; }
+.pl-persona.on { background: var(--official); border-color: var(--official); color: #fff; }
+.pl-heat { margin: 0.4rem 0 1rem; }
+.pl-heat-k { font-family: var(--font-sans); font-size: 0.76rem; color: var(--ink-mute); margin-bottom: 0.4rem; }
+.pl-heat-bars { display: flex; align-items: flex-end; gap: 3px; height: 56px; }
+.pl-heat-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+.pl-heat-bar { width: 100%; min-height: 2px; background: var(--official); border-radius: 2px 2px 0 0; opacity: 0.85; }
+.pl-heat-col span { font-family: var(--font-mono); font-size: 0.6rem; color: var(--ink-mute); margin-top: 2px; }
