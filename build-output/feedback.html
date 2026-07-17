@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>反馈与联系 · WAIC 2026 参展助手</title>
+<style>
+  :root{--bg:#0b0e14;--card:#141925;--fg:#e7ecf3;--mut:#93a0b5;--acc:#3b6ef5;--line:#232a38;--ok:#3ecf8e}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,"PingFang SC","Microsoft YaHei",Segoe UI,sans-serif;line-height:1.7}
+  .wrap{max-width:640px;margin:0 auto;padding:32px 20px 80px}
+  a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+  .back{color:var(--mut);font-size:14px}
+  h1{font-size:26px;margin:18px 0 6px} .sub{color:var(--mut);margin-bottom:24px}
+  h2{font-size:18px;margin:30px 0 10px;border-left:3px solid var(--acc);padding-left:10px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0}
+  label{display:block;font-size:14px;color:var(--mut);margin:12px 0 6px}
+  select,textarea,input{width:100%;background:#0f1420;color:var(--fg);border:1px solid var(--line);border-radius:9px;padding:10px 12px;font-size:15px;font-family:inherit}
+  textarea{min-height:120px;resize:vertical}
+  button{margin-top:14px;background:var(--acc);color:#fff;border:none;border-radius:9px;padding:11px 22px;font-size:15px;cursor:pointer}
+  button:disabled{opacity:.5}
+  .done{color:var(--ok);font-size:15px;margin-top:12px}
+  .err{color:#ff8f7d;font-size:14px;margin-top:10px}
+  .contact{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .contact img{width:96px;height:96px;border-radius:8px;background:#fff}
+  .mut{color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/">← 返回 WAIC 2026 参展助手</a>
+  <h1>反馈与联系</h1>
+  <div class="sub">发现数据有误、功能有问题，或想聊合作——都从这里找到我们。</div>
+
+  <h2>提交反馈</h2>
+  <div class="card">
+    <form id="fb-form">
+      <label for="fb-kind">类型</label>
+      <select id="fb-kind">
+        <option value="feedback">功能问题 / 使用不顺</option>
+        <option value="data">数据有误 / 活动信息纠错</option>
+        <option value="idea">建议 / 想要的功能</option>
+        <option value="biz">商务合作</option>
+      </select>
+      <label for="fb-msg">说说具体情况（数据纠错请带上活动名称）</label>
+      <textarea id="fb-msg" maxlength="1000" placeholder="例：7/19 XX 论坛的时间和官网不一致，应该是 14:00 开始…"></textarea>
+      <label for="fb-contact">联系方式（可选；想要回复就留微信/邮箱）</label>
+      <input id="fb-contact" maxlength="80" placeholder="选填">
+      <button type="submit" id="fb-btn">提交</button>
+      <div id="fb-tip"></div>
+    </form>
+  </div>
+
+  <h2>直接找到我们</h2>
+  <div class="card contact">
+    <img src="assets/superbrain-qr.png" alt="超脑公众号二维码">
+    <div>
+      <div><strong>超脑 AI 孵化器</strong>（本助手出品方）</div>
+      <div>官网：<a href="https://www.superbrain-ai.com" target="_blank" rel="noopener">www.superbrain-ai.com</a></div>
+      <div class="mut">合作洽谈 / 媒体联络：官网内联系入口，或扫码关注公众号留言（每天都会看）</div>
+      <div class="mut">会期现场：西岸国际会展中心北门四楼「超脑 AI 原住民计划」展区可直接找到我们</div>
+    </div>
+  </div>
+
+  <script>
+  document.getElementById('fb-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn=document.getElementById('fb-btn'), tip=document.getElementById('fb-tip');
+    var msg=document.getElementById('fb-msg').value.trim();
+    if(!msg){ tip.className='err'; tip.textContent='内容不能为空'; return; }
+    var contact=document.getElementById('fb-contact').value.trim();
+    if(contact) msg += '\n[联系方式] '+contact;
+    var device=''; try{ device=localStorage.getItem('waic2026.device.v1')||''; }catch(err){}
+    btn.disabled=true; tip.textContent='';
+    fetch('/api/report',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({device:device,kind:document.getElementById('fb-kind').value,id:'feedback-page',message:msg})})
+      .then(function(r){ if(!r.ok) throw new Error(r.status);
+        tip.className='done'; tip.textContent='✅ 已收到，谢谢！有联系方式的会尽快回复。';
+        document.getElementById('fb-msg').value=''; document.getElementById('fb-contact').value=''; })
+      .catch(function(){ tip.className='err'; tip.textContent='提交失败，请稍后再试，或到公众号留言。'; })
+      .finally(function(){ btn.disabled=false; });
+  });
+  </script>
+</div>
+</body>
+</html>

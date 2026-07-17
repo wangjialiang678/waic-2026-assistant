@@ -1,0 +1,14 @@
+{
+  "name": "WAIC 2026 参展助手",
+  "short_name": "WAIC助手",
+  "description": "WAIC 2026 官方日程 · 边会 · 1020 参展商 · 情报，免注册可搜索，AI 可接入",
+  "start_url": "/?from=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f2f3f1",
+  "theme_color": "#1d5178",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

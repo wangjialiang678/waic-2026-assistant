@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>放进手机 · WAIC 2026 参展助手</title>
+<meta name="description" content="把 WAIC 2026 参展助手放到手机桌面或存进相册，会期四天随时打开。">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="WAIC助手">
+<style>
+  :root{--paper:#f4f5f2;--panel:#fff;--ink:#171b21;--soft:#434952;--mute:#6d747e;
+    --rule:rgba(23,27,33,.12);--blue:#1d5178;--amber:#8c5a11;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    --mono:"SF Mono",ui-monospace,Consolas,monospace}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7}
+  .wrap{max-width:640px;margin:0 auto;padding:1.6rem 1.1rem 4rem}
+  a{color:var(--blue)}
+  .back{color:var(--mute);font-size:.85rem;text-decoration:none}
+  h1{font-family:"Songti SC","STSong",serif;font-size:1.65rem;margin:.7rem 0 .3rem}
+  .sub{color:var(--soft);margin-bottom:1.4rem}
+  .sec{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:1.1rem 1.2rem;margin:1rem 0;position:relative}
+  .sec h2{font-family:"Songti SC",serif;font-size:1.1rem;margin:0 0 .6rem;display:flex;align-items:center;gap:.5rem}
+  .you{position:absolute;top:-10px;right:14px;background:var(--amber);color:#fff;font-size:.7rem;
+    padding:.15em .7em;border-radius:99px;letter-spacing:.05em}
+  ol{margin:.2rem 0 0;padding-left:1.4rem}
+  li{margin:.45rem 0;color:var(--soft)}
+  li b{color:var(--ink)}
+  .qr{text-align:center;padding:.6rem 0 .2rem}
+  .qr img{width:min(340px,86%);border-radius:10px;border:1px solid var(--rule)}
+  .qr .hint{font-size:.85rem;color:var(--mute);margin-top:.4rem}
+  .note{font-size:.82rem;color:var(--mute);margin-top:1.4rem;padding-top:.9rem;border-top:1px solid var(--rule)}
+  .icon-demo{width:40px;height:40px;border-radius:9px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/">← 返回 WAIC 2026 参展助手</a>
+  <h1>放进手机，会期四天随时打开</h1>
+  <p class="sub">30 秒把助手 <img class="icon-demo" src="/assets/icon-192.png" alt="应用图标"> 放到桌面，或存一张二维码到相册——不用记网址。</p>
+
+  <section class="sec" id="sec-wx">
+    <h2>💬 你在微信里打开的话</h2>
+    <ol>
+      <li>点右上角 <b>「···」</b> → <b>「在浏览器打开」</b>（微信内没法添加到桌面）</li>
+      <li>跳到浏览器后，按下面 iPhone / Android 的两步操作</li>
+      <li><b>更快的兜底</b>：长按下面这张二维码 → <b>保存图片</b>到相册，之后扫码就能回来</li>
+    </ol>
+    <div class="qr">
+      <img src="/assets/waic-qr-card.png" alt="WAIC 参展助手二维码卡（长按保存到相册）">
+      <div class="hint">长按图片 → 保存到相册</div>
+    </div>
+  </section>
+
+  <section class="sec" id="sec-ios">
+    <h2>🍎 iPhone（Safari 或 Chrome 都行）</h2>
+    <ol>
+      <li>点底部/右上角的 <b>分享按钮</b>（方框加向上箭头 ⬆️）</li>
+      <li>往下滑，点 <b>「添加到主屏幕」</b> → <b>「添加」</b></li>
+    </ol>
+    <p style="margin:.5rem 0 0;font-size:.85rem;color:var(--mute)">桌面就会出现「WAIC助手」图标，点开直达。</p>
+  </section>
+
+  <section class="sec" id="sec-android">
+    <h2>🤖 Android（Chrome / Edge 等）</h2>
+    <ol>
+      <li>点右上角 <b>「⋮」菜单</b></li>
+      <li>点 <b>「添加到主屏幕」</b>（或「安装应用」）→ 确认</li>
+    </ol>
+    <p style="margin:.5rem 0 0;font-size:.85rem;color:var(--mute)">部分国产浏览器菜单里叫「发送到桌面」，效果相同。</p>
+  </section>
+
+  <p class="note">这只是一个桌面快捷方式，不占空间、不要权限、随时可删。<br>
+  也可以直接收藏网址：<span style="font-family:var(--mono)">waic.sg.superbrain-ai.com</span></p>
+
+  <script>
+  // 按设备把最相关的一节排到最前（纯重排，不隐藏任何内容；失败则保持原序）
+  try {
+    var ua = navigator.userAgent, wrap = document.querySelector('.wrap');
+    var order = /MicroMessenger/i.test(ua) ? [] :
+                /iPhone|iPad/i.test(ua) ? ['sec-ios'] :
+                /Android/i.test(ua) ? ['sec-android'] : [];
+    order.reverse().forEach(function(id){
+      var el = document.getElementById(id);
+      var first = document.getElementById('sec-wx');
+      if (el && first) { wrap.insertBefore(el, first); }
+      var tag = document.createElement('span'); tag.className='you'; tag.textContent='为你的手机推荐';
+      el && el.appendChild(tag);
+    });
+  } catch(e){}
+  </script>
+</div>
+</body>
+</html>
