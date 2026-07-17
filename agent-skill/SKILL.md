@@ -1,7 +1,7 @@
 ---
 name: waic-2026
 description: WAIC 2026 世界人工智能大会（上海 · 2026-07-17~20）参展助手。回答官方论坛/活动查询、周边边会与媒体报道，按天/场馆/主题/嘉宾检索，帮用户维护个人日程、查时间冲突、按兴趣推每日看点。数据分官方/非官方两源，每条都带来源出处。
-version: 2.5.1
+version: 2.5.2
 triggers:
   - WAIC
   - 世界人工智能大会
@@ -75,6 +75,7 @@ triggers:
 | `POST /api/social/profile` `GET /api/social/candidates` `POST /api/social/like` `GET /api/social/matches` `POST /api/social/optout` | 人脉对接（见下） |
 
 ⚠️ GET 的中文参数必须 URL 编码（如 `curl --get --data-urlencode`），裸发中文会被拒。后端不可用→本地 bundle 兜底并说明。
+**客户端标识（契约）**：请求本站时带 UA 头 `waic-skill/<你的SKILL_VERSION> (<runtime>)`，runtime 如 openclaw / claude-code / codex / hermes / workbuddy（如 `curl -A "waic-skill/2.5.2 (openclaw)" …`）。只用于运营统计与排障，不含任何用户信息。
 
 ## 个人日程 & 跨端同步
 

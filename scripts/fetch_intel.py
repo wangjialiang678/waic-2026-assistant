@@ -80,6 +80,8 @@ def tavily(query, domains, days, key):
 # ---- cimidata（次幂）微信搜一搜：拿真 mp.weixin.qq.com 文章链，替代搜狗断链 ----
 CIMI_HOST = "https://www.cimidata.com/"
 CIMI_QUERIES = ["WAIC 2026 世界人工智能大会", "世界人工智能大会 上海", "WAIC 2026"]
+# 定点监测的公众号（每轮拉"当天发文"，不依赖关键词搜索的收录延迟；官方号全收不做关键词过滤）
+CIMI_WATCH_ACCOUNTS = ["世界人工智能大会"]
 
 
 def _cimi_env():
@@ -115,8 +117,19 @@ def cimi_search(keyword, token, page=1):
     return d.get("items") or []
 
 
+def cimi_today(nickname, token):
+    """公众号当天发文（/api/v2/articles/current）。返回 items 列表，失败抛异常由调用方降级。"""
+    req = urllib.request.Request(
+        CIMI_HOST + "api/v2/articles/current?access_token=" + urllib.parse.quote(token),
+        data=json.dumps({"nickname": nickname}).encode(),
+        headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        d = json.loads(r.read()).get("data")
+    return d.get("items") if isinstance(d, dict) else (d if isinstance(d, list) else [])
+
+
 def collect_cimi(known_urls, known_titles):
-    """微信搜一搜 → 真链文章列表（跳过已知/搜狗/自家域）。失败降级返回 []。"""
+    """微信搜一搜 + 官方号定点监测 → 真链文章列表（跳过已知/搜狗/自家域）。失败降级返回 []。"""
     aid, sec = _cimi_env()
     if not (aid and sec):
         print("[fetch_intel] 无 CIMI 凭证，跳过微信搜一搜")
@@ -127,6 +140,31 @@ def collect_cimi(known_urls, known_titles):
         print(f"[fetch_intel] cimidata token 失败: {e}")
         return []
     out = []
+    # ① 官方公众号定点监测（当天发文全收，不做关键词过滤）
+    for acct in CIMI_WATCH_ACCOUNTS:
+        try:
+            items = cimi_today(acct, token)
+        except Exception as e:  # noqa: BLE001
+            print(f"[fetch_intel] 官方号监测失败({acct}): {e}")
+            items = []
+        for it in items or []:
+            if not isinstance(it, dict):
+                continue
+            url = (it.get("content_url") or it.get("url") or "").split("#")[0]
+            title = re.sub(r"<[^>]+>", "", it.get("title") or "").strip()
+            if not url or not title or "sogou.com" in url:
+                continue
+            if url in known_urls or norm_title(title) in known_titles:
+                continue
+            known_urls.add(url)
+            known_titles.add(norm_title(title))
+            out.append({
+                "title": title, "kind": "coverage", "publisher": acct,
+                "date": (it.get("published_at") or it.get("publish_time") or "")[:10],
+                "summary": "", "url": url, "auto_collected": True,
+                "source_api": "cimidata-watch",
+                "collected_at": datetime.now().strftime("%F %T"),
+            })
     for kw in CIMI_QUERIES:
         try:
             items = cimi_search(kw, token)
