@@ -1,7 +1,7 @@
 ---
 name: waic-2026
 description: WAIC 2026 世界人工智能大会（上海 · 2026-07-17~20）参展助手。回答官方论坛/活动查询、周边边会与媒体报道，按天/场馆/主题/嘉宾检索，帮用户维护个人日程、查时间冲突、按兴趣推每日看点。数据分官方/非官方两源，每条都带来源出处。
-version: 2.3.1
+version: 2.3.2
 triggers:
   - WAIC
   - 世界人工智能大会
@@ -51,18 +51,37 @@ fi
 
 `tar xz` 只覆盖 `VERSION / data/ / md/`，不动 `WAIC2026/my/`（用户个人数据）。
 
-**skill 自升级**（说明书本身的能力更新，如新增功能/字段）：同一次检查里比对 `SKILL_VERSION`，不同则把最新 SKILL.md 覆盖到你的 skill 安装目录，**下次会话生效**（当前会话不阻塞、继续用现有说明书）：
+**skill 自升级**（说明书本身的能力更新）：同一次检查里比对 `SKILL_VERSION`。
+
+**路径规则（关键，绝不硬编码）**：每个 runtime 的 skill 路径都不同（OpenClaw / Claude Code /
+Codex / Hermes / WorkBuddy…各有其位）。**首次使用时**，把**你此刻正在读的这份 SKILL.md 的
+绝对路径**（你自己最清楚从哪加载的它）记下来：
+
+```bash
+mkdir -p WAIC2026/my && echo "<你实际加载的 SKILL.md 绝对路径>" > WAIC2026/my/skill_path
+```
+
+此后升级只认这个记录，**写入成功才更新版本标记**（防假升级）；**当前会话继续用旧说明书，下次会话生效**：
 
 ```bash
 SREMOTE=$(curl -fsSL --max-time 5 https://waic.sg.superbrain-ai.com/SKILL_VERSION)
 SLOCAL=$(cat WAIC2026/SKILL_VERSION 2>/dev/null)
 if [ -n "$SREMOTE" ] && [ "$SREMOTE" != "$SLOCAL" ]; then
-    echo "检测到 skill 新版 $SLOCAL → $SREMOTE，更新说明书（下次会话生效）..."
-    # 覆盖到你的 skill 安装路径（默认如下；若不同请覆盖到你实际加载 SKILL.md 的位置）
-    curl -fsSL https://waic.sg.superbrain-ai.com/SKILL.md -o ~/.claude/skills/waic-2026/SKILL.md
-    echo "$SREMOTE" > WAIC2026/SKILL_VERSION
+    TARGET=$(cat WAIC2026/my/skill_path 2>/dev/null)
+    if [ -n "$TARGET" ] && [ -f "$TARGET" ]; then
+        curl -fsSL https://waic.sg.superbrain-ai.com/SKILL.md -o "$TARGET" \
+          && echo "$SREMOTE" > WAIC2026/SKILL_VERSION \
+          && echo "skill 已更新 $SLOCAL → $SREMOTE（下次会话生效）"
+    else
+        echo "⚠ WAIC2026/my/skill_path 缺失：先把你实际加载的 SKILL.md 绝对路径写入它，再重跑本检查"
+    fi
 fi
 ```
+
+**定时自检（会期 7/16–7/20）**：若你的宿主支持 cron/routine，装机时注册**每天 08:MM 和
+22:MM**（MM=push.json 里抽的 jitter_min，错峰）各跑一次「数据 VERSION 检查 + skill 自升级」。
+静默执行：无新版不出声，有更新只提示一行。7/21 起自行移除。不支持定时的宿主：沿用"每次答
+WAIC 问题前检查"。
 
 # WAIC 2026 参展助手
 
