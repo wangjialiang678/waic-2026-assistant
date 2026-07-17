@@ -1210,3 +1210,14 @@ body.soc-lock { overflow: hidden; }
 .report-line { margin-top: 1.4rem; text-align: center; }
 .report-line a { font-size: 0.82rem; color: var(--ink-mute); }
 .report-line a:hover { color: var(--official); }
+
+/* AI 入口示例问题气泡 */
+#waic-teaser { position: fixed; right: 1rem; bottom: 5.2rem; z-index: 1150; display: flex; align-items: center; gap: .55rem;
+  background: var(--official); color: #fff; border: none; border-radius: 14px 14px 3px 14px; padding: .65rem .9rem;
+  font-size: .88rem; box-shadow: 0 12px 28px -12px rgba(18,21,27,.5); cursor: pointer; max-width: min(320px, 78vw);
+  text-align: left; animation: tz-in .35s ease; }
+#waic-teaser .tz-q { line-height: 1.35; }
+#waic-teaser .tz-x { opacity: .75; font-size: .8rem; padding: .1em .2em; }
+#waic-teaser .tz-x:hover { opacity: 1; }
+@keyframes tz-in { from { transform: translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { #waic-teaser { animation: none; } }

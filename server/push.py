@@ -21,6 +21,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
+import store_social
 import store_state
 
 CST = timezone(timedelta(hours=8))
@@ -208,6 +209,19 @@ def build_push(store, device: str = "", interests: str = "", last: str = "",
             if evs:
                 sections.append({"h": "今天还来得及去", "type": "events",
                                  "items": [_fmt_event(a) for a in evs]})
+        # 人脉对接激活：已开名片的用户带一条"同频人数"（他自己的社交资产，准则1；未开名片者不打扰）
+        try:
+            if device and store_social.ENABLED:
+                prof = store_social.get_profile(device)
+                if prof and prof.get("enabled"):
+                    n = len(store_social.candidates(device) or [])
+                    if n:
+                        sections.append({"h": "🫱 人脉对接", "type": "social", "items": [{
+                            "title": f"现在有 {n} 位同频的人可发现",
+                            "summary": "说「帮我看看同频的人」即可浏览；互相感兴趣才互换联系方式",
+                            "publisher": "", "url": ""}]})
+        except Exception:  # noqa: BLE001 - 社交查询失败绝不影响推送主体
+            pass
         if not sections:
             return {"ready": False, "window": win["name"], "note": "无画像匹配内容"}
 

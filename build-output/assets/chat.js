@@ -93,6 +93,31 @@
     fab.innerHTML = `<span class="wf-ic">${ICON_SPARK}</span><span class="wf-txt">AI 助手</span>`;
     fab.addEventListener('click', openPanel);
 
+    // 示例问题气泡：降低首次使用门槛（chat/PV 转化缺口）。每会话最多一次；
+    // 点击=带着问题打开聊天；点 × 或 8 秒后自动消失。
+    try {
+      if (!sessionStorage.getItem('waic.teaser.v1')) {
+        const QS = [
+          '明天上午西岸有什么适合孩子逛的？',
+          '7/18 有哪些大模型论坛？',
+          '从世博中心到张江来得及吗？',
+          '今晚有哪些要报名的边会活动？',
+        ];
+        const q = QS[Math.floor(Math.random() * QS.length)];
+        const tz = document.createElement('button');
+        tz.id = 'waic-teaser'; tz.type = 'button';
+        tz.innerHTML = `<span class="tz-q">试试问我：${q}</span><span class="tz-x" aria-label="关闭">✕</span>`;
+        setTimeout(() => {
+          document.body.appendChild(tz);
+          sessionStorage.setItem('waic.teaser.v1', '1');
+          const kill = () => { tz.remove(); };
+          setTimeout(kill, 8000);
+          tz.querySelector('.tz-x').addEventListener('click', e => { e.stopPropagation(); kill(); });
+          tz.addEventListener('click', () => { kill(); openPanel(); if (inputEl) { inputEl.value = q; inputEl.focus(); } });
+        }, 3500);
+      }
+    } catch (e) { /* sessionStorage 不可用则跳过 */ }
+
     root = document.createElement('div');
     root.id = 'waic-chat';
     root.className = 'waic-chat';

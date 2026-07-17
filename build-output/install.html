@@ -38,13 +38,39 @@
     </ul>
   </div>
 
+  <div class="card" id="wx-tip" hidden style="border-left:3px solid #a86212;background:#fdf6e8">
+    <p style="margin:0"><strong>你在微信里打开本页</strong>——微信内没法跑命令。两个办法：①点右上角「···」→「在浏览器打开」；②直接点下面「复制发给 AI 的一句话」，粘贴给你的 AI 助手即可。</p>
+  </div>
+
   <h2>安装（一条命令）</h2>
   <div class="card">
-    <p>把这份「AI 说明书」放进<strong>你的 runtime 加载 skills 的目录</strong>（各家不同：Claude Code 是 <code>~/.claude/skills/</code>，OpenClaw 是 <code>~/.openclaw/workspace/skills/</code>，Codex / Hermes / WorkBuddy 等放各自的 skills 位置）：</p>
-    <pre>SK=&lt;你的skills目录&gt;/waic-2026        # ← 换成你 runtime 的实际路径
+    <p><strong>最省事（推荐，手机也行）</strong>：把这句话发给你的 AI 助手（OpenClaw / Claude Code / Codex 等）：</p>
+    <pre id="ai-oneliner">帮我装一下 WAIC 参展助手 skill：下载 https://waic.sg.superbrain-ai.com/SKILL.md 放进你加载 skills 的目录（waic-2026/SKILL.md），装好后把会期推送和自检的定时任务也设上。</pre>
+    <p><button class="copy-btn" data-copy="ai-oneliner">📋 复制发给 AI 的一句话</button></p>
+    <p>或者自己动手——放进<strong>你的 runtime 加载 skills 的目录</strong>（Claude Code 是 <code>~/.claude/skills/</code>，OpenClaw 是 <code>~/.openclaw/workspace/skills/</code>，其余 runtime 放各自的 skills 位置）：</p>
+    <pre id="cmd-install">SK=&lt;你的skills目录&gt;/waic-2026        # ← 换成你 runtime 的实际路径
 mkdir -p "$SK" && curl -fsSL https://waic.sg.superbrain-ai.com/SKILL.md -o "$SK/SKILL.md"</pre>
-    <p>更省事的办法：把上面这段直接发给你的 AI 助手，说「装一下这个 skill」——它知道自己的 skills 目录在哪。装好后问任何 WAIC 问题即可，数据与说明书都会自动保持最新。</p>
+    <p><button class="copy-btn" data-copy="cmd-install">📋 复制安装命令</button></p>
+    <p>装好后问任何 WAIC 问题即可，数据与说明书都会自动保持最新。</p>
   </div>
+  <style>
+    .copy-btn{background:#1d5178;color:#fff;border:none;border-radius:7px;padding:.5em 1em;font-size:.9rem;cursor:pointer}
+    .copy-btn:active{opacity:.8}
+  </style>
+  <script>
+  (function(){
+    if (/MicroMessenger/i.test(navigator.userAgent)) document.getElementById('wx-tip').hidden = false;
+    document.querySelectorAll('.copy-btn').forEach(function(b){
+      b.addEventListener('click', function(){
+        var t = document.getElementById(b.dataset.copy).textContent.replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+        function done(){ b.textContent = '✅ 已复制，去粘贴吧'; setTimeout(function(){ b.textContent = b.dataset.copy==='ai-oneliner' ? '📋 复制发给 AI 的一句话' : '📋 复制安装命令'; }, 2500); }
+        if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(t).then(done, function(){ fallback(); }); }
+        else fallback();
+        function fallback(){ var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy'); done();}catch(e){} document.body.removeChild(ta); }
+      });
+    });
+  })();
+  </script>
 
   <h2>数据接口（也可直接用）</h2>
   <div class="card">
