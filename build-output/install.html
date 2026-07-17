@@ -40,10 +40,10 @@
 
   <h2>安装（一条命令）</h2>
   <div class="card">
-    <p>把这份「AI 说明书」放进你的 skills 目录：</p>
-    <pre>mkdir -p ~/.claude/skills/waic-2026
-curl -fsSL https://waic.sg.superbrain-ai.com/SKILL.md -o ~/.claude/skills/waic-2026/SKILL.md</pre>
-    <p>然后在对话里问任何 WAIC 相关问题即可，AI 会自动拉取最新数据。</p>
+    <p>把这份「AI 说明书」放进<strong>你的 runtime 加载 skills 的目录</strong>（各家不同：Claude Code 是 <code>~/.claude/skills/</code>，OpenClaw 是 <code>~/.openclaw/workspace/skills/</code>，Codex / Hermes / WorkBuddy 等放各自的 skills 位置）：</p>
+    <pre>SK=&lt;你的skills目录&gt;/waic-2026        # ← 换成你 runtime 的实际路径
+mkdir -p "$SK" && curl -fsSL https://waic.sg.superbrain-ai.com/SKILL.md -o "$SK/SKILL.md"</pre>
+    <p>更省事的办法：把上面这段直接发给你的 AI 助手，说「装一下这个 skill」——它知道自己的 skills 目录在哪。装好后问任何 WAIC 问题即可，数据与说明书都会自动保持最新。</p>
   </div>
 
   <h2>数据接口（也可直接用）</h2>
