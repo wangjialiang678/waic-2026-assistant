@@ -7,6 +7,8 @@
 <meta name="description" content="把 WAIC 2026 参展助手放到手机桌面或存进相册，会期四天随时打开。">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#1d5178">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="WAIC助手">
 <style>
   :root{--paper:#f4f5f2;--panel:#fff;--ink:#171b21;--soft:#434952;--mute:#6d747e;
@@ -43,7 +45,8 @@
   <section class="sec" id="sec-wx">
     <h2>💬 你在微信里打开的话</h2>
     <ol>
-      <li>点右上角 <b>「···」</b> → <b>「在浏览器打开」</b>（微信内没法添加到桌面）</li>
+      <li><b>最省事</b>：点右上角 <b>「···」</b> → <b>「收藏」</b>（之后在 我 → 收藏 一点就开），或选 <b>「浮窗」</b>把页面钉在微信边缘</li>
+      <li>想放桌面：点右上角 <b>「···」</b> → <b>「在浏览器打开」</b>（微信内没法添加到桌面）</li>
       <li>跳到浏览器后，按下面 iPhone / Android 的两步操作</li>
       <li><b>更快的兜底</b>：长按下面这张二维码 → <b>保存图片</b>到相册，之后扫码就能回来</li>
     </ol>
@@ -91,5 +94,6 @@
   } catch(e){}
   </script>
 </div>
+<script src="/assets/pwa.js" defer></script>
 </body>
 </html>

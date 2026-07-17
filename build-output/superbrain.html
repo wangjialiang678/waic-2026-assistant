@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1d5178">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WAIC助手">
 <title>超脑 @ WAIC 2026 · 青少年 AI 特别展</title>
 <meta name="description" content="超脑 AI 孵化器承接 WAIC 2026 青少年创新板块 —— 47 个青少年 AI 项目、12 城、平均 14 岁。青少年会客厅 45 场、超脑小课堂 13 项、生命力博物馆线上特别展。10 后用 AI，回应真实世界。">
 <meta property="og:type" content="website">
@@ -734,5 +739,6 @@ const SB_AGENDA = [
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
 })();
 </script>
+<script src="/assets/pwa.js" defer></script>
 </body>
 </html>
