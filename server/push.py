@@ -24,6 +24,7 @@ from typing import Optional
 import store_state
 
 CST = timezone(timedelta(hours=8))
+DAY4 = "2026-07-20"          # 会期最后一天（晚报"排明天"提醒的边界）
 _CONFIG_PATH = Path(__file__).resolve().parent / "push_config.json"
 _config_cache: Optional[dict] = None
 
@@ -72,21 +73,24 @@ def _hit(text: str, tokens: list[str]) -> bool:
     return any(t and t in text for t in tokens)
 
 
-def _device_interests(device: str, interests_param: str) -> list[str]:
-    """画像：服务端存的显式兴趣 + 强推断（≥2 分），回退请求参数。"""
+def _device_profile(device: str, interests_param: str) -> tuple[list[str], list[str]]:
+    """画像 + 已加入日程：服务端 user_state（P4 上报/网站同步）优先，兴趣回退请求参数。
+    返回 (interests_tokens, schedule_ids)。"""
     toks: list[str] = []
+    sched: list[str] = []
     if device:
         st = store_state.get_state(device) or {}
         toks += [s for s in (st.get("interests") or []) if s]
         inferred = st.get("inferred") or {}
         toks += [k for k, v in inferred.items() if isinstance(v, (int, float)) and v >= 2]
+        sched = [str(x) for x in (st.get("schedule") or [])]
     toks += _split(interests_param)
     seen, out = set(), []
     for t in toks:
         if t not in seen:
             seen.add(t)
             out.append(t)
-    return out
+    return out, sched
 
 
 def _fmt_article(a: dict) -> dict:
@@ -127,7 +131,15 @@ def build_push(store, device: str = "", interests: str = "", last: str = "",
     if last == delivery_id:
         return {"ready": False, "window": win["name"], "note": "本窗口已投递"}
 
-    tokens = _device_interests(device, interests)
+    tokens, sched_ids = _device_profile(device, interests)
+    sched_set = set(sched_ids)
+
+    def _mine_on(date_: str) -> list[dict]:
+        """该日期里用户已加入日程的活动，按开始时间排（用户自己的数据优先展示）。"""
+        mine = [a for a in _acts_on(store, date_) if str(a.get("id")) in sched_set]
+        mine.sort(key=lambda x: x.get("start_time") or "99:99")
+        return mine
+
     arts_all = [a for a in (getattr(store, "intel", None) or [])
                 if _real_link(a.get("url") or "")]
     yesterday = (now - timedelta(days=1)).strftime("%F")
@@ -140,10 +152,20 @@ def build_push(store, device: str = "", interests: str = "", last: str = "",
     sections: list[dict] = []
     kind = win.get("kind", "速报")
 
+    tip = ""
     if win.get("audience") == "all":
+        # 设计准则：用户自己的数据优先于推荐 → 「你的日程」永远排第一段；推荐里去掉已加入的
         if win["name"] == "morning":
+            mine = _mine_on(today)
+            if mine:
+                sections.append({"h": "📌 你今天的日程", "type": "events",
+                                 "items": [_fmt_event(a) for a in mine[:10]]})
+            else:
+                tip = ("你还没有安排今天的日程——回复「帮我排今天行程」一键生成，"
+                       "或把感兴趣的场次加入日程（网站与 skill 可同步）。")
             arts = _rank_by_interest(fresh, art_blob, tokens, 6)
-            evs = _rank_by_interest(_acts_on(store, today), act_blob, tokens, 8)
+            evs = [a for a in _rank_by_interest(_acts_on(store, today), act_blob, tokens, 12)
+                   if str(a.get("id")) not in sched_set][:8]
             if arts:
                 sections.append({"h": "今日 WAIC 要闻", "type": "articles",
                                  "items": [_fmt_article(a) for a in arts]})
@@ -151,8 +173,15 @@ def build_push(store, device: str = "", interests: str = "", last: str = "",
                 sections.append({"h": "今日亮点·按你关注", "type": "events",
                                  "items": [_fmt_event(a) for a in evs]})
         else:  # evening 晚报
+            mine_tmr = _mine_on(tomorrow)
+            if mine_tmr:
+                sections.append({"h": "📌 你明天的日程", "type": "events",
+                                 "items": [_fmt_event(a) for a in mine_tmr[:10]]})
+            elif tomorrow <= DAY4:
+                tip = "明天还没安排日程——回复「帮我排明天行程」，睡前定好明天去哪。"
             arts = _rank_by_interest(fresh, art_blob, tokens, 5)
-            evs = _rank_by_interest(_acts_on(store, tomorrow), act_blob, tokens, 8)
+            evs = [a for a in _rank_by_interest(_acts_on(store, tomorrow), act_blob, tokens, 12)
+                   if str(a.get("id")) not in sched_set][:8]
             if arts:
                 sections.append({"h": "今日回顾", "type": "articles",
                                  "items": [_fmt_article(a) for a in arts]})
@@ -189,6 +218,8 @@ def build_push(store, device: str = "", interests: str = "", last: str = "",
         "delivery_id": delivery_id,
         "title": f"WAIC {kind} · {today[5:7]}/{today[8:10]}",
         "personalized": bool(tokens),
+        "has_schedule": bool(sched_ids),
+        "tip": tip,   # 非空时随播报带一句（如"还没排日程→帮我排今天行程"）
         "sections": sections,
         "cta": ["帮我排今天行程", "看全部日程 waic.sg.superbrain-ai.com"],
     }
