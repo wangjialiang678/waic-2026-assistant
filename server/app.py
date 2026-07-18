@@ -325,6 +325,7 @@ PUSH_LIMITER = TokenBucket(capacity=30, refill_per_sec=30 / 60.0)   # 每设备 
 
 @app.get("/api/push")
 def push_get(
+    request: Request,
     device: str = Query("", description="匿名同步码（推荐，画像取服务端）"),
     interests: str = Query("", description="兴趣兜底（未同步画像时用），逗号/斜杠分隔"),
     last: str = Query("", description="上次收到的 delivery_id（去重）"),
