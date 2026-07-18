@@ -342,7 +342,8 @@ def push_get(
     result = push.build_push(data.get_store(), device=device, interests=interests,
                              last=last, now=now)
     _log_event("push", device=device[:12], window=result.get("window"),
-               ready=result.get("ready"))
+               ready=result.get("ready"), acked=bool(last), last=last[:16],
+               ua=(request.headers.get("user-agent") or "")[:40])
     return result
 
 
@@ -398,7 +399,8 @@ async def state_put(request: Request):
     updated_at = str(body.get("updated_at") or "")[:32]
 
     st = store_state.put_state(device, schedule, interests, inferred, contact, updated_at)
-    _log_event("state", ip8=_ip8(ip), dev=device[:6], n_sch=len(schedule), n_int=len(interests))
+    _log_event("state", ip8=_ip8(ip), dev=device[:6], n_sch=len(schedule), n_int=len(interests),
+               ua=(request.headers.get("user-agent") or "")[:40])
     return st
 
 

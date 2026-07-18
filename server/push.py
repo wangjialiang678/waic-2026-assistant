@@ -227,13 +227,66 @@ def build_push(store, device: str = "", interests: str = "", last: str = "",
 
     if not sections:
         return {"ready": False, "window": win["name"], "note": "暂无新内容"}
+
+    title = f"WAIC {kind} · {today[5:7]}/{today[8:10]}"
+    text, numbered_ids = _render_text(title, sections, tip)
     return {
         "ready": True, "window": win["name"], "kind": kind,
         "delivery_id": delivery_id,
-        "title": f"WAIC {kind} · {today[5:7]}/{today[8:10]}",
+        "title": title,
         "personalized": bool(tokens),
         "has_schedule": bool(sched_ids),
-        "tip": tip,   # 非空时随播报带一句（如"还没排日程→帮我排今天行程"）
+        "tip": tip,
+        # text = 服务端预渲染的完整播报（含签名）。skill 契约：原样转发，不要自己重组——
+        # 渲染交给 agent 自由发挥会退化（实测 Hermes 丢正文只播 tip）。sections 保留给高级定制。
+        "text": text,
+        "numbered_ids": numbered_ids,   # text 里 1) 2) 编号对应的活动 id（用户回编号→加入日程）
+        "skill_latest": _skill_latest(),  # 轮询即升级信号：比本地新就顺手自升级
         "sections": sections,
         "cta": ["帮我排今天行程", "看全部日程 waic.sg.superbrain-ai.com"],
     }
+
+
+def _skill_latest() -> str:
+    try:
+        return Path("/var/www/waic/SKILL_VERSION").read_text().strip()
+    except Exception:  # noqa: BLE001
+        return ""
+
+
+def _render_text(title: str, sections: list[dict], tip: str) -> tuple[str, list]:
+    """预渲染微信可粘贴的纯文本播报：日程无编号、文章带链接（限4）、活动带编号（限5，回编号加日程）。"""
+    L = [f"📮 {title}"]
+    numbered: list = []
+    for sec in sections:
+        items = sec.get("items") or []
+        if not items:
+            continue
+        L.append("")
+        L.append(f"【{sec['h'].replace('📌 ', '')}】" if not sec["h"].startswith("📌") else sec["h"])
+        if sec.get("type") == "events":
+            mine = "你今天的日程" in sec["h"] or "你明天的日程" in sec["h"]
+            for a in items[: (10 if mine else 5)]:
+                if mine:
+                    L.append(f"· {a['time']} {a['title'][:38]} @{a['venue'][:12]}")
+                else:
+                    numbered.append(a.get("id"))
+                    L.append(f"{len(numbered)}) {a['time']} {a['title'][:36]} @{a['venue'][:12]}")
+        elif sec.get("type") == "articles":
+            for a in items[:4]:
+                pub = f" —{a['publisher']}" if a.get("publisher") else ""
+                L.append(f"· {a['title'][:40]}{pub}")
+                if a.get("url"):
+                    L.append(f"  {a['url']}")
+        else:  # social 等
+            for a in items[:2]:
+                L.append(f"· {a.get('title','')}" + (f"（{a['summary']}）" if a.get("summary") else ""))
+    if numbered:
+        L.append("")
+        L.append("回复编号即可加入日程；回复「帮我排今天行程」生成动线")
+    if tip:
+        L.append("")
+        L.append(f"💡 {tip}")
+    L.append("")
+    L.append("—— WAIC 2026 参展助手 → https://waic.sg.superbrain-ai.com/?from=agent")
+    return "\n".join(L), numbered

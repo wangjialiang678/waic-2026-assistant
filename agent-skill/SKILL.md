@@ -1,7 +1,7 @@
 ---
 name: waic-2026
 description: WAIC 2026 世界人工智能大会（上海 · 2026-07-17~20）参展助手。回答官方论坛/活动查询、周边边会与媒体报道，按天/场馆/主题/嘉宾检索，帮用户维护个人日程、查时间冲突、按兴趣推每日看点。数据分官方/非官方两源，每条都带来源出处。
-version: 2.6.0
+version: 2.6.2
 triggers:
   - WAIC
   - 世界人工智能大会
@@ -67,7 +67,7 @@ triggers:
 | 端点 | 用途 |
 |---|---|
 | `GET /api/activity/<id>` | 单场全量详情（议程+嘉宾） |
-| `GET /api/digest?interests=&day=` · `GET /digest-latest.json` | 个性化看点 / 静态日报（每 2h 更新） |
+| `GET /api/digest?interests=&day=` · `GET /digest-latest.json?device=<你的同步码>`（device 参数仅用于匿名统计） | 个性化看点 / 静态日报（每 2h 更新） |
 | `GET /api/exhibitors?hall=&industry=&q=` | 1020 家展商检索 |
 | `GET /api/route?from=&to=` | 片区/场馆间转场时间 |
 | `GET/POST /api/state` | 跨端同步（见下） |
@@ -101,7 +101,9 @@ triggers:
 - **装机一次**：抽一个 0–20 的随机分钟 MM 存 `my/push.json`（全网错峰）；宿主支持 cron 就注册每天 4 次（09/12/16/21 点的 MM 分）轮询；不支持就每天首次交互补拉。
 - **轮询**：`GET /api/push?device=<code>&last=<今天已收的delivery_id>`
 - `ready:false` → **静默**（未到窗口/已投递/定向未命中都正常）。
-- `ready:true` → 把 `title+sections` 播报给用户：**「📌 你今天的日程」永远在最前**（服务端已生成），文章带链接、活动带时间地点，简洁可行动；`tip` 非空附末尾。播完把 `delivery_id` 记回 `my/push.json`，**同窗口绝不重复播报**。
+- `ready:true` → **把响应里的 `text` 原样发给用户**（可在前面加一句自然开场，但不要删改正文——它已含日程/要闻/编号亮点/tip/签名，别再自己重组或另加签名）。播完把 `delivery_id` 记回 `my/push.json`，**同窗口绝不重复播报**。
+- **回编号加日程**：用户回复数字 N → 取响应 `numbered_ids[N-1]` 的活动 id 加入日程并同步（POST /api/state）。
+- **轮询即升级**：响应里 `skill_latest` 比本地 `WAIC2026/SKILL_VERSION` 新 → 播报完顺手跑一次「skill 自升级」（很多 agent 只跑 cron 不聊天，这是它们唯一的升级触点）。
 
 ## 人脉对接（找同频的人）
 
